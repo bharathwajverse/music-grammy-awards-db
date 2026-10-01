@@ -156,6 +156,11 @@ Detailed design documents are maintained in [`docs/`](docs/):
   - [Formal Acceptance Criteria](docs/requirements/acceptance-criteria.md)
   - [Team Responsibilities & Work Breakdown](docs/requirements/team-responsibilities.md)
   - [Database Boundaries & Partitioning](docs/requirements/database-boundaries.md)
+- **Data Research & Provenance (Phases 2 & 3)**:
+  - [Data Source Discovery Catalog](research/source-discovery.md)
+  - [50-Collection Data Coverage Matrix](research/data-coverage-matrix.md)
+  - [Master Source Register (CSV)](sources/source-register.csv)
+  - [Formal Licensing & IP Audit Report](sources/licensing-report.md)
 - **System Architecture**: [`docs/architecture/system_topology.md`](docs/architecture/system_topology.md)
 - **Data Dictionary (All 50 Collections)**: [`docs/architecture/data_dictionary.md`](docs/architecture/data_dictionary.md)
 - **Conceptual EER Specification**: [`docs/eer_diagrams/conceptual_eer_spec.md`](docs/eer_diagrams/conceptual_eer_spec.md)

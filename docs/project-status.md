@@ -98,10 +98,19 @@ The system architecture partitions the domain across five dedicated databases. E
     - [`docs/requirements/acceptance-criteria.md`](requirements/acceptance-criteria.md)
     - [`docs/requirements/team-responsibilities.md`](requirements/team-responsibilities.md)
     - [`docs/requirements/database-boundaries.md`](requirements/database-boundaries.md)
-  - Root `README.md` updated with architecture, setup instructions, and syllabus mapping.
+- **Completed in Phase 2 (Data Source Research)**:
+  - Comprehensive source discovery catalog: [`research/source-discovery.md`](../research/source-discovery.md)
+  - 50-collection source coverage matrix: [`research/data-coverage-matrix.md`](../research/data-coverage-matrix.md)
+  - Primary, secondary, and derived data tiers clearly partitioned.
+- **Completed in Phase 3 (Source & License Verification)**:
+  - Formal IP and licensing legal audit: [`sources/licensing-report.md`](../sources/licensing-report.md)
+  - Machine-readable source register with verification decisions: [`sources/source-register.csv`](../sources/source-register.csv)
+  - Source-to-collection mapping for all 50 collections across all 5 databases.
+  - Quarantined unverified GitHub repository (`reisanar/datasets/grammyDB.csv`) as `NEEDS_REVIEW`.
 - **Phase Rule Compliance**:
   - No MongoDB database operations were executed.
   - No data import was run.
   - No application code was written.
-- **Next Authorized Phase**: Phase 2 — Research & Source/License Verification (Awaiting user checkpoint approval).
+- **Next Authorized Phase**: Phase 4 — Conceptual Enhanced Entity-Relationship (EER) Modeling (Awaiting user checkpoint approval).
+
 
