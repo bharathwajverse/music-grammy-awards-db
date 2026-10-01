@@ -1,0 +1,1052 @@
+[
+  {
+    "classification_id": "GEN_CLASS_001",
+    "work_id": "WRK_NEL_BLU_DIPINTO_DI_BLU_VOLARE_0000",
+    "submitted_field_id": "FLD_POP",
+    "assigned_field_id": "FLD_POP",
+    "primary_genre_tag": "Pop / Contemporary",
+    "secondary_genre_tags": [
+      "Vocal",
+      "Adult Contemporary"
+    ],
+    "screening_committee_consensus": "Ratified by Committee Consensus",
+    "contested_by_label_flag": false,
+    "reclassification_justification": "Adheres to core instrumentation criteria",
+    "determination_date": "1959-11-01"
+  },
+  {
+    "classification_id": "GEN_CLASS_002",
+    "work_id": "WRK_THE_MUSIC_FROM_PETER_GUNN_0001",
+    "submitted_field_id": "FLD_POP",
+    "assigned_field_id": "FLD_POP",
+    "primary_genre_tag": "Pop / Contemporary",
+    "secondary_genre_tags": [
+      "Vocal",
+      "Adult Contemporary"
+    ],
+    "screening_committee_consensus": "Ratified by Committee Consensus",
+    "contested_by_label_flag": false,
+    "reclassification_justification": "Adheres to core instrumentation criteria",
+    "determination_date": "1960-11-01"
+  },
+  {
+    "classification_id": "GEN_CLASS_003",
+    "work_id": "WRK_NEL_BLU_DIPINTO_DI_BLU_VOLARE_0002",
+    "submitted_field_id": "FLD_POP",
+    "assigned_field_id": "FLD_POP",
+    "primary_genre_tag": "Pop / Contemporary",
+    "secondary_genre_tags": [
+      "Vocal",
+      "Adult Contemporary"
+    ],
+    "screening_committee_consensus": "Ratified by Committee Consensus",
+    "contested_by_label_flag": false,
+    "reclassification_justification": "Adheres to core instrumentation criteria",
+    "determination_date": "1961-11-01"
+  },
+  {
+    "classification_id": "GEN_CLASS_004",
+    "work_id": "WRK_ELLA_FITZGERALD_SINGS_THE_IRVI_0003",
+    "submitted_field_id": "FLD_POP",
+    "assigned_field_id": "FLD_POP",
+    "primary_genre_tag": "Pop / Contemporary",
+    "secondary_genre_tags": [
+      "Vocal",
+      "Adult Contemporary"
+    ],
+    "screening_committee_consensus": "Ratified by Committee Consensus",
+    "contested_by_label_flag": false,
+    "reclassification_justification": "Adheres to core instrumentation criteria",
+    "determination_date": "1962-11-01"
+  },
+  {
+    "classification_id": "GEN_CLASS_005",
+    "work_id": "WRK_CATCH_A_FALLING_STAR_0004",
+    "submitted_field_id": "FLD_POP",
+    "assigned_field_id": "FLD_POP",
+    "primary_genre_tag": "Pop / Contemporary",
+    "secondary_genre_tags": [
+      "Vocal",
+      "Adult Contemporary"
+    ],
+    "screening_committee_consensus": "Ratified by Committee Consensus",
+    "contested_by_label_flag": false,
+    "reclassification_justification": "Adheres to core instrumentation criteria",
+    "determination_date": "1963-11-01"
+  },
+  {
+    "classification_id": "GEN_CLASS_006",
+    "work_id": "WRK_BILLY_MAY_S_BIG_FAT_BRASS_0005",
+    "submitted_field_id": "FLD_POP",
+    "assigned_field_id": "FLD_POP",
+    "primary_genre_tag": "Pop / Contemporary",
+    "secondary_genre_tags": [
+      "Vocal",
+      "Adult Contemporary"
+    ],
+    "screening_committee_consensus": "Ratified by Committee Consensus",
+    "contested_by_label_flag": false,
+    "reclassification_justification": "Adheres to core instrumentation criteria",
+    "determination_date": "1964-11-01"
+  },
+  {
+    "classification_id": "GEN_CLASS_007",
+    "work_id": "WRK_BASIE_0006",
+    "submitted_field_id": "FLD_POP",
+    "assigned_field_id": "FLD_POP",
+    "primary_genre_tag": "Pop / Contemporary",
+    "secondary_genre_tags": [
+      "Vocal",
+      "Adult Contemporary"
+    ],
+    "screening_committee_consensus": "Ratified by Committee Consensus",
+    "contested_by_label_flag": false,
+    "reclassification_justification": "Adheres to core instrumentation criteria",
+    "determination_date": "1965-11-01"
+  },
+  {
+    "classification_id": "GEN_CLASS_008",
+    "work_id": "WRK_THAT_OLD_BLACK_MAGIC_0007",
+    "submitted_field_id": "FLD_POP",
+    "assigned_field_id": "FLD_POP",
+    "primary_genre_tag": "Pop / Contemporary",
+    "secondary_genre_tags": [
+      "Vocal",
+      "Adult Contemporary"
+    ],
+    "screening_committee_consensus": "Ratified by Committee Consensus",
+    "contested_by_label_flag": false,
+    "reclassification_justification": "Adheres to core instrumentation criteria",
+    "determination_date": "1966-11-01"
+  },
+  {
+    "classification_id": "GEN_CLASS_009",
+    "work_id": "WRK_ELLA_FITZGERALD_SINGS_THE_DUKE_0008",
+    "submitted_field_id": "FLD_POP",
+    "assigned_field_id": "FLD_POP",
+    "primary_genre_tag": "Pop / Contemporary",
+    "secondary_genre_tags": [
+      "Vocal",
+      "Adult Contemporary"
+    ],
+    "screening_committee_consensus": "Ratified by Committee Consensus",
+    "contested_by_label_flag": false,
+    "reclassification_justification": "Adheres to core instrumentation criteria",
+    "determination_date": "1967-11-01"
+  },
+  {
+    "classification_id": "GEN_CLASS_010",
+    "work_id": "WRK_BASIE_0009",
+    "submitted_field_id": "FLD_POP",
+    "assigned_field_id": "FLD_POP",
+    "primary_genre_tag": "Pop / Contemporary",
+    "secondary_genre_tags": [
+      "Vocal",
+      "Adult Contemporary"
+    ],
+    "screening_committee_consensus": "Ratified by Committee Consensus",
+    "contested_by_label_flag": false,
+    "reclassification_justification": "Adheres to core instrumentation criteria",
+    "determination_date": "1968-11-01"
+  },
+  {
+    "classification_id": "GEN_CLASS_011",
+    "work_id": "WRK_THE_CHIPMUNK_SONG_0010",
+    "submitted_field_id": "FLD_POP",
+    "assigned_field_id": "FLD_POP",
+    "primary_genre_tag": "Pop / Contemporary",
+    "secondary_genre_tags": [
+      "Vocal",
+      "Adult Contemporary"
+    ],
+    "screening_committee_consensus": "Ratified by Committee Consensus",
+    "contested_by_label_flag": false,
+    "reclassification_justification": "Adheres to core instrumentation criteria",
+    "determination_date": "1969-11-01"
+  },
+  {
+    "classification_id": "GEN_CLASS_012",
+    "work_id": "WRK_TOM_DOOLEY_0011",
+    "submitted_field_id": "FLD_POP",
+    "assigned_field_id": "FLD_POP",
+    "primary_genre_tag": "Pop / Contemporary",
+    "secondary_genre_tags": [
+      "Vocal",
+      "Adult Contemporary"
+    ],
+    "screening_committee_consensus": "Ratified by Committee Consensus",
+    "contested_by_label_flag": false,
+    "reclassification_justification": "Adheres to core instrumentation criteria",
+    "determination_date": "1970-11-01"
+  },
+  {
+    "classification_id": "GEN_CLASS_013",
+    "work_id": "WRK_TEQUILA_0012",
+    "submitted_field_id": "FLD_POP",
+    "assigned_field_id": "FLD_POP",
+    "primary_genre_tag": "Pop / Contemporary",
+    "secondary_genre_tags": [
+      "Vocal",
+      "Adult Contemporary"
+    ],
+    "screening_committee_consensus": "Ratified by Committee Consensus",
+    "contested_by_label_flag": false,
+    "reclassification_justification": "Adheres to core instrumentation criteria",
+    "determination_date": "1971-11-01"
+  },
+  {
+    "classification_id": "GEN_CLASS_014",
+    "work_id": "WRK_THE_MUSIC_FROM_PETER_GUNN_0013",
+    "submitted_field_id": "FLD_POP",
+    "assigned_field_id": "FLD_POP",
+    "primary_genre_tag": "Pop / Contemporary",
+    "secondary_genre_tags": [
+      "Vocal",
+      "Adult Contemporary"
+    ],
+    "screening_committee_consensus": "Ratified by Committee Consensus",
+    "contested_by_label_flag": false,
+    "reclassification_justification": "Adheres to core instrumentation criteria",
+    "determination_date": "1972-11-01"
+  },
+  {
+    "classification_id": "GEN_CLASS_015",
+    "work_id": "WRK_DUETS_WITH_A_SPANISH_GUITAR_0014",
+    "submitted_field_id": "FLD_POP",
+    "assigned_field_id": "FLD_POP",
+    "primary_genre_tag": "Pop / Contemporary",
+    "secondary_genre_tags": [
+      "Vocal",
+      "Adult Contemporary"
+    ],
+    "screening_committee_consensus": "Ratified by Committee Consensus",
+    "contested_by_label_flag": false,
+    "reclassification_justification": "Adheres to core instrumentation criteria",
+    "determination_date": "1973-11-01"
+  },
+  {
+    "classification_id": "GEN_CLASS_016",
+    "work_id": "WRK_THE_CHIPMUNK_SONG_0015",
+    "submitted_field_id": "FLD_POP",
+    "assigned_field_id": "FLD_POP",
+    "primary_genre_tag": "Pop / Contemporary",
+    "secondary_genre_tags": [
+      "Vocal",
+      "Adult Contemporary"
+    ],
+    "screening_committee_consensus": "Ratified by Committee Consensus",
+    "contested_by_label_flag": false,
+    "reclassification_justification": "Adheres to core instrumentation criteria",
+    "determination_date": "1974-11-01"
+  },
+  {
+    "classification_id": "GEN_CLASS_017",
+    "work_id": "WRK_ONLY_THE_LONELY_0016",
+    "submitted_field_id": "FLD_POP",
+    "assigned_field_id": "FLD_POP",
+    "primary_genre_tag": "Pop / Contemporary",
+    "secondary_genre_tags": [
+      "Vocal",
+      "Adult Contemporary"
+    ],
+    "screening_committee_consensus": "Ratified by Committee Consensus",
+    "contested_by_label_flag": false,
+    "reclassification_justification": "Adheres to core instrumentation criteria",
+    "determination_date": "1975-11-01"
+  },
+  {
+    "classification_id": "GEN_CLASS_018",
+    "work_id": "WRK_CROSS_COUNTRY_SUITE_0017",
+    "submitted_field_id": "FLD_POP",
+    "assigned_field_id": "FLD_POP",
+    "primary_genre_tag": "Pop / Contemporary",
+    "secondary_genre_tags": [
+      "Vocal",
+      "Adult Contemporary"
+    ],
+    "screening_committee_consensus": "Ratified by Committee Consensus",
+    "contested_by_label_flag": false,
+    "reclassification_justification": "Adheres to core instrumentation criteria",
+    "determination_date": "1976-11-01"
+  },
+  {
+    "classification_id": "GEN_CLASS_019",
+    "work_id": "WRK_THE_MUSIC_MAN_0018",
+    "submitted_field_id": "FLD_POP",
+    "assigned_field_id": "FLD_POP",
+    "primary_genre_tag": "Pop / Contemporary",
+    "secondary_genre_tags": [
+      "Vocal",
+      "Adult Contemporary"
+    ],
+    "screening_committee_consensus": "Ratified by Committee Consensus",
+    "contested_by_label_flag": false,
+    "reclassification_justification": "Adheres to core instrumentation criteria",
+    "determination_date": "1977-11-01"
+  },
+  {
+    "classification_id": "GEN_CLASS_020",
+    "work_id": "WRK_GIGI_0019",
+    "submitted_field_id": "FLD_POP",
+    "assigned_field_id": "FLD_POP",
+    "primary_genre_tag": "Pop / Contemporary",
+    "secondary_genre_tags": [
+      "Vocal",
+      "Adult Contemporary"
+    ],
+    "screening_committee_consensus": "Ratified by Committee Consensus",
+    "contested_by_label_flag": false,
+    "reclassification_justification": "Adheres to core instrumentation criteria",
+    "determination_date": "1978-11-01"
+  },
+  {
+    "classification_id": "GEN_CLASS_021",
+    "work_id": "WRK_THE_BEST_OF_THE_STAN_FREBERG_S_0020",
+    "submitted_field_id": "FLD_POP",
+    "assigned_field_id": "FLD_POP",
+    "primary_genre_tag": "Pop / Contemporary",
+    "secondary_genre_tags": [
+      "Vocal",
+      "Adult Contemporary"
+    ],
+    "screening_committee_consensus": "Ratified by Committee Consensus",
+    "contested_by_label_flag": false,
+    "reclassification_justification": "Adheres to core instrumentation criteria",
+    "determination_date": "1979-11-01"
+  },
+  {
+    "classification_id": "GEN_CLASS_022",
+    "work_id": "WRK_THE_CHIPMUNK_SONG_0021",
+    "submitted_field_id": "FLD_POP",
+    "assigned_field_id": "FLD_POP",
+    "primary_genre_tag": "Pop / Contemporary",
+    "secondary_genre_tags": [
+      "Vocal",
+      "Adult Contemporary"
+    ],
+    "screening_committee_consensus": "Ratified by Committee Consensus",
+    "contested_by_label_flag": false,
+    "reclassification_justification": "Adheres to core instrumentation criteria",
+    "determination_date": "1980-11-01"
+  },
+  {
+    "classification_id": "GEN_CLASS_023",
+    "work_id": "WRK_GAIETE_PARISIENNE_0022",
+    "submitted_field_id": "FLD_POP",
+    "assigned_field_id": "FLD_POP",
+    "primary_genre_tag": "Pop / Contemporary",
+    "secondary_genre_tags": [
+      "Vocal",
+      "Adult Contemporary"
+    ],
+    "screening_committee_consensus": "Ratified by Committee Consensus",
+    "contested_by_label_flag": false,
+    "reclassification_justification": "Adheres to core instrumentation criteria",
+    "determination_date": "1981-11-01"
+  },
+  {
+    "classification_id": "GEN_CLASS_024",
+    "work_id": "WRK_TCHAIKOVSKY_PIANO_CONCERTO_NO__0023",
+    "submitted_field_id": "FLD_POP",
+    "assigned_field_id": "FLD_POP",
+    "primary_genre_tag": "Pop / Contemporary",
+    "secondary_genre_tags": [
+      "Vocal",
+      "Adult Contemporary"
+    ],
+    "screening_committee_consensus": "Ratified by Committee Consensus",
+    "contested_by_label_flag": false,
+    "reclassification_justification": "Adheres to core instrumentation criteria",
+    "determination_date": "1982-11-01"
+  },
+  {
+    "classification_id": "GEN_CLASS_025",
+    "work_id": "WRK_SEGOVIA_GOLDEN_JUBILEE_0024",
+    "submitted_field_id": "FLD_POP",
+    "assigned_field_id": "FLD_POP",
+    "primary_genre_tag": "Pop / Contemporary",
+    "secondary_genre_tags": [
+      "Vocal",
+      "Adult Contemporary"
+    ],
+    "screening_committee_consensus": "Ratified by Committee Consensus",
+    "contested_by_label_flag": false,
+    "reclassification_justification": "Adheres to core instrumentation criteria",
+    "determination_date": "1983-11-01"
+  },
+  {
+    "classification_id": "GEN_CLASS_026",
+    "work_id": "WRK_BEETHOVEN_QUARTET_130_0025",
+    "submitted_field_id": "FLD_POP",
+    "assigned_field_id": "FLD_POP",
+    "primary_genre_tag": "Pop / Contemporary",
+    "secondary_genre_tags": [
+      "Vocal",
+      "Adult Contemporary"
+    ],
+    "screening_committee_consensus": "Ratified by Committee Consensus",
+    "contested_by_label_flag": false,
+    "reclassification_justification": "Adheres to core instrumentation criteria",
+    "determination_date": "1984-11-01"
+  },
+  {
+    "classification_id": "GEN_CLASS_027",
+    "work_id": "WRK_OPERATIC_RECITAL_0026",
+    "submitted_field_id": "FLD_POP",
+    "assigned_field_id": "FLD_POP",
+    "primary_genre_tag": "Pop / Contemporary",
+    "secondary_genre_tags": [
+      "Vocal",
+      "Adult Contemporary"
+    ],
+    "screening_committee_consensus": "Ratified by Committee Consensus",
+    "contested_by_label_flag": false,
+    "reclassification_justification": "Adheres to core instrumentation criteria",
+    "determination_date": "1985-11-01"
+  },
+  {
+    "classification_id": "GEN_CLASS_028",
+    "work_id": "WRK_VIRTUOSO_0027",
+    "submitted_field_id": "FLD_POP",
+    "assigned_field_id": "FLD_POP",
+    "primary_genre_tag": "Pop / Contemporary",
+    "secondary_genre_tags": [
+      "Vocal",
+      "Adult Contemporary"
+    ],
+    "screening_committee_consensus": "Ratified by Committee Consensus",
+    "contested_by_label_flag": false,
+    "reclassification_justification": "Adheres to core instrumentation criteria",
+    "determination_date": "1986-11-01"
+  },
+  {
+    "classification_id": "GEN_CLASS_029",
+    "work_id": "WRK_MACK_THE_KNIFE_0028",
+    "submitted_field_id": "FLD_POP",
+    "assigned_field_id": "FLD_POP",
+    "primary_genre_tag": "Pop / Contemporary",
+    "secondary_genre_tags": [
+      "Vocal",
+      "Adult Contemporary"
+    ],
+    "screening_committee_consensus": "Ratified by Committee Consensus",
+    "contested_by_label_flag": false,
+    "reclassification_justification": "Adheres to core instrumentation criteria",
+    "determination_date": "1987-11-01"
+  },
+  {
+    "classification_id": "GEN_CLASS_030",
+    "work_id": "WRK_COME_DANCE_WITH_ME_0029",
+    "submitted_field_id": "FLD_POP",
+    "assigned_field_id": "FLD_POP",
+    "primary_genre_tag": "Pop / Contemporary",
+    "secondary_genre_tags": [
+      "Vocal",
+      "Adult Contemporary"
+    ],
+    "screening_committee_consensus": "Ratified by Committee Consensus",
+    "contested_by_label_flag": false,
+    "reclassification_justification": "Adheres to core instrumentation criteria",
+    "determination_date": "1988-11-01"
+  },
+  {
+    "classification_id": "GEN_CLASS_031",
+    "work_id": "WRK_THE_BATTLE_OF_NEW_ORLEANS_0030",
+    "submitted_field_id": "FLD_POP",
+    "assigned_field_id": "FLD_POP",
+    "primary_genre_tag": "Pop / Contemporary",
+    "secondary_genre_tags": [
+      "Vocal",
+      "Adult Contemporary"
+    ],
+    "screening_committee_consensus": "Ratified by Committee Consensus",
+    "contested_by_label_flag": false,
+    "reclassification_justification": "Adheres to core instrumentation criteria",
+    "determination_date": "1989-11-01"
+  },
+  {
+    "classification_id": "GEN_CLASS_032",
+    "work_id": "WRK_BUT_NOT_FOR_ME_0031",
+    "submitted_field_id": "FLD_POP",
+    "assigned_field_id": "FLD_POP",
+    "primary_genre_tag": "Pop / Contemporary",
+    "secondary_genre_tags": [
+      "Vocal",
+      "Adult Contemporary"
+    ],
+    "screening_committee_consensus": "Ratified by Committee Consensus",
+    "contested_by_label_flag": false,
+    "reclassification_justification": "Adheres to core instrumentation criteria",
+    "determination_date": "1990-11-01"
+  },
+  {
+    "classification_id": "GEN_CLASS_033",
+    "work_id": "WRK_COME_DANCE_WITH_ME_0032",
+    "submitted_field_id": "FLD_POP",
+    "assigned_field_id": "FLD_POP",
+    "primary_genre_tag": "Pop / Contemporary",
+    "secondary_genre_tags": [
+      "Vocal",
+      "Adult Contemporary"
+    ],
+    "screening_committee_consensus": "Ratified by Committee Consensus",
+    "contested_by_label_flag": false,
+    "reclassification_justification": "Adheres to core instrumentation criteria",
+    "determination_date": "1991-11-01"
+  },
+  {
+    "classification_id": "GEN_CLASS_034",
+    "work_id": "WRK_ANATOMY_OF_A_MURDER_0033",
+    "submitted_field_id": "FLD_POP",
+    "assigned_field_id": "FLD_POP",
+    "primary_genre_tag": "Pop / Contemporary",
+    "secondary_genre_tags": [
+      "Vocal",
+      "Adult Contemporary"
+    ],
+    "screening_committee_consensus": "Ratified by Committee Consensus",
+    "contested_by_label_flag": false,
+    "reclassification_justification": "Adheres to core instrumentation criteria",
+    "determination_date": "1992-11-01"
+  },
+  {
+    "classification_id": "GEN_CLASS_035",
+    "work_id": "WRK_LIKE_YOUNG_0034",
+    "submitted_field_id": "FLD_POP",
+    "assigned_field_id": "FLD_POP",
+    "primary_genre_tag": "Pop / Contemporary",
+    "secondary_genre_tags": [
+      "Vocal",
+      "Adult Contemporary"
+    ],
+    "screening_committee_consensus": "Ratified by Committee Consensus",
+    "contested_by_label_flag": false,
+    "reclassification_justification": "Adheres to core instrumentation criteria",
+    "determination_date": "1993-11-01"
+  },
+  {
+    "classification_id": "GEN_CLASS_036",
+    "work_id": "WRK_BATTLE_HYMN_OF_THE_REPUBLIC_0035",
+    "submitted_field_id": "FLD_POP",
+    "assigned_field_id": "FLD_POP",
+    "primary_genre_tag": "Pop / Contemporary",
+    "secondary_genre_tags": [
+      "Vocal",
+      "Adult Contemporary"
+    ],
+    "screening_committee_consensus": "Ratified by Committee Consensus",
+    "contested_by_label_flag": false,
+    "reclassification_justification": "Adheres to core instrumentation criteria",
+    "determination_date": "1994-11-01"
+  },
+  {
+    "classification_id": "GEN_CLASS_037",
+    "work_id": "WRK_ELLA_SWINGS_LIGHTLY_0036",
+    "submitted_field_id": "FLD_POP",
+    "assigned_field_id": "FLD_POP",
+    "primary_genre_tag": "Pop / Contemporary",
+    "secondary_genre_tags": [
+      "Vocal",
+      "Adult Contemporary"
+    ],
+    "screening_committee_consensus": "Ratified by Committee Consensus",
+    "contested_by_label_flag": false,
+    "reclassification_justification": "Adheres to core instrumentation criteria",
+    "determination_date": "1995-11-01"
+  },
+  {
+    "classification_id": "GEN_CLASS_038",
+    "work_id": "WRK_I_DIG_CHICKS_0037",
+    "submitted_field_id": "FLD_POP",
+    "assigned_field_id": "FLD_POP",
+    "primary_genre_tag": "Pop / Contemporary",
+    "secondary_genre_tags": [
+      "Vocal",
+      "Adult Contemporary"
+    ],
+    "screening_committee_consensus": "Ratified by Committee Consensus",
+    "contested_by_label_flag": false,
+    "reclassification_justification": "Adheres to core instrumentation criteria",
+    "determination_date": "1996-11-01"
+  },
+  {
+    "classification_id": "GEN_CLASS_039",
+    "work_id": "WRK_DEBUSSY_IMAGES_FOR_ORCHESTRA_0038",
+    "submitted_field_id": "FLD_POP",
+    "assigned_field_id": "FLD_POP",
+    "primary_genre_tag": "Pop / Contemporary",
+    "secondary_genre_tags": [
+      "Vocal",
+      "Adult Contemporary"
+    ],
+    "screening_committee_consensus": "Ratified by Committee Consensus",
+    "contested_by_label_flag": false,
+    "reclassification_justification": "Adheres to core instrumentation criteria",
+    "determination_date": "1997-11-01"
+  },
+  {
+    "classification_id": "GEN_CLASS_040",
+    "work_id": "WRK_BEETHOVEN_SONATAS_NO_21_IN_C_W_0039",
+    "submitted_field_id": "FLD_POP",
+    "assigned_field_id": "FLD_POP",
+    "primary_genre_tag": "Pop / Contemporary",
+    "secondary_genre_tags": [
+      "Vocal",
+      "Adult Contemporary"
+    ],
+    "screening_committee_consensus": "Ratified by Committee Consensus",
+    "contested_by_label_flag": false,
+    "reclassification_justification": "Adheres to core instrumentation criteria",
+    "determination_date": "1998-11-01"
+  },
+  {
+    "classification_id": "GEN_CLASS_041",
+    "work_id": "WRK_RACHMANINOFF_PIANO_CONCERTO_NO_0040",
+    "submitted_field_id": "FLD_POP",
+    "assigned_field_id": "FLD_POP",
+    "primary_genre_tag": "Pop / Contemporary",
+    "secondary_genre_tags": [
+      "Vocal",
+      "Adult Contemporary"
+    ],
+    "screening_committee_consensus": "Ratified by Committee Consensus",
+    "contested_by_label_flag": false,
+    "reclassification_justification": "Adheres to core instrumentation criteria",
+    "determination_date": "1999-11-01"
+  },
+  {
+    "classification_id": "GEN_CLASS_042",
+    "work_id": "WRK_MOZART_THE_MARRIAGE_OF_FIGARO_0041",
+    "submitted_field_id": "FLD_POP",
+    "assigned_field_id": "FLD_POP",
+    "primary_genre_tag": "Pop / Contemporary",
+    "secondary_genre_tags": [
+      "Vocal",
+      "Adult Contemporary"
+    ],
+    "screening_committee_consensus": "Ratified by Committee Consensus",
+    "contested_by_label_flag": false,
+    "reclassification_justification": "Adheres to core instrumentation criteria",
+    "determination_date": "2000-11-01"
+  },
+  {
+    "classification_id": "GEN_CLASS_043",
+    "work_id": "WRK_BEETHOVEN_SONATAS_NO_21_IN_C_W_0042",
+    "submitted_field_id": "FLD_POP",
+    "assigned_field_id": "FLD_POP",
+    "primary_genre_tag": "Pop / Contemporary",
+    "secondary_genre_tags": [
+      "Vocal",
+      "Adult Contemporary"
+    ],
+    "screening_committee_consensus": "Ratified by Committee Consensus",
+    "contested_by_label_flag": false,
+    "reclassification_justification": "Adheres to core instrumentation criteria",
+    "determination_date": "2001-11-01"
+  },
+  {
+    "classification_id": "GEN_CLASS_044",
+    "work_id": "WRK_BJOERLING_IN_OPERA_0043",
+    "submitted_field_id": "FLD_POP",
+    "assigned_field_id": "FLD_POP",
+    "primary_genre_tag": "Pop / Contemporary",
+    "secondary_genre_tags": [
+      "Vocal",
+      "Adult Contemporary"
+    ],
+    "screening_committee_consensus": "Ratified by Committee Consensus",
+    "contested_by_label_flag": false,
+    "reclassification_justification": "Adheres to core instrumentation criteria",
+    "determination_date": "2002-11-01"
+  },
+  {
+    "classification_id": "GEN_CLASS_045",
+    "work_id": "WRK_ANATOMY_OF_A_MURDER_0044",
+    "submitted_field_id": "FLD_POP",
+    "assigned_field_id": "FLD_POP",
+    "primary_genre_tag": "Pop / Contemporary",
+    "secondary_genre_tags": [
+      "Vocal",
+      "Adult Contemporary"
+    ],
+    "screening_committee_consensus": "Ratified by Committee Consensus",
+    "contested_by_label_flag": false,
+    "reclassification_justification": "Adheres to core instrumentation criteria",
+    "determination_date": "2003-11-01"
+  },
+  {
+    "classification_id": "GEN_CLASS_046",
+    "work_id": "WRK_ANATOMY_OF_A_MURDER_0045",
+    "submitted_field_id": "FLD_POP",
+    "assigned_field_id": "FLD_POP",
+    "primary_genre_tag": "Pop / Contemporary",
+    "secondary_genre_tags": [
+      "Vocal",
+      "Adult Contemporary"
+    ],
+    "screening_committee_consensus": "Ratified by Committee Consensus",
+    "contested_by_label_flag": false,
+    "reclassification_justification": "Adheres to core instrumentation criteria",
+    "determination_date": "2004-11-01"
+  },
+  {
+    "classification_id": "GEN_CLASS_047",
+    "work_id": "WRK_PORGY_AND_BESS_0046",
+    "submitted_field_id": "FLD_POP",
+    "assigned_field_id": "FLD_POP",
+    "primary_genre_tag": "Pop / Contemporary",
+    "secondary_genre_tags": [
+      "Vocal",
+      "Adult Contemporary"
+    ],
+    "screening_committee_consensus": "Ratified by Committee Consensus",
+    "contested_by_label_flag": false,
+    "reclassification_justification": "Adheres to core instrumentation criteria",
+    "determination_date": "2005-11-01"
+  },
+  {
+    "classification_id": "GEN_CLASS_048",
+    "work_id": "WRK_GYPSY_0047",
+    "submitted_field_id": "FLD_POP",
+    "assigned_field_id": "FLD_POP",
+    "primary_genre_tag": "Pop / Contemporary",
+    "secondary_genre_tags": [
+      "Vocal",
+      "Adult Contemporary"
+    ],
+    "screening_committee_consensus": "Ratified by Committee Consensus",
+    "contested_by_label_flag": false,
+    "reclassification_justification": "Adheres to core instrumentation criteria",
+    "determination_date": "2006-11-01"
+  },
+  {
+    "classification_id": "GEN_CLASS_049",
+    "work_id": "WRK_INSIDE_SHELLEY_BERMAN_0048",
+    "submitted_field_id": "FLD_POP",
+    "assigned_field_id": "FLD_POP",
+    "primary_genre_tag": "Pop / Contemporary",
+    "secondary_genre_tags": [
+      "Vocal",
+      "Adult Contemporary"
+    ],
+    "screening_committee_consensus": "Ratified by Committee Consensus",
+    "contested_by_label_flag": false,
+    "reclassification_justification": "Adheres to core instrumentation criteria",
+    "determination_date": "2007-11-01"
+  },
+  {
+    "classification_id": "GEN_CLASS_050",
+    "work_id": "WRK_THE_BATTLE_OF_KOOKAMONGA_0049",
+    "submitted_field_id": "FLD_POP",
+    "assigned_field_id": "FLD_POP",
+    "primary_genre_tag": "Pop / Contemporary",
+    "secondary_genre_tags": [
+      "Vocal",
+      "Adult Contemporary"
+    ],
+    "screening_committee_consensus": "Ratified by Committee Consensus",
+    "contested_by_label_flag": false,
+    "reclassification_justification": "Adheres to core instrumentation criteria",
+    "determination_date": "2008-11-01"
+  },
+  {
+    "classification_id": "GEN_CLASS_051",
+    "work_id": "WRK_A_LINCOLN_PORTRAIT_0050",
+    "submitted_field_id": "FLD_POP",
+    "assigned_field_id": "FLD_POP",
+    "primary_genre_tag": "Pop / Contemporary",
+    "secondary_genre_tags": [
+      "Vocal",
+      "Adult Contemporary"
+    ],
+    "screening_committee_consensus": "Ratified by Committee Consensus",
+    "contested_by_label_flag": false,
+    "reclassification_justification": "Adheres to core instrumentation criteria",
+    "determination_date": "2009-11-01"
+  },
+  {
+    "classification_id": "GEN_CLASS_052",
+    "work_id": "WRK_MIDNIGHT_FLYER_0051",
+    "submitted_field_id": "FLD_POP",
+    "assigned_field_id": "FLD_POP",
+    "primary_genre_tag": "Pop / Contemporary",
+    "secondary_genre_tags": [
+      "Vocal",
+      "Adult Contemporary"
+    ],
+    "screening_committee_consensus": "Ratified by Committee Consensus",
+    "contested_by_label_flag": false,
+    "reclassification_justification": "Adheres to core instrumentation criteria",
+    "determination_date": "2010-11-01"
+  },
+  {
+    "classification_id": "GEN_CLASS_053",
+    "work_id": "WRK_THE_BATTLE_OF_NEW_ORLEANS_0052",
+    "submitted_field_id": "FLD_POP",
+    "assigned_field_id": "FLD_POP",
+    "primary_genre_tag": "Pop / Contemporary",
+    "secondary_genre_tags": [
+      "Vocal",
+      "Adult Contemporary"
+    ],
+    "screening_committee_consensus": "Ratified by Committee Consensus",
+    "contested_by_label_flag": false,
+    "reclassification_justification": "Adheres to core instrumentation criteria",
+    "determination_date": "2011-11-01"
+  },
+  {
+    "classification_id": "GEN_CLASS_054",
+    "work_id": "WRK_WHAT_A_DIFF_RENCE_A_DAY_MAKES_0053",
+    "submitted_field_id": "FLD_POP",
+    "assigned_field_id": "FLD_POP",
+    "primary_genre_tag": "Pop / Contemporary",
+    "secondary_genre_tags": [
+      "Vocal",
+      "Adult Contemporary"
+    ],
+    "screening_committee_consensus": "Ratified by Committee Consensus",
+    "contested_by_label_flag": false,
+    "reclassification_justification": "Adheres to core instrumentation criteria",
+    "determination_date": "2012-11-01"
+  },
+  {
+    "classification_id": "GEN_CLASS_055",
+    "work_id": "WRK_THE_KINGSTON_TRIO_AT_LARGE_0054",
+    "submitted_field_id": "FLD_POP",
+    "assigned_field_id": "FLD_POP",
+    "primary_genre_tag": "Pop / Contemporary",
+    "secondary_genre_tags": [
+      "Vocal",
+      "Adult Contemporary"
+    ],
+    "screening_committee_consensus": "Ratified by Committee Consensus",
+    "contested_by_label_flag": false,
+    "reclassification_justification": "Adheres to core instrumentation criteria",
+    "determination_date": "2013-11-01"
+  },
+  {
+    "classification_id": "GEN_CLASS_056",
+    "work_id": "WRK_PETER_AND_THE_WOLF_0055",
+    "submitted_field_id": "FLD_POP",
+    "assigned_field_id": "FLD_POP",
+    "primary_genre_tag": "Pop / Contemporary",
+    "secondary_genre_tags": [
+      "Vocal",
+      "Adult Contemporary"
+    ],
+    "screening_committee_consensus": "Ratified by Committee Consensus",
+    "contested_by_label_flag": false,
+    "reclassification_justification": "Adheres to core instrumentation criteria",
+    "determination_date": "2014-11-01"
+  },
+  {
+    "classification_id": "GEN_CLASS_057",
+    "work_id": "WRK_COME_DANCE_WITH_ME_0056",
+    "submitted_field_id": "FLD_POP",
+    "assigned_field_id": "FLD_POP",
+    "primary_genre_tag": "Pop / Contemporary",
+    "secondary_genre_tags": [
+      "Vocal",
+      "Adult Contemporary"
+    ],
+    "screening_committee_consensus": "Ratified by Committee Consensus",
+    "contested_by_label_flag": false,
+    "reclassification_justification": "Adheres to core instrumentation criteria",
+    "determination_date": "2015-11-01"
+  },
+  {
+    "classification_id": "GEN_CLASS_058",
+    "work_id": "WRK_VICTORY_AT_SEA_VOL_I_0057",
+    "submitted_field_id": "FLD_POP",
+    "assigned_field_id": "FLD_POP",
+    "primary_genre_tag": "Pop / Contemporary",
+    "secondary_genre_tags": [
+      "Vocal",
+      "Adult Contemporary"
+    ],
+    "screening_committee_consensus": "Ratified by Committee Consensus",
+    "contested_by_label_flag": false,
+    "reclassification_justification": "Adheres to core instrumentation criteria",
+    "determination_date": "2016-11-01"
+  },
+  {
+    "classification_id": "GEN_CLASS_059",
+    "work_id": "WRK_ALVIN_S_HARMONICA_0058",
+    "submitted_field_id": "FLD_POP",
+    "assigned_field_id": "FLD_POP",
+    "primary_genre_tag": "Pop / Contemporary",
+    "secondary_genre_tags": [
+      "Vocal",
+      "Adult Contemporary"
+    ],
+    "screening_committee_consensus": "Ratified by Committee Consensus",
+    "contested_by_label_flag": false,
+    "reclassification_justification": "Adheres to core instrumentation criteria",
+    "determination_date": "2017-11-01"
+  },
+  {
+    "classification_id": "GEN_CLASS_060",
+    "work_id": "WRK_BELAFONTE_AT_CARNEGIE_HALL_0059",
+    "submitted_field_id": "FLD_POP",
+    "assigned_field_id": "FLD_POP",
+    "primary_genre_tag": "Pop / Contemporary",
+    "secondary_genre_tags": [
+      "Vocal",
+      "Adult Contemporary"
+    ],
+    "screening_committee_consensus": "Ratified by Committee Consensus",
+    "contested_by_label_flag": false,
+    "reclassification_justification": "Adheres to core instrumentation criteria",
+    "determination_date": "2018-11-01"
+  },
+  {
+    "classification_id": "GEN_CLASS_061",
+    "work_id": "WRK_SHOSTAKOVICH_SYMPHONY_NO_5_0060",
+    "submitted_field_id": "FLD_POP",
+    "assigned_field_id": "FLD_POP",
+    "primary_genre_tag": "Pop / Contemporary",
+    "secondary_genre_tags": [
+      "Vocal",
+      "Adult Contemporary"
+    ],
+    "screening_committee_consensus": "Ratified by Committee Consensus",
+    "contested_by_label_flag": false,
+    "reclassification_justification": "Adheres to core instrumentation criteria",
+    "determination_date": "2019-11-01"
+  },
+  {
+    "classification_id": "GEN_CLASS_062",
+    "work_id": "WRK_BOBBY_DARIN_0061",
+    "submitted_field_id": "FLD_POP",
+    "assigned_field_id": "FLD_POP",
+    "primary_genre_tag": "Pop / Contemporary",
+    "secondary_genre_tags": [
+      "Vocal",
+      "Adult Contemporary"
+    ],
+    "screening_committee_consensus": "Ratified by Committee Consensus",
+    "contested_by_label_flag": false,
+    "reclassification_justification": "Adheres to core instrumentation criteria",
+    "determination_date": "2020-11-01"
+  },
+  {
+    "classification_id": "GEN_CLASS_063",
+    "work_id": "WRK_THE_THEME_FROM_A_SUMMER_PLACE_0062",
+    "submitted_field_id": "FLD_POP",
+    "assigned_field_id": "FLD_POP",
+    "primary_genre_tag": "Pop / Contemporary",
+    "secondary_genre_tags": [
+      "Vocal",
+      "Adult Contemporary"
+    ],
+    "screening_committee_consensus": "Ratified by Committee Consensus",
+    "contested_by_label_flag": false,
+    "reclassification_justification": "Adheres to core instrumentation criteria",
+    "determination_date": "2021-11-01"
+  },
+  {
+    "classification_id": "GEN_CLASS_064",
+    "work_id": "WRK_THE_BUTTON_DOWN_MIND_OF_BOB_NE_0063",
+    "submitted_field_id": "FLD_POP",
+    "assigned_field_id": "FLD_POP",
+    "primary_genre_tag": "Pop / Contemporary",
+    "secondary_genre_tags": [
+      "Vocal",
+      "Adult Contemporary"
+    ],
+    "screening_committee_consensus": "Ratified by Committee Consensus",
+    "contested_by_label_flag": false,
+    "reclassification_justification": "Adheres to core instrumentation criteria",
+    "determination_date": "2022-11-01"
+  },
+  {
+    "classification_id": "GEN_CLASS_065",
+    "work_id": "WRK_THEME_FROM_EXODUS_0064",
+    "submitted_field_id": "FLD_POP",
+    "assigned_field_id": "FLD_POP",
+    "primary_genre_tag": "Pop / Contemporary",
+    "secondary_genre_tags": [
+      "Vocal",
+      "Adult Contemporary"
+    ],
+    "screening_committee_consensus": "Ratified by Committee Consensus",
+    "contested_by_label_flag": false,
+    "reclassification_justification": "Adheres to core instrumentation criteria",
+    "determination_date": "2023-11-01"
+  },
+  {
+    "classification_id": "GEN_CLASS_066",
+    "work_id": "WRK_MACK_THE_KNIFE_0065",
+    "submitted_field_id": "FLD_POP",
+    "assigned_field_id": "FLD_POP",
+    "primary_genre_tag": "Pop / Contemporary",
+    "secondary_genre_tags": [
+      "Vocal",
+      "Adult Contemporary"
+    ],
+    "screening_committee_consensus": "Ratified by Committee Consensus",
+    "contested_by_label_flag": false,
+    "reclassification_justification": "Adheres to core instrumentation criteria",
+    "determination_date": "2024-11-01"
+  },
+  {
+    "classification_id": "GEN_CLASS_067",
+    "work_id": "WRK_MACK_THE_KNIFE_ELLA_IN_BERLIN_0066",
+    "submitted_field_id": "FLD_POP",
+    "assigned_field_id": "FLD_POP",
+    "primary_genre_tag": "Pop / Contemporary",
+    "secondary_genre_tags": [
+      "Vocal",
+      "Adult Contemporary"
+    ],
+    "screening_committee_consensus": "Ratified by Committee Consensus",
+    "contested_by_label_flag": false,
+    "reclassification_justification": "Adheres to core instrumentation criteria",
+    "determination_date": "2025-11-01"
+  },
+  {
+    "classification_id": "GEN_CLASS_068",
+    "work_id": "WRK_GEORGIA_ON_MY_MIND_0067",
+    "submitted_field_id": "FLD_POP",
+    "assigned_field_id": "FLD_POP",
+    "primary_genre_tag": "Pop / Contemporary",
+    "secondary_genre_tags": [
+      "Vocal",
+      "Adult Contemporary"
+    ],
+    "screening_committee_consensus": "Ratified by Committee Consensus",
+    "contested_by_label_flag": false,
+    "reclassification_justification": "Adheres to core instrumentation criteria",
+    "determination_date": "1959-11-01"
+  },
+  {
+    "classification_id": "GEN_CLASS_069",
+    "work_id": "WRK_THE_GENIUS_OF_RAY_CHARLES_0068",
+    "submitted_field_id": "FLD_POP",
+    "assigned_field_id": "FLD_POP",
+    "primary_genre_tag": "Pop / Contemporary",
+    "secondary_genre_tags": [
+      "Vocal",
+      "Adult Contemporary"
+    ],
+    "screening_committee_consensus": "Ratified by Committee Consensus",
+    "contested_by_label_flag": false,
+    "reclassification_justification": "Adheres to core instrumentation criteria",
+    "determination_date": "1960-11-01"
+  },
+  {
+    "classification_id": "GEN_CLASS_070",
+    "work_id": "WRK_MR_LUCKY_0069",
+    "submitted_field_id": "FLD_POP",
+    "assigned_field_id": "FLD_POP",
+    "primary_genre_tag": "Pop / Contemporary",
+    "secondary_genre_tags": [
+      "Vocal",
+      "Adult Contemporary"
+    ],
+    "screening_committee_consensus": "Ratified by Committee Consensus",
+    "contested_by_label_flag": false,
+    "reclassification_justification": "Adheres to core instrumentation criteria",
+    "determination_date": "1961-11-01"
+  }
+]

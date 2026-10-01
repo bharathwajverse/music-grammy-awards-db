@@ -1,0 +1,902 @@
+[
+  {
+    "event_id": "EVT_RESTRUCT_001",
+    "restructuring_type": "Consolidation & Modernization",
+    "effective_year": 2012,
+    "primary_category_id": "CAT_RECORD_OF_THE_YEAR_000",
+    "source_category_ids": [
+      "LEGACY_CAT_MALE_0",
+      "LEGACY_CAT_FEMALE_0"
+    ],
+    "consolidation_justification": "Elimination of gender distinction to create unisex performance categories",
+    "gender_neutral_reform_flag": true,
+    "member_feedback_period_days": 90,
+    "trustee_vote_tally": "Passed Unanimously",
+    "published_press_bulletin_id": "BULL_ACADEMY_REFORM_2011_1"
+  },
+  {
+    "event_id": "EVT_RESTRUCT_002",
+    "restructuring_type": "Consolidation & Modernization",
+    "effective_year": 2012,
+    "primary_category_id": "CAT_ALBUM_OF_THE_YEAR_001",
+    "source_category_ids": [
+      "LEGACY_CAT_MALE_1",
+      "LEGACY_CAT_FEMALE_1"
+    ],
+    "consolidation_justification": "Elimination of gender distinction to create unisex performance categories",
+    "gender_neutral_reform_flag": true,
+    "member_feedback_period_days": 90,
+    "trustee_vote_tally": "Passed Unanimously",
+    "published_press_bulletin_id": "BULL_ACADEMY_REFORM_2011_2"
+  },
+  {
+    "event_id": "EVT_RESTRUCT_003",
+    "restructuring_type": "Consolidation & Modernization",
+    "effective_year": 2012,
+    "primary_category_id": "CAT_SONG_OF_THE_YEAR_002",
+    "source_category_ids": [
+      "LEGACY_CAT_MALE_2",
+      "LEGACY_CAT_FEMALE_2"
+    ],
+    "consolidation_justification": "Elimination of gender distinction to create unisex performance categories",
+    "gender_neutral_reform_flag": true,
+    "member_feedback_period_days": 90,
+    "trustee_vote_tally": "Passed Unanimously",
+    "published_press_bulletin_id": "BULL_ACADEMY_REFORM_2011_3"
+  },
+  {
+    "event_id": "EVT_RESTRUCT_004",
+    "restructuring_type": "Consolidation & Modernization",
+    "effective_year": 2012,
+    "primary_category_id": "CAT_BEST_VOCAL_PERFORMANCE_FEMALE_003",
+    "source_category_ids": [
+      "LEGACY_CAT_MALE_3",
+      "LEGACY_CAT_FEMALE_3"
+    ],
+    "consolidation_justification": "Elimination of gender distinction to create unisex performance categories",
+    "gender_neutral_reform_flag": true,
+    "member_feedback_period_days": 90,
+    "trustee_vote_tally": "Passed Unanimously",
+    "published_press_bulletin_id": "BULL_ACADEMY_REFORM_2011_4"
+  },
+  {
+    "event_id": "EVT_RESTRUCT_005",
+    "restructuring_type": "Consolidation & Modernization",
+    "effective_year": 2012,
+    "primary_category_id": "CAT_BEST_VOCAL_PERFORMANCE_MALE_004",
+    "source_category_ids": [
+      "LEGACY_CAT_MALE_4",
+      "LEGACY_CAT_FEMALE_4"
+    ],
+    "consolidation_justification": "Elimination of gender distinction to create unisex performance categories",
+    "gender_neutral_reform_flag": true,
+    "member_feedback_period_days": 90,
+    "trustee_vote_tally": "Passed Unanimously",
+    "published_press_bulletin_id": "BULL_ACADEMY_REFORM_2011_5"
+  },
+  {
+    "event_id": "EVT_RESTRUCT_006",
+    "restructuring_type": "Consolidation & Modernization",
+    "effective_year": 2012,
+    "primary_category_id": "CAT_BEST_PERFORMANCE_BY_AN_ORCHEST_005",
+    "source_category_ids": [
+      "LEGACY_CAT_MALE_5",
+      "LEGACY_CAT_FEMALE_5"
+    ],
+    "consolidation_justification": "Elimination of gender distinction to create unisex performance categories",
+    "gender_neutral_reform_flag": true,
+    "member_feedback_period_days": 90,
+    "trustee_vote_tally": "Passed Unanimously",
+    "published_press_bulletin_id": "BULL_ACADEMY_REFORM_2011_6"
+  },
+  {
+    "event_id": "EVT_RESTRUCT_007",
+    "restructuring_type": "Consolidation & Modernization",
+    "effective_year": 2012,
+    "primary_category_id": "CAT_BEST_PERFORMANCE_BY_A_DANCE_BA_006",
+    "source_category_ids": [
+      "LEGACY_CAT_MALE_6",
+      "LEGACY_CAT_FEMALE_6"
+    ],
+    "consolidation_justification": "Elimination of gender distinction to create unisex performance categories",
+    "gender_neutral_reform_flag": true,
+    "member_feedback_period_days": 90,
+    "trustee_vote_tally": "Passed Unanimously",
+    "published_press_bulletin_id": "BULL_ACADEMY_REFORM_2011_7"
+  },
+  {
+    "event_id": "EVT_RESTRUCT_008",
+    "restructuring_type": "Consolidation & Modernization",
+    "effective_year": 2012,
+    "primary_category_id": "CAT_BEST_PERFORMANCE_BY_A_VOCAL_GR_007",
+    "source_category_ids": [
+      "LEGACY_CAT_MALE_7",
+      "LEGACY_CAT_FEMALE_7"
+    ],
+    "consolidation_justification": "Elimination of gender distinction to create unisex performance categories",
+    "gender_neutral_reform_flag": true,
+    "member_feedback_period_days": 90,
+    "trustee_vote_tally": "Passed Unanimously",
+    "published_press_bulletin_id": "BULL_ACADEMY_REFORM_2011_8"
+  },
+  {
+    "event_id": "EVT_RESTRUCT_009",
+    "restructuring_type": "Consolidation & Modernization",
+    "effective_year": 2012,
+    "primary_category_id": "CAT_BEST_JAZZ_PERFORMANCE_INDIVIDU_008",
+    "source_category_ids": [
+      "LEGACY_CAT_MALE_8",
+      "LEGACY_CAT_FEMALE_8"
+    ],
+    "consolidation_justification": "Elimination of gender distinction to create unisex performance categories",
+    "gender_neutral_reform_flag": true,
+    "member_feedback_period_days": 90,
+    "trustee_vote_tally": "Passed Unanimously",
+    "published_press_bulletin_id": "BULL_ACADEMY_REFORM_2011_9"
+  },
+  {
+    "event_id": "EVT_RESTRUCT_010",
+    "restructuring_type": "Consolidation & Modernization",
+    "effective_year": 2012,
+    "primary_category_id": "CAT_BEST_JAZZ_PERFORMANCE_GROUP_009",
+    "source_category_ids": [
+      "LEGACY_CAT_MALE_9",
+      "LEGACY_CAT_FEMALE_9"
+    ],
+    "consolidation_justification": "Elimination of gender distinction to create unisex performance categories",
+    "gender_neutral_reform_flag": true,
+    "member_feedback_period_days": 90,
+    "trustee_vote_tally": "Passed Unanimously",
+    "published_press_bulletin_id": "BULL_ACADEMY_REFORM_2011_10"
+  },
+  {
+    "event_id": "EVT_RESTRUCT_011",
+    "restructuring_type": "Consolidation & Modernization",
+    "effective_year": 2012,
+    "primary_category_id": "CAT_BEST_COMEDY_PERFORMANCE_010",
+    "source_category_ids": [
+      "LEGACY_CAT_MALE_10",
+      "LEGACY_CAT_FEMALE_10"
+    ],
+    "consolidation_justification": "Elimination of gender distinction to create unisex performance categories",
+    "gender_neutral_reform_flag": true,
+    "member_feedback_period_days": 90,
+    "trustee_vote_tally": "Passed Unanimously",
+    "published_press_bulletin_id": "BULL_ACADEMY_REFORM_2011_11"
+  },
+  {
+    "event_id": "EVT_RESTRUCT_012",
+    "restructuring_type": "Consolidation & Modernization",
+    "effective_year": 2012,
+    "primary_category_id": "CAT_BEST_COUNTRY_WESTERN_PERFORMAN_011",
+    "source_category_ids": [
+      "LEGACY_CAT_MALE_11",
+      "LEGACY_CAT_FEMALE_11"
+    ],
+    "consolidation_justification": "Elimination of gender distinction to create unisex performance categories",
+    "gender_neutral_reform_flag": true,
+    "member_feedback_period_days": 90,
+    "trustee_vote_tally": "Passed Unanimously",
+    "published_press_bulletin_id": "BULL_ACADEMY_REFORM_2011_12"
+  },
+  {
+    "event_id": "EVT_RESTRUCT_013",
+    "restructuring_type": "Consolidation & Modernization",
+    "effective_year": 2012,
+    "primary_category_id": "CAT_BEST_RHYTHM_BLUES_PERFORMANCE_012",
+    "source_category_ids": [
+      "LEGACY_CAT_MALE_12",
+      "LEGACY_CAT_FEMALE_12"
+    ],
+    "consolidation_justification": "Elimination of gender distinction to create unisex performance categories",
+    "gender_neutral_reform_flag": true,
+    "member_feedback_period_days": 90,
+    "trustee_vote_tally": "Passed Unanimously",
+    "published_press_bulletin_id": "BULL_ACADEMY_REFORM_2011_13"
+  },
+  {
+    "event_id": "EVT_RESTRUCT_014",
+    "restructuring_type": "Consolidation & Modernization",
+    "effective_year": 2012,
+    "primary_category_id": "CAT_BEST_ARRANGEMENT_013",
+    "source_category_ids": [
+      "LEGACY_CAT_MALE_13",
+      "LEGACY_CAT_FEMALE_13"
+    ],
+    "consolidation_justification": "Elimination of gender distinction to create unisex performance categories",
+    "gender_neutral_reform_flag": true,
+    "member_feedback_period_days": 90,
+    "trustee_vote_tally": "Passed Unanimously",
+    "published_press_bulletin_id": "BULL_ACADEMY_REFORM_2011_14"
+  },
+  {
+    "event_id": "EVT_RESTRUCT_015",
+    "restructuring_type": "Consolidation & Modernization",
+    "effective_year": 2012,
+    "primary_category_id": "CAT_BEST_ENGINEERED_RECORD_CLASSIC_014",
+    "source_category_ids": [
+      "LEGACY_CAT_MALE_14",
+      "LEGACY_CAT_FEMALE_14"
+    ],
+    "consolidation_justification": "Elimination of gender distinction to create unisex performance categories",
+    "gender_neutral_reform_flag": true,
+    "member_feedback_period_days": 90,
+    "trustee_vote_tally": "Passed Unanimously",
+    "published_press_bulletin_id": "BULL_ACADEMY_REFORM_2011_15"
+  },
+  {
+    "event_id": "EVT_RESTRUCT_016",
+    "restructuring_type": "Consolidation & Modernization",
+    "effective_year": 2012,
+    "primary_category_id": "CAT_BEST_ENGINEERED_RECORD_NON_CLA_015",
+    "source_category_ids": [
+      "LEGACY_CAT_MALE_15",
+      "LEGACY_CAT_FEMALE_15"
+    ],
+    "consolidation_justification": "Elimination of gender distinction to create unisex performance categories",
+    "gender_neutral_reform_flag": true,
+    "member_feedback_period_days": 90,
+    "trustee_vote_tally": "Passed Unanimously",
+    "published_press_bulletin_id": "BULL_ACADEMY_REFORM_2011_16"
+  },
+  {
+    "event_id": "EVT_RESTRUCT_017",
+    "restructuring_type": "Consolidation & Modernization",
+    "effective_year": 2012,
+    "primary_category_id": "CAT_BEST_ALBUM_COVER_016",
+    "source_category_ids": [
+      "LEGACY_CAT_MALE_16",
+      "LEGACY_CAT_FEMALE_16"
+    ],
+    "consolidation_justification": "Elimination of gender distinction to create unisex performance categories",
+    "gender_neutral_reform_flag": true,
+    "member_feedback_period_days": 90,
+    "trustee_vote_tally": "Passed Unanimously",
+    "published_press_bulletin_id": "BULL_ACADEMY_REFORM_2011_17"
+  },
+  {
+    "event_id": "EVT_RESTRUCT_018",
+    "restructuring_type": "Consolidation & Modernization",
+    "effective_year": 2012,
+    "primary_category_id": "CAT_BEST_MUSICAL_COMPOSITION_FIRST_017",
+    "source_category_ids": [
+      "LEGACY_CAT_MALE_17",
+      "LEGACY_CAT_FEMALE_17"
+    ],
+    "consolidation_justification": "Elimination of gender distinction to create unisex performance categories",
+    "gender_neutral_reform_flag": true,
+    "member_feedback_period_days": 90,
+    "trustee_vote_tally": "Passed Unanimously",
+    "published_press_bulletin_id": "BULL_ACADEMY_REFORM_2011_18"
+  },
+  {
+    "event_id": "EVT_RESTRUCT_019",
+    "restructuring_type": "Consolidation & Modernization",
+    "effective_year": 2012,
+    "primary_category_id": "CAT_BEST_ORIGINAL_CAST_ALBUM_BROAD_018",
+    "source_category_ids": [
+      "LEGACY_CAT_MALE_18",
+      "LEGACY_CAT_FEMALE_18"
+    ],
+    "consolidation_justification": "Elimination of gender distinction to create unisex performance categories",
+    "gender_neutral_reform_flag": true,
+    "member_feedback_period_days": 90,
+    "trustee_vote_tally": "Passed Unanimously",
+    "published_press_bulletin_id": "BULL_ACADEMY_REFORM_2011_19"
+  },
+  {
+    "event_id": "EVT_RESTRUCT_020",
+    "restructuring_type": "Consolidation & Modernization",
+    "effective_year": 2012,
+    "primary_category_id": "CAT_BEST_SOUND_TRACK_ALBUM_DRAMATI_019",
+    "source_category_ids": [
+      "LEGACY_CAT_MALE_19",
+      "LEGACY_CAT_FEMALE_19"
+    ],
+    "consolidation_justification": "Elimination of gender distinction to create unisex performance categories",
+    "gender_neutral_reform_flag": true,
+    "member_feedback_period_days": 90,
+    "trustee_vote_tally": "Passed Unanimously",
+    "published_press_bulletin_id": "BULL_ACADEMY_REFORM_2011_20"
+  },
+  {
+    "event_id": "EVT_RESTRUCT_021",
+    "restructuring_type": "Consolidation & Modernization",
+    "effective_year": 2012,
+    "primary_category_id": "CAT_BEST_PERFORMANCE_DOCUMENTARY_O_020",
+    "source_category_ids": [
+      "LEGACY_CAT_MALE_20",
+      "LEGACY_CAT_FEMALE_20"
+    ],
+    "consolidation_justification": "Elimination of gender distinction to create unisex performance categories",
+    "gender_neutral_reform_flag": true,
+    "member_feedback_period_days": 90,
+    "trustee_vote_tally": "Passed Unanimously",
+    "published_press_bulletin_id": "BULL_ACADEMY_REFORM_2011_21"
+  },
+  {
+    "event_id": "EVT_RESTRUCT_022",
+    "restructuring_type": "Consolidation & Modernization",
+    "effective_year": 2012,
+    "primary_category_id": "CAT_BEST_RECORDING_FOR_CHILDREN_021",
+    "source_category_ids": [
+      "LEGACY_CAT_MALE_21",
+      "LEGACY_CAT_FEMALE_21"
+    ],
+    "consolidation_justification": "Elimination of gender distinction to create unisex performance categories",
+    "gender_neutral_reform_flag": true,
+    "member_feedback_period_days": 90,
+    "trustee_vote_tally": "Passed Unanimously",
+    "published_press_bulletin_id": "BULL_ACADEMY_REFORM_2011_22"
+  },
+  {
+    "event_id": "EVT_RESTRUCT_023",
+    "restructuring_type": "Consolidation & Modernization",
+    "effective_year": 2012,
+    "primary_category_id": "CAT_BEST_CLASSICAL_PERFORMANCE_ORC_022",
+    "source_category_ids": [
+      "LEGACY_CAT_MALE_22",
+      "LEGACY_CAT_FEMALE_22"
+    ],
+    "consolidation_justification": "Elimination of gender distinction to create unisex performance categories",
+    "gender_neutral_reform_flag": true,
+    "member_feedback_period_days": 90,
+    "trustee_vote_tally": "Passed Unanimously",
+    "published_press_bulletin_id": "BULL_ACADEMY_REFORM_2011_23"
+  },
+  {
+    "event_id": "EVT_RESTRUCT_024",
+    "restructuring_type": "Consolidation & Modernization",
+    "effective_year": 2012,
+    "primary_category_id": "CAT_BEST_CLASSICAL_PERFORMANCE_INS_023",
+    "source_category_ids": [
+      "LEGACY_CAT_MALE_23",
+      "LEGACY_CAT_FEMALE_23"
+    ],
+    "consolidation_justification": "Elimination of gender distinction to create unisex performance categories",
+    "gender_neutral_reform_flag": true,
+    "member_feedback_period_days": 90,
+    "trustee_vote_tally": "Passed Unanimously",
+    "published_press_bulletin_id": "BULL_ACADEMY_REFORM_2011_24"
+  },
+  {
+    "event_id": "EVT_RESTRUCT_025",
+    "restructuring_type": "Consolidation & Modernization",
+    "effective_year": 2012,
+    "primary_category_id": "CAT_BEST_CLASSICAL_PERFORMANCE_INS_024",
+    "source_category_ids": [
+      "LEGACY_CAT_MALE_24",
+      "LEGACY_CAT_FEMALE_24"
+    ],
+    "consolidation_justification": "Elimination of gender distinction to create unisex performance categories",
+    "gender_neutral_reform_flag": true,
+    "member_feedback_period_days": 90,
+    "trustee_vote_tally": "Passed Unanimously",
+    "published_press_bulletin_id": "BULL_ACADEMY_REFORM_2011_25"
+  },
+  {
+    "event_id": "EVT_RESTRUCT_026",
+    "restructuring_type": "Consolidation & Modernization",
+    "effective_year": 2012,
+    "primary_category_id": "CAT_BEST_CLASSICAL_PERFORMANCE_CHA_025",
+    "source_category_ids": [
+      "LEGACY_CAT_MALE_25",
+      "LEGACY_CAT_FEMALE_25"
+    ],
+    "consolidation_justification": "Elimination of gender distinction to create unisex performance categories",
+    "gender_neutral_reform_flag": true,
+    "member_feedback_period_days": 90,
+    "trustee_vote_tally": "Passed Unanimously",
+    "published_press_bulletin_id": "BULL_ACADEMY_REFORM_2011_26"
+  },
+  {
+    "event_id": "EVT_RESTRUCT_027",
+    "restructuring_type": "Consolidation & Modernization",
+    "effective_year": 2012,
+    "primary_category_id": "CAT_BEST_CLASSICAL_PERFORMANCE_VOC_026",
+    "source_category_ids": [
+      "LEGACY_CAT_MALE_26",
+      "LEGACY_CAT_FEMALE_26"
+    ],
+    "consolidation_justification": "Elimination of gender distinction to create unisex performance categories",
+    "gender_neutral_reform_flag": true,
+    "member_feedback_period_days": 90,
+    "trustee_vote_tally": "Passed Unanimously",
+    "published_press_bulletin_id": "BULL_ACADEMY_REFORM_2011_27"
+  },
+  {
+    "event_id": "EVT_RESTRUCT_028",
+    "restructuring_type": "Consolidation & Modernization",
+    "effective_year": 2012,
+    "primary_category_id": "CAT_BEST_CLASSICAL_PERFORMANCE_OPE_027",
+    "source_category_ids": [
+      "LEGACY_CAT_MALE_27",
+      "LEGACY_CAT_FEMALE_27"
+    ],
+    "consolidation_justification": "Elimination of gender distinction to create unisex performance categories",
+    "gender_neutral_reform_flag": true,
+    "member_feedback_period_days": 90,
+    "trustee_vote_tally": "Passed Unanimously",
+    "published_press_bulletin_id": "BULL_ACADEMY_REFORM_2011_28"
+  },
+  {
+    "event_id": "EVT_RESTRUCT_029",
+    "restructuring_type": "Consolidation & Modernization",
+    "effective_year": 2012,
+    "primary_category_id": "CAT_BEST_JAZZ_PERFORMANCE_SOLOIST_028",
+    "source_category_ids": [
+      "LEGACY_CAT_MALE_28",
+      "LEGACY_CAT_FEMALE_28"
+    ],
+    "consolidation_justification": "Elimination of gender distinction to create unisex performance categories",
+    "gender_neutral_reform_flag": true,
+    "member_feedback_period_days": 90,
+    "trustee_vote_tally": "Passed Unanimously",
+    "published_press_bulletin_id": "BULL_ACADEMY_REFORM_2011_29"
+  },
+  {
+    "event_id": "EVT_RESTRUCT_030",
+    "restructuring_type": "Consolidation & Modernization",
+    "effective_year": 2012,
+    "primary_category_id": "CAT_BEST_JAZZ_PERFORMANCE_GROUP_029",
+    "source_category_ids": [
+      "LEGACY_CAT_MALE_29",
+      "LEGACY_CAT_FEMALE_29"
+    ],
+    "consolidation_justification": "Elimination of gender distinction to create unisex performance categories",
+    "gender_neutral_reform_flag": true,
+    "member_feedback_period_days": 90,
+    "trustee_vote_tally": "Passed Unanimously",
+    "published_press_bulletin_id": "BULL_ACADEMY_REFORM_2011_30"
+  },
+  {
+    "event_id": "EVT_RESTRUCT_031",
+    "restructuring_type": "Consolidation & Modernization",
+    "effective_year": 2012,
+    "primary_category_id": "CAT_BEST_CLASSICAL_PERFORMANCE_CON_030",
+    "source_category_ids": [
+      "LEGACY_CAT_MALE_30",
+      "LEGACY_CAT_FEMALE_30"
+    ],
+    "consolidation_justification": "Elimination of gender distinction to create unisex performance categories",
+    "gender_neutral_reform_flag": true,
+    "member_feedback_period_days": 90,
+    "trustee_vote_tally": "Passed Unanimously",
+    "published_press_bulletin_id": "BULL_ACADEMY_REFORM_2011_31"
+  },
+  {
+    "event_id": "EVT_RESTRUCT_032",
+    "restructuring_type": "Consolidation & Modernization",
+    "effective_year": 2012,
+    "primary_category_id": "CAT_BEST_CLASSICAL_PERFORMANCE_OPE_031",
+    "source_category_ids": [
+      "LEGACY_CAT_MALE_31",
+      "LEGACY_CAT_FEMALE_31"
+    ],
+    "consolidation_justification": "Elimination of gender distinction to create unisex performance categories",
+    "gender_neutral_reform_flag": true,
+    "member_feedback_period_days": 90,
+    "trustee_vote_tally": "Passed Unanimously",
+    "published_press_bulletin_id": "BULL_ACADEMY_REFORM_2011_32"
+  },
+  {
+    "event_id": "EVT_RESTRUCT_033",
+    "restructuring_type": "Consolidation & Modernization",
+    "effective_year": 2012,
+    "primary_category_id": "CAT_BEST_CLASSICAL_PERFORMANCE_CON_032",
+    "source_category_ids": [
+      "LEGACY_CAT_MALE_32",
+      "LEGACY_CAT_FEMALE_32"
+    ],
+    "consolidation_justification": "Elimination of gender distinction to create unisex performance categories",
+    "gender_neutral_reform_flag": true,
+    "member_feedback_period_days": 90,
+    "trustee_vote_tally": "Passed Unanimously",
+    "published_press_bulletin_id": "BULL_ACADEMY_REFORM_2011_33"
+  },
+  {
+    "event_id": "EVT_RESTRUCT_034",
+    "restructuring_type": "Consolidation & Modernization",
+    "effective_year": 2012,
+    "primary_category_id": "CAT_BEST_MUSICAL_COMPOSITION_FIRST_033",
+    "source_category_ids": [
+      "LEGACY_CAT_MALE_33",
+      "LEGACY_CAT_FEMALE_33"
+    ],
+    "consolidation_justification": "Elimination of gender distinction to create unisex performance categories",
+    "gender_neutral_reform_flag": true,
+    "member_feedback_period_days": 90,
+    "trustee_vote_tally": "Passed Unanimously",
+    "published_press_bulletin_id": "BULL_ACADEMY_REFORM_2011_34"
+  },
+  {
+    "event_id": "EVT_RESTRUCT_035",
+    "restructuring_type": "Consolidation & Modernization",
+    "effective_year": 2012,
+    "primary_category_id": "CAT_BEST_SOUND_TRACK_ALBUM_BACKGRO_034",
+    "source_category_ids": [
+      "LEGACY_CAT_MALE_34",
+      "LEGACY_CAT_FEMALE_34"
+    ],
+    "consolidation_justification": "Elimination of gender distinction to create unisex performance categories",
+    "gender_neutral_reform_flag": true,
+    "member_feedback_period_days": 90,
+    "trustee_vote_tally": "Passed Unanimously",
+    "published_press_bulletin_id": "BULL_ACADEMY_REFORM_2011_35"
+  },
+  {
+    "event_id": "EVT_RESTRUCT_036",
+    "restructuring_type": "Consolidation & Modernization",
+    "effective_year": 2012,
+    "primary_category_id": "CAT_BEST_SOUND_TRACK_ALBUM_ORIGINA_035",
+    "source_category_ids": [
+      "LEGACY_CAT_MALE_35",
+      "LEGACY_CAT_FEMALE_35"
+    ],
+    "consolidation_justification": "Elimination of gender distinction to create unisex performance categories",
+    "gender_neutral_reform_flag": true,
+    "member_feedback_period_days": 90,
+    "trustee_vote_tally": "Passed Unanimously",
+    "published_press_bulletin_id": "BULL_ACADEMY_REFORM_2011_36"
+  },
+  {
+    "event_id": "EVT_RESTRUCT_037",
+    "restructuring_type": "Consolidation & Modernization",
+    "effective_year": 2012,
+    "primary_category_id": "CAT_BEST_BROADWAY_SHOW_ALBUM_036",
+    "source_category_ids": [
+      "LEGACY_CAT_MALE_36",
+      "LEGACY_CAT_FEMALE_36"
+    ],
+    "consolidation_justification": "Elimination of gender distinction to create unisex performance categories",
+    "gender_neutral_reform_flag": true,
+    "member_feedback_period_days": 90,
+    "trustee_vote_tally": "Passed Unanimously",
+    "published_press_bulletin_id": "BULL_ACADEMY_REFORM_2011_37"
+  },
+  {
+    "event_id": "EVT_RESTRUCT_038",
+    "restructuring_type": "Consolidation & Modernization",
+    "effective_year": 2012,
+    "primary_category_id": "CAT_BEST_COMEDY_PERFORMANCE_SPOKEN_037",
+    "source_category_ids": [
+      "LEGACY_CAT_MALE_37",
+      "LEGACY_CAT_FEMALE_37"
+    ],
+    "consolidation_justification": "Elimination of gender distinction to create unisex performance categories",
+    "gender_neutral_reform_flag": true,
+    "member_feedback_period_days": 90,
+    "trustee_vote_tally": "Passed Unanimously",
+    "published_press_bulletin_id": "BULL_ACADEMY_REFORM_2011_38"
+  },
+  {
+    "event_id": "EVT_RESTRUCT_039",
+    "restructuring_type": "Consolidation & Modernization",
+    "effective_year": 2012,
+    "primary_category_id": "CAT_BEST_COMEDY_PERFORMANCE_MUSICA_038",
+    "source_category_ids": [
+      "LEGACY_CAT_MALE_38",
+      "LEGACY_CAT_FEMALE_38"
+    ],
+    "consolidation_justification": "Elimination of gender distinction to create unisex performance categories",
+    "gender_neutral_reform_flag": true,
+    "member_feedback_period_days": 90,
+    "trustee_vote_tally": "Passed Unanimously",
+    "published_press_bulletin_id": "BULL_ACADEMY_REFORM_2011_39"
+  },
+  {
+    "event_id": "EVT_RESTRUCT_040",
+    "restructuring_type": "Consolidation & Modernization",
+    "effective_year": 2012,
+    "primary_category_id": "CAT_BEST_PERFORMANCE_DOCUMENTARY_O_039",
+    "source_category_ids": [
+      "LEGACY_CAT_MALE_39",
+      "LEGACY_CAT_FEMALE_39"
+    ],
+    "consolidation_justification": "Elimination of gender distinction to create unisex performance categories",
+    "gender_neutral_reform_flag": true,
+    "member_feedback_period_days": 90,
+    "trustee_vote_tally": "Passed Unanimously",
+    "published_press_bulletin_id": "BULL_ACADEMY_REFORM_2011_40"
+  },
+  {
+    "event_id": "EVT_RESTRUCT_041",
+    "restructuring_type": "Consolidation & Modernization",
+    "effective_year": 2012,
+    "primary_category_id": "CAT_BEST_PERFORMANCE_BY_A_TOP_40_A_040",
+    "source_category_ids": [
+      "LEGACY_CAT_MALE_40",
+      "LEGACY_CAT_FEMALE_40"
+    ],
+    "consolidation_justification": "Elimination of gender distinction to create unisex performance categories",
+    "gender_neutral_reform_flag": true,
+    "member_feedback_period_days": 90,
+    "trustee_vote_tally": "Passed Unanimously",
+    "published_press_bulletin_id": "BULL_ACADEMY_REFORM_2011_41"
+  },
+  {
+    "event_id": "EVT_RESTRUCT_042",
+    "restructuring_type": "Consolidation & Modernization",
+    "effective_year": 2012,
+    "primary_category_id": "CAT_BEST_PERFORMANCE_FOLK_041",
+    "source_category_ids": [
+      "LEGACY_CAT_MALE_41",
+      "LEGACY_CAT_FEMALE_41"
+    ],
+    "consolidation_justification": "Elimination of gender distinction to create unisex performance categories",
+    "gender_neutral_reform_flag": true,
+    "member_feedback_period_days": 90,
+    "trustee_vote_tally": "Passed Unanimously",
+    "published_press_bulletin_id": "BULL_ACADEMY_REFORM_2011_42"
+  },
+  {
+    "event_id": "EVT_RESTRUCT_043",
+    "restructuring_type": "Consolidation & Modernization",
+    "effective_year": 2012,
+    "primary_category_id": "CAT_BEST_ENGINEERING_CONTRIBUTION__042",
+    "source_category_ids": [
+      "LEGACY_CAT_MALE_42",
+      "LEGACY_CAT_FEMALE_42"
+    ],
+    "consolidation_justification": "Elimination of gender distinction to create unisex performance categories",
+    "gender_neutral_reform_flag": true,
+    "member_feedback_period_days": 90,
+    "trustee_vote_tally": "Passed Unanimously",
+    "published_press_bulletin_id": "BULL_ACADEMY_REFORM_2011_43"
+  },
+  {
+    "event_id": "EVT_RESTRUCT_044",
+    "restructuring_type": "Consolidation & Modernization",
+    "effective_year": 2012,
+    "primary_category_id": "CAT_BEST_ENGINEERING_CONTRIBUTION__043",
+    "source_category_ids": [
+      "LEGACY_CAT_MALE_43",
+      "LEGACY_CAT_FEMALE_43"
+    ],
+    "consolidation_justification": "Elimination of gender distinction to create unisex performance categories",
+    "gender_neutral_reform_flag": true,
+    "member_feedback_period_days": 90,
+    "trustee_vote_tally": "Passed Unanimously",
+    "published_press_bulletin_id": "BULL_ACADEMY_REFORM_2011_44"
+  },
+  {
+    "event_id": "EVT_RESTRUCT_045",
+    "restructuring_type": "Consolidation & Modernization",
+    "effective_year": 2012,
+    "primary_category_id": "CAT_BEST_ENGINEERING_CONTRIBUTION__044",
+    "source_category_ids": [
+      "LEGACY_CAT_MALE_44",
+      "LEGACY_CAT_FEMALE_44"
+    ],
+    "consolidation_justification": "Elimination of gender distinction to create unisex performance categories",
+    "gender_neutral_reform_flag": true,
+    "member_feedback_period_days": 90,
+    "trustee_vote_tally": "Passed Unanimously",
+    "published_press_bulletin_id": "BULL_ACADEMY_REFORM_2011_45"
+  },
+  {
+    "event_id": "EVT_RESTRUCT_046",
+    "restructuring_type": "Consolidation & Modernization",
+    "effective_year": 2012,
+    "primary_category_id": "CAT_BEST_NEW_ARTIST_OF_1959_045",
+    "source_category_ids": [
+      "LEGACY_CAT_MALE_45",
+      "LEGACY_CAT_FEMALE_45"
+    ],
+    "consolidation_justification": "Elimination of gender distinction to create unisex performance categories",
+    "gender_neutral_reform_flag": true,
+    "member_feedback_period_days": 90,
+    "trustee_vote_tally": "Passed Unanimously",
+    "published_press_bulletin_id": "BULL_ACADEMY_REFORM_2011_46"
+  },
+  {
+    "event_id": "EVT_RESTRUCT_047",
+    "restructuring_type": "Consolidation & Modernization",
+    "effective_year": 2012,
+    "primary_category_id": "CAT_BEST_VOCAL_PERFORMANCE_SINGLE__046",
+    "source_category_ids": [
+      "LEGACY_CAT_MALE_46",
+      "LEGACY_CAT_FEMALE_46"
+    ],
+    "consolidation_justification": "Elimination of gender distinction to create unisex performance categories",
+    "gender_neutral_reform_flag": true,
+    "member_feedback_period_days": 90,
+    "trustee_vote_tally": "Passed Unanimously",
+    "published_press_bulletin_id": "BULL_ACADEMY_REFORM_2011_47"
+  },
+  {
+    "event_id": "EVT_RESTRUCT_048",
+    "restructuring_type": "Consolidation & Modernization",
+    "effective_year": 2012,
+    "primary_category_id": "CAT_BEST_VOCAL_PERFORMANCE_ALBUM_F_047",
+    "source_category_ids": [
+      "LEGACY_CAT_MALE_47",
+      "LEGACY_CAT_FEMALE_47"
+    ],
+    "consolidation_justification": "Elimination of gender distinction to create unisex performance categories",
+    "gender_neutral_reform_flag": true,
+    "member_feedback_period_days": 90,
+    "trustee_vote_tally": "Passed Unanimously",
+    "published_press_bulletin_id": "BULL_ACADEMY_REFORM_2011_48"
+  },
+  {
+    "event_id": "EVT_RESTRUCT_049",
+    "restructuring_type": "Consolidation & Modernization",
+    "effective_year": 2012,
+    "primary_category_id": "CAT_BEST_VOCAL_PERFORMANCE_SINGLE__048",
+    "source_category_ids": [
+      "LEGACY_CAT_MALE_48",
+      "LEGACY_CAT_FEMALE_48"
+    ],
+    "consolidation_justification": "Elimination of gender distinction to create unisex performance categories",
+    "gender_neutral_reform_flag": true,
+    "member_feedback_period_days": 90,
+    "trustee_vote_tally": "Passed Unanimously",
+    "published_press_bulletin_id": "BULL_ACADEMY_REFORM_2011_49"
+  },
+  {
+    "event_id": "EVT_RESTRUCT_050",
+    "restructuring_type": "Consolidation & Modernization",
+    "effective_year": 2012,
+    "primary_category_id": "CAT_BEST_VOCAL_PERFORMANCE_ALBUM_M_049",
+    "source_category_ids": [
+      "LEGACY_CAT_MALE_49",
+      "LEGACY_CAT_FEMALE_49"
+    ],
+    "consolidation_justification": "Elimination of gender distinction to create unisex performance categories",
+    "gender_neutral_reform_flag": true,
+    "member_feedback_period_days": 90,
+    "trustee_vote_tally": "Passed Unanimously",
+    "published_press_bulletin_id": "BULL_ACADEMY_REFORM_2011_50"
+  },
+  {
+    "event_id": "EVT_RESTRUCT_051",
+    "restructuring_type": "Consolidation & Modernization",
+    "effective_year": 2012,
+    "primary_category_id": "CAT_BEST_PERFORMANCE_BY_A_BAND_FOR_050",
+    "source_category_ids": [
+      "LEGACY_CAT_MALE_50",
+      "LEGACY_CAT_FEMALE_50"
+    ],
+    "consolidation_justification": "Elimination of gender distinction to create unisex performance categories",
+    "gender_neutral_reform_flag": true,
+    "member_feedback_period_days": 90,
+    "trustee_vote_tally": "Passed Unanimously",
+    "published_press_bulletin_id": "BULL_ACADEMY_REFORM_2011_51"
+  },
+  {
+    "event_id": "EVT_RESTRUCT_052",
+    "restructuring_type": "Consolidation & Modernization",
+    "effective_year": 2012,
+    "primary_category_id": "CAT_BEST_PERFORMANCE_BY_A_VOCAL_GR_051",
+    "source_category_ids": [
+      "LEGACY_CAT_MALE_51",
+      "LEGACY_CAT_FEMALE_51"
+    ],
+    "consolidation_justification": "Elimination of gender distinction to create unisex performance categories",
+    "gender_neutral_reform_flag": true,
+    "member_feedback_period_days": 90,
+    "trustee_vote_tally": "Passed Unanimously",
+    "published_press_bulletin_id": "BULL_ACADEMY_REFORM_2011_52"
+  },
+  {
+    "event_id": "EVT_RESTRUCT_053",
+    "restructuring_type": "Consolidation & Modernization",
+    "effective_year": 2012,
+    "primary_category_id": "CAT_BEST_PERFORMANCE_BY_A_CHORUS_7_052",
+    "source_category_ids": [
+      "LEGACY_CAT_MALE_52",
+      "LEGACY_CAT_FEMALE_52"
+    ],
+    "consolidation_justification": "Elimination of gender distinction to create unisex performance categories",
+    "gender_neutral_reform_flag": true,
+    "member_feedback_period_days": 90,
+    "trustee_vote_tally": "Passed Unanimously",
+    "published_press_bulletin_id": "BULL_ACADEMY_REFORM_2011_53"
+  },
+  {
+    "event_id": "EVT_RESTRUCT_054",
+    "restructuring_type": "Consolidation & Modernization",
+    "effective_year": 2012,
+    "primary_category_id": "CAT_BEST_JAZZ_PERFORMANCE_SOLO_OR__053",
+    "source_category_ids": [
+      "LEGACY_CAT_MALE_53",
+      "LEGACY_CAT_FEMALE_53"
+    ],
+    "consolidation_justification": "Elimination of gender distinction to create unisex performance categories",
+    "gender_neutral_reform_flag": true,
+    "member_feedback_period_days": 90,
+    "trustee_vote_tally": "Passed Unanimously",
+    "published_press_bulletin_id": "BULL_ACADEMY_REFORM_2011_54"
+  },
+  {
+    "event_id": "EVT_RESTRUCT_055",
+    "restructuring_type": "Consolidation & Modernization",
+    "effective_year": 2012,
+    "primary_category_id": "CAT_BEST_JAZZ_PERFORMANCE_LARGE_GR_054",
+    "source_category_ids": [
+      "LEGACY_CAT_MALE_54",
+      "LEGACY_CAT_FEMALE_54"
+    ],
+    "consolidation_justification": "Elimination of gender distinction to create unisex performance categories",
+    "gender_neutral_reform_flag": true,
+    "member_feedback_period_days": 90,
+    "trustee_vote_tally": "Passed Unanimously",
+    "published_press_bulletin_id": "BULL_ACADEMY_REFORM_2011_55"
+  },
+  {
+    "event_id": "EVT_RESTRUCT_056",
+    "restructuring_type": "Consolidation & Modernization",
+    "effective_year": 2012,
+    "primary_category_id": "CAT_BEST_CLASSICAL_PERFORMANCE_VOC_055",
+    "source_category_ids": [
+      "LEGACY_CAT_MALE_55",
+      "LEGACY_CAT_FEMALE_55"
+    ],
+    "consolidation_justification": "Elimination of gender distinction to create unisex performance categories",
+    "gender_neutral_reform_flag": true,
+    "member_feedback_period_days": 90,
+    "trustee_vote_tally": "Passed Unanimously",
+    "published_press_bulletin_id": "BULL_ACADEMY_REFORM_2011_56"
+  },
+  {
+    "event_id": "EVT_RESTRUCT_057",
+    "restructuring_type": "Consolidation & Modernization",
+    "effective_year": 2012,
+    "primary_category_id": "CAT_BEST_CLASSICAL_PERFORMANCE_CON_056",
+    "source_category_ids": [
+      "LEGACY_CAT_MALE_56",
+      "LEGACY_CAT_FEMALE_56"
+    ],
+    "consolidation_justification": "Elimination of gender distinction to create unisex performance categories",
+    "gender_neutral_reform_flag": true,
+    "member_feedback_period_days": 90,
+    "trustee_vote_tally": "Passed Unanimously",
+    "published_press_bulletin_id": "BULL_ACADEMY_REFORM_2011_57"
+  },
+  {
+    "event_id": "EVT_RESTRUCT_058",
+    "restructuring_type": "Consolidation & Modernization",
+    "effective_year": 2012,
+    "primary_category_id": "CAT_BEST_CLASSICAL_PERFORMANCE_INS_057",
+    "source_category_ids": [
+      "LEGACY_CAT_MALE_57",
+      "LEGACY_CAT_FEMALE_57"
+    ],
+    "consolidation_justification": "Elimination of gender distinction to create unisex performance categories",
+    "gender_neutral_reform_flag": true,
+    "member_feedback_period_days": 90,
+    "trustee_vote_tally": "Passed Unanimously",
+    "published_press_bulletin_id": "BULL_ACADEMY_REFORM_2011_58"
+  },
+  {
+    "event_id": "EVT_RESTRUCT_059",
+    "restructuring_type": "Consolidation & Modernization",
+    "effective_year": 2012,
+    "primary_category_id": "CAT_BEST_CLASSICAL_PERFORMANCE_VOC_058",
+    "source_category_ids": [
+      "LEGACY_CAT_MALE_58",
+      "LEGACY_CAT_FEMALE_58"
+    ],
+    "consolidation_justification": "Elimination of gender distinction to create unisex performance categories",
+    "gender_neutral_reform_flag": true,
+    "member_feedback_period_days": 90,
+    "trustee_vote_tally": "Passed Unanimously",
+    "published_press_bulletin_id": "BULL_ACADEMY_REFORM_2011_59"
+  },
+  {
+    "event_id": "EVT_RESTRUCT_060",
+    "restructuring_type": "Consolidation & Modernization",
+    "effective_year": 2012,
+    "primary_category_id": "CAT_BEST_CLASSICAL_OPERA_PRODUCTIO_059",
+    "source_category_ids": [
+      "LEGACY_CAT_MALE_59",
+      "LEGACY_CAT_FEMALE_59"
+    ],
+    "consolidation_justification": "Elimination of gender distinction to create unisex performance categories",
+    "gender_neutral_reform_flag": true,
+    "member_feedback_period_days": 90,
+    "trustee_vote_tally": "Passed Unanimously",
+    "published_press_bulletin_id": "BULL_ACADEMY_REFORM_2011_60"
+  }
+]

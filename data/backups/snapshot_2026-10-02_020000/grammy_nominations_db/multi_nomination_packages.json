@@ -1,0 +1,982 @@
+[
+  {
+    "package_id": "MULTI_PKG_001",
+    "ceremony_id": "CEREMONY_001",
+    "creator_id": "CRT_NEL_BLU_DIPINTO",
+    "total_nominations_count": 4,
+    "general_field_nominations_count": 2,
+    "genre_field_nominations_count": 2,
+    "leading_nominee_rank": 1,
+    "nominated_work_ids": [
+      "WRK_NEL_BLU_DIPINTO_DI_BLU_VOLARE_0000"
+    ],
+    "public_announcement_tier": "Headlining Multi-Nominee",
+    "ceremony_year": 1959
+  },
+  {
+    "package_id": "MULTI_PKG_002",
+    "ceremony_id": "CEREMONY_002",
+    "creator_id": "CRT_HENRY_MANCINI",
+    "total_nominations_count": 5,
+    "general_field_nominations_count": 2,
+    "genre_field_nominations_count": 3,
+    "leading_nominee_rank": 1,
+    "nominated_work_ids": [
+      "WRK_THE_MUSIC_FROM_PETER_GUNN_0001"
+    ],
+    "public_announcement_tier": "Headlining Multi-Nominee",
+    "ceremony_year": 1960
+  },
+  {
+    "package_id": "MULTI_PKG_003",
+    "ceremony_id": "CEREMONY_003",
+    "creator_id": "CRT_NEL_BLU_DIPINTO",
+    "total_nominations_count": 6,
+    "general_field_nominations_count": 2,
+    "genre_field_nominations_count": 4,
+    "leading_nominee_rank": 1,
+    "nominated_work_ids": [
+      "WRK_NEL_BLU_DIPINTO_DI_BLU_VOLARE_0002"
+    ],
+    "public_announcement_tier": "Headlining Multi-Nominee",
+    "ceremony_year": 1961
+  },
+  {
+    "package_id": "MULTI_PKG_004",
+    "ceremony_id": "CEREMONY_004",
+    "creator_id": "CRT_ELLA_FITZGERALD",
+    "total_nominations_count": 7,
+    "general_field_nominations_count": 2,
+    "genre_field_nominations_count": 5,
+    "leading_nominee_rank": 1,
+    "nominated_work_ids": [
+      "WRK_ELLA_FITZGERALD_SINGS_THE_IRVI_0003"
+    ],
+    "public_announcement_tier": "Headlining Multi-Nominee",
+    "ceremony_year": 1962
+  },
+  {
+    "package_id": "MULTI_PKG_005",
+    "ceremony_id": "CEREMONY_005",
+    "creator_id": "CRT_CATCH_A_FALLING",
+    "total_nominations_count": 8,
+    "general_field_nominations_count": 2,
+    "genre_field_nominations_count": 6,
+    "leading_nominee_rank": 1,
+    "nominated_work_ids": [
+      "WRK_CATCH_A_FALLING_STAR_0004"
+    ],
+    "public_announcement_tier": "Headlining Multi-Nominee",
+    "ceremony_year": 1963
+  },
+  {
+    "package_id": "MULTI_PKG_006",
+    "ceremony_id": "CEREMONY_006",
+    "creator_id": "CRT_BILLY_MAY_S_BIG",
+    "total_nominations_count": 4,
+    "general_field_nominations_count": 2,
+    "genre_field_nominations_count": 2,
+    "leading_nominee_rank": 1,
+    "nominated_work_ids": [
+      "WRK_BILLY_MAY_S_BIG_FAT_BRASS_0005"
+    ],
+    "public_announcement_tier": "Headlining Multi-Nominee",
+    "ceremony_year": 1964
+  },
+  {
+    "package_id": "MULTI_PKG_007",
+    "ceremony_id": "CEREMONY_007",
+    "creator_id": "CRT_BASIE",
+    "total_nominations_count": 5,
+    "general_field_nominations_count": 2,
+    "genre_field_nominations_count": 3,
+    "leading_nominee_rank": 1,
+    "nominated_work_ids": [
+      "WRK_BASIE_0006"
+    ],
+    "public_announcement_tier": "Headlining Multi-Nominee",
+    "ceremony_year": 1965
+  },
+  {
+    "package_id": "MULTI_PKG_008",
+    "ceremony_id": "CEREMONY_008",
+    "creator_id": "CRT_THAT_OLD_BLACK_",
+    "total_nominations_count": 6,
+    "general_field_nominations_count": 2,
+    "genre_field_nominations_count": 4,
+    "leading_nominee_rank": 1,
+    "nominated_work_ids": [
+      "WRK_THAT_OLD_BLACK_MAGIC_0007"
+    ],
+    "public_announcement_tier": "Headlining Multi-Nominee",
+    "ceremony_year": 1966
+  },
+  {
+    "package_id": "MULTI_PKG_009",
+    "ceremony_id": "CEREMONY_009",
+    "creator_id": "CRT_ELLA_FITZGERALD",
+    "total_nominations_count": 7,
+    "general_field_nominations_count": 2,
+    "genre_field_nominations_count": 5,
+    "leading_nominee_rank": 1,
+    "nominated_work_ids": [
+      "WRK_ELLA_FITZGERALD_SINGS_THE_DUKE_0008"
+    ],
+    "public_announcement_tier": "Headlining Multi-Nominee",
+    "ceremony_year": 1967
+  },
+  {
+    "package_id": "MULTI_PKG_010",
+    "ceremony_id": "CEREMONY_010",
+    "creator_id": "CRT_BASIE",
+    "total_nominations_count": 8,
+    "general_field_nominations_count": 2,
+    "genre_field_nominations_count": 6,
+    "leading_nominee_rank": 1,
+    "nominated_work_ids": [
+      "WRK_BASIE_0009"
+    ],
+    "public_announcement_tier": "Headlining Multi-Nominee",
+    "ceremony_year": 1968
+  },
+  {
+    "package_id": "MULTI_PKG_011",
+    "ceremony_id": "CEREMONY_011",
+    "creator_id": "CRT_THE_CHIPMUNK_SO",
+    "total_nominations_count": 4,
+    "general_field_nominations_count": 2,
+    "genre_field_nominations_count": 2,
+    "leading_nominee_rank": 1,
+    "nominated_work_ids": [
+      "WRK_THE_CHIPMUNK_SONG_0010"
+    ],
+    "public_announcement_tier": "Headlining Multi-Nominee",
+    "ceremony_year": 1969
+  },
+  {
+    "package_id": "MULTI_PKG_012",
+    "ceremony_id": "CEREMONY_012",
+    "creator_id": "CRT_TOM_DOOLEY",
+    "total_nominations_count": 5,
+    "general_field_nominations_count": 2,
+    "genre_field_nominations_count": 3,
+    "leading_nominee_rank": 1,
+    "nominated_work_ids": [
+      "WRK_TOM_DOOLEY_0011"
+    ],
+    "public_announcement_tier": "Headlining Multi-Nominee",
+    "ceremony_year": 1970
+  },
+  {
+    "package_id": "MULTI_PKG_013",
+    "ceremony_id": "CEREMONY_013",
+    "creator_id": "CRT_TEQUILA",
+    "total_nominations_count": 6,
+    "general_field_nominations_count": 2,
+    "genre_field_nominations_count": 4,
+    "leading_nominee_rank": 1,
+    "nominated_work_ids": [
+      "WRK_TEQUILA_0012"
+    ],
+    "public_announcement_tier": "Headlining Multi-Nominee",
+    "ceremony_year": 1971
+  },
+  {
+    "package_id": "MULTI_PKG_014",
+    "ceremony_id": "CEREMONY_014",
+    "creator_id": "CRT_HENRY_MANCINI",
+    "total_nominations_count": 7,
+    "general_field_nominations_count": 2,
+    "genre_field_nominations_count": 5,
+    "leading_nominee_rank": 1,
+    "nominated_work_ids": [
+      "WRK_THE_MUSIC_FROM_PETER_GUNN_0013"
+    ],
+    "public_announcement_tier": "Headlining Multi-Nominee",
+    "ceremony_year": 1972
+  },
+  {
+    "package_id": "MULTI_PKG_015",
+    "ceremony_id": "CEREMONY_015",
+    "creator_id": "CRT_DUETS_WITH_A_SP",
+    "total_nominations_count": 8,
+    "general_field_nominations_count": 2,
+    "genre_field_nominations_count": 6,
+    "leading_nominee_rank": 1,
+    "nominated_work_ids": [
+      "WRK_DUETS_WITH_A_SPANISH_GUITAR_0014"
+    ],
+    "public_announcement_tier": "Headlining Multi-Nominee",
+    "ceremony_year": 1973
+  },
+  {
+    "package_id": "MULTI_PKG_016",
+    "ceremony_id": "CEREMONY_016",
+    "creator_id": "CRT_THE_CHIPMUNK_SO",
+    "total_nominations_count": 4,
+    "general_field_nominations_count": 2,
+    "genre_field_nominations_count": 2,
+    "leading_nominee_rank": 1,
+    "nominated_work_ids": [
+      "WRK_THE_CHIPMUNK_SONG_0015"
+    ],
+    "public_announcement_tier": "Headlining Multi-Nominee",
+    "ceremony_year": 1974
+  },
+  {
+    "package_id": "MULTI_PKG_017",
+    "ceremony_id": "CEREMONY_017",
+    "creator_id": "CRT_FRANK_SINATRA",
+    "total_nominations_count": 5,
+    "general_field_nominations_count": 2,
+    "genre_field_nominations_count": 3,
+    "leading_nominee_rank": 1,
+    "nominated_work_ids": [
+      "WRK_ONLY_THE_LONELY_0016"
+    ],
+    "public_announcement_tier": "Headlining Multi-Nominee",
+    "ceremony_year": 1975
+  },
+  {
+    "package_id": "MULTI_PKG_018",
+    "ceremony_id": "CEREMONY_018",
+    "creator_id": "CRT_CROSS_COUNTRY_S",
+    "total_nominations_count": 6,
+    "general_field_nominations_count": 2,
+    "genre_field_nominations_count": 4,
+    "leading_nominee_rank": 1,
+    "nominated_work_ids": [
+      "WRK_CROSS_COUNTRY_SUITE_0017"
+    ],
+    "public_announcement_tier": "Headlining Multi-Nominee",
+    "ceremony_year": 1976
+  },
+  {
+    "package_id": "MULTI_PKG_019",
+    "ceremony_id": "CEREMONY_019",
+    "creator_id": "CRT_THE_MUSIC_MAN",
+    "total_nominations_count": 7,
+    "general_field_nominations_count": 2,
+    "genre_field_nominations_count": 5,
+    "leading_nominee_rank": 1,
+    "nominated_work_ids": [
+      "WRK_THE_MUSIC_MAN_0018"
+    ],
+    "public_announcement_tier": "Headlining Multi-Nominee",
+    "ceremony_year": 1977
+  },
+  {
+    "package_id": "MULTI_PKG_020",
+    "ceremony_id": "CEREMONY_020",
+    "creator_id": "CRT_ANDR_PREVIN",
+    "total_nominations_count": 8,
+    "general_field_nominations_count": 2,
+    "genre_field_nominations_count": 6,
+    "leading_nominee_rank": 1,
+    "nominated_work_ids": [
+      "WRK_GIGI_0019"
+    ],
+    "public_announcement_tier": "Headlining Multi-Nominee",
+    "ceremony_year": 1978
+  },
+  {
+    "package_id": "MULTI_PKG_021",
+    "ceremony_id": "CEREMONY_021",
+    "creator_id": "CRT_THE_BEST_OF_THE",
+    "total_nominations_count": 4,
+    "general_field_nominations_count": 2,
+    "genre_field_nominations_count": 2,
+    "leading_nominee_rank": 1,
+    "nominated_work_ids": [
+      "WRK_THE_BEST_OF_THE_STAN_FREBERG_S_0020"
+    ],
+    "public_announcement_tier": "Headlining Multi-Nominee",
+    "ceremony_year": 1979
+  },
+  {
+    "package_id": "MULTI_PKG_022",
+    "ceremony_id": "CEREMONY_022",
+    "creator_id": "CRT_THE_CHIPMUNK_SO",
+    "total_nominations_count": 5,
+    "general_field_nominations_count": 2,
+    "genre_field_nominations_count": 3,
+    "leading_nominee_rank": 1,
+    "nominated_work_ids": [
+      "WRK_THE_CHIPMUNK_SONG_0021"
+    ],
+    "public_announcement_tier": "Headlining Multi-Nominee",
+    "ceremony_year": 1980
+  },
+  {
+    "package_id": "MULTI_PKG_023",
+    "ceremony_id": "CEREMONY_023",
+    "creator_id": "CRT_GAIETE_PARISIEN",
+    "total_nominations_count": 6,
+    "general_field_nominations_count": 2,
+    "genre_field_nominations_count": 4,
+    "leading_nominee_rank": 1,
+    "nominated_work_ids": [
+      "WRK_GAIETE_PARISIENNE_0022"
+    ],
+    "public_announcement_tier": "Headlining Multi-Nominee",
+    "ceremony_year": 1981
+  },
+  {
+    "package_id": "MULTI_PKG_024",
+    "ceremony_id": "CEREMONY_024",
+    "creator_id": "CRT_TCHAIKOVSKY_PIA",
+    "total_nominations_count": 7,
+    "general_field_nominations_count": 2,
+    "genre_field_nominations_count": 5,
+    "leading_nominee_rank": 1,
+    "nominated_work_ids": [
+      "WRK_TCHAIKOVSKY_PIANO_CONCERTO_NO__0023"
+    ],
+    "public_announcement_tier": "Headlining Multi-Nominee",
+    "ceremony_year": 1982
+  },
+  {
+    "package_id": "MULTI_PKG_025",
+    "ceremony_id": "CEREMONY_025",
+    "creator_id": "CRT_SEGOVIA_GOLDEN_",
+    "total_nominations_count": 8,
+    "general_field_nominations_count": 2,
+    "genre_field_nominations_count": 6,
+    "leading_nominee_rank": 1,
+    "nominated_work_ids": [
+      "WRK_SEGOVIA_GOLDEN_JUBILEE_0024"
+    ],
+    "public_announcement_tier": "Headlining Multi-Nominee",
+    "ceremony_year": 1983
+  },
+  {
+    "package_id": "MULTI_PKG_026",
+    "ceremony_id": "CEREMONY_026",
+    "creator_id": "CRT_BEETHOVEN_QUART",
+    "total_nominations_count": 4,
+    "general_field_nominations_count": 2,
+    "genre_field_nominations_count": 2,
+    "leading_nominee_rank": 1,
+    "nominated_work_ids": [
+      "WRK_BEETHOVEN_QUARTET_130_0025"
+    ],
+    "public_announcement_tier": "Headlining Multi-Nominee",
+    "ceremony_year": 1984
+  },
+  {
+    "package_id": "MULTI_PKG_027",
+    "ceremony_id": "CEREMONY_027",
+    "creator_id": "CRT_OPERATIC_RECITA",
+    "total_nominations_count": 5,
+    "general_field_nominations_count": 2,
+    "genre_field_nominations_count": 3,
+    "leading_nominee_rank": 1,
+    "nominated_work_ids": [
+      "WRK_OPERATIC_RECITAL_0026"
+    ],
+    "public_announcement_tier": "Headlining Multi-Nominee",
+    "ceremony_year": 1985
+  },
+  {
+    "package_id": "MULTI_PKG_028",
+    "ceremony_id": "CEREMONY_028",
+    "creator_id": "CRT_VIRTUOSO",
+    "total_nominations_count": 6,
+    "general_field_nominations_count": 2,
+    "genre_field_nominations_count": 4,
+    "leading_nominee_rank": 1,
+    "nominated_work_ids": [
+      "WRK_VIRTUOSO_0027"
+    ],
+    "public_announcement_tier": "Headlining Multi-Nominee",
+    "ceremony_year": 1986
+  },
+  {
+    "package_id": "MULTI_PKG_029",
+    "ceremony_id": "CEREMONY_029",
+    "creator_id": "CRT_MACK_THE_KNIFE",
+    "total_nominations_count": 7,
+    "general_field_nominations_count": 2,
+    "genre_field_nominations_count": 5,
+    "leading_nominee_rank": 1,
+    "nominated_work_ids": [
+      "WRK_MACK_THE_KNIFE_0028"
+    ],
+    "public_announcement_tier": "Headlining Multi-Nominee",
+    "ceremony_year": 1987
+  },
+  {
+    "package_id": "MULTI_PKG_030",
+    "ceremony_id": "CEREMONY_030",
+    "creator_id": "CRT_FRANK_SINATRA",
+    "total_nominations_count": 8,
+    "general_field_nominations_count": 2,
+    "genre_field_nominations_count": 6,
+    "leading_nominee_rank": 1,
+    "nominated_work_ids": [
+      "WRK_COME_DANCE_WITH_ME_0029"
+    ],
+    "public_announcement_tier": "Headlining Multi-Nominee",
+    "ceremony_year": 1988
+  },
+  {
+    "package_id": "MULTI_PKG_031",
+    "ceremony_id": "CEREMONY_031",
+    "creator_id": "CRT_THE_BATTLE_OF_N",
+    "total_nominations_count": 4,
+    "general_field_nominations_count": 2,
+    "genre_field_nominations_count": 2,
+    "leading_nominee_rank": 1,
+    "nominated_work_ids": [
+      "WRK_THE_BATTLE_OF_NEW_ORLEANS_0030"
+    ],
+    "public_announcement_tier": "Headlining Multi-Nominee",
+    "ceremony_year": 1989
+  },
+  {
+    "package_id": "MULTI_PKG_032",
+    "ceremony_id": "CEREMONY_032",
+    "creator_id": "CRT_ELLA_FITZGERALD",
+    "total_nominations_count": 5,
+    "general_field_nominations_count": 2,
+    "genre_field_nominations_count": 3,
+    "leading_nominee_rank": 1,
+    "nominated_work_ids": [
+      "WRK_BUT_NOT_FOR_ME_0031"
+    ],
+    "public_announcement_tier": "Headlining Multi-Nominee",
+    "ceremony_year": 1990
+  },
+  {
+    "package_id": "MULTI_PKG_033",
+    "ceremony_id": "CEREMONY_033",
+    "creator_id": "CRT_FRANK_SINATRA",
+    "total_nominations_count": 6,
+    "general_field_nominations_count": 2,
+    "genre_field_nominations_count": 4,
+    "leading_nominee_rank": 1,
+    "nominated_work_ids": [
+      "WRK_COME_DANCE_WITH_ME_0032"
+    ],
+    "public_announcement_tier": "Headlining Multi-Nominee",
+    "ceremony_year": 1991
+  },
+  {
+    "package_id": "MULTI_PKG_034",
+    "ceremony_id": "CEREMONY_034",
+    "creator_id": "CRT_DUKE_ELLINGTON",
+    "total_nominations_count": 7,
+    "general_field_nominations_count": 2,
+    "genre_field_nominations_count": 5,
+    "leading_nominee_rank": 1,
+    "nominated_work_ids": [
+      "WRK_ANATOMY_OF_A_MURDER_0033"
+    ],
+    "public_announcement_tier": "Headlining Multi-Nominee",
+    "ceremony_year": 1992
+  },
+  {
+    "package_id": "MULTI_PKG_035",
+    "ceremony_id": "CEREMONY_035",
+    "creator_id": "CRT_ANDR_PREVIN",
+    "total_nominations_count": 8,
+    "general_field_nominations_count": 2,
+    "genre_field_nominations_count": 6,
+    "leading_nominee_rank": 1,
+    "nominated_work_ids": [
+      "WRK_LIKE_YOUNG_0034"
+    ],
+    "public_announcement_tier": "Headlining Multi-Nominee",
+    "ceremony_year": 1993
+  },
+  {
+    "package_id": "MULTI_PKG_036",
+    "ceremony_id": "CEREMONY_036",
+    "creator_id": "CRT_BATTLE_HYMN_OF_",
+    "total_nominations_count": 4,
+    "general_field_nominations_count": 2,
+    "genre_field_nominations_count": 2,
+    "leading_nominee_rank": 1,
+    "nominated_work_ids": [
+      "WRK_BATTLE_HYMN_OF_THE_REPUBLIC_0035"
+    ],
+    "public_announcement_tier": "Headlining Multi-Nominee",
+    "ceremony_year": 1994
+  },
+  {
+    "package_id": "MULTI_PKG_037",
+    "ceremony_id": "CEREMONY_037",
+    "creator_id": "CRT_ELLA_FITZGERALD",
+    "total_nominations_count": 5,
+    "general_field_nominations_count": 2,
+    "genre_field_nominations_count": 3,
+    "leading_nominee_rank": 1,
+    "nominated_work_ids": [
+      "WRK_ELLA_SWINGS_LIGHTLY_0036"
+    ],
+    "public_announcement_tier": "Headlining Multi-Nominee",
+    "ceremony_year": 1995
+  },
+  {
+    "package_id": "MULTI_PKG_038",
+    "ceremony_id": "CEREMONY_038",
+    "creator_id": "CRT_I_DIG_CHICKS",
+    "total_nominations_count": 6,
+    "general_field_nominations_count": 2,
+    "genre_field_nominations_count": 4,
+    "leading_nominee_rank": 1,
+    "nominated_work_ids": [
+      "WRK_I_DIG_CHICKS_0037"
+    ],
+    "public_announcement_tier": "Headlining Multi-Nominee",
+    "ceremony_year": 1996
+  },
+  {
+    "package_id": "MULTI_PKG_039",
+    "ceremony_id": "CEREMONY_039",
+    "creator_id": "CRT_DEBUSSY_IMAGES_",
+    "total_nominations_count": 7,
+    "general_field_nominations_count": 2,
+    "genre_field_nominations_count": 5,
+    "leading_nominee_rank": 1,
+    "nominated_work_ids": [
+      "WRK_DEBUSSY_IMAGES_FOR_ORCHESTRA_0038"
+    ],
+    "public_announcement_tier": "Headlining Multi-Nominee",
+    "ceremony_year": 1997
+  },
+  {
+    "package_id": "MULTI_PKG_040",
+    "ceremony_id": "CEREMONY_040",
+    "creator_id": "CRT_BEETHOVEN_SONAT",
+    "total_nominations_count": 8,
+    "general_field_nominations_count": 2,
+    "genre_field_nominations_count": 6,
+    "leading_nominee_rank": 1,
+    "nominated_work_ids": [
+      "WRK_BEETHOVEN_SONATAS_NO_21_IN_C_W_0039"
+    ],
+    "public_announcement_tier": "Headlining Multi-Nominee",
+    "ceremony_year": 1998
+  },
+  {
+    "package_id": "MULTI_PKG_041",
+    "ceremony_id": "CEREMONY_041",
+    "creator_id": "CRT_RACHMANINOFF_PI",
+    "total_nominations_count": 4,
+    "general_field_nominations_count": 2,
+    "genre_field_nominations_count": 2,
+    "leading_nominee_rank": 1,
+    "nominated_work_ids": [
+      "WRK_RACHMANINOFF_PIANO_CONCERTO_NO_0040"
+    ],
+    "public_announcement_tier": "Headlining Multi-Nominee",
+    "ceremony_year": 1999
+  },
+  {
+    "package_id": "MULTI_PKG_042",
+    "ceremony_id": "CEREMONY_042",
+    "creator_id": "CRT_MOZART_THE_MARR",
+    "total_nominations_count": 5,
+    "general_field_nominations_count": 2,
+    "genre_field_nominations_count": 3,
+    "leading_nominee_rank": 1,
+    "nominated_work_ids": [
+      "WRK_MOZART_THE_MARRIAGE_OF_FIGARO_0041"
+    ],
+    "public_announcement_tier": "Headlining Multi-Nominee",
+    "ceremony_year": 2000
+  },
+  {
+    "package_id": "MULTI_PKG_043",
+    "ceremony_id": "CEREMONY_043",
+    "creator_id": "CRT_BEETHOVEN_SONAT",
+    "total_nominations_count": 6,
+    "general_field_nominations_count": 2,
+    "genre_field_nominations_count": 4,
+    "leading_nominee_rank": 1,
+    "nominated_work_ids": [
+      "WRK_BEETHOVEN_SONATAS_NO_21_IN_C_W_0042"
+    ],
+    "public_announcement_tier": "Headlining Multi-Nominee",
+    "ceremony_year": 2001
+  },
+  {
+    "package_id": "MULTI_PKG_044",
+    "ceremony_id": "CEREMONY_044",
+    "creator_id": "CRT_BJOERLING_IN_OP",
+    "total_nominations_count": 7,
+    "general_field_nominations_count": 2,
+    "genre_field_nominations_count": 5,
+    "leading_nominee_rank": 1,
+    "nominated_work_ids": [
+      "WRK_BJOERLING_IN_OPERA_0043"
+    ],
+    "public_announcement_tier": "Headlining Multi-Nominee",
+    "ceremony_year": 2002
+  },
+  {
+    "package_id": "MULTI_PKG_045",
+    "ceremony_id": "CEREMONY_045",
+    "creator_id": "CRT_DUKE_ELLINGTON",
+    "total_nominations_count": 8,
+    "general_field_nominations_count": 2,
+    "genre_field_nominations_count": 6,
+    "leading_nominee_rank": 1,
+    "nominated_work_ids": [
+      "WRK_ANATOMY_OF_A_MURDER_0044"
+    ],
+    "public_announcement_tier": "Headlining Multi-Nominee",
+    "ceremony_year": 2003
+  },
+  {
+    "package_id": "MULTI_PKG_046",
+    "ceremony_id": "CEREMONY_046",
+    "creator_id": "CRT_DUKE_ELLINGTON",
+    "total_nominations_count": 4,
+    "general_field_nominations_count": 2,
+    "genre_field_nominations_count": 2,
+    "leading_nominee_rank": 1,
+    "nominated_work_ids": [
+      "WRK_ANATOMY_OF_A_MURDER_0045"
+    ],
+    "public_announcement_tier": "Headlining Multi-Nominee",
+    "ceremony_year": 2004
+  },
+  {
+    "package_id": "MULTI_PKG_047",
+    "ceremony_id": "CEREMONY_047",
+    "creator_id": "CRT_PORGY_AND_BESS",
+    "total_nominations_count": 5,
+    "general_field_nominations_count": 2,
+    "genre_field_nominations_count": 3,
+    "leading_nominee_rank": 1,
+    "nominated_work_ids": [
+      "WRK_PORGY_AND_BESS_0046"
+    ],
+    "public_announcement_tier": "Headlining Multi-Nominee",
+    "ceremony_year": 2005
+  },
+  {
+    "package_id": "MULTI_PKG_048",
+    "ceremony_id": "CEREMONY_048",
+    "creator_id": "CRT_GYPSY",
+    "total_nominations_count": 6,
+    "general_field_nominations_count": 2,
+    "genre_field_nominations_count": 4,
+    "leading_nominee_rank": 1,
+    "nominated_work_ids": [
+      "WRK_GYPSY_0047"
+    ],
+    "public_announcement_tier": "Headlining Multi-Nominee",
+    "ceremony_year": 2006
+  },
+  {
+    "package_id": "MULTI_PKG_049",
+    "ceremony_id": "CEREMONY_049",
+    "creator_id": "CRT_INSIDE_SHELLEY_",
+    "total_nominations_count": 7,
+    "general_field_nominations_count": 2,
+    "genre_field_nominations_count": 5,
+    "leading_nominee_rank": 1,
+    "nominated_work_ids": [
+      "WRK_INSIDE_SHELLEY_BERMAN_0048"
+    ],
+    "public_announcement_tier": "Headlining Multi-Nominee",
+    "ceremony_year": 2007
+  },
+  {
+    "package_id": "MULTI_PKG_050",
+    "ceremony_id": "CEREMONY_050",
+    "creator_id": "CRT_THE_BATTLE_OF_K",
+    "total_nominations_count": 8,
+    "general_field_nominations_count": 2,
+    "genre_field_nominations_count": 6,
+    "leading_nominee_rank": 1,
+    "nominated_work_ids": [
+      "WRK_THE_BATTLE_OF_KOOKAMONGA_0049"
+    ],
+    "public_announcement_tier": "Headlining Multi-Nominee",
+    "ceremony_year": 2008
+  },
+  {
+    "package_id": "MULTI_PKG_051",
+    "ceremony_id": "CEREMONY_051",
+    "creator_id": "CRT_A_LINCOLN_PORTR",
+    "total_nominations_count": 4,
+    "general_field_nominations_count": 2,
+    "genre_field_nominations_count": 2,
+    "leading_nominee_rank": 1,
+    "nominated_work_ids": [
+      "WRK_A_LINCOLN_PORTRAIT_0050"
+    ],
+    "public_announcement_tier": "Headlining Multi-Nominee",
+    "ceremony_year": 2009
+  },
+  {
+    "package_id": "MULTI_PKG_052",
+    "ceremony_id": "CEREMONY_052",
+    "creator_id": "CRT_MIDNIGHT_FLYER",
+    "total_nominations_count": 5,
+    "general_field_nominations_count": 2,
+    "genre_field_nominations_count": 3,
+    "leading_nominee_rank": 1,
+    "nominated_work_ids": [
+      "WRK_MIDNIGHT_FLYER_0051"
+    ],
+    "public_announcement_tier": "Headlining Multi-Nominee",
+    "ceremony_year": 2010
+  },
+  {
+    "package_id": "MULTI_PKG_053",
+    "ceremony_id": "CEREMONY_053",
+    "creator_id": "CRT_THE_BATTLE_OF_N",
+    "total_nominations_count": 6,
+    "general_field_nominations_count": 2,
+    "genre_field_nominations_count": 4,
+    "leading_nominee_rank": 1,
+    "nominated_work_ids": [
+      "WRK_THE_BATTLE_OF_NEW_ORLEANS_0052"
+    ],
+    "public_announcement_tier": "Headlining Multi-Nominee",
+    "ceremony_year": 2011
+  },
+  {
+    "package_id": "MULTI_PKG_054",
+    "ceremony_id": "CEREMONY_054",
+    "creator_id": "CRT_WHAT_A_DIFF_REN",
+    "total_nominations_count": 7,
+    "general_field_nominations_count": 2,
+    "genre_field_nominations_count": 5,
+    "leading_nominee_rank": 1,
+    "nominated_work_ids": [
+      "WRK_WHAT_A_DIFF_RENCE_A_DAY_MAKES_0053"
+    ],
+    "public_announcement_tier": "Headlining Multi-Nominee",
+    "ceremony_year": 2012
+  },
+  {
+    "package_id": "MULTI_PKG_055",
+    "ceremony_id": "CEREMONY_055",
+    "creator_id": "CRT_THE_KINGSTON_TR",
+    "total_nominations_count": 8,
+    "general_field_nominations_count": 2,
+    "genre_field_nominations_count": 6,
+    "leading_nominee_rank": 1,
+    "nominated_work_ids": [
+      "WRK_THE_KINGSTON_TRIO_AT_LARGE_0054"
+    ],
+    "public_announcement_tier": "Headlining Multi-Nominee",
+    "ceremony_year": 2013
+  },
+  {
+    "package_id": "MULTI_PKG_056",
+    "ceremony_id": "CEREMONY_056",
+    "creator_id": "CRT_PETER_AND_THE_W",
+    "total_nominations_count": 4,
+    "general_field_nominations_count": 2,
+    "genre_field_nominations_count": 2,
+    "leading_nominee_rank": 1,
+    "nominated_work_ids": [
+      "WRK_PETER_AND_THE_WOLF_0055"
+    ],
+    "public_announcement_tier": "Headlining Multi-Nominee",
+    "ceremony_year": 2014
+  },
+  {
+    "package_id": "MULTI_PKG_057",
+    "ceremony_id": "CEREMONY_057",
+    "creator_id": "CRT_COME_DANCE_WITH",
+    "total_nominations_count": 5,
+    "general_field_nominations_count": 2,
+    "genre_field_nominations_count": 3,
+    "leading_nominee_rank": 1,
+    "nominated_work_ids": [
+      "WRK_COME_DANCE_WITH_ME_0056"
+    ],
+    "public_announcement_tier": "Headlining Multi-Nominee",
+    "ceremony_year": 2015
+  },
+  {
+    "package_id": "MULTI_PKG_058",
+    "ceremony_id": "CEREMONY_058",
+    "creator_id": "CRT_VICTORY_AT_SEA_",
+    "total_nominations_count": 6,
+    "general_field_nominations_count": 2,
+    "genre_field_nominations_count": 4,
+    "leading_nominee_rank": 1,
+    "nominated_work_ids": [
+      "WRK_VICTORY_AT_SEA_VOL_I_0057"
+    ],
+    "public_announcement_tier": "Headlining Multi-Nominee",
+    "ceremony_year": 2016
+  },
+  {
+    "package_id": "MULTI_PKG_059",
+    "ceremony_id": "CEREMONY_059",
+    "creator_id": "CRT_ALVIN_S_HARMONI",
+    "total_nominations_count": 7,
+    "general_field_nominations_count": 2,
+    "genre_field_nominations_count": 5,
+    "leading_nominee_rank": 1,
+    "nominated_work_ids": [
+      "WRK_ALVIN_S_HARMONICA_0058"
+    ],
+    "public_announcement_tier": "Headlining Multi-Nominee",
+    "ceremony_year": 2017
+  },
+  {
+    "package_id": "MULTI_PKG_060",
+    "ceremony_id": "CEREMONY_060",
+    "creator_id": "CRT_BELAFONTE_AT_CA",
+    "total_nominations_count": 8,
+    "general_field_nominations_count": 2,
+    "genre_field_nominations_count": 6,
+    "leading_nominee_rank": 1,
+    "nominated_work_ids": [
+      "WRK_BELAFONTE_AT_CARNEGIE_HALL_0059"
+    ],
+    "public_announcement_tier": "Headlining Multi-Nominee",
+    "ceremony_year": 2018
+  },
+  {
+    "package_id": "MULTI_PKG_061",
+    "ceremony_id": "CEREMONY_061",
+    "creator_id": "CRT_SHOSTAKOVICH_SY",
+    "total_nominations_count": 4,
+    "general_field_nominations_count": 2,
+    "genre_field_nominations_count": 2,
+    "leading_nominee_rank": 1,
+    "nominated_work_ids": [
+      "WRK_SHOSTAKOVICH_SYMPHONY_NO_5_0060"
+    ],
+    "public_announcement_tier": "Headlining Multi-Nominee",
+    "ceremony_year": 2019
+  },
+  {
+    "package_id": "MULTI_PKG_062",
+    "ceremony_id": "CEREMONY_062",
+    "creator_id": "CRT_BOBBY_DARIN",
+    "total_nominations_count": 5,
+    "general_field_nominations_count": 2,
+    "genre_field_nominations_count": 3,
+    "leading_nominee_rank": 1,
+    "nominated_work_ids": [
+      "WRK_BOBBY_DARIN_0061"
+    ],
+    "public_announcement_tier": "Headlining Multi-Nominee",
+    "ceremony_year": 2020
+  },
+  {
+    "package_id": "MULTI_PKG_063",
+    "ceremony_id": "CEREMONY_063",
+    "creator_id": "CRT_THE_THEME_FROM_",
+    "total_nominations_count": 6,
+    "general_field_nominations_count": 2,
+    "genre_field_nominations_count": 4,
+    "leading_nominee_rank": 1,
+    "nominated_work_ids": [
+      "WRK_THE_THEME_FROM_A_SUMMER_PLACE_0062"
+    ],
+    "public_announcement_tier": "Headlining Multi-Nominee",
+    "ceremony_year": 2021
+  },
+  {
+    "package_id": "MULTI_PKG_064",
+    "ceremony_id": "CEREMONY_064",
+    "creator_id": "CRT_THE_BUTTON_DOWN",
+    "total_nominations_count": 7,
+    "general_field_nominations_count": 2,
+    "genre_field_nominations_count": 5,
+    "leading_nominee_rank": 1,
+    "nominated_work_ids": [
+      "WRK_THE_BUTTON_DOWN_MIND_OF_BOB_NE_0063"
+    ],
+    "public_announcement_tier": "Headlining Multi-Nominee",
+    "ceremony_year": 2022
+  },
+  {
+    "package_id": "MULTI_PKG_065",
+    "ceremony_id": "CEREMONY_065",
+    "creator_id": "CRT_THEME_FROM_EXOD",
+    "total_nominations_count": 8,
+    "general_field_nominations_count": 2,
+    "genre_field_nominations_count": 6,
+    "leading_nominee_rank": 1,
+    "nominated_work_ids": [
+      "WRK_THEME_FROM_EXODUS_0064"
+    ],
+    "public_announcement_tier": "Headlining Multi-Nominee",
+    "ceremony_year": 2023
+  },
+  {
+    "package_id": "MULTI_PKG_066",
+    "ceremony_id": "CEREMONY_066",
+    "creator_id": "CRT_MACK_THE_KNIFE",
+    "total_nominations_count": 4,
+    "general_field_nominations_count": 2,
+    "genre_field_nominations_count": 2,
+    "leading_nominee_rank": 1,
+    "nominated_work_ids": [
+      "WRK_MACK_THE_KNIFE_0065"
+    ],
+    "public_announcement_tier": "Headlining Multi-Nominee",
+    "ceremony_year": 2024
+  },
+  {
+    "package_id": "MULTI_PKG_067",
+    "ceremony_id": "CEREMONY_067",
+    "creator_id": "CRT_ELLA_FITZGERALD",
+    "total_nominations_count": 5,
+    "general_field_nominations_count": 2,
+    "genre_field_nominations_count": 3,
+    "leading_nominee_rank": 1,
+    "nominated_work_ids": [
+      "WRK_MACK_THE_KNIFE_ELLA_IN_BERLIN_0066"
+    ],
+    "public_announcement_tier": "Headlining Multi-Nominee",
+    "ceremony_year": 2025
+  },
+  {
+    "package_id": "MULTI_PKG_068",
+    "ceremony_id": "CEREMONY_001",
+    "creator_id": "CRT_GEORGIA_ON_MY_M",
+    "total_nominations_count": 6,
+    "general_field_nominations_count": 2,
+    "genre_field_nominations_count": 4,
+    "leading_nominee_rank": 1,
+    "nominated_work_ids": [
+      "WRK_GEORGIA_ON_MY_MIND_0067"
+    ],
+    "public_announcement_tier": "Headlining Multi-Nominee",
+    "ceremony_year": 1959
+  },
+  {
+    "package_id": "MULTI_PKG_069",
+    "ceremony_id": "CEREMONY_002",
+    "creator_id": "CRT_THE_GENIUS_OF_R",
+    "total_nominations_count": 7,
+    "general_field_nominations_count": 2,
+    "genre_field_nominations_count": 5,
+    "leading_nominee_rank": 1,
+    "nominated_work_ids": [
+      "WRK_THE_GENIUS_OF_RAY_CHARLES_0068"
+    ],
+    "public_announcement_tier": "Headlining Multi-Nominee",
+    "ceremony_year": 1960
+  },
+  {
+    "package_id": "MULTI_PKG_070",
+    "ceremony_id": "CEREMONY_003",
+    "creator_id": "CRT_HENRY_MANCINI",
+    "total_nominations_count": 8,
+    "general_field_nominations_count": 2,
+    "genre_field_nominations_count": 6,
+    "leading_nominee_rank": 1,
+    "nominated_work_ids": [
+      "WRK_MR_LUCKY_0069"
+    ],
+    "public_announcement_tier": "Headlining Multi-Nominee",
+    "ceremony_year": 1961
+  }
+]

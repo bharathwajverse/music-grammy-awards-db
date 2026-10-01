@@ -1,0 +1,1107 @@
+[
+  {
+    "speech_id": "SPEECH_001",
+    "winner_record_id": "WIN_NOM_001_RECORD_OF__0000",
+    "primary_speaker_creator_id": "CRT_NEL_BLU_DIPINTO",
+    "speech_duration_seconds": 95,
+    "playoff_music_interrupted": true,
+    "primary_quote_transcript": "Thank you to the Recording Academy, my fans, producers, and collaborators.",
+    "individuals_acknowledged": [
+      "Record Label",
+      "Co-producers",
+      "Family",
+      "Fans"
+    ],
+    "social_political_message_flag": true,
+    "press_room_followup_id": "PRESS_ROOM_QNA_001",
+    "broadcast_clip_timecode": "02:15:30"
+  },
+  {
+    "speech_id": "SPEECH_002",
+    "winner_record_id": "WIN_NOM_001_ALBUM_OF_T_0001",
+    "primary_speaker_creator_id": "CRT_HENRY_MANCINI",
+    "speech_duration_seconds": 96,
+    "playoff_music_interrupted": false,
+    "primary_quote_transcript": "Thank you to the Recording Academy, my fans, producers, and collaborators.",
+    "individuals_acknowledged": [
+      "Record Label",
+      "Co-producers",
+      "Family",
+      "Fans"
+    ],
+    "social_political_message_flag": false,
+    "press_room_followup_id": "PRESS_ROOM_QNA_002",
+    "broadcast_clip_timecode": "02:16:30"
+  },
+  {
+    "speech_id": "SPEECH_003",
+    "winner_record_id": "WIN_NOM_001_SONG_OF_TH_0002",
+    "primary_speaker_creator_id": "CRT_NEL_BLU_DIPINTO",
+    "speech_duration_seconds": 97,
+    "playoff_music_interrupted": false,
+    "primary_quote_transcript": "Thank you to the Recording Academy, my fans, producers, and collaborators.",
+    "individuals_acknowledged": [
+      "Record Label",
+      "Co-producers",
+      "Family",
+      "Fans"
+    ],
+    "social_political_message_flag": false,
+    "press_room_followup_id": "PRESS_ROOM_QNA_003",
+    "broadcast_clip_timecode": "02:17:30"
+  },
+  {
+    "speech_id": "SPEECH_004",
+    "winner_record_id": "WIN_NOM_001_BEST_VOCAL_0003",
+    "primary_speaker_creator_id": "CRT_ELLA_FITZGERALD",
+    "speech_duration_seconds": 98,
+    "playoff_music_interrupted": false,
+    "primary_quote_transcript": "Thank you to the Recording Academy, my fans, producers, and collaborators.",
+    "individuals_acknowledged": [
+      "Record Label",
+      "Co-producers",
+      "Family",
+      "Fans"
+    ],
+    "social_political_message_flag": false,
+    "press_room_followup_id": "PRESS_ROOM_QNA_004",
+    "broadcast_clip_timecode": "02:18:30"
+  },
+  {
+    "speech_id": "SPEECH_005",
+    "winner_record_id": "WIN_NOM_001_BEST_VOCAL_0004",
+    "primary_speaker_creator_id": "CRT_CATCH_A_FALLING",
+    "speech_duration_seconds": 99,
+    "playoff_music_interrupted": false,
+    "primary_quote_transcript": "Thank you to the Recording Academy, my fans, producers, and collaborators.",
+    "individuals_acknowledged": [
+      "Record Label",
+      "Co-producers",
+      "Family",
+      "Fans"
+    ],
+    "social_political_message_flag": true,
+    "press_room_followup_id": "PRESS_ROOM_QNA_005",
+    "broadcast_clip_timecode": "02:19:30"
+  },
+  {
+    "speech_id": "SPEECH_006",
+    "winner_record_id": "WIN_NOM_001_BEST_PERFO_0005",
+    "primary_speaker_creator_id": "CRT_BILLY_MAY_S_BIG",
+    "speech_duration_seconds": 100,
+    "playoff_music_interrupted": true,
+    "primary_quote_transcript": "Thank you to the Recording Academy, my fans, producers, and collaborators.",
+    "individuals_acknowledged": [
+      "Record Label",
+      "Co-producers",
+      "Family",
+      "Fans"
+    ],
+    "social_political_message_flag": false,
+    "press_room_followup_id": "PRESS_ROOM_QNA_006",
+    "broadcast_clip_timecode": "02:20:30"
+  },
+  {
+    "speech_id": "SPEECH_007",
+    "winner_record_id": "WIN_NOM_001_BEST_PERFO_0006",
+    "primary_speaker_creator_id": "CRT_BASIE",
+    "speech_duration_seconds": 101,
+    "playoff_music_interrupted": false,
+    "primary_quote_transcript": "Thank you to the Recording Academy, my fans, producers, and collaborators.",
+    "individuals_acknowledged": [
+      "Record Label",
+      "Co-producers",
+      "Family",
+      "Fans"
+    ],
+    "social_political_message_flag": false,
+    "press_room_followup_id": "PRESS_ROOM_QNA_007",
+    "broadcast_clip_timecode": "02:21:30"
+  },
+  {
+    "speech_id": "SPEECH_008",
+    "winner_record_id": "WIN_NOM_001_BEST_PERFO_0007",
+    "primary_speaker_creator_id": "CRT_THAT_OLD_BLACK_",
+    "speech_duration_seconds": 102,
+    "playoff_music_interrupted": false,
+    "primary_quote_transcript": "Thank you to the Recording Academy, my fans, producers, and collaborators.",
+    "individuals_acknowledged": [
+      "Record Label",
+      "Co-producers",
+      "Family",
+      "Fans"
+    ],
+    "social_political_message_flag": false,
+    "press_room_followup_id": "PRESS_ROOM_QNA_008",
+    "broadcast_clip_timecode": "02:22:30"
+  },
+  {
+    "speech_id": "SPEECH_009",
+    "winner_record_id": "WIN_NOM_001_BEST_JAZZ__0008",
+    "primary_speaker_creator_id": "CRT_ELLA_FITZGERALD",
+    "speech_duration_seconds": 103,
+    "playoff_music_interrupted": false,
+    "primary_quote_transcript": "Thank you to the Recording Academy, my fans, producers, and collaborators.",
+    "individuals_acknowledged": [
+      "Record Label",
+      "Co-producers",
+      "Family",
+      "Fans"
+    ],
+    "social_political_message_flag": true,
+    "press_room_followup_id": "PRESS_ROOM_QNA_009",
+    "broadcast_clip_timecode": "02:23:30"
+  },
+  {
+    "speech_id": "SPEECH_010",
+    "winner_record_id": "WIN_NOM_001_BEST_JAZZ__0009",
+    "primary_speaker_creator_id": "CRT_BASIE",
+    "speech_duration_seconds": 104,
+    "playoff_music_interrupted": false,
+    "primary_quote_transcript": "Thank you to the Recording Academy, my fans, producers, and collaborators.",
+    "individuals_acknowledged": [
+      "Record Label",
+      "Co-producers",
+      "Family",
+      "Fans"
+    ],
+    "social_political_message_flag": false,
+    "press_room_followup_id": "PRESS_ROOM_QNA_010",
+    "broadcast_clip_timecode": "02:24:30"
+  },
+  {
+    "speech_id": "SPEECH_011",
+    "winner_record_id": "WIN_NOM_001_BEST_COMED_0010",
+    "primary_speaker_creator_id": "CRT_THE_CHIPMUNK_SO",
+    "speech_duration_seconds": 105,
+    "playoff_music_interrupted": true,
+    "primary_quote_transcript": "Thank you to the Recording Academy, my fans, producers, and collaborators.",
+    "individuals_acknowledged": [
+      "Record Label",
+      "Co-producers",
+      "Family",
+      "Fans"
+    ],
+    "social_political_message_flag": false,
+    "press_room_followup_id": "PRESS_ROOM_QNA_011",
+    "broadcast_clip_timecode": "02:25:30"
+  },
+  {
+    "speech_id": "SPEECH_012",
+    "winner_record_id": "WIN_NOM_001_BEST_COUNT_0011",
+    "primary_speaker_creator_id": "CRT_TOM_DOOLEY",
+    "speech_duration_seconds": 106,
+    "playoff_music_interrupted": false,
+    "primary_quote_transcript": "Thank you to the Recording Academy, my fans, producers, and collaborators.",
+    "individuals_acknowledged": [
+      "Record Label",
+      "Co-producers",
+      "Family",
+      "Fans"
+    ],
+    "social_political_message_flag": false,
+    "press_room_followup_id": "PRESS_ROOM_QNA_012",
+    "broadcast_clip_timecode": "02:26:30"
+  },
+  {
+    "speech_id": "SPEECH_013",
+    "winner_record_id": "WIN_NOM_001_BEST_RHYTH_0012",
+    "primary_speaker_creator_id": "CRT_TEQUILA",
+    "speech_duration_seconds": 107,
+    "playoff_music_interrupted": false,
+    "primary_quote_transcript": "Thank you to the Recording Academy, my fans, producers, and collaborators.",
+    "individuals_acknowledged": [
+      "Record Label",
+      "Co-producers",
+      "Family",
+      "Fans"
+    ],
+    "social_political_message_flag": true,
+    "press_room_followup_id": "PRESS_ROOM_QNA_013",
+    "broadcast_clip_timecode": "02:27:30"
+  },
+  {
+    "speech_id": "SPEECH_014",
+    "winner_record_id": "WIN_NOM_001_BEST_ARRAN_0013",
+    "primary_speaker_creator_id": "CRT_HENRY_MANCINI",
+    "speech_duration_seconds": 108,
+    "playoff_music_interrupted": false,
+    "primary_quote_transcript": "Thank you to the Recording Academy, my fans, producers, and collaborators.",
+    "individuals_acknowledged": [
+      "Record Label",
+      "Co-producers",
+      "Family",
+      "Fans"
+    ],
+    "social_political_message_flag": false,
+    "press_room_followup_id": "PRESS_ROOM_QNA_014",
+    "broadcast_clip_timecode": "02:28:30"
+  },
+  {
+    "speech_id": "SPEECH_015",
+    "winner_record_id": "WIN_NOM_001_BEST_ENGIN_0014",
+    "primary_speaker_creator_id": "CRT_DUETS_WITH_A_SP",
+    "speech_duration_seconds": 109,
+    "playoff_music_interrupted": false,
+    "primary_quote_transcript": "Thank you to the Recording Academy, my fans, producers, and collaborators.",
+    "individuals_acknowledged": [
+      "Record Label",
+      "Co-producers",
+      "Family",
+      "Fans"
+    ],
+    "social_political_message_flag": false,
+    "press_room_followup_id": "PRESS_ROOM_QNA_015",
+    "broadcast_clip_timecode": "02:29:30"
+  },
+  {
+    "speech_id": "SPEECH_016",
+    "winner_record_id": "WIN_NOM_001_BEST_ENGIN_0015",
+    "primary_speaker_creator_id": "CRT_THE_CHIPMUNK_SO",
+    "speech_duration_seconds": 110,
+    "playoff_music_interrupted": true,
+    "primary_quote_transcript": "Thank you to the Recording Academy, my fans, producers, and collaborators.",
+    "individuals_acknowledged": [
+      "Record Label",
+      "Co-producers",
+      "Family",
+      "Fans"
+    ],
+    "social_political_message_flag": false,
+    "press_room_followup_id": "PRESS_ROOM_QNA_016",
+    "broadcast_clip_timecode": "02:30:30"
+  },
+  {
+    "speech_id": "SPEECH_017",
+    "winner_record_id": "WIN_NOM_001_BEST_ALBUM_0016",
+    "primary_speaker_creator_id": "CRT_FRANK_SINATRA",
+    "speech_duration_seconds": 111,
+    "playoff_music_interrupted": false,
+    "primary_quote_transcript": "Thank you to the Recording Academy, my fans, producers, and collaborators.",
+    "individuals_acknowledged": [
+      "Record Label",
+      "Co-producers",
+      "Family",
+      "Fans"
+    ],
+    "social_political_message_flag": true,
+    "press_room_followup_id": "PRESS_ROOM_QNA_017",
+    "broadcast_clip_timecode": "02:31:30"
+  },
+  {
+    "speech_id": "SPEECH_018",
+    "winner_record_id": "WIN_NOM_001_BEST_MUSIC_0017",
+    "primary_speaker_creator_id": "CRT_CROSS_COUNTRY_S",
+    "speech_duration_seconds": 112,
+    "playoff_music_interrupted": false,
+    "primary_quote_transcript": "Thank you to the Recording Academy, my fans, producers, and collaborators.",
+    "individuals_acknowledged": [
+      "Record Label",
+      "Co-producers",
+      "Family",
+      "Fans"
+    ],
+    "social_political_message_flag": false,
+    "press_room_followup_id": "PRESS_ROOM_QNA_018",
+    "broadcast_clip_timecode": "02:32:30"
+  },
+  {
+    "speech_id": "SPEECH_019",
+    "winner_record_id": "WIN_NOM_001_BEST_ORIGI_0018",
+    "primary_speaker_creator_id": "CRT_THE_MUSIC_MAN",
+    "speech_duration_seconds": 113,
+    "playoff_music_interrupted": false,
+    "primary_quote_transcript": "Thank you to the Recording Academy, my fans, producers, and collaborators.",
+    "individuals_acknowledged": [
+      "Record Label",
+      "Co-producers",
+      "Family",
+      "Fans"
+    ],
+    "social_political_message_flag": false,
+    "press_room_followup_id": "PRESS_ROOM_QNA_019",
+    "broadcast_clip_timecode": "02:33:30"
+  },
+  {
+    "speech_id": "SPEECH_020",
+    "winner_record_id": "WIN_NOM_001_BEST_SOUND_0019",
+    "primary_speaker_creator_id": "CRT_ANDR_PREVIN",
+    "speech_duration_seconds": 114,
+    "playoff_music_interrupted": false,
+    "primary_quote_transcript": "Thank you to the Recording Academy, my fans, producers, and collaborators.",
+    "individuals_acknowledged": [
+      "Record Label",
+      "Co-producers",
+      "Family",
+      "Fans"
+    ],
+    "social_political_message_flag": false,
+    "press_room_followup_id": "PRESS_ROOM_QNA_020",
+    "broadcast_clip_timecode": "02:34:30"
+  },
+  {
+    "speech_id": "SPEECH_021",
+    "winner_record_id": "WIN_NOM_001_BEST_PERFO_0020",
+    "primary_speaker_creator_id": "CRT_THE_BEST_OF_THE",
+    "speech_duration_seconds": 115,
+    "playoff_music_interrupted": true,
+    "primary_quote_transcript": "Thank you to the Recording Academy, my fans, producers, and collaborators.",
+    "individuals_acknowledged": [
+      "Record Label",
+      "Co-producers",
+      "Family",
+      "Fans"
+    ],
+    "social_political_message_flag": true,
+    "press_room_followup_id": "PRESS_ROOM_QNA_021",
+    "broadcast_clip_timecode": "02:35:30"
+  },
+  {
+    "speech_id": "SPEECH_022",
+    "winner_record_id": "WIN_NOM_001_BEST_RECOR_0021",
+    "primary_speaker_creator_id": "CRT_THE_CHIPMUNK_SO",
+    "speech_duration_seconds": 116,
+    "playoff_music_interrupted": false,
+    "primary_quote_transcript": "Thank you to the Recording Academy, my fans, producers, and collaborators.",
+    "individuals_acknowledged": [
+      "Record Label",
+      "Co-producers",
+      "Family",
+      "Fans"
+    ],
+    "social_political_message_flag": false,
+    "press_room_followup_id": "PRESS_ROOM_QNA_022",
+    "broadcast_clip_timecode": "02:36:30"
+  },
+  {
+    "speech_id": "SPEECH_023",
+    "winner_record_id": "WIN_NOM_001_BEST_CLASS_0022",
+    "primary_speaker_creator_id": "CRT_GAIETE_PARISIEN",
+    "speech_duration_seconds": 117,
+    "playoff_music_interrupted": false,
+    "primary_quote_transcript": "Thank you to the Recording Academy, my fans, producers, and collaborators.",
+    "individuals_acknowledged": [
+      "Record Label",
+      "Co-producers",
+      "Family",
+      "Fans"
+    ],
+    "social_political_message_flag": false,
+    "press_room_followup_id": "PRESS_ROOM_QNA_023",
+    "broadcast_clip_timecode": "02:37:30"
+  },
+  {
+    "speech_id": "SPEECH_024",
+    "winner_record_id": "WIN_NOM_001_BEST_CLASS_0023",
+    "primary_speaker_creator_id": "CRT_TCHAIKOVSKY_PIA",
+    "speech_duration_seconds": 118,
+    "playoff_music_interrupted": false,
+    "primary_quote_transcript": "Thank you to the Recording Academy, my fans, producers, and collaborators.",
+    "individuals_acknowledged": [
+      "Record Label",
+      "Co-producers",
+      "Family",
+      "Fans"
+    ],
+    "social_political_message_flag": false,
+    "press_room_followup_id": "PRESS_ROOM_QNA_024",
+    "broadcast_clip_timecode": "02:38:30"
+  },
+  {
+    "speech_id": "SPEECH_025",
+    "winner_record_id": "WIN_NOM_001_BEST_CLASS_0024",
+    "primary_speaker_creator_id": "CRT_SEGOVIA_GOLDEN_",
+    "speech_duration_seconds": 119,
+    "playoff_music_interrupted": false,
+    "primary_quote_transcript": "Thank you to the Recording Academy, my fans, producers, and collaborators.",
+    "individuals_acknowledged": [
+      "Record Label",
+      "Co-producers",
+      "Family",
+      "Fans"
+    ],
+    "social_political_message_flag": true,
+    "press_room_followup_id": "PRESS_ROOM_QNA_025",
+    "broadcast_clip_timecode": "02:39:30"
+  },
+  {
+    "speech_id": "SPEECH_026",
+    "winner_record_id": "WIN_NOM_001_BEST_CLASS_0025",
+    "primary_speaker_creator_id": "CRT_BEETHOVEN_QUART",
+    "speech_duration_seconds": 120,
+    "playoff_music_interrupted": true,
+    "primary_quote_transcript": "Thank you to the Recording Academy, my fans, producers, and collaborators.",
+    "individuals_acknowledged": [
+      "Record Label",
+      "Co-producers",
+      "Family",
+      "Fans"
+    ],
+    "social_political_message_flag": false,
+    "press_room_followup_id": "PRESS_ROOM_QNA_026",
+    "broadcast_clip_timecode": "02:40:30"
+  },
+  {
+    "speech_id": "SPEECH_027",
+    "winner_record_id": "WIN_NOM_001_BEST_CLASS_0026",
+    "primary_speaker_creator_id": "CRT_OPERATIC_RECITA",
+    "speech_duration_seconds": 121,
+    "playoff_music_interrupted": false,
+    "primary_quote_transcript": "Thank you to the Recording Academy, my fans, producers, and collaborators.",
+    "individuals_acknowledged": [
+      "Record Label",
+      "Co-producers",
+      "Family",
+      "Fans"
+    ],
+    "social_political_message_flag": false,
+    "press_room_followup_id": "PRESS_ROOM_QNA_027",
+    "broadcast_clip_timecode": "02:41:30"
+  },
+  {
+    "speech_id": "SPEECH_028",
+    "winner_record_id": "WIN_NOM_001_BEST_CLASS_0027",
+    "primary_speaker_creator_id": "CRT_VIRTUOSO",
+    "speech_duration_seconds": 122,
+    "playoff_music_interrupted": false,
+    "primary_quote_transcript": "Thank you to the Recording Academy, my fans, producers, and collaborators.",
+    "individuals_acknowledged": [
+      "Record Label",
+      "Co-producers",
+      "Family",
+      "Fans"
+    ],
+    "social_political_message_flag": false,
+    "press_room_followup_id": "PRESS_ROOM_QNA_028",
+    "broadcast_clip_timecode": "02:42:30"
+  },
+  {
+    "speech_id": "SPEECH_029",
+    "winner_record_id": "WIN_NOM_002_RECORD_OF__0028",
+    "primary_speaker_creator_id": "CRT_MACK_THE_KNIFE",
+    "speech_duration_seconds": 123,
+    "playoff_music_interrupted": false,
+    "primary_quote_transcript": "Thank you to the Recording Academy, my fans, producers, and collaborators.",
+    "individuals_acknowledged": [
+      "Record Label",
+      "Co-producers",
+      "Family",
+      "Fans"
+    ],
+    "social_political_message_flag": true,
+    "press_room_followup_id": "PRESS_ROOM_QNA_029",
+    "broadcast_clip_timecode": "02:43:30"
+  },
+  {
+    "speech_id": "SPEECH_030",
+    "winner_record_id": "WIN_NOM_002_ALBUM_OF_T_0029",
+    "primary_speaker_creator_id": "CRT_FRANK_SINATRA",
+    "speech_duration_seconds": 124,
+    "playoff_music_interrupted": false,
+    "primary_quote_transcript": "Thank you to the Recording Academy, my fans, producers, and collaborators.",
+    "individuals_acknowledged": [
+      "Record Label",
+      "Co-producers",
+      "Family",
+      "Fans"
+    ],
+    "social_political_message_flag": false,
+    "press_room_followup_id": "PRESS_ROOM_QNA_030",
+    "broadcast_clip_timecode": "02:44:30"
+  },
+  {
+    "speech_id": "SPEECH_031",
+    "winner_record_id": "WIN_NOM_002_SONG_OF_TH_0030",
+    "primary_speaker_creator_id": "CRT_THE_BATTLE_OF_N",
+    "speech_duration_seconds": 125,
+    "playoff_music_interrupted": true,
+    "primary_quote_transcript": "Thank you to the Recording Academy, my fans, producers, and collaborators.",
+    "individuals_acknowledged": [
+      "Record Label",
+      "Co-producers",
+      "Family",
+      "Fans"
+    ],
+    "social_political_message_flag": false,
+    "press_room_followup_id": "PRESS_ROOM_QNA_031",
+    "broadcast_clip_timecode": "02:45:30"
+  },
+  {
+    "speech_id": "SPEECH_032",
+    "winner_record_id": "WIN_NOM_002_BEST_VOCAL_0031",
+    "primary_speaker_creator_id": "CRT_ELLA_FITZGERALD",
+    "speech_duration_seconds": 126,
+    "playoff_music_interrupted": false,
+    "primary_quote_transcript": "Thank you to the Recording Academy, my fans, producers, and collaborators.",
+    "individuals_acknowledged": [
+      "Record Label",
+      "Co-producers",
+      "Family",
+      "Fans"
+    ],
+    "social_political_message_flag": false,
+    "press_room_followup_id": "PRESS_ROOM_QNA_032",
+    "broadcast_clip_timecode": "02:46:30"
+  },
+  {
+    "speech_id": "SPEECH_033",
+    "winner_record_id": "WIN_NOM_002_BEST_VOCAL_0032",
+    "primary_speaker_creator_id": "CRT_FRANK_SINATRA",
+    "speech_duration_seconds": 127,
+    "playoff_music_interrupted": false,
+    "primary_quote_transcript": "Thank you to the Recording Academy, my fans, producers, and collaborators.",
+    "individuals_acknowledged": [
+      "Record Label",
+      "Co-producers",
+      "Family",
+      "Fans"
+    ],
+    "social_political_message_flag": true,
+    "press_room_followup_id": "PRESS_ROOM_QNA_033",
+    "broadcast_clip_timecode": "02:47:30"
+  },
+  {
+    "speech_id": "SPEECH_034",
+    "winner_record_id": "WIN_NOM_002_BEST_PERFO_0033",
+    "primary_speaker_creator_id": "CRT_DUKE_ELLINGTON",
+    "speech_duration_seconds": 128,
+    "playoff_music_interrupted": false,
+    "primary_quote_transcript": "Thank you to the Recording Academy, my fans, producers, and collaborators.",
+    "individuals_acknowledged": [
+      "Record Label",
+      "Co-producers",
+      "Family",
+      "Fans"
+    ],
+    "social_political_message_flag": false,
+    "press_room_followup_id": "PRESS_ROOM_QNA_034",
+    "broadcast_clip_timecode": "02:48:30"
+  },
+  {
+    "speech_id": "SPEECH_035",
+    "winner_record_id": "WIN_NOM_002_BEST_PERFO_0034",
+    "primary_speaker_creator_id": "CRT_ANDR_PREVIN",
+    "speech_duration_seconds": 129,
+    "playoff_music_interrupted": false,
+    "primary_quote_transcript": "Thank you to the Recording Academy, my fans, producers, and collaborators.",
+    "individuals_acknowledged": [
+      "Record Label",
+      "Co-producers",
+      "Family",
+      "Fans"
+    ],
+    "social_political_message_flag": false,
+    "press_room_followup_id": "PRESS_ROOM_QNA_035",
+    "broadcast_clip_timecode": "02:49:30"
+  },
+  {
+    "speech_id": "SPEECH_036",
+    "winner_record_id": "WIN_NOM_002_BEST_PERFO_0035",
+    "primary_speaker_creator_id": "CRT_BATTLE_HYMN_OF_",
+    "speech_duration_seconds": 130,
+    "playoff_music_interrupted": true,
+    "primary_quote_transcript": "Thank you to the Recording Academy, my fans, producers, and collaborators.",
+    "individuals_acknowledged": [
+      "Record Label",
+      "Co-producers",
+      "Family",
+      "Fans"
+    ],
+    "social_political_message_flag": false,
+    "press_room_followup_id": "PRESS_ROOM_QNA_036",
+    "broadcast_clip_timecode": "02:50:30"
+  },
+  {
+    "speech_id": "SPEECH_037",
+    "winner_record_id": "WIN_NOM_002_BEST_JAZZ__0036",
+    "primary_speaker_creator_id": "CRT_ELLA_FITZGERALD",
+    "speech_duration_seconds": 131,
+    "playoff_music_interrupted": false,
+    "primary_quote_transcript": "Thank you to the Recording Academy, my fans, producers, and collaborators.",
+    "individuals_acknowledged": [
+      "Record Label",
+      "Co-producers",
+      "Family",
+      "Fans"
+    ],
+    "social_political_message_flag": true,
+    "press_room_followup_id": "PRESS_ROOM_QNA_037",
+    "broadcast_clip_timecode": "02:51:30"
+  },
+  {
+    "speech_id": "SPEECH_038",
+    "winner_record_id": "WIN_NOM_002_BEST_JAZZ__0037",
+    "primary_speaker_creator_id": "CRT_I_DIG_CHICKS",
+    "speech_duration_seconds": 132,
+    "playoff_music_interrupted": false,
+    "primary_quote_transcript": "Thank you to the Recording Academy, my fans, producers, and collaborators.",
+    "individuals_acknowledged": [
+      "Record Label",
+      "Co-producers",
+      "Family",
+      "Fans"
+    ],
+    "social_political_message_flag": false,
+    "press_room_followup_id": "PRESS_ROOM_QNA_038",
+    "broadcast_clip_timecode": "02:52:30"
+  },
+  {
+    "speech_id": "SPEECH_039",
+    "winner_record_id": "WIN_NOM_002_BEST_CLASS_0038",
+    "primary_speaker_creator_id": "CRT_DEBUSSY_IMAGES_",
+    "speech_duration_seconds": 133,
+    "playoff_music_interrupted": false,
+    "primary_quote_transcript": "Thank you to the Recording Academy, my fans, producers, and collaborators.",
+    "individuals_acknowledged": [
+      "Record Label",
+      "Co-producers",
+      "Family",
+      "Fans"
+    ],
+    "social_political_message_flag": false,
+    "press_room_followup_id": "PRESS_ROOM_QNA_039",
+    "broadcast_clip_timecode": "02:53:30"
+  },
+  {
+    "speech_id": "SPEECH_040",
+    "winner_record_id": "WIN_NOM_002_BEST_CLASS_0039",
+    "primary_speaker_creator_id": "CRT_BEETHOVEN_SONAT",
+    "speech_duration_seconds": 134,
+    "playoff_music_interrupted": false,
+    "primary_quote_transcript": "Thank you to the Recording Academy, my fans, producers, and collaborators.",
+    "individuals_acknowledged": [
+      "Record Label",
+      "Co-producers",
+      "Family",
+      "Fans"
+    ],
+    "social_political_message_flag": false,
+    "press_room_followup_id": "PRESS_ROOM_QNA_040",
+    "broadcast_clip_timecode": "02:54:30"
+  },
+  {
+    "speech_id": "SPEECH_041",
+    "winner_record_id": "WIN_NOM_002_BEST_CLASS_0040",
+    "primary_speaker_creator_id": "CRT_RACHMANINOFF_PI",
+    "speech_duration_seconds": 135,
+    "playoff_music_interrupted": true,
+    "primary_quote_transcript": "Thank you to the Recording Academy, my fans, producers, and collaborators.",
+    "individuals_acknowledged": [
+      "Record Label",
+      "Co-producers",
+      "Family",
+      "Fans"
+    ],
+    "social_political_message_flag": true,
+    "press_room_followup_id": "PRESS_ROOM_QNA_041",
+    "broadcast_clip_timecode": "02:15:30"
+  },
+  {
+    "speech_id": "SPEECH_042",
+    "winner_record_id": "WIN_NOM_002_BEST_CLASS_0041",
+    "primary_speaker_creator_id": "CRT_MOZART_THE_MARR",
+    "speech_duration_seconds": 136,
+    "playoff_music_interrupted": false,
+    "primary_quote_transcript": "Thank you to the Recording Academy, my fans, producers, and collaborators.",
+    "individuals_acknowledged": [
+      "Record Label",
+      "Co-producers",
+      "Family",
+      "Fans"
+    ],
+    "social_political_message_flag": false,
+    "press_room_followup_id": "PRESS_ROOM_QNA_042",
+    "broadcast_clip_timecode": "02:16:30"
+  },
+  {
+    "speech_id": "SPEECH_043",
+    "winner_record_id": "WIN_NOM_002_BEST_CLASS_0042",
+    "primary_speaker_creator_id": "CRT_BEETHOVEN_SONAT",
+    "speech_duration_seconds": 137,
+    "playoff_music_interrupted": false,
+    "primary_quote_transcript": "Thank you to the Recording Academy, my fans, producers, and collaborators.",
+    "individuals_acknowledged": [
+      "Record Label",
+      "Co-producers",
+      "Family",
+      "Fans"
+    ],
+    "social_political_message_flag": false,
+    "press_room_followup_id": "PRESS_ROOM_QNA_043",
+    "broadcast_clip_timecode": "02:17:30"
+  },
+  {
+    "speech_id": "SPEECH_044",
+    "winner_record_id": "WIN_NOM_002_BEST_CLASS_0043",
+    "primary_speaker_creator_id": "CRT_BJOERLING_IN_OP",
+    "speech_duration_seconds": 138,
+    "playoff_music_interrupted": false,
+    "primary_quote_transcript": "Thank you to the Recording Academy, my fans, producers, and collaborators.",
+    "individuals_acknowledged": [
+      "Record Label",
+      "Co-producers",
+      "Family",
+      "Fans"
+    ],
+    "social_political_message_flag": false,
+    "press_room_followup_id": "PRESS_ROOM_QNA_044",
+    "broadcast_clip_timecode": "02:18:30"
+  },
+  {
+    "speech_id": "SPEECH_045",
+    "winner_record_id": "WIN_NOM_002_BEST_MUSIC_0044",
+    "primary_speaker_creator_id": "CRT_DUKE_ELLINGTON",
+    "speech_duration_seconds": 139,
+    "playoff_music_interrupted": false,
+    "primary_quote_transcript": "Thank you to the Recording Academy, my fans, producers, and collaborators.",
+    "individuals_acknowledged": [
+      "Record Label",
+      "Co-producers",
+      "Family",
+      "Fans"
+    ],
+    "social_political_message_flag": true,
+    "press_room_followup_id": "PRESS_ROOM_QNA_045",
+    "broadcast_clip_timecode": "02:19:30"
+  },
+  {
+    "speech_id": "SPEECH_046",
+    "winner_record_id": "WIN_NOM_002_BEST_SOUND_0045",
+    "primary_speaker_creator_id": "CRT_DUKE_ELLINGTON",
+    "speech_duration_seconds": 95,
+    "playoff_music_interrupted": true,
+    "primary_quote_transcript": "Thank you to the Recording Academy, my fans, producers, and collaborators.",
+    "individuals_acknowledged": [
+      "Record Label",
+      "Co-producers",
+      "Family",
+      "Fans"
+    ],
+    "social_political_message_flag": false,
+    "press_room_followup_id": "PRESS_ROOM_QNA_046",
+    "broadcast_clip_timecode": "02:20:30"
+  },
+  {
+    "speech_id": "SPEECH_047",
+    "winner_record_id": "WIN_NOM_002_BEST_SOUND_0046",
+    "primary_speaker_creator_id": "CRT_PORGY_AND_BESS",
+    "speech_duration_seconds": 96,
+    "playoff_music_interrupted": false,
+    "primary_quote_transcript": "Thank you to the Recording Academy, my fans, producers, and collaborators.",
+    "individuals_acknowledged": [
+      "Record Label",
+      "Co-producers",
+      "Family",
+      "Fans"
+    ],
+    "social_political_message_flag": false,
+    "press_room_followup_id": "PRESS_ROOM_QNA_047",
+    "broadcast_clip_timecode": "02:21:30"
+  },
+  {
+    "speech_id": "SPEECH_048",
+    "winner_record_id": "WIN_NOM_002_BEST_BROAD_0047",
+    "primary_speaker_creator_id": "CRT_GYPSY",
+    "speech_duration_seconds": 97,
+    "playoff_music_interrupted": false,
+    "primary_quote_transcript": "Thank you to the Recording Academy, my fans, producers, and collaborators.",
+    "individuals_acknowledged": [
+      "Record Label",
+      "Co-producers",
+      "Family",
+      "Fans"
+    ],
+    "social_political_message_flag": false,
+    "press_room_followup_id": "PRESS_ROOM_QNA_048",
+    "broadcast_clip_timecode": "02:22:30"
+  },
+  {
+    "speech_id": "SPEECH_049",
+    "winner_record_id": "WIN_NOM_002_BEST_COMED_0048",
+    "primary_speaker_creator_id": "CRT_INSIDE_SHELLEY_",
+    "speech_duration_seconds": 98,
+    "playoff_music_interrupted": false,
+    "primary_quote_transcript": "Thank you to the Recording Academy, my fans, producers, and collaborators.",
+    "individuals_acknowledged": [
+      "Record Label",
+      "Co-producers",
+      "Family",
+      "Fans"
+    ],
+    "social_political_message_flag": true,
+    "press_room_followup_id": "PRESS_ROOM_QNA_049",
+    "broadcast_clip_timecode": "02:23:30"
+  },
+  {
+    "speech_id": "SPEECH_050",
+    "winner_record_id": "WIN_NOM_002_BEST_COMED_0049",
+    "primary_speaker_creator_id": "CRT_THE_BATTLE_OF_K",
+    "speech_duration_seconds": 99,
+    "playoff_music_interrupted": false,
+    "primary_quote_transcript": "Thank you to the Recording Academy, my fans, producers, and collaborators.",
+    "individuals_acknowledged": [
+      "Record Label",
+      "Co-producers",
+      "Family",
+      "Fans"
+    ],
+    "social_political_message_flag": false,
+    "press_room_followup_id": "PRESS_ROOM_QNA_050",
+    "broadcast_clip_timecode": "02:24:30"
+  },
+  {
+    "speech_id": "SPEECH_051",
+    "winner_record_id": "WIN_NOM_002_BEST_PERFO_0050",
+    "primary_speaker_creator_id": "CRT_A_LINCOLN_PORTR",
+    "speech_duration_seconds": 100,
+    "playoff_music_interrupted": true,
+    "primary_quote_transcript": "Thank you to the Recording Academy, my fans, producers, and collaborators.",
+    "individuals_acknowledged": [
+      "Record Label",
+      "Co-producers",
+      "Family",
+      "Fans"
+    ],
+    "social_political_message_flag": false,
+    "press_room_followup_id": "PRESS_ROOM_QNA_051",
+    "broadcast_clip_timecode": "02:25:30"
+  },
+  {
+    "speech_id": "SPEECH_052",
+    "winner_record_id": "WIN_NOM_002_BEST_PERFO_0051",
+    "primary_speaker_creator_id": "CRT_MIDNIGHT_FLYER",
+    "speech_duration_seconds": 101,
+    "playoff_music_interrupted": false,
+    "primary_quote_transcript": "Thank you to the Recording Academy, my fans, producers, and collaborators.",
+    "individuals_acknowledged": [
+      "Record Label",
+      "Co-producers",
+      "Family",
+      "Fans"
+    ],
+    "social_political_message_flag": false,
+    "press_room_followup_id": "PRESS_ROOM_QNA_052",
+    "broadcast_clip_timecode": "02:26:30"
+  },
+  {
+    "speech_id": "SPEECH_053",
+    "winner_record_id": "WIN_NOM_002_BEST_COUNT_0052",
+    "primary_speaker_creator_id": "CRT_THE_BATTLE_OF_N",
+    "speech_duration_seconds": 102,
+    "playoff_music_interrupted": false,
+    "primary_quote_transcript": "Thank you to the Recording Academy, my fans, producers, and collaborators.",
+    "individuals_acknowledged": [
+      "Record Label",
+      "Co-producers",
+      "Family",
+      "Fans"
+    ],
+    "social_political_message_flag": true,
+    "press_room_followup_id": "PRESS_ROOM_QNA_053",
+    "broadcast_clip_timecode": "02:27:30"
+  },
+  {
+    "speech_id": "SPEECH_054",
+    "winner_record_id": "WIN_NOM_002_BEST_RHYTH_0053",
+    "primary_speaker_creator_id": "CRT_WHAT_A_DIFF_REN",
+    "speech_duration_seconds": 103,
+    "playoff_music_interrupted": false,
+    "primary_quote_transcript": "Thank you to the Recording Academy, my fans, producers, and collaborators.",
+    "individuals_acknowledged": [
+      "Record Label",
+      "Co-producers",
+      "Family",
+      "Fans"
+    ],
+    "social_political_message_flag": false,
+    "press_room_followup_id": "PRESS_ROOM_QNA_054",
+    "broadcast_clip_timecode": "02:28:30"
+  },
+  {
+    "speech_id": "SPEECH_055",
+    "winner_record_id": "WIN_NOM_002_BEST_PERFO_0054",
+    "primary_speaker_creator_id": "CRT_THE_KINGSTON_TR",
+    "speech_duration_seconds": 104,
+    "playoff_music_interrupted": false,
+    "primary_quote_transcript": "Thank you to the Recording Academy, my fans, producers, and collaborators.",
+    "individuals_acknowledged": [
+      "Record Label",
+      "Co-producers",
+      "Family",
+      "Fans"
+    ],
+    "social_political_message_flag": false,
+    "press_room_followup_id": "PRESS_ROOM_QNA_055",
+    "broadcast_clip_timecode": "02:29:30"
+  },
+  {
+    "speech_id": "SPEECH_056",
+    "winner_record_id": "WIN_NOM_002_BEST_RECOR_0055",
+    "primary_speaker_creator_id": "CRT_PETER_AND_THE_W",
+    "speech_duration_seconds": 105,
+    "playoff_music_interrupted": true,
+    "primary_quote_transcript": "Thank you to the Recording Academy, my fans, producers, and collaborators.",
+    "individuals_acknowledged": [
+      "Record Label",
+      "Co-producers",
+      "Family",
+      "Fans"
+    ],
+    "social_political_message_flag": false,
+    "press_room_followup_id": "PRESS_ROOM_QNA_056",
+    "broadcast_clip_timecode": "02:30:30"
+  },
+  {
+    "speech_id": "SPEECH_057",
+    "winner_record_id": "WIN_NOM_002_BEST_ARRAN_0056",
+    "primary_speaker_creator_id": "CRT_COME_DANCE_WITH",
+    "speech_duration_seconds": 106,
+    "playoff_music_interrupted": false,
+    "primary_quote_transcript": "Thank you to the Recording Academy, my fans, producers, and collaborators.",
+    "individuals_acknowledged": [
+      "Record Label",
+      "Co-producers",
+      "Family",
+      "Fans"
+    ],
+    "social_political_message_flag": true,
+    "press_room_followup_id": "PRESS_ROOM_QNA_057",
+    "broadcast_clip_timecode": "02:31:30"
+  },
+  {
+    "speech_id": "SPEECH_058",
+    "winner_record_id": "WIN_NOM_002_BEST_ENGIN_0057",
+    "primary_speaker_creator_id": "CRT_VICTORY_AT_SEA_",
+    "speech_duration_seconds": 107,
+    "playoff_music_interrupted": false,
+    "primary_quote_transcript": "Thank you to the Recording Academy, my fans, producers, and collaborators.",
+    "individuals_acknowledged": [
+      "Record Label",
+      "Co-producers",
+      "Family",
+      "Fans"
+    ],
+    "social_political_message_flag": false,
+    "press_room_followup_id": "PRESS_ROOM_QNA_058",
+    "broadcast_clip_timecode": "02:32:30"
+  },
+  {
+    "speech_id": "SPEECH_059",
+    "winner_record_id": "WIN_NOM_002_BEST_ENGIN_0058",
+    "primary_speaker_creator_id": "CRT_ALVIN_S_HARMONI",
+    "speech_duration_seconds": 108,
+    "playoff_music_interrupted": false,
+    "primary_quote_transcript": "Thank you to the Recording Academy, my fans, producers, and collaborators.",
+    "individuals_acknowledged": [
+      "Record Label",
+      "Co-producers",
+      "Family",
+      "Fans"
+    ],
+    "social_political_message_flag": false,
+    "press_room_followup_id": "PRESS_ROOM_QNA_059",
+    "broadcast_clip_timecode": "02:33:30"
+  },
+  {
+    "speech_id": "SPEECH_060",
+    "winner_record_id": "WIN_NOM_002_BEST_ENGIN_0059",
+    "primary_speaker_creator_id": "CRT_BELAFONTE_AT_CA",
+    "speech_duration_seconds": 109,
+    "playoff_music_interrupted": false,
+    "primary_quote_transcript": "Thank you to the Recording Academy, my fans, producers, and collaborators.",
+    "individuals_acknowledged": [
+      "Record Label",
+      "Co-producers",
+      "Family",
+      "Fans"
+    ],
+    "social_political_message_flag": false,
+    "press_room_followup_id": "PRESS_ROOM_QNA_060",
+    "broadcast_clip_timecode": "02:34:30"
+  },
+  {
+    "speech_id": "SPEECH_061",
+    "winner_record_id": "WIN_NOM_002_BEST_ALBUM_0060",
+    "primary_speaker_creator_id": "CRT_SHOSTAKOVICH_SY",
+    "speech_duration_seconds": 110,
+    "playoff_music_interrupted": true,
+    "primary_quote_transcript": "Thank you to the Recording Academy, my fans, producers, and collaborators.",
+    "individuals_acknowledged": [
+      "Record Label",
+      "Co-producers",
+      "Family",
+      "Fans"
+    ],
+    "social_political_message_flag": true,
+    "press_room_followup_id": "PRESS_ROOM_QNA_061",
+    "broadcast_clip_timecode": "02:35:30"
+  },
+  {
+    "speech_id": "SPEECH_062",
+    "winner_record_id": "WIN_NOM_002_BEST_NEW_A_0061",
+    "primary_speaker_creator_id": "CRT_BOBBY_DARIN",
+    "speech_duration_seconds": 111,
+    "playoff_music_interrupted": false,
+    "primary_quote_transcript": "Thank you to the Recording Academy, my fans, producers, and collaborators.",
+    "individuals_acknowledged": [
+      "Record Label",
+      "Co-producers",
+      "Family",
+      "Fans"
+    ],
+    "social_political_message_flag": false,
+    "press_room_followup_id": "PRESS_ROOM_QNA_062",
+    "broadcast_clip_timecode": "02:36:30"
+  },
+  {
+    "speech_id": "SPEECH_063",
+    "winner_record_id": "WIN_NOM_003_RECORD_OF__0062",
+    "primary_speaker_creator_id": "CRT_THE_THEME_FROM_",
+    "speech_duration_seconds": 112,
+    "playoff_music_interrupted": false,
+    "primary_quote_transcript": "Thank you to the Recording Academy, my fans, producers, and collaborators.",
+    "individuals_acknowledged": [
+      "Record Label",
+      "Co-producers",
+      "Family",
+      "Fans"
+    ],
+    "social_political_message_flag": false,
+    "press_room_followup_id": "PRESS_ROOM_QNA_063",
+    "broadcast_clip_timecode": "02:37:30"
+  },
+  {
+    "speech_id": "SPEECH_064",
+    "winner_record_id": "WIN_NOM_003_ALBUM_OF_T_0063",
+    "primary_speaker_creator_id": "CRT_THE_BUTTON_DOWN",
+    "speech_duration_seconds": 113,
+    "playoff_music_interrupted": false,
+    "primary_quote_transcript": "Thank you to the Recording Academy, my fans, producers, and collaborators.",
+    "individuals_acknowledged": [
+      "Record Label",
+      "Co-producers",
+      "Family",
+      "Fans"
+    ],
+    "social_political_message_flag": false,
+    "press_room_followup_id": "PRESS_ROOM_QNA_064",
+    "broadcast_clip_timecode": "02:38:30"
+  },
+  {
+    "speech_id": "SPEECH_065",
+    "winner_record_id": "WIN_NOM_003_SONG_OF_TH_0064",
+    "primary_speaker_creator_id": "CRT_THEME_FROM_EXOD",
+    "speech_duration_seconds": 114,
+    "playoff_music_interrupted": false,
+    "primary_quote_transcript": "Thank you to the Recording Academy, my fans, producers, and collaborators.",
+    "individuals_acknowledged": [
+      "Record Label",
+      "Co-producers",
+      "Family",
+      "Fans"
+    ],
+    "social_political_message_flag": true,
+    "press_room_followup_id": "PRESS_ROOM_QNA_065",
+    "broadcast_clip_timecode": "02:39:30"
+  }
+]

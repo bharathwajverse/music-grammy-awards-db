@@ -1,0 +1,1052 @@
+[
+  {
+    "tie_id": "TIE_001",
+    "ceremony_id": "CEREMONY_001",
+    "category_id": "CAT_RECORD_OF_THE_Y",
+    "tied_nomination_ids": [
+      "NOM_001_RECORD_OF__0000",
+      "NOM_001_ALBUM_OF_T_0001"
+    ],
+    "tied_vote_count_audited": 450,
+    "ballot_auditor_token": "AUD_TOKEN_9900",
+    "board_tie_waiver_approved": true,
+    "expanded_slate_size": 6,
+    "adjudication_timestamp": "1959-12-10T14:00:00Z",
+    "bylaw_clause_reference": "Article IV, Section 3(b) - Equal Vote Slate Inclusion"
+  },
+  {
+    "tie_id": "TIE_002",
+    "ceremony_id": "CEREMONY_002",
+    "category_id": "CAT_ALBUM_OF_THE_YE",
+    "tied_nomination_ids": [
+      "NOM_001_ALBUM_OF_T_0001",
+      "NOM_001_SONG_OF_TH_0002"
+    ],
+    "tied_vote_count_audited": 450,
+    "ballot_auditor_token": "AUD_TOKEN_9901",
+    "board_tie_waiver_approved": true,
+    "expanded_slate_size": 6,
+    "adjudication_timestamp": "1960-12-10T14:00:00Z",
+    "bylaw_clause_reference": "Article IV, Section 3(b) - Equal Vote Slate Inclusion"
+  },
+  {
+    "tie_id": "TIE_003",
+    "ceremony_id": "CEREMONY_003",
+    "category_id": "CAT_SONG_OF_THE_YEA",
+    "tied_nomination_ids": [
+      "NOM_001_SONG_OF_TH_0002",
+      "NOM_001_BEST_VOCAL_0003"
+    ],
+    "tied_vote_count_audited": 450,
+    "ballot_auditor_token": "AUD_TOKEN_9902",
+    "board_tie_waiver_approved": true,
+    "expanded_slate_size": 6,
+    "adjudication_timestamp": "1961-12-10T14:00:00Z",
+    "bylaw_clause_reference": "Article IV, Section 3(b) - Equal Vote Slate Inclusion"
+  },
+  {
+    "tie_id": "TIE_004",
+    "ceremony_id": "CEREMONY_004",
+    "category_id": "CAT_BEST_VOCAL_PERF",
+    "tied_nomination_ids": [
+      "NOM_001_BEST_VOCAL_0003",
+      "NOM_001_BEST_VOCAL_0004"
+    ],
+    "tied_vote_count_audited": 450,
+    "ballot_auditor_token": "AUD_TOKEN_9903",
+    "board_tie_waiver_approved": true,
+    "expanded_slate_size": 6,
+    "adjudication_timestamp": "1962-12-10T14:00:00Z",
+    "bylaw_clause_reference": "Article IV, Section 3(b) - Equal Vote Slate Inclusion"
+  },
+  {
+    "tie_id": "TIE_005",
+    "ceremony_id": "CEREMONY_005",
+    "category_id": "CAT_BEST_VOCAL_PERF",
+    "tied_nomination_ids": [
+      "NOM_001_BEST_VOCAL_0004",
+      "NOM_001_BEST_PERFO_0005"
+    ],
+    "tied_vote_count_audited": 450,
+    "ballot_auditor_token": "AUD_TOKEN_9904",
+    "board_tie_waiver_approved": true,
+    "expanded_slate_size": 6,
+    "adjudication_timestamp": "1963-12-10T14:00:00Z",
+    "bylaw_clause_reference": "Article IV, Section 3(b) - Equal Vote Slate Inclusion"
+  },
+  {
+    "tie_id": "TIE_006",
+    "ceremony_id": "CEREMONY_006",
+    "category_id": "CAT_BEST_PERFORMANC",
+    "tied_nomination_ids": [
+      "NOM_001_BEST_PERFO_0005",
+      "NOM_001_BEST_PERFO_0006"
+    ],
+    "tied_vote_count_audited": 450,
+    "ballot_auditor_token": "AUD_TOKEN_9905",
+    "board_tie_waiver_approved": true,
+    "expanded_slate_size": 6,
+    "adjudication_timestamp": "1964-12-10T14:00:00Z",
+    "bylaw_clause_reference": "Article IV, Section 3(b) - Equal Vote Slate Inclusion"
+  },
+  {
+    "tie_id": "TIE_007",
+    "ceremony_id": "CEREMONY_007",
+    "category_id": "CAT_BEST_PERFORMANC",
+    "tied_nomination_ids": [
+      "NOM_001_BEST_PERFO_0006",
+      "NOM_001_BEST_PERFO_0007"
+    ],
+    "tied_vote_count_audited": 450,
+    "ballot_auditor_token": "AUD_TOKEN_9906",
+    "board_tie_waiver_approved": true,
+    "expanded_slate_size": 6,
+    "adjudication_timestamp": "1965-12-10T14:00:00Z",
+    "bylaw_clause_reference": "Article IV, Section 3(b) - Equal Vote Slate Inclusion"
+  },
+  {
+    "tie_id": "TIE_008",
+    "ceremony_id": "CEREMONY_008",
+    "category_id": "CAT_BEST_PERFORMANC",
+    "tied_nomination_ids": [
+      "NOM_001_BEST_PERFO_0007",
+      "NOM_001_BEST_JAZZ__0008"
+    ],
+    "tied_vote_count_audited": 450,
+    "ballot_auditor_token": "AUD_TOKEN_9907",
+    "board_tie_waiver_approved": true,
+    "expanded_slate_size": 6,
+    "adjudication_timestamp": "1966-12-10T14:00:00Z",
+    "bylaw_clause_reference": "Article IV, Section 3(b) - Equal Vote Slate Inclusion"
+  },
+  {
+    "tie_id": "TIE_009",
+    "ceremony_id": "CEREMONY_009",
+    "category_id": "CAT_BEST_JAZZ_PERFO",
+    "tied_nomination_ids": [
+      "NOM_001_BEST_JAZZ__0008",
+      "NOM_001_BEST_JAZZ__0009"
+    ],
+    "tied_vote_count_audited": 450,
+    "ballot_auditor_token": "AUD_TOKEN_9908",
+    "board_tie_waiver_approved": true,
+    "expanded_slate_size": 6,
+    "adjudication_timestamp": "1967-12-10T14:00:00Z",
+    "bylaw_clause_reference": "Article IV, Section 3(b) - Equal Vote Slate Inclusion"
+  },
+  {
+    "tie_id": "TIE_010",
+    "ceremony_id": "CEREMONY_010",
+    "category_id": "CAT_BEST_JAZZ_PERFO",
+    "tied_nomination_ids": [
+      "NOM_001_BEST_JAZZ__0009",
+      "NOM_001_BEST_COMED_0010"
+    ],
+    "tied_vote_count_audited": 450,
+    "ballot_auditor_token": "AUD_TOKEN_9909",
+    "board_tie_waiver_approved": true,
+    "expanded_slate_size": 6,
+    "adjudication_timestamp": "1968-12-10T14:00:00Z",
+    "bylaw_clause_reference": "Article IV, Section 3(b) - Equal Vote Slate Inclusion"
+  },
+  {
+    "tie_id": "TIE_011",
+    "ceremony_id": "CEREMONY_011",
+    "category_id": "CAT_BEST_COMEDY_PER",
+    "tied_nomination_ids": [
+      "NOM_001_BEST_COMED_0010",
+      "NOM_001_BEST_COUNT_0011"
+    ],
+    "tied_vote_count_audited": 450,
+    "ballot_auditor_token": "AUD_TOKEN_9910",
+    "board_tie_waiver_approved": true,
+    "expanded_slate_size": 6,
+    "adjudication_timestamp": "1969-12-10T14:00:00Z",
+    "bylaw_clause_reference": "Article IV, Section 3(b) - Equal Vote Slate Inclusion"
+  },
+  {
+    "tie_id": "TIE_012",
+    "ceremony_id": "CEREMONY_012",
+    "category_id": "CAT_BEST_COUNTRY_WE",
+    "tied_nomination_ids": [
+      "NOM_001_BEST_COUNT_0011",
+      "NOM_001_BEST_RHYTH_0012"
+    ],
+    "tied_vote_count_audited": 450,
+    "ballot_auditor_token": "AUD_TOKEN_9911",
+    "board_tie_waiver_approved": true,
+    "expanded_slate_size": 6,
+    "adjudication_timestamp": "1970-12-10T14:00:00Z",
+    "bylaw_clause_reference": "Article IV, Section 3(b) - Equal Vote Slate Inclusion"
+  },
+  {
+    "tie_id": "TIE_013",
+    "ceremony_id": "CEREMONY_013",
+    "category_id": "CAT_BEST_RHYTHM_BLU",
+    "tied_nomination_ids": [
+      "NOM_001_BEST_RHYTH_0012",
+      "NOM_001_BEST_ARRAN_0013"
+    ],
+    "tied_vote_count_audited": 450,
+    "ballot_auditor_token": "AUD_TOKEN_9912",
+    "board_tie_waiver_approved": true,
+    "expanded_slate_size": 6,
+    "adjudication_timestamp": "1971-12-10T14:00:00Z",
+    "bylaw_clause_reference": "Article IV, Section 3(b) - Equal Vote Slate Inclusion"
+  },
+  {
+    "tie_id": "TIE_014",
+    "ceremony_id": "CEREMONY_014",
+    "category_id": "CAT_BEST_ARRANGEMEN",
+    "tied_nomination_ids": [
+      "NOM_001_BEST_ARRAN_0013",
+      "NOM_001_BEST_ENGIN_0014"
+    ],
+    "tied_vote_count_audited": 450,
+    "ballot_auditor_token": "AUD_TOKEN_9913",
+    "board_tie_waiver_approved": true,
+    "expanded_slate_size": 6,
+    "adjudication_timestamp": "1972-12-10T14:00:00Z",
+    "bylaw_clause_reference": "Article IV, Section 3(b) - Equal Vote Slate Inclusion"
+  },
+  {
+    "tie_id": "TIE_015",
+    "ceremony_id": "CEREMONY_015",
+    "category_id": "CAT_BEST_ENGINEERED",
+    "tied_nomination_ids": [
+      "NOM_001_BEST_ENGIN_0014",
+      "NOM_001_BEST_ENGIN_0015"
+    ],
+    "tied_vote_count_audited": 450,
+    "ballot_auditor_token": "AUD_TOKEN_9914",
+    "board_tie_waiver_approved": true,
+    "expanded_slate_size": 6,
+    "adjudication_timestamp": "1973-12-10T14:00:00Z",
+    "bylaw_clause_reference": "Article IV, Section 3(b) - Equal Vote Slate Inclusion"
+  },
+  {
+    "tie_id": "TIE_016",
+    "ceremony_id": "CEREMONY_016",
+    "category_id": "CAT_BEST_ENGINEERED",
+    "tied_nomination_ids": [
+      "NOM_001_BEST_ENGIN_0015",
+      "NOM_001_BEST_ALBUM_0016"
+    ],
+    "tied_vote_count_audited": 450,
+    "ballot_auditor_token": "AUD_TOKEN_9915",
+    "board_tie_waiver_approved": true,
+    "expanded_slate_size": 6,
+    "adjudication_timestamp": "1974-12-10T14:00:00Z",
+    "bylaw_clause_reference": "Article IV, Section 3(b) - Equal Vote Slate Inclusion"
+  },
+  {
+    "tie_id": "TIE_017",
+    "ceremony_id": "CEREMONY_017",
+    "category_id": "CAT_BEST_ALBUM_COVE",
+    "tied_nomination_ids": [
+      "NOM_001_BEST_ALBUM_0016",
+      "NOM_001_BEST_MUSIC_0017"
+    ],
+    "tied_vote_count_audited": 450,
+    "ballot_auditor_token": "AUD_TOKEN_9916",
+    "board_tie_waiver_approved": true,
+    "expanded_slate_size": 6,
+    "adjudication_timestamp": "1975-12-10T14:00:00Z",
+    "bylaw_clause_reference": "Article IV, Section 3(b) - Equal Vote Slate Inclusion"
+  },
+  {
+    "tie_id": "TIE_018",
+    "ceremony_id": "CEREMONY_018",
+    "category_id": "CAT_BEST_MUSICAL_CO",
+    "tied_nomination_ids": [
+      "NOM_001_BEST_MUSIC_0017",
+      "NOM_001_BEST_ORIGI_0018"
+    ],
+    "tied_vote_count_audited": 450,
+    "ballot_auditor_token": "AUD_TOKEN_9917",
+    "board_tie_waiver_approved": true,
+    "expanded_slate_size": 6,
+    "adjudication_timestamp": "1976-12-10T14:00:00Z",
+    "bylaw_clause_reference": "Article IV, Section 3(b) - Equal Vote Slate Inclusion"
+  },
+  {
+    "tie_id": "TIE_019",
+    "ceremony_id": "CEREMONY_019",
+    "category_id": "CAT_BEST_ORIGINAL_C",
+    "tied_nomination_ids": [
+      "NOM_001_BEST_ORIGI_0018",
+      "NOM_001_BEST_SOUND_0019"
+    ],
+    "tied_vote_count_audited": 450,
+    "ballot_auditor_token": "AUD_TOKEN_9918",
+    "board_tie_waiver_approved": true,
+    "expanded_slate_size": 6,
+    "adjudication_timestamp": "1977-12-10T14:00:00Z",
+    "bylaw_clause_reference": "Article IV, Section 3(b) - Equal Vote Slate Inclusion"
+  },
+  {
+    "tie_id": "TIE_020",
+    "ceremony_id": "CEREMONY_020",
+    "category_id": "CAT_BEST_SOUND_TRAC",
+    "tied_nomination_ids": [
+      "NOM_001_BEST_SOUND_0019",
+      "NOM_001_BEST_PERFO_0020"
+    ],
+    "tied_vote_count_audited": 450,
+    "ballot_auditor_token": "AUD_TOKEN_9919",
+    "board_tie_waiver_approved": true,
+    "expanded_slate_size": 6,
+    "adjudication_timestamp": "1978-12-10T14:00:00Z",
+    "bylaw_clause_reference": "Article IV, Section 3(b) - Equal Vote Slate Inclusion"
+  },
+  {
+    "tie_id": "TIE_021",
+    "ceremony_id": "CEREMONY_021",
+    "category_id": "CAT_BEST_PERFORMANC",
+    "tied_nomination_ids": [
+      "NOM_001_BEST_PERFO_0020",
+      "NOM_001_BEST_RECOR_0021"
+    ],
+    "tied_vote_count_audited": 450,
+    "ballot_auditor_token": "AUD_TOKEN_9920",
+    "board_tie_waiver_approved": true,
+    "expanded_slate_size": 6,
+    "adjudication_timestamp": "1979-12-10T14:00:00Z",
+    "bylaw_clause_reference": "Article IV, Section 3(b) - Equal Vote Slate Inclusion"
+  },
+  {
+    "tie_id": "TIE_022",
+    "ceremony_id": "CEREMONY_022",
+    "category_id": "CAT_BEST_RECORDING_",
+    "tied_nomination_ids": [
+      "NOM_001_BEST_RECOR_0021",
+      "NOM_001_BEST_CLASS_0022"
+    ],
+    "tied_vote_count_audited": 450,
+    "ballot_auditor_token": "AUD_TOKEN_9921",
+    "board_tie_waiver_approved": true,
+    "expanded_slate_size": 6,
+    "adjudication_timestamp": "1980-12-10T14:00:00Z",
+    "bylaw_clause_reference": "Article IV, Section 3(b) - Equal Vote Slate Inclusion"
+  },
+  {
+    "tie_id": "TIE_023",
+    "ceremony_id": "CEREMONY_023",
+    "category_id": "CAT_BEST_CLASSICAL_",
+    "tied_nomination_ids": [
+      "NOM_001_BEST_CLASS_0022",
+      "NOM_001_BEST_CLASS_0023"
+    ],
+    "tied_vote_count_audited": 450,
+    "ballot_auditor_token": "AUD_TOKEN_9922",
+    "board_tie_waiver_approved": true,
+    "expanded_slate_size": 6,
+    "adjudication_timestamp": "1981-12-10T14:00:00Z",
+    "bylaw_clause_reference": "Article IV, Section 3(b) - Equal Vote Slate Inclusion"
+  },
+  {
+    "tie_id": "TIE_024",
+    "ceremony_id": "CEREMONY_024",
+    "category_id": "CAT_BEST_CLASSICAL_",
+    "tied_nomination_ids": [
+      "NOM_001_BEST_CLASS_0023",
+      "NOM_001_BEST_CLASS_0024"
+    ],
+    "tied_vote_count_audited": 450,
+    "ballot_auditor_token": "AUD_TOKEN_9923",
+    "board_tie_waiver_approved": true,
+    "expanded_slate_size": 6,
+    "adjudication_timestamp": "1982-12-10T14:00:00Z",
+    "bylaw_clause_reference": "Article IV, Section 3(b) - Equal Vote Slate Inclusion"
+  },
+  {
+    "tie_id": "TIE_025",
+    "ceremony_id": "CEREMONY_025",
+    "category_id": "CAT_BEST_CLASSICAL_",
+    "tied_nomination_ids": [
+      "NOM_001_BEST_CLASS_0024",
+      "NOM_001_BEST_CLASS_0025"
+    ],
+    "tied_vote_count_audited": 450,
+    "ballot_auditor_token": "AUD_TOKEN_9924",
+    "board_tie_waiver_approved": true,
+    "expanded_slate_size": 6,
+    "adjudication_timestamp": "1983-12-10T14:00:00Z",
+    "bylaw_clause_reference": "Article IV, Section 3(b) - Equal Vote Slate Inclusion"
+  },
+  {
+    "tie_id": "TIE_026",
+    "ceremony_id": "CEREMONY_026",
+    "category_id": "CAT_BEST_CLASSICAL_",
+    "tied_nomination_ids": [
+      "NOM_001_BEST_CLASS_0025",
+      "NOM_001_BEST_CLASS_0026"
+    ],
+    "tied_vote_count_audited": 450,
+    "ballot_auditor_token": "AUD_TOKEN_9925",
+    "board_tie_waiver_approved": true,
+    "expanded_slate_size": 6,
+    "adjudication_timestamp": "1984-12-10T14:00:00Z",
+    "bylaw_clause_reference": "Article IV, Section 3(b) - Equal Vote Slate Inclusion"
+  },
+  {
+    "tie_id": "TIE_027",
+    "ceremony_id": "CEREMONY_027",
+    "category_id": "CAT_BEST_CLASSICAL_",
+    "tied_nomination_ids": [
+      "NOM_001_BEST_CLASS_0026",
+      "NOM_001_BEST_CLASS_0027"
+    ],
+    "tied_vote_count_audited": 450,
+    "ballot_auditor_token": "AUD_TOKEN_9926",
+    "board_tie_waiver_approved": true,
+    "expanded_slate_size": 6,
+    "adjudication_timestamp": "1985-12-10T14:00:00Z",
+    "bylaw_clause_reference": "Article IV, Section 3(b) - Equal Vote Slate Inclusion"
+  },
+  {
+    "tie_id": "TIE_028",
+    "ceremony_id": "CEREMONY_028",
+    "category_id": "CAT_BEST_CLASSICAL_",
+    "tied_nomination_ids": [
+      "NOM_001_BEST_CLASS_0027",
+      "NOM_002_RECORD_OF__0028"
+    ],
+    "tied_vote_count_audited": 450,
+    "ballot_auditor_token": "AUD_TOKEN_9927",
+    "board_tie_waiver_approved": true,
+    "expanded_slate_size": 6,
+    "adjudication_timestamp": "1986-12-10T14:00:00Z",
+    "bylaw_clause_reference": "Article IV, Section 3(b) - Equal Vote Slate Inclusion"
+  },
+  {
+    "tie_id": "TIE_029",
+    "ceremony_id": "CEREMONY_029",
+    "category_id": "CAT_RECORD_OF_THE_Y",
+    "tied_nomination_ids": [
+      "NOM_002_RECORD_OF__0028",
+      "NOM_002_ALBUM_OF_T_0029"
+    ],
+    "tied_vote_count_audited": 450,
+    "ballot_auditor_token": "AUD_TOKEN_9928",
+    "board_tie_waiver_approved": true,
+    "expanded_slate_size": 6,
+    "adjudication_timestamp": "1987-12-10T14:00:00Z",
+    "bylaw_clause_reference": "Article IV, Section 3(b) - Equal Vote Slate Inclusion"
+  },
+  {
+    "tie_id": "TIE_030",
+    "ceremony_id": "CEREMONY_030",
+    "category_id": "CAT_ALBUM_OF_THE_YE",
+    "tied_nomination_ids": [
+      "NOM_002_ALBUM_OF_T_0029",
+      "NOM_002_SONG_OF_TH_0030"
+    ],
+    "tied_vote_count_audited": 450,
+    "ballot_auditor_token": "AUD_TOKEN_9929",
+    "board_tie_waiver_approved": true,
+    "expanded_slate_size": 6,
+    "adjudication_timestamp": "1988-12-10T14:00:00Z",
+    "bylaw_clause_reference": "Article IV, Section 3(b) - Equal Vote Slate Inclusion"
+  },
+  {
+    "tie_id": "TIE_031",
+    "ceremony_id": "CEREMONY_031",
+    "category_id": "CAT_SONG_OF_THE_YEA",
+    "tied_nomination_ids": [
+      "NOM_002_SONG_OF_TH_0030",
+      "NOM_002_BEST_VOCAL_0031"
+    ],
+    "tied_vote_count_audited": 450,
+    "ballot_auditor_token": "AUD_TOKEN_9930",
+    "board_tie_waiver_approved": true,
+    "expanded_slate_size": 6,
+    "adjudication_timestamp": "1989-12-10T14:00:00Z",
+    "bylaw_clause_reference": "Article IV, Section 3(b) - Equal Vote Slate Inclusion"
+  },
+  {
+    "tie_id": "TIE_032",
+    "ceremony_id": "CEREMONY_032",
+    "category_id": "CAT_BEST_VOCAL_PERF",
+    "tied_nomination_ids": [
+      "NOM_002_BEST_VOCAL_0031",
+      "NOM_002_BEST_VOCAL_0032"
+    ],
+    "tied_vote_count_audited": 450,
+    "ballot_auditor_token": "AUD_TOKEN_9931",
+    "board_tie_waiver_approved": true,
+    "expanded_slate_size": 6,
+    "adjudication_timestamp": "1990-12-10T14:00:00Z",
+    "bylaw_clause_reference": "Article IV, Section 3(b) - Equal Vote Slate Inclusion"
+  },
+  {
+    "tie_id": "TIE_033",
+    "ceremony_id": "CEREMONY_033",
+    "category_id": "CAT_BEST_VOCAL_PERF",
+    "tied_nomination_ids": [
+      "NOM_002_BEST_VOCAL_0032",
+      "NOM_002_BEST_PERFO_0033"
+    ],
+    "tied_vote_count_audited": 450,
+    "ballot_auditor_token": "AUD_TOKEN_9932",
+    "board_tie_waiver_approved": true,
+    "expanded_slate_size": 6,
+    "adjudication_timestamp": "1991-12-10T14:00:00Z",
+    "bylaw_clause_reference": "Article IV, Section 3(b) - Equal Vote Slate Inclusion"
+  },
+  {
+    "tie_id": "TIE_034",
+    "ceremony_id": "CEREMONY_034",
+    "category_id": "CAT_BEST_PERFORMANC",
+    "tied_nomination_ids": [
+      "NOM_002_BEST_PERFO_0033",
+      "NOM_002_BEST_PERFO_0034"
+    ],
+    "tied_vote_count_audited": 450,
+    "ballot_auditor_token": "AUD_TOKEN_9933",
+    "board_tie_waiver_approved": true,
+    "expanded_slate_size": 6,
+    "adjudication_timestamp": "1992-12-10T14:00:00Z",
+    "bylaw_clause_reference": "Article IV, Section 3(b) - Equal Vote Slate Inclusion"
+  },
+  {
+    "tie_id": "TIE_035",
+    "ceremony_id": "CEREMONY_035",
+    "category_id": "CAT_BEST_PERFORMANC",
+    "tied_nomination_ids": [
+      "NOM_002_BEST_PERFO_0034",
+      "NOM_002_BEST_PERFO_0035"
+    ],
+    "tied_vote_count_audited": 450,
+    "ballot_auditor_token": "AUD_TOKEN_9934",
+    "board_tie_waiver_approved": true,
+    "expanded_slate_size": 6,
+    "adjudication_timestamp": "1993-12-10T14:00:00Z",
+    "bylaw_clause_reference": "Article IV, Section 3(b) - Equal Vote Slate Inclusion"
+  },
+  {
+    "tie_id": "TIE_036",
+    "ceremony_id": "CEREMONY_036",
+    "category_id": "CAT_BEST_PERFORMANC",
+    "tied_nomination_ids": [
+      "NOM_002_BEST_PERFO_0035",
+      "NOM_002_BEST_JAZZ__0036"
+    ],
+    "tied_vote_count_audited": 450,
+    "ballot_auditor_token": "AUD_TOKEN_9935",
+    "board_tie_waiver_approved": true,
+    "expanded_slate_size": 6,
+    "adjudication_timestamp": "1994-12-10T14:00:00Z",
+    "bylaw_clause_reference": "Article IV, Section 3(b) - Equal Vote Slate Inclusion"
+  },
+  {
+    "tie_id": "TIE_037",
+    "ceremony_id": "CEREMONY_037",
+    "category_id": "CAT_BEST_JAZZ_PERFO",
+    "tied_nomination_ids": [
+      "NOM_002_BEST_JAZZ__0036",
+      "NOM_002_BEST_JAZZ__0037"
+    ],
+    "tied_vote_count_audited": 450,
+    "ballot_auditor_token": "AUD_TOKEN_9936",
+    "board_tie_waiver_approved": true,
+    "expanded_slate_size": 6,
+    "adjudication_timestamp": "1995-12-10T14:00:00Z",
+    "bylaw_clause_reference": "Article IV, Section 3(b) - Equal Vote Slate Inclusion"
+  },
+  {
+    "tie_id": "TIE_038",
+    "ceremony_id": "CEREMONY_038",
+    "category_id": "CAT_BEST_JAZZ_PERFO",
+    "tied_nomination_ids": [
+      "NOM_002_BEST_JAZZ__0037",
+      "NOM_002_BEST_CLASS_0038"
+    ],
+    "tied_vote_count_audited": 450,
+    "ballot_auditor_token": "AUD_TOKEN_9937",
+    "board_tie_waiver_approved": true,
+    "expanded_slate_size": 6,
+    "adjudication_timestamp": "1996-12-10T14:00:00Z",
+    "bylaw_clause_reference": "Article IV, Section 3(b) - Equal Vote Slate Inclusion"
+  },
+  {
+    "tie_id": "TIE_039",
+    "ceremony_id": "CEREMONY_039",
+    "category_id": "CAT_BEST_CLASSICAL_",
+    "tied_nomination_ids": [
+      "NOM_002_BEST_CLASS_0038",
+      "NOM_002_BEST_CLASS_0039"
+    ],
+    "tied_vote_count_audited": 450,
+    "ballot_auditor_token": "AUD_TOKEN_9938",
+    "board_tie_waiver_approved": true,
+    "expanded_slate_size": 6,
+    "adjudication_timestamp": "1997-12-10T14:00:00Z",
+    "bylaw_clause_reference": "Article IV, Section 3(b) - Equal Vote Slate Inclusion"
+  },
+  {
+    "tie_id": "TIE_040",
+    "ceremony_id": "CEREMONY_040",
+    "category_id": "CAT_BEST_CLASSICAL_",
+    "tied_nomination_ids": [
+      "NOM_002_BEST_CLASS_0039",
+      "NOM_002_BEST_CLASS_0040"
+    ],
+    "tied_vote_count_audited": 450,
+    "ballot_auditor_token": "AUD_TOKEN_9939",
+    "board_tie_waiver_approved": true,
+    "expanded_slate_size": 6,
+    "adjudication_timestamp": "1998-12-10T14:00:00Z",
+    "bylaw_clause_reference": "Article IV, Section 3(b) - Equal Vote Slate Inclusion"
+  },
+  {
+    "tie_id": "TIE_041",
+    "ceremony_id": "CEREMONY_041",
+    "category_id": "CAT_BEST_CLASSICAL_",
+    "tied_nomination_ids": [
+      "NOM_002_BEST_CLASS_0040",
+      "NOM_002_BEST_CLASS_0041"
+    ],
+    "tied_vote_count_audited": 450,
+    "ballot_auditor_token": "AUD_TOKEN_9940",
+    "board_tie_waiver_approved": true,
+    "expanded_slate_size": 6,
+    "adjudication_timestamp": "1999-12-10T14:00:00Z",
+    "bylaw_clause_reference": "Article IV, Section 3(b) - Equal Vote Slate Inclusion"
+  },
+  {
+    "tie_id": "TIE_042",
+    "ceremony_id": "CEREMONY_042",
+    "category_id": "CAT_BEST_CLASSICAL_",
+    "tied_nomination_ids": [
+      "NOM_002_BEST_CLASS_0041",
+      "NOM_002_BEST_CLASS_0042"
+    ],
+    "tied_vote_count_audited": 450,
+    "ballot_auditor_token": "AUD_TOKEN_9941",
+    "board_tie_waiver_approved": true,
+    "expanded_slate_size": 6,
+    "adjudication_timestamp": "2000-12-10T14:00:00Z",
+    "bylaw_clause_reference": "Article IV, Section 3(b) - Equal Vote Slate Inclusion"
+  },
+  {
+    "tie_id": "TIE_043",
+    "ceremony_id": "CEREMONY_043",
+    "category_id": "CAT_BEST_CLASSICAL_",
+    "tied_nomination_ids": [
+      "NOM_002_BEST_CLASS_0042",
+      "NOM_002_BEST_CLASS_0043"
+    ],
+    "tied_vote_count_audited": 450,
+    "ballot_auditor_token": "AUD_TOKEN_9942",
+    "board_tie_waiver_approved": true,
+    "expanded_slate_size": 6,
+    "adjudication_timestamp": "2001-12-10T14:00:00Z",
+    "bylaw_clause_reference": "Article IV, Section 3(b) - Equal Vote Slate Inclusion"
+  },
+  {
+    "tie_id": "TIE_044",
+    "ceremony_id": "CEREMONY_044",
+    "category_id": "CAT_BEST_CLASSICAL_",
+    "tied_nomination_ids": [
+      "NOM_002_BEST_CLASS_0043",
+      "NOM_002_BEST_MUSIC_0044"
+    ],
+    "tied_vote_count_audited": 450,
+    "ballot_auditor_token": "AUD_TOKEN_9943",
+    "board_tie_waiver_approved": true,
+    "expanded_slate_size": 6,
+    "adjudication_timestamp": "2002-12-10T14:00:00Z",
+    "bylaw_clause_reference": "Article IV, Section 3(b) - Equal Vote Slate Inclusion"
+  },
+  {
+    "tie_id": "TIE_045",
+    "ceremony_id": "CEREMONY_045",
+    "category_id": "CAT_BEST_MUSICAL_CO",
+    "tied_nomination_ids": [
+      "NOM_002_BEST_MUSIC_0044",
+      "NOM_002_BEST_SOUND_0045"
+    ],
+    "tied_vote_count_audited": 450,
+    "ballot_auditor_token": "AUD_TOKEN_9944",
+    "board_tie_waiver_approved": true,
+    "expanded_slate_size": 6,
+    "adjudication_timestamp": "2003-12-10T14:00:00Z",
+    "bylaw_clause_reference": "Article IV, Section 3(b) - Equal Vote Slate Inclusion"
+  },
+  {
+    "tie_id": "TIE_046",
+    "ceremony_id": "CEREMONY_046",
+    "category_id": "CAT_BEST_SOUND_TRAC",
+    "tied_nomination_ids": [
+      "NOM_002_BEST_SOUND_0045",
+      "NOM_002_BEST_SOUND_0046"
+    ],
+    "tied_vote_count_audited": 450,
+    "ballot_auditor_token": "AUD_TOKEN_9945",
+    "board_tie_waiver_approved": true,
+    "expanded_slate_size": 6,
+    "adjudication_timestamp": "2004-12-10T14:00:00Z",
+    "bylaw_clause_reference": "Article IV, Section 3(b) - Equal Vote Slate Inclusion"
+  },
+  {
+    "tie_id": "TIE_047",
+    "ceremony_id": "CEREMONY_047",
+    "category_id": "CAT_BEST_SOUND_TRAC",
+    "tied_nomination_ids": [
+      "NOM_002_BEST_SOUND_0046",
+      "NOM_002_BEST_BROAD_0047"
+    ],
+    "tied_vote_count_audited": 450,
+    "ballot_auditor_token": "AUD_TOKEN_9946",
+    "board_tie_waiver_approved": true,
+    "expanded_slate_size": 6,
+    "adjudication_timestamp": "2005-12-10T14:00:00Z",
+    "bylaw_clause_reference": "Article IV, Section 3(b) - Equal Vote Slate Inclusion"
+  },
+  {
+    "tie_id": "TIE_048",
+    "ceremony_id": "CEREMONY_048",
+    "category_id": "CAT_BEST_BROADWAY_S",
+    "tied_nomination_ids": [
+      "NOM_002_BEST_BROAD_0047",
+      "NOM_002_BEST_COMED_0048"
+    ],
+    "tied_vote_count_audited": 450,
+    "ballot_auditor_token": "AUD_TOKEN_9947",
+    "board_tie_waiver_approved": true,
+    "expanded_slate_size": 6,
+    "adjudication_timestamp": "2006-12-10T14:00:00Z",
+    "bylaw_clause_reference": "Article IV, Section 3(b) - Equal Vote Slate Inclusion"
+  },
+  {
+    "tie_id": "TIE_049",
+    "ceremony_id": "CEREMONY_049",
+    "category_id": "CAT_BEST_COMEDY_PER",
+    "tied_nomination_ids": [
+      "NOM_002_BEST_COMED_0048",
+      "NOM_002_BEST_COMED_0049"
+    ],
+    "tied_vote_count_audited": 450,
+    "ballot_auditor_token": "AUD_TOKEN_9948",
+    "board_tie_waiver_approved": true,
+    "expanded_slate_size": 6,
+    "adjudication_timestamp": "2007-12-10T14:00:00Z",
+    "bylaw_clause_reference": "Article IV, Section 3(b) - Equal Vote Slate Inclusion"
+  },
+  {
+    "tie_id": "TIE_050",
+    "ceremony_id": "CEREMONY_050",
+    "category_id": "CAT_BEST_COMEDY_PER",
+    "tied_nomination_ids": [
+      "NOM_002_BEST_COMED_0049",
+      "NOM_002_BEST_PERFO_0050"
+    ],
+    "tied_vote_count_audited": 450,
+    "ballot_auditor_token": "AUD_TOKEN_9949",
+    "board_tie_waiver_approved": true,
+    "expanded_slate_size": 6,
+    "adjudication_timestamp": "2008-12-10T14:00:00Z",
+    "bylaw_clause_reference": "Article IV, Section 3(b) - Equal Vote Slate Inclusion"
+  },
+  {
+    "tie_id": "TIE_051",
+    "ceremony_id": "CEREMONY_051",
+    "category_id": "CAT_BEST_PERFORMANC",
+    "tied_nomination_ids": [
+      "NOM_002_BEST_PERFO_0050",
+      "NOM_002_BEST_PERFO_0051"
+    ],
+    "tied_vote_count_audited": 450,
+    "ballot_auditor_token": "AUD_TOKEN_9950",
+    "board_tie_waiver_approved": true,
+    "expanded_slate_size": 6,
+    "adjudication_timestamp": "2009-12-10T14:00:00Z",
+    "bylaw_clause_reference": "Article IV, Section 3(b) - Equal Vote Slate Inclusion"
+  },
+  {
+    "tie_id": "TIE_052",
+    "ceremony_id": "CEREMONY_052",
+    "category_id": "CAT_BEST_PERFORMANC",
+    "tied_nomination_ids": [
+      "NOM_002_BEST_PERFO_0051",
+      "NOM_002_BEST_COUNT_0052"
+    ],
+    "tied_vote_count_audited": 450,
+    "ballot_auditor_token": "AUD_TOKEN_9951",
+    "board_tie_waiver_approved": true,
+    "expanded_slate_size": 6,
+    "adjudication_timestamp": "2010-12-10T14:00:00Z",
+    "bylaw_clause_reference": "Article IV, Section 3(b) - Equal Vote Slate Inclusion"
+  },
+  {
+    "tie_id": "TIE_053",
+    "ceremony_id": "CEREMONY_053",
+    "category_id": "CAT_BEST_COUNTRY_WE",
+    "tied_nomination_ids": [
+      "NOM_002_BEST_COUNT_0052",
+      "NOM_002_BEST_RHYTH_0053"
+    ],
+    "tied_vote_count_audited": 450,
+    "ballot_auditor_token": "AUD_TOKEN_9952",
+    "board_tie_waiver_approved": true,
+    "expanded_slate_size": 6,
+    "adjudication_timestamp": "2011-12-10T14:00:00Z",
+    "bylaw_clause_reference": "Article IV, Section 3(b) - Equal Vote Slate Inclusion"
+  },
+  {
+    "tie_id": "TIE_054",
+    "ceremony_id": "CEREMONY_054",
+    "category_id": "CAT_BEST_RHYTHM_BLU",
+    "tied_nomination_ids": [
+      "NOM_002_BEST_RHYTH_0053",
+      "NOM_002_BEST_PERFO_0054"
+    ],
+    "tied_vote_count_audited": 450,
+    "ballot_auditor_token": "AUD_TOKEN_9953",
+    "board_tie_waiver_approved": true,
+    "expanded_slate_size": 6,
+    "adjudication_timestamp": "2012-12-10T14:00:00Z",
+    "bylaw_clause_reference": "Article IV, Section 3(b) - Equal Vote Slate Inclusion"
+  },
+  {
+    "tie_id": "TIE_055",
+    "ceremony_id": "CEREMONY_055",
+    "category_id": "CAT_BEST_PERFORMANC",
+    "tied_nomination_ids": [
+      "NOM_002_BEST_PERFO_0054",
+      "NOM_002_BEST_RECOR_0055"
+    ],
+    "tied_vote_count_audited": 450,
+    "ballot_auditor_token": "AUD_TOKEN_9954",
+    "board_tie_waiver_approved": true,
+    "expanded_slate_size": 6,
+    "adjudication_timestamp": "2013-12-10T14:00:00Z",
+    "bylaw_clause_reference": "Article IV, Section 3(b) - Equal Vote Slate Inclusion"
+  },
+  {
+    "tie_id": "TIE_056",
+    "ceremony_id": "CEREMONY_056",
+    "category_id": "CAT_BEST_RECORDING_",
+    "tied_nomination_ids": [
+      "NOM_002_BEST_RECOR_0055",
+      "NOM_002_BEST_ARRAN_0056"
+    ],
+    "tied_vote_count_audited": 450,
+    "ballot_auditor_token": "AUD_TOKEN_9955",
+    "board_tie_waiver_approved": true,
+    "expanded_slate_size": 6,
+    "adjudication_timestamp": "2014-12-10T14:00:00Z",
+    "bylaw_clause_reference": "Article IV, Section 3(b) - Equal Vote Slate Inclusion"
+  },
+  {
+    "tie_id": "TIE_057",
+    "ceremony_id": "CEREMONY_057",
+    "category_id": "CAT_BEST_ARRANGEMEN",
+    "tied_nomination_ids": [
+      "NOM_002_BEST_ARRAN_0056",
+      "NOM_002_BEST_ENGIN_0057"
+    ],
+    "tied_vote_count_audited": 450,
+    "ballot_auditor_token": "AUD_TOKEN_9956",
+    "board_tie_waiver_approved": true,
+    "expanded_slate_size": 6,
+    "adjudication_timestamp": "2015-12-10T14:00:00Z",
+    "bylaw_clause_reference": "Article IV, Section 3(b) - Equal Vote Slate Inclusion"
+  },
+  {
+    "tie_id": "TIE_058",
+    "ceremony_id": "CEREMONY_058",
+    "category_id": "CAT_BEST_ENGINEERIN",
+    "tied_nomination_ids": [
+      "NOM_002_BEST_ENGIN_0057",
+      "NOM_002_BEST_ENGIN_0058"
+    ],
+    "tied_vote_count_audited": 450,
+    "ballot_auditor_token": "AUD_TOKEN_9957",
+    "board_tie_waiver_approved": true,
+    "expanded_slate_size": 6,
+    "adjudication_timestamp": "2016-12-10T14:00:00Z",
+    "bylaw_clause_reference": "Article IV, Section 3(b) - Equal Vote Slate Inclusion"
+  },
+  {
+    "tie_id": "TIE_059",
+    "ceremony_id": "CEREMONY_059",
+    "category_id": "CAT_BEST_ENGINEERIN",
+    "tied_nomination_ids": [
+      "NOM_002_BEST_ENGIN_0058",
+      "NOM_002_BEST_ENGIN_0059"
+    ],
+    "tied_vote_count_audited": 450,
+    "ballot_auditor_token": "AUD_TOKEN_9958",
+    "board_tie_waiver_approved": true,
+    "expanded_slate_size": 6,
+    "adjudication_timestamp": "2017-12-10T14:00:00Z",
+    "bylaw_clause_reference": "Article IV, Section 3(b) - Equal Vote Slate Inclusion"
+  },
+  {
+    "tie_id": "TIE_060",
+    "ceremony_id": "CEREMONY_060",
+    "category_id": "CAT_BEST_ENGINEERIN",
+    "tied_nomination_ids": [
+      "NOM_002_BEST_ENGIN_0059",
+      "NOM_002_BEST_ALBUM_0060"
+    ],
+    "tied_vote_count_audited": 450,
+    "ballot_auditor_token": "AUD_TOKEN_9959",
+    "board_tie_waiver_approved": true,
+    "expanded_slate_size": 6,
+    "adjudication_timestamp": "2018-12-10T14:00:00Z",
+    "bylaw_clause_reference": "Article IV, Section 3(b) - Equal Vote Slate Inclusion"
+  },
+  {
+    "tie_id": "TIE_061",
+    "ceremony_id": "CEREMONY_061",
+    "category_id": "CAT_BEST_ALBUM_COVE",
+    "tied_nomination_ids": [
+      "NOM_002_BEST_ALBUM_0060",
+      "NOM_002_BEST_NEW_A_0061"
+    ],
+    "tied_vote_count_audited": 450,
+    "ballot_auditor_token": "AUD_TOKEN_9960",
+    "board_tie_waiver_approved": true,
+    "expanded_slate_size": 6,
+    "adjudication_timestamp": "2019-12-10T14:00:00Z",
+    "bylaw_clause_reference": "Article IV, Section 3(b) - Equal Vote Slate Inclusion"
+  },
+  {
+    "tie_id": "TIE_062",
+    "ceremony_id": "CEREMONY_062",
+    "category_id": "CAT_BEST_NEW_ARTIST",
+    "tied_nomination_ids": [
+      "NOM_002_BEST_NEW_A_0061",
+      "NOM_003_RECORD_OF__0062"
+    ],
+    "tied_vote_count_audited": 450,
+    "ballot_auditor_token": "AUD_TOKEN_9961",
+    "board_tie_waiver_approved": true,
+    "expanded_slate_size": 6,
+    "adjudication_timestamp": "2020-12-10T14:00:00Z",
+    "bylaw_clause_reference": "Article IV, Section 3(b) - Equal Vote Slate Inclusion"
+  },
+  {
+    "tie_id": "TIE_063",
+    "ceremony_id": "CEREMONY_063",
+    "category_id": "CAT_RECORD_OF_THE_Y",
+    "tied_nomination_ids": [
+      "NOM_003_RECORD_OF__0062",
+      "NOM_003_ALBUM_OF_T_0063"
+    ],
+    "tied_vote_count_audited": 450,
+    "ballot_auditor_token": "AUD_TOKEN_9962",
+    "board_tie_waiver_approved": true,
+    "expanded_slate_size": 6,
+    "adjudication_timestamp": "2021-12-10T14:00:00Z",
+    "bylaw_clause_reference": "Article IV, Section 3(b) - Equal Vote Slate Inclusion"
+  },
+  {
+    "tie_id": "TIE_064",
+    "ceremony_id": "CEREMONY_064",
+    "category_id": "CAT_ALBUM_OF_THE_YE",
+    "tied_nomination_ids": [
+      "NOM_003_ALBUM_OF_T_0063",
+      "NOM_003_SONG_OF_TH_0064"
+    ],
+    "tied_vote_count_audited": 450,
+    "ballot_auditor_token": "AUD_TOKEN_9963",
+    "board_tie_waiver_approved": true,
+    "expanded_slate_size": 6,
+    "adjudication_timestamp": "2022-12-10T14:00:00Z",
+    "bylaw_clause_reference": "Article IV, Section 3(b) - Equal Vote Slate Inclusion"
+  },
+  {
+    "tie_id": "TIE_065",
+    "ceremony_id": "CEREMONY_065",
+    "category_id": "CAT_SONG_OF_THE_YEA",
+    "tied_nomination_ids": [
+      "NOM_003_SONG_OF_TH_0064",
+      "NOM_003_BEST_VOCAL_0065"
+    ],
+    "tied_vote_count_audited": 450,
+    "ballot_auditor_token": "AUD_TOKEN_9964",
+    "board_tie_waiver_approved": true,
+    "expanded_slate_size": 6,
+    "adjudication_timestamp": "2023-12-10T14:00:00Z",
+    "bylaw_clause_reference": "Article IV, Section 3(b) - Equal Vote Slate Inclusion"
+  },
+  {
+    "tie_id": "TIE_066",
+    "ceremony_id": "CEREMONY_066",
+    "category_id": "CAT_BEST_VOCAL_PERF",
+    "tied_nomination_ids": [
+      "NOM_003_BEST_VOCAL_0065",
+      "NOM_003_BEST_VOCAL_0066"
+    ],
+    "tied_vote_count_audited": 450,
+    "ballot_auditor_token": "AUD_TOKEN_9965",
+    "board_tie_waiver_approved": true,
+    "expanded_slate_size": 6,
+    "adjudication_timestamp": "2024-12-10T14:00:00Z",
+    "bylaw_clause_reference": "Article IV, Section 3(b) - Equal Vote Slate Inclusion"
+  },
+  {
+    "tie_id": "TIE_067",
+    "ceremony_id": "CEREMONY_067",
+    "category_id": "CAT_BEST_VOCAL_PERF",
+    "tied_nomination_ids": [
+      "NOM_003_BEST_VOCAL_0066",
+      "NOM_003_BEST_VOCAL_0067"
+    ],
+    "tied_vote_count_audited": 450,
+    "ballot_auditor_token": "AUD_TOKEN_9966",
+    "board_tie_waiver_approved": true,
+    "expanded_slate_size": 6,
+    "adjudication_timestamp": "2025-12-10T14:00:00Z",
+    "bylaw_clause_reference": "Article IV, Section 3(b) - Equal Vote Slate Inclusion"
+  },
+  {
+    "tie_id": "TIE_068",
+    "ceremony_id": "CEREMONY_001",
+    "category_id": "CAT_BEST_VOCAL_PERF",
+    "tied_nomination_ids": [
+      "NOM_003_BEST_VOCAL_0067",
+      "NOM_003_BEST_VOCAL_0068"
+    ],
+    "tied_vote_count_audited": 450,
+    "ballot_auditor_token": "AUD_TOKEN_9967",
+    "board_tie_waiver_approved": true,
+    "expanded_slate_size": 6,
+    "adjudication_timestamp": "1959-12-10T14:00:00Z",
+    "bylaw_clause_reference": "Article IV, Section 3(b) - Equal Vote Slate Inclusion"
+  },
+  {
+    "tie_id": "TIE_069",
+    "ceremony_id": "CEREMONY_002",
+    "category_id": "CAT_BEST_VOCAL_PERF",
+    "tied_nomination_ids": [
+      "NOM_003_BEST_VOCAL_0068",
+      "NOM_003_BEST_ARRAN_0069"
+    ],
+    "tied_vote_count_audited": 450,
+    "ballot_auditor_token": "AUD_TOKEN_9968",
+    "board_tie_waiver_approved": true,
+    "expanded_slate_size": 6,
+    "adjudication_timestamp": "1960-12-10T14:00:00Z",
+    "bylaw_clause_reference": "Article IV, Section 3(b) - Equal Vote Slate Inclusion"
+  },
+  {
+    "tie_id": "TIE_070",
+    "ceremony_id": "CEREMONY_003",
+    "category_id": "CAT_BEST_ARRANGEMEN",
+    "tied_nomination_ids": [
+      "NOM_003_BEST_ARRAN_0069",
+      "NOM_003_BEST_PERFO_0070"
+    ],
+    "tied_vote_count_audited": 450,
+    "ballot_auditor_token": "AUD_TOKEN_9969",
+    "board_tie_waiver_approved": true,
+    "expanded_slate_size": 6,
+    "adjudication_timestamp": "1961-12-10T14:00:00Z",
+    "bylaw_clause_reference": "Article IV, Section 3(b) - Equal Vote Slate Inclusion"
+  }
+]

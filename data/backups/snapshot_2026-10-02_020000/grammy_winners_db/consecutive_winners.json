@@ -1,0 +1,912 @@
+[
+  {
+    "streak_id": "STREAK_001",
+    "creator_id": "CRT_NEL_BLU_DIPINTO",
+    "category_id": "CAT_RECORD_OF_THE_Y",
+    "streak_span_years": 2,
+    "initial_ceremony_edition": 1,
+    "terminal_ceremony_edition": 3,
+    "winning_work_ids_list": [
+      "WRK_NEL_BLU_DIPINTO_DI_BLU_VOLARE_0000"
+    ],
+    "is_streak_currently_active": false,
+    "historical_streak_rank": 1,
+    "category_monopoly_notes": "Consecutive category wins across consecutive award cycles"
+  },
+  {
+    "streak_id": "STREAK_002",
+    "creator_id": "CRT_HENRY_MANCINI",
+    "category_id": "CAT_ALBUM_OF_THE_YE",
+    "streak_span_years": 3,
+    "initial_ceremony_edition": 1,
+    "terminal_ceremony_edition": 4,
+    "winning_work_ids_list": [
+      "WRK_THE_MUSIC_FROM_PETER_GUNN_0001"
+    ],
+    "is_streak_currently_active": false,
+    "historical_streak_rank": 2,
+    "category_monopoly_notes": "Consecutive category wins across consecutive award cycles"
+  },
+  {
+    "streak_id": "STREAK_003",
+    "creator_id": "CRT_NEL_BLU_DIPINTO",
+    "category_id": "CAT_SONG_OF_THE_YEA",
+    "streak_span_years": 4,
+    "initial_ceremony_edition": 1,
+    "terminal_ceremony_edition": 5,
+    "winning_work_ids_list": [
+      "WRK_NEL_BLU_DIPINTO_DI_BLU_VOLARE_0002"
+    ],
+    "is_streak_currently_active": false,
+    "historical_streak_rank": 3,
+    "category_monopoly_notes": "Consecutive category wins across consecutive award cycles"
+  },
+  {
+    "streak_id": "STREAK_004",
+    "creator_id": "CRT_ELLA_FITZGERALD",
+    "category_id": "CAT_BEST_VOCAL_PERF",
+    "streak_span_years": 2,
+    "initial_ceremony_edition": 1,
+    "terminal_ceremony_edition": 3,
+    "winning_work_ids_list": [
+      "WRK_ELLA_FITZGERALD_SINGS_THE_IRVI_0003"
+    ],
+    "is_streak_currently_active": false,
+    "historical_streak_rank": 4,
+    "category_monopoly_notes": "Consecutive category wins across consecutive award cycles"
+  },
+  {
+    "streak_id": "STREAK_005",
+    "creator_id": "CRT_CATCH_A_FALLING",
+    "category_id": "CAT_BEST_VOCAL_PERF",
+    "streak_span_years": 3,
+    "initial_ceremony_edition": 1,
+    "terminal_ceremony_edition": 4,
+    "winning_work_ids_list": [
+      "WRK_CATCH_A_FALLING_STAR_0004"
+    ],
+    "is_streak_currently_active": false,
+    "historical_streak_rank": 5,
+    "category_monopoly_notes": "Consecutive category wins across consecutive award cycles"
+  },
+  {
+    "streak_id": "STREAK_006",
+    "creator_id": "CRT_BILLY_MAY_S_BIG",
+    "category_id": "CAT_BEST_PERFORMANC",
+    "streak_span_years": 4,
+    "initial_ceremony_edition": 1,
+    "terminal_ceremony_edition": 5,
+    "winning_work_ids_list": [
+      "WRK_BILLY_MAY_S_BIG_FAT_BRASS_0005"
+    ],
+    "is_streak_currently_active": false,
+    "historical_streak_rank": 6,
+    "category_monopoly_notes": "Consecutive category wins across consecutive award cycles"
+  },
+  {
+    "streak_id": "STREAK_007",
+    "creator_id": "CRT_BASIE",
+    "category_id": "CAT_BEST_PERFORMANC",
+    "streak_span_years": 2,
+    "initial_ceremony_edition": 1,
+    "terminal_ceremony_edition": 3,
+    "winning_work_ids_list": [
+      "WRK_BASIE_0006"
+    ],
+    "is_streak_currently_active": false,
+    "historical_streak_rank": 7,
+    "category_monopoly_notes": "Consecutive category wins across consecutive award cycles"
+  },
+  {
+    "streak_id": "STREAK_008",
+    "creator_id": "CRT_THAT_OLD_BLACK_",
+    "category_id": "CAT_BEST_PERFORMANC",
+    "streak_span_years": 3,
+    "initial_ceremony_edition": 1,
+    "terminal_ceremony_edition": 4,
+    "winning_work_ids_list": [
+      "WRK_THAT_OLD_BLACK_MAGIC_0007"
+    ],
+    "is_streak_currently_active": false,
+    "historical_streak_rank": 8,
+    "category_monopoly_notes": "Consecutive category wins across consecutive award cycles"
+  },
+  {
+    "streak_id": "STREAK_009",
+    "creator_id": "CRT_ELLA_FITZGERALD",
+    "category_id": "CAT_BEST_JAZZ_PERFO",
+    "streak_span_years": 4,
+    "initial_ceremony_edition": 1,
+    "terminal_ceremony_edition": 5,
+    "winning_work_ids_list": [
+      "WRK_ELLA_FITZGERALD_SINGS_THE_DUKE_0008"
+    ],
+    "is_streak_currently_active": false,
+    "historical_streak_rank": 9,
+    "category_monopoly_notes": "Consecutive category wins across consecutive award cycles"
+  },
+  {
+    "streak_id": "STREAK_010",
+    "creator_id": "CRT_BASIE",
+    "category_id": "CAT_BEST_JAZZ_PERFO",
+    "streak_span_years": 2,
+    "initial_ceremony_edition": 1,
+    "terminal_ceremony_edition": 3,
+    "winning_work_ids_list": [
+      "WRK_BASIE_0009"
+    ],
+    "is_streak_currently_active": false,
+    "historical_streak_rank": 10,
+    "category_monopoly_notes": "Consecutive category wins across consecutive award cycles"
+  },
+  {
+    "streak_id": "STREAK_011",
+    "creator_id": "CRT_THE_CHIPMUNK_SO",
+    "category_id": "CAT_BEST_COMEDY_PER",
+    "streak_span_years": 3,
+    "initial_ceremony_edition": 1,
+    "terminal_ceremony_edition": 4,
+    "winning_work_ids_list": [
+      "WRK_THE_CHIPMUNK_SONG_0010"
+    ],
+    "is_streak_currently_active": false,
+    "historical_streak_rank": 1,
+    "category_monopoly_notes": "Consecutive category wins across consecutive award cycles"
+  },
+  {
+    "streak_id": "STREAK_012",
+    "creator_id": "CRT_TOM_DOOLEY",
+    "category_id": "CAT_BEST_COUNTRY_WE",
+    "streak_span_years": 4,
+    "initial_ceremony_edition": 1,
+    "terminal_ceremony_edition": 5,
+    "winning_work_ids_list": [
+      "WRK_TOM_DOOLEY_0011"
+    ],
+    "is_streak_currently_active": false,
+    "historical_streak_rank": 2,
+    "category_monopoly_notes": "Consecutive category wins across consecutive award cycles"
+  },
+  {
+    "streak_id": "STREAK_013",
+    "creator_id": "CRT_TEQUILA",
+    "category_id": "CAT_BEST_RHYTHM_BLU",
+    "streak_span_years": 2,
+    "initial_ceremony_edition": 1,
+    "terminal_ceremony_edition": 3,
+    "winning_work_ids_list": [
+      "WRK_TEQUILA_0012"
+    ],
+    "is_streak_currently_active": false,
+    "historical_streak_rank": 3,
+    "category_monopoly_notes": "Consecutive category wins across consecutive award cycles"
+  },
+  {
+    "streak_id": "STREAK_014",
+    "creator_id": "CRT_HENRY_MANCINI",
+    "category_id": "CAT_BEST_ARRANGEMEN",
+    "streak_span_years": 3,
+    "initial_ceremony_edition": 1,
+    "terminal_ceremony_edition": 4,
+    "winning_work_ids_list": [
+      "WRK_THE_MUSIC_FROM_PETER_GUNN_0013"
+    ],
+    "is_streak_currently_active": false,
+    "historical_streak_rank": 4,
+    "category_monopoly_notes": "Consecutive category wins across consecutive award cycles"
+  },
+  {
+    "streak_id": "STREAK_015",
+    "creator_id": "CRT_DUETS_WITH_A_SP",
+    "category_id": "CAT_BEST_ENGINEERED",
+    "streak_span_years": 4,
+    "initial_ceremony_edition": 1,
+    "terminal_ceremony_edition": 5,
+    "winning_work_ids_list": [
+      "WRK_DUETS_WITH_A_SPANISH_GUITAR_0014"
+    ],
+    "is_streak_currently_active": false,
+    "historical_streak_rank": 5,
+    "category_monopoly_notes": "Consecutive category wins across consecutive award cycles"
+  },
+  {
+    "streak_id": "STREAK_016",
+    "creator_id": "CRT_THE_CHIPMUNK_SO",
+    "category_id": "CAT_BEST_ENGINEERED",
+    "streak_span_years": 2,
+    "initial_ceremony_edition": 1,
+    "terminal_ceremony_edition": 3,
+    "winning_work_ids_list": [
+      "WRK_THE_CHIPMUNK_SONG_0015"
+    ],
+    "is_streak_currently_active": false,
+    "historical_streak_rank": 6,
+    "category_monopoly_notes": "Consecutive category wins across consecutive award cycles"
+  },
+  {
+    "streak_id": "STREAK_017",
+    "creator_id": "CRT_FRANK_SINATRA",
+    "category_id": "CAT_BEST_ALBUM_COVE",
+    "streak_span_years": 3,
+    "initial_ceremony_edition": 1,
+    "terminal_ceremony_edition": 4,
+    "winning_work_ids_list": [
+      "WRK_ONLY_THE_LONELY_0016"
+    ],
+    "is_streak_currently_active": false,
+    "historical_streak_rank": 7,
+    "category_monopoly_notes": "Consecutive category wins across consecutive award cycles"
+  },
+  {
+    "streak_id": "STREAK_018",
+    "creator_id": "CRT_CROSS_COUNTRY_S",
+    "category_id": "CAT_BEST_MUSICAL_CO",
+    "streak_span_years": 4,
+    "initial_ceremony_edition": 1,
+    "terminal_ceremony_edition": 5,
+    "winning_work_ids_list": [
+      "WRK_CROSS_COUNTRY_SUITE_0017"
+    ],
+    "is_streak_currently_active": false,
+    "historical_streak_rank": 8,
+    "category_monopoly_notes": "Consecutive category wins across consecutive award cycles"
+  },
+  {
+    "streak_id": "STREAK_019",
+    "creator_id": "CRT_THE_MUSIC_MAN",
+    "category_id": "CAT_BEST_ORIGINAL_C",
+    "streak_span_years": 2,
+    "initial_ceremony_edition": 1,
+    "terminal_ceremony_edition": 3,
+    "winning_work_ids_list": [
+      "WRK_THE_MUSIC_MAN_0018"
+    ],
+    "is_streak_currently_active": false,
+    "historical_streak_rank": 9,
+    "category_monopoly_notes": "Consecutive category wins across consecutive award cycles"
+  },
+  {
+    "streak_id": "STREAK_020",
+    "creator_id": "CRT_ANDR_PREVIN",
+    "category_id": "CAT_BEST_SOUND_TRAC",
+    "streak_span_years": 3,
+    "initial_ceremony_edition": 1,
+    "terminal_ceremony_edition": 4,
+    "winning_work_ids_list": [
+      "WRK_GIGI_0019"
+    ],
+    "is_streak_currently_active": false,
+    "historical_streak_rank": 10,
+    "category_monopoly_notes": "Consecutive category wins across consecutive award cycles"
+  },
+  {
+    "streak_id": "STREAK_021",
+    "creator_id": "CRT_THE_BEST_OF_THE",
+    "category_id": "CAT_BEST_PERFORMANC",
+    "streak_span_years": 4,
+    "initial_ceremony_edition": 1,
+    "terminal_ceremony_edition": 5,
+    "winning_work_ids_list": [
+      "WRK_THE_BEST_OF_THE_STAN_FREBERG_S_0020"
+    ],
+    "is_streak_currently_active": false,
+    "historical_streak_rank": 1,
+    "category_monopoly_notes": "Consecutive category wins across consecutive award cycles"
+  },
+  {
+    "streak_id": "STREAK_022",
+    "creator_id": "CRT_THE_CHIPMUNK_SO",
+    "category_id": "CAT_BEST_RECORDING_",
+    "streak_span_years": 2,
+    "initial_ceremony_edition": 1,
+    "terminal_ceremony_edition": 3,
+    "winning_work_ids_list": [
+      "WRK_THE_CHIPMUNK_SONG_0021"
+    ],
+    "is_streak_currently_active": false,
+    "historical_streak_rank": 2,
+    "category_monopoly_notes": "Consecutive category wins across consecutive award cycles"
+  },
+  {
+    "streak_id": "STREAK_023",
+    "creator_id": "CRT_GAIETE_PARISIEN",
+    "category_id": "CAT_BEST_CLASSICAL_",
+    "streak_span_years": 3,
+    "initial_ceremony_edition": 1,
+    "terminal_ceremony_edition": 4,
+    "winning_work_ids_list": [
+      "WRK_GAIETE_PARISIENNE_0022"
+    ],
+    "is_streak_currently_active": false,
+    "historical_streak_rank": 3,
+    "category_monopoly_notes": "Consecutive category wins across consecutive award cycles"
+  },
+  {
+    "streak_id": "STREAK_024",
+    "creator_id": "CRT_TCHAIKOVSKY_PIA",
+    "category_id": "CAT_BEST_CLASSICAL_",
+    "streak_span_years": 4,
+    "initial_ceremony_edition": 1,
+    "terminal_ceremony_edition": 5,
+    "winning_work_ids_list": [
+      "WRK_TCHAIKOVSKY_PIANO_CONCERTO_NO__0023"
+    ],
+    "is_streak_currently_active": false,
+    "historical_streak_rank": 4,
+    "category_monopoly_notes": "Consecutive category wins across consecutive award cycles"
+  },
+  {
+    "streak_id": "STREAK_025",
+    "creator_id": "CRT_SEGOVIA_GOLDEN_",
+    "category_id": "CAT_BEST_CLASSICAL_",
+    "streak_span_years": 2,
+    "initial_ceremony_edition": 1,
+    "terminal_ceremony_edition": 3,
+    "winning_work_ids_list": [
+      "WRK_SEGOVIA_GOLDEN_JUBILEE_0024"
+    ],
+    "is_streak_currently_active": false,
+    "historical_streak_rank": 5,
+    "category_monopoly_notes": "Consecutive category wins across consecutive award cycles"
+  },
+  {
+    "streak_id": "STREAK_026",
+    "creator_id": "CRT_BEETHOVEN_QUART",
+    "category_id": "CAT_BEST_CLASSICAL_",
+    "streak_span_years": 3,
+    "initial_ceremony_edition": 1,
+    "terminal_ceremony_edition": 4,
+    "winning_work_ids_list": [
+      "WRK_BEETHOVEN_QUARTET_130_0025"
+    ],
+    "is_streak_currently_active": false,
+    "historical_streak_rank": 6,
+    "category_monopoly_notes": "Consecutive category wins across consecutive award cycles"
+  },
+  {
+    "streak_id": "STREAK_027",
+    "creator_id": "CRT_OPERATIC_RECITA",
+    "category_id": "CAT_BEST_CLASSICAL_",
+    "streak_span_years": 4,
+    "initial_ceremony_edition": 1,
+    "terminal_ceremony_edition": 5,
+    "winning_work_ids_list": [
+      "WRK_OPERATIC_RECITAL_0026"
+    ],
+    "is_streak_currently_active": false,
+    "historical_streak_rank": 7,
+    "category_monopoly_notes": "Consecutive category wins across consecutive award cycles"
+  },
+  {
+    "streak_id": "STREAK_028",
+    "creator_id": "CRT_VIRTUOSO",
+    "category_id": "CAT_BEST_CLASSICAL_",
+    "streak_span_years": 2,
+    "initial_ceremony_edition": 1,
+    "terminal_ceremony_edition": 3,
+    "winning_work_ids_list": [
+      "WRK_VIRTUOSO_0027"
+    ],
+    "is_streak_currently_active": false,
+    "historical_streak_rank": 8,
+    "category_monopoly_notes": "Consecutive category wins across consecutive award cycles"
+  },
+  {
+    "streak_id": "STREAK_029",
+    "creator_id": "CRT_MACK_THE_KNIFE",
+    "category_id": "CAT_RECORD_OF_THE_Y",
+    "streak_span_years": 3,
+    "initial_ceremony_edition": 2,
+    "terminal_ceremony_edition": 5,
+    "winning_work_ids_list": [
+      "WRK_MACK_THE_KNIFE_0028"
+    ],
+    "is_streak_currently_active": false,
+    "historical_streak_rank": 9,
+    "category_monopoly_notes": "Consecutive category wins across consecutive award cycles"
+  },
+  {
+    "streak_id": "STREAK_030",
+    "creator_id": "CRT_FRANK_SINATRA",
+    "category_id": "CAT_ALBUM_OF_THE_YE",
+    "streak_span_years": 4,
+    "initial_ceremony_edition": 2,
+    "terminal_ceremony_edition": 6,
+    "winning_work_ids_list": [
+      "WRK_COME_DANCE_WITH_ME_0029"
+    ],
+    "is_streak_currently_active": false,
+    "historical_streak_rank": 10,
+    "category_monopoly_notes": "Consecutive category wins across consecutive award cycles"
+  },
+  {
+    "streak_id": "STREAK_031",
+    "creator_id": "CRT_THE_BATTLE_OF_N",
+    "category_id": "CAT_SONG_OF_THE_YEA",
+    "streak_span_years": 2,
+    "initial_ceremony_edition": 2,
+    "terminal_ceremony_edition": 4,
+    "winning_work_ids_list": [
+      "WRK_THE_BATTLE_OF_NEW_ORLEANS_0030"
+    ],
+    "is_streak_currently_active": false,
+    "historical_streak_rank": 1,
+    "category_monopoly_notes": "Consecutive category wins across consecutive award cycles"
+  },
+  {
+    "streak_id": "STREAK_032",
+    "creator_id": "CRT_ELLA_FITZGERALD",
+    "category_id": "CAT_BEST_VOCAL_PERF",
+    "streak_span_years": 3,
+    "initial_ceremony_edition": 2,
+    "terminal_ceremony_edition": 5,
+    "winning_work_ids_list": [
+      "WRK_BUT_NOT_FOR_ME_0031"
+    ],
+    "is_streak_currently_active": false,
+    "historical_streak_rank": 2,
+    "category_monopoly_notes": "Consecutive category wins across consecutive award cycles"
+  },
+  {
+    "streak_id": "STREAK_033",
+    "creator_id": "CRT_FRANK_SINATRA",
+    "category_id": "CAT_BEST_VOCAL_PERF",
+    "streak_span_years": 4,
+    "initial_ceremony_edition": 2,
+    "terminal_ceremony_edition": 6,
+    "winning_work_ids_list": [
+      "WRK_COME_DANCE_WITH_ME_0032"
+    ],
+    "is_streak_currently_active": false,
+    "historical_streak_rank": 3,
+    "category_monopoly_notes": "Consecutive category wins across consecutive award cycles"
+  },
+  {
+    "streak_id": "STREAK_034",
+    "creator_id": "CRT_DUKE_ELLINGTON",
+    "category_id": "CAT_BEST_PERFORMANC",
+    "streak_span_years": 2,
+    "initial_ceremony_edition": 2,
+    "terminal_ceremony_edition": 4,
+    "winning_work_ids_list": [
+      "WRK_ANATOMY_OF_A_MURDER_0033"
+    ],
+    "is_streak_currently_active": false,
+    "historical_streak_rank": 4,
+    "category_monopoly_notes": "Consecutive category wins across consecutive award cycles"
+  },
+  {
+    "streak_id": "STREAK_035",
+    "creator_id": "CRT_ANDR_PREVIN",
+    "category_id": "CAT_BEST_PERFORMANC",
+    "streak_span_years": 3,
+    "initial_ceremony_edition": 2,
+    "terminal_ceremony_edition": 5,
+    "winning_work_ids_list": [
+      "WRK_LIKE_YOUNG_0034"
+    ],
+    "is_streak_currently_active": false,
+    "historical_streak_rank": 5,
+    "category_monopoly_notes": "Consecutive category wins across consecutive award cycles"
+  },
+  {
+    "streak_id": "STREAK_036",
+    "creator_id": "CRT_BATTLE_HYMN_OF_",
+    "category_id": "CAT_BEST_PERFORMANC",
+    "streak_span_years": 4,
+    "initial_ceremony_edition": 2,
+    "terminal_ceremony_edition": 6,
+    "winning_work_ids_list": [
+      "WRK_BATTLE_HYMN_OF_THE_REPUBLIC_0035"
+    ],
+    "is_streak_currently_active": false,
+    "historical_streak_rank": 6,
+    "category_monopoly_notes": "Consecutive category wins across consecutive award cycles"
+  },
+  {
+    "streak_id": "STREAK_037",
+    "creator_id": "CRT_ELLA_FITZGERALD",
+    "category_id": "CAT_BEST_JAZZ_PERFO",
+    "streak_span_years": 2,
+    "initial_ceremony_edition": 2,
+    "terminal_ceremony_edition": 4,
+    "winning_work_ids_list": [
+      "WRK_ELLA_SWINGS_LIGHTLY_0036"
+    ],
+    "is_streak_currently_active": false,
+    "historical_streak_rank": 7,
+    "category_monopoly_notes": "Consecutive category wins across consecutive award cycles"
+  },
+  {
+    "streak_id": "STREAK_038",
+    "creator_id": "CRT_I_DIG_CHICKS",
+    "category_id": "CAT_BEST_JAZZ_PERFO",
+    "streak_span_years": 3,
+    "initial_ceremony_edition": 2,
+    "terminal_ceremony_edition": 5,
+    "winning_work_ids_list": [
+      "WRK_I_DIG_CHICKS_0037"
+    ],
+    "is_streak_currently_active": false,
+    "historical_streak_rank": 8,
+    "category_monopoly_notes": "Consecutive category wins across consecutive award cycles"
+  },
+  {
+    "streak_id": "STREAK_039",
+    "creator_id": "CRT_DEBUSSY_IMAGES_",
+    "category_id": "CAT_BEST_CLASSICAL_",
+    "streak_span_years": 4,
+    "initial_ceremony_edition": 2,
+    "terminal_ceremony_edition": 6,
+    "winning_work_ids_list": [
+      "WRK_DEBUSSY_IMAGES_FOR_ORCHESTRA_0038"
+    ],
+    "is_streak_currently_active": false,
+    "historical_streak_rank": 9,
+    "category_monopoly_notes": "Consecutive category wins across consecutive award cycles"
+  },
+  {
+    "streak_id": "STREAK_040",
+    "creator_id": "CRT_BEETHOVEN_SONAT",
+    "category_id": "CAT_BEST_CLASSICAL_",
+    "streak_span_years": 2,
+    "initial_ceremony_edition": 2,
+    "terminal_ceremony_edition": 4,
+    "winning_work_ids_list": [
+      "WRK_BEETHOVEN_SONATAS_NO_21_IN_C_W_0039"
+    ],
+    "is_streak_currently_active": false,
+    "historical_streak_rank": 10,
+    "category_monopoly_notes": "Consecutive category wins across consecutive award cycles"
+  },
+  {
+    "streak_id": "STREAK_041",
+    "creator_id": "CRT_RACHMANINOFF_PI",
+    "category_id": "CAT_BEST_CLASSICAL_",
+    "streak_span_years": 3,
+    "initial_ceremony_edition": 2,
+    "terminal_ceremony_edition": 5,
+    "winning_work_ids_list": [
+      "WRK_RACHMANINOFF_PIANO_CONCERTO_NO_0040"
+    ],
+    "is_streak_currently_active": false,
+    "historical_streak_rank": 1,
+    "category_monopoly_notes": "Consecutive category wins across consecutive award cycles"
+  },
+  {
+    "streak_id": "STREAK_042",
+    "creator_id": "CRT_MOZART_THE_MARR",
+    "category_id": "CAT_BEST_CLASSICAL_",
+    "streak_span_years": 4,
+    "initial_ceremony_edition": 2,
+    "terminal_ceremony_edition": 6,
+    "winning_work_ids_list": [
+      "WRK_MOZART_THE_MARRIAGE_OF_FIGARO_0041"
+    ],
+    "is_streak_currently_active": false,
+    "historical_streak_rank": 2,
+    "category_monopoly_notes": "Consecutive category wins across consecutive award cycles"
+  },
+  {
+    "streak_id": "STREAK_043",
+    "creator_id": "CRT_BEETHOVEN_SONAT",
+    "category_id": "CAT_BEST_CLASSICAL_",
+    "streak_span_years": 2,
+    "initial_ceremony_edition": 2,
+    "terminal_ceremony_edition": 4,
+    "winning_work_ids_list": [
+      "WRK_BEETHOVEN_SONATAS_NO_21_IN_C_W_0042"
+    ],
+    "is_streak_currently_active": false,
+    "historical_streak_rank": 3,
+    "category_monopoly_notes": "Consecutive category wins across consecutive award cycles"
+  },
+  {
+    "streak_id": "STREAK_044",
+    "creator_id": "CRT_BJOERLING_IN_OP",
+    "category_id": "CAT_BEST_CLASSICAL_",
+    "streak_span_years": 3,
+    "initial_ceremony_edition": 2,
+    "terminal_ceremony_edition": 5,
+    "winning_work_ids_list": [
+      "WRK_BJOERLING_IN_OPERA_0043"
+    ],
+    "is_streak_currently_active": false,
+    "historical_streak_rank": 4,
+    "category_monopoly_notes": "Consecutive category wins across consecutive award cycles"
+  },
+  {
+    "streak_id": "STREAK_045",
+    "creator_id": "CRT_DUKE_ELLINGTON",
+    "category_id": "CAT_BEST_MUSICAL_CO",
+    "streak_span_years": 4,
+    "initial_ceremony_edition": 2,
+    "terminal_ceremony_edition": 6,
+    "winning_work_ids_list": [
+      "WRK_ANATOMY_OF_A_MURDER_0044"
+    ],
+    "is_streak_currently_active": false,
+    "historical_streak_rank": 5,
+    "category_monopoly_notes": "Consecutive category wins across consecutive award cycles"
+  },
+  {
+    "streak_id": "STREAK_046",
+    "creator_id": "CRT_DUKE_ELLINGTON",
+    "category_id": "CAT_BEST_SOUND_TRAC",
+    "streak_span_years": 2,
+    "initial_ceremony_edition": 2,
+    "terminal_ceremony_edition": 4,
+    "winning_work_ids_list": [
+      "WRK_ANATOMY_OF_A_MURDER_0045"
+    ],
+    "is_streak_currently_active": false,
+    "historical_streak_rank": 6,
+    "category_monopoly_notes": "Consecutive category wins across consecutive award cycles"
+  },
+  {
+    "streak_id": "STREAK_047",
+    "creator_id": "CRT_PORGY_AND_BESS",
+    "category_id": "CAT_BEST_SOUND_TRAC",
+    "streak_span_years": 3,
+    "initial_ceremony_edition": 2,
+    "terminal_ceremony_edition": 5,
+    "winning_work_ids_list": [
+      "WRK_PORGY_AND_BESS_0046"
+    ],
+    "is_streak_currently_active": false,
+    "historical_streak_rank": 7,
+    "category_monopoly_notes": "Consecutive category wins across consecutive award cycles"
+  },
+  {
+    "streak_id": "STREAK_048",
+    "creator_id": "CRT_GYPSY",
+    "category_id": "CAT_BEST_BROADWAY_S",
+    "streak_span_years": 4,
+    "initial_ceremony_edition": 2,
+    "terminal_ceremony_edition": 6,
+    "winning_work_ids_list": [
+      "WRK_GYPSY_0047"
+    ],
+    "is_streak_currently_active": false,
+    "historical_streak_rank": 8,
+    "category_monopoly_notes": "Consecutive category wins across consecutive award cycles"
+  },
+  {
+    "streak_id": "STREAK_049",
+    "creator_id": "CRT_INSIDE_SHELLEY_",
+    "category_id": "CAT_BEST_COMEDY_PER",
+    "streak_span_years": 2,
+    "initial_ceremony_edition": 2,
+    "terminal_ceremony_edition": 4,
+    "winning_work_ids_list": [
+      "WRK_INSIDE_SHELLEY_BERMAN_0048"
+    ],
+    "is_streak_currently_active": false,
+    "historical_streak_rank": 9,
+    "category_monopoly_notes": "Consecutive category wins across consecutive award cycles"
+  },
+  {
+    "streak_id": "STREAK_050",
+    "creator_id": "CRT_THE_BATTLE_OF_K",
+    "category_id": "CAT_BEST_COMEDY_PER",
+    "streak_span_years": 3,
+    "initial_ceremony_edition": 2,
+    "terminal_ceremony_edition": 5,
+    "winning_work_ids_list": [
+      "WRK_THE_BATTLE_OF_KOOKAMONGA_0049"
+    ],
+    "is_streak_currently_active": false,
+    "historical_streak_rank": 10,
+    "category_monopoly_notes": "Consecutive category wins across consecutive award cycles"
+  },
+  {
+    "streak_id": "STREAK_051",
+    "creator_id": "CRT_A_LINCOLN_PORTR",
+    "category_id": "CAT_BEST_PERFORMANC",
+    "streak_span_years": 4,
+    "initial_ceremony_edition": 2,
+    "terminal_ceremony_edition": 6,
+    "winning_work_ids_list": [
+      "WRK_A_LINCOLN_PORTRAIT_0050"
+    ],
+    "is_streak_currently_active": false,
+    "historical_streak_rank": 1,
+    "category_monopoly_notes": "Consecutive category wins across consecutive award cycles"
+  },
+  {
+    "streak_id": "STREAK_052",
+    "creator_id": "CRT_MIDNIGHT_FLYER",
+    "category_id": "CAT_BEST_PERFORMANC",
+    "streak_span_years": 2,
+    "initial_ceremony_edition": 2,
+    "terminal_ceremony_edition": 4,
+    "winning_work_ids_list": [
+      "WRK_MIDNIGHT_FLYER_0051"
+    ],
+    "is_streak_currently_active": false,
+    "historical_streak_rank": 2,
+    "category_monopoly_notes": "Consecutive category wins across consecutive award cycles"
+  },
+  {
+    "streak_id": "STREAK_053",
+    "creator_id": "CRT_THE_BATTLE_OF_N",
+    "category_id": "CAT_BEST_COUNTRY_WE",
+    "streak_span_years": 3,
+    "initial_ceremony_edition": 2,
+    "terminal_ceremony_edition": 5,
+    "winning_work_ids_list": [
+      "WRK_THE_BATTLE_OF_NEW_ORLEANS_0052"
+    ],
+    "is_streak_currently_active": false,
+    "historical_streak_rank": 3,
+    "category_monopoly_notes": "Consecutive category wins across consecutive award cycles"
+  },
+  {
+    "streak_id": "STREAK_054",
+    "creator_id": "CRT_WHAT_A_DIFF_REN",
+    "category_id": "CAT_BEST_RHYTHM_BLU",
+    "streak_span_years": 4,
+    "initial_ceremony_edition": 2,
+    "terminal_ceremony_edition": 6,
+    "winning_work_ids_list": [
+      "WRK_WHAT_A_DIFF_RENCE_A_DAY_MAKES_0053"
+    ],
+    "is_streak_currently_active": false,
+    "historical_streak_rank": 4,
+    "category_monopoly_notes": "Consecutive category wins across consecutive award cycles"
+  },
+  {
+    "streak_id": "STREAK_055",
+    "creator_id": "CRT_THE_KINGSTON_TR",
+    "category_id": "CAT_BEST_PERFORMANC",
+    "streak_span_years": 2,
+    "initial_ceremony_edition": 2,
+    "terminal_ceremony_edition": 4,
+    "winning_work_ids_list": [
+      "WRK_THE_KINGSTON_TRIO_AT_LARGE_0054"
+    ],
+    "is_streak_currently_active": false,
+    "historical_streak_rank": 5,
+    "category_monopoly_notes": "Consecutive category wins across consecutive award cycles"
+  },
+  {
+    "streak_id": "STREAK_056",
+    "creator_id": "CRT_PETER_AND_THE_W",
+    "category_id": "CAT_BEST_RECORDING_",
+    "streak_span_years": 3,
+    "initial_ceremony_edition": 2,
+    "terminal_ceremony_edition": 5,
+    "winning_work_ids_list": [
+      "WRK_PETER_AND_THE_WOLF_0055"
+    ],
+    "is_streak_currently_active": false,
+    "historical_streak_rank": 6,
+    "category_monopoly_notes": "Consecutive category wins across consecutive award cycles"
+  },
+  {
+    "streak_id": "STREAK_057",
+    "creator_id": "CRT_COME_DANCE_WITH",
+    "category_id": "CAT_BEST_ARRANGEMEN",
+    "streak_span_years": 4,
+    "initial_ceremony_edition": 2,
+    "terminal_ceremony_edition": 6,
+    "winning_work_ids_list": [
+      "WRK_COME_DANCE_WITH_ME_0056"
+    ],
+    "is_streak_currently_active": false,
+    "historical_streak_rank": 7,
+    "category_monopoly_notes": "Consecutive category wins across consecutive award cycles"
+  },
+  {
+    "streak_id": "STREAK_058",
+    "creator_id": "CRT_VICTORY_AT_SEA_",
+    "category_id": "CAT_BEST_ENGINEERIN",
+    "streak_span_years": 2,
+    "initial_ceremony_edition": 2,
+    "terminal_ceremony_edition": 4,
+    "winning_work_ids_list": [
+      "WRK_VICTORY_AT_SEA_VOL_I_0057"
+    ],
+    "is_streak_currently_active": false,
+    "historical_streak_rank": 8,
+    "category_monopoly_notes": "Consecutive category wins across consecutive award cycles"
+  },
+  {
+    "streak_id": "STREAK_059",
+    "creator_id": "CRT_ALVIN_S_HARMONI",
+    "category_id": "CAT_BEST_ENGINEERIN",
+    "streak_span_years": 3,
+    "initial_ceremony_edition": 2,
+    "terminal_ceremony_edition": 5,
+    "winning_work_ids_list": [
+      "WRK_ALVIN_S_HARMONICA_0058"
+    ],
+    "is_streak_currently_active": false,
+    "historical_streak_rank": 9,
+    "category_monopoly_notes": "Consecutive category wins across consecutive award cycles"
+  },
+  {
+    "streak_id": "STREAK_060",
+    "creator_id": "CRT_BELAFONTE_AT_CA",
+    "category_id": "CAT_BEST_ENGINEERIN",
+    "streak_span_years": 4,
+    "initial_ceremony_edition": 2,
+    "terminal_ceremony_edition": 6,
+    "winning_work_ids_list": [
+      "WRK_BELAFONTE_AT_CARNEGIE_HALL_0059"
+    ],
+    "is_streak_currently_active": false,
+    "historical_streak_rank": 10,
+    "category_monopoly_notes": "Consecutive category wins across consecutive award cycles"
+  },
+  {
+    "streak_id": "STREAK_061",
+    "creator_id": "CRT_SHOSTAKOVICH_SY",
+    "category_id": "CAT_BEST_ALBUM_COVE",
+    "streak_span_years": 2,
+    "initial_ceremony_edition": 2,
+    "terminal_ceremony_edition": 4,
+    "winning_work_ids_list": [
+      "WRK_SHOSTAKOVICH_SYMPHONY_NO_5_0060"
+    ],
+    "is_streak_currently_active": false,
+    "historical_streak_rank": 1,
+    "category_monopoly_notes": "Consecutive category wins across consecutive award cycles"
+  },
+  {
+    "streak_id": "STREAK_062",
+    "creator_id": "CRT_BOBBY_DARIN",
+    "category_id": "CAT_BEST_NEW_ARTIST",
+    "streak_span_years": 3,
+    "initial_ceremony_edition": 2,
+    "terminal_ceremony_edition": 5,
+    "winning_work_ids_list": [
+      "WRK_BOBBY_DARIN_0061"
+    ],
+    "is_streak_currently_active": false,
+    "historical_streak_rank": 2,
+    "category_monopoly_notes": "Consecutive category wins across consecutive award cycles"
+  },
+  {
+    "streak_id": "STREAK_063",
+    "creator_id": "CRT_THE_THEME_FROM_",
+    "category_id": "CAT_RECORD_OF_THE_Y",
+    "streak_span_years": 4,
+    "initial_ceremony_edition": 3,
+    "terminal_ceremony_edition": 7,
+    "winning_work_ids_list": [
+      "WRK_THE_THEME_FROM_A_SUMMER_PLACE_0062"
+    ],
+    "is_streak_currently_active": false,
+    "historical_streak_rank": 3,
+    "category_monopoly_notes": "Consecutive category wins across consecutive award cycles"
+  },
+  {
+    "streak_id": "STREAK_064",
+    "creator_id": "CRT_THE_BUTTON_DOWN",
+    "category_id": "CAT_ALBUM_OF_THE_YE",
+    "streak_span_years": 2,
+    "initial_ceremony_edition": 3,
+    "terminal_ceremony_edition": 5,
+    "winning_work_ids_list": [
+      "WRK_THE_BUTTON_DOWN_MIND_OF_BOB_NE_0063"
+    ],
+    "is_streak_currently_active": false,
+    "historical_streak_rank": 4,
+    "category_monopoly_notes": "Consecutive category wins across consecutive award cycles"
+  },
+  {
+    "streak_id": "STREAK_065",
+    "creator_id": "CRT_THEME_FROM_EXOD",
+    "category_id": "CAT_SONG_OF_THE_YEA",
+    "streak_span_years": 3,
+    "initial_ceremony_edition": 3,
+    "terminal_ceremony_edition": 6,
+    "winning_work_ids_list": [
+      "WRK_THEME_FROM_EXODUS_0064"
+    ],
+    "is_streak_currently_active": false,
+    "historical_streak_rank": 5,
+    "category_monopoly_notes": "Consecutive category wins across consecutive award cycles"
+  }
+]
