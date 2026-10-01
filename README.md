@@ -169,8 +169,11 @@ Detailed design documents are maintained in [`docs/`](docs/):
   - [End-to-End Data Flow & Validation Pipeline](docs/architecture/data-flow.md)
   - [Database Boundaries & Domain Encapsulation](docs/architecture/database-boundaries.md)
   - [System Topology Architecture](docs/architecture/system_topology.md)
-  - [Data Dictionary (All 50 Collections)](docs/architecture/data_dictionary.md)
-- **Conceptual EER Specification**: [`docs/eer_diagrams/conceptual_eer_spec.md`](docs/eer_diagrams/conceptual_eer_spec.md)
+- **Conceptual EER Modeling (Phase 6)**:
+  - [Comprehensive EER Design Specification](docs/eer-design.md)
+  - [EER Conceptual Model Diagram (PNG)](eer/grammy-eer.png)
+  - [EER Source Draw.io File](eer/grammy-eer.drawio)
+  - [Conceptual EER Theoretical Spec](docs/eer_diagrams/conceptual_eer_spec.md)
 - **Relational DDL Reference**: [`schemas/relational_ddl/relational_reference_schema.sql`](schemas/relational_ddl/relational_reference_schema.sql)
 - **Functional Dependencies (1NF/2NF)**: [`docs/normalization/functional_dependencies.md`](docs/normalization/functional_dependencies.md)
 - **Normalization Proofs (3NF/BCNF/4NF/5NF)**: [`docs/normalization/normalization_proofs.md`](docs/normalization/normalization_proofs.md)

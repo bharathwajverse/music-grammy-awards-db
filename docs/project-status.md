@@ -2,7 +2,7 @@
 
 > **Course**: Advanced Database Management Systems (ADBMS)  
 > **Project Title**: GRAMMY Awards Information & Analytics System  
-> **Current Phase**: Phase 5 — System Architecture (Completed)  
+> **Current Phase**: Phase 6 — Conceptual EER Modeling (Completed)  
 > **Status Date**: October 2026  
 > **Version Control**: Git / GitHub (`bharathwajverse/music-grammy-awards-db`)  
 > **Database Engine**: MongoDB Atlas & MongoDB Compass  
@@ -116,11 +116,16 @@ The system architecture partitions the domain across five dedicated databases. E
   - End-to-end data flow & validation pipeline: [`docs/architecture/data-flow.md`](architecture/data-flow.md)
   - Database boundaries & domain encapsulation: [`docs/architecture/database-boundaries.md`](architecture/database-boundaries.md)
   - 5-database distributed topology, shared entities, universal deterministic identifiers, source vs. derived data partitioning, ADRs, and client-side aggregation models fully specified.
+- **Completed in Phase 6 (Conceptual EER Modeling)**:
+  - Conceptual EER Draw.io diagram: [`eer/grammy-eer.drawio`](../eer/grammy-eer.drawio)
+  - High-resolution rendered diagram (300 DPI): [`eer/grammy-eer.png`](../eer/grammy-eer.png)
+  - Comprehensive conceptual EER specification: [`docs/eer-design.md`](eer-design.md)
+  - Full representation across all 5 databases: entities, attributes, keys, relationships, cardinality ratios, participation constraints, overlapping specialization (`CREATOR`), disjoint specialization (`WORK`, `AWARD_CATEGORY`), conceptual aggregation (`NOMINATION_CREDIT`), and category/union types (`AWARD_RECIPIENT` = `ARTIST` ∪ `MUSICAL_GROUP`).
 - **Phase Rule Compliance**:
   - No MongoDB database operations were executed.
   - No data import was run.
   - No application code was written.
-- **Next Authorized Phase**: Phase 6 — Conceptual Modeling & EER Diagrams (Awaiting user checkpoint approval).
+- **Next Authorized Phase**: Phase 7 — Relational Schema Mapping & Relational Algebra (Awaiting user checkpoint approval).
 
 
 

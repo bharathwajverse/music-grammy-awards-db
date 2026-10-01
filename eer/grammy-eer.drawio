@@ -1,0 +1,314 @@
+<?xml version="1.0" ?>
+<mxfile host="app.diagrams.net" modified="2026-10-02T03:30:00.000Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64)" version="21.0.0" type="device">
+  <diagram id="grammy-eer-diagram" name="GRAMMY Awards EER Conceptual Model">
+    <mxGraphModel dx="3200" dy="2400" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="5200" pageHeight="3600" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="cell_2" value="DATABASE 1: grammy_history_db (Event Logistics &amp; Governance)" style="swimlane;startSize=25;rounded=1;fontStyle=1;fontSize=14;strokeWidth=2;fillColor=#f8f9fa;strokeColor=#495057;fillColor=#e1f5fe;strokeColor=#0288d1;" parent="1" vertex="1">
+          <mxGeometry x="80" y="80" width="1000" height="1050" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_3" value="DATABASE 2: grammy_categories_db (Award Taxonomy &amp; By-Laws)" style="swimlane;startSize=25;rounded=1;fontStyle=1;fontSize=14;strokeWidth=2;fillColor=#f8f9fa;strokeColor=#495057;fillColor=#e8f5e9;strokeColor=#2e7d32;" parent="1" vertex="1">
+          <mxGeometry x="1120" y="80" width="1050" height="1050" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_4" value="DATABASE 3: grammy_nominations_db (Ballots, Works &amp; Credits)" style="swimlane;startSize=25;rounded=1;fontStyle=1;fontSize=14;strokeWidth=2;fillColor=#f8f9fa;strokeColor=#495057;fillColor=#fff3e0;strokeColor=#ef6c00;" parent="1" vertex="1">
+          <mxGeometry x="2210" y="80" width="1150" height="1050" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_5" value="DATABASE 4: grammy_winners_db (Trophy Fulfillment &amp; Records)" style="swimlane;startSize=25;rounded=1;fontStyle=1;fontSize=14;strokeWidth=2;fillColor=#f8f9fa;strokeColor=#495057;fillColor=#f3e5f5;strokeColor=#7b1fa2;" parent="1" vertex="1">
+          <mxGeometry x="3400" y="80" width="1050" height="1050" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_6" value="DATABASE 5: grammy_creators_db (Master Creator &amp; Entity Hub)" style="swimlane;startSize=25;rounded=1;fontStyle=1;fontSize=14;strokeWidth=2;fillColor=#f8f9fa;strokeColor=#495057;fillColor=#e0f2f1;strokeColor=#00796b;" parent="1" vertex="1">
+          <mxGeometry x="80" y="1180" width="3280" height="1200" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_7" value="CEREMONY
+(CeremonyEdition)
+[PK: ceremony_id]" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=12;strokeWidth=2;fillColor=#b3e5fc;strokeColor=#0288d1;" parent="1" vertex="1">
+          <mxGeometry x="140" y="180" width="180" height="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_8" value="VENUE
+(CeremonyVenue)
+[PK: venue_id]" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=12;strokeWidth=2;fillColor=#b3e5fc;strokeColor=#0288d1;" parent="1" vertex="1">
+          <mxGeometry x="520" y="180" width="160" height="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_9" value="TELECAST_BROADCASTER
+[PK: broadcaster_id]" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=12;strokeWidth=2;fillColor=#b3e5fc;strokeColor=#0288d1;" parent="1" vertex="1">
+          <mxGeometry x="760" y="180" width="180" height="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_10" value="VIEWERSHIP_RATING
+[PK: rating_id]" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=12;strokeWidth=2;fillColor=#b3e5fc;strokeColor=#0288d1;" parent="1" vertex="1">
+          <mxGeometry x="140" y="420" width="180" height="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_11" value="CEREMONY_HOST
+[PK: host_record_id]" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=12;strokeWidth=2;fillColor=#b3e5fc;strokeColor=#0288d1;" parent="1" vertex="1">
+          <mxGeometry x="520" y="420" width="160" height="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_12" value="HISTORIC_MILESTONE
+[PK: milestone_id]" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=12;strokeWidth=2;fillColor=#b3e5fc;strokeColor=#0288d1;" parent="1" vertex="1">
+          <mxGeometry x="140" y="660" width="180" height="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_13" value="TIMELINE_ERA
+[PK: era_id]" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=12;strokeWidth=2;fillColor=#b3e5fc;strokeColor=#0288d1;" parent="1" vertex="1">
+          <mxGeometry x="520" y="660" width="160" height="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_14" value="ACADEMY_LEADERSHIP
+[PK: leadership_id]" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=12;strokeWidth=2;fillColor=#b3e5fc;strokeColor=#0288d1;" parent="1" vertex="1">
+          <mxGeometry x="140" y="900" width="180" height="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_15" value="PRESS_ACCREDITATION
+[PK: media_pass_id]" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=12;strokeWidth=2;fillColor=#b3e5fc;strokeColor=#0288d1;" parent="1" vertex="1">
+          <mxGeometry x="520" y="900" width="180" height="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_16" value="HOSTED_AT
+(N:1)" style="rhombus;whiteSpace=wrap;html=1;fontStyle=1;fontSize=11;strokeWidth=2;fillColor=#81d4fa;" parent="1" vertex="1">
+          <mxGeometry x="380" y="190" width="90" height="45" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_17" value="HAS_RATING
+(1:1)" style="rhombus;double=1;whiteSpace=wrap;html=1;fontStyle=1;fontSize=11;strokeWidth=2;fillColor=#81d4fa;" parent="1" vertex="1">
+          <mxGeometry x="185" y="305" width="90" height="45" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_18" value="ANCHORED_BY
+(1:N)" style="rhombus;whiteSpace=wrap;html=1;fontStyle=1;fontSize=11;strokeWidth=2;fillColor=#81d4fa;" parent="1" vertex="1">
+          <mxGeometry x="380" y="430" width="95" height="45" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_19" value="IN_ERA
+(N:1)" style="rhombus;whiteSpace=wrap;html=1;fontStyle=1;fontSize=11;strokeWidth=2;fillColor=#81d4fa;" parent="1" vertex="1">
+          <mxGeometry x="380" y="670" width="90" height="45" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_20" value="AWARD_FIELD
+[PK: field_id]" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=12;strokeWidth=2;fillColor=#c8e6c9;strokeColor=#2e7d32;" parent="1" vertex="1">
+          <mxGeometry x="1180" y="180" width="160" height="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_21" value="AWARD_CATEGORY
+(Superclass)
+[PK: category_id]" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=12;strokeWidth=2;fillColor=#c8e6c9;strokeColor=#2e7d32;" parent="1" vertex="1">
+          <mxGeometry x="1540" y="180" width="180" height="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_22" value="d" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontStyle=1;fontSize=14;strokeWidth=2;fillColor=#ffffff;strokeColor=#2e7d32;" parent="1" vertex="1">
+          <mxGeometry x="1610" y="290" width="40" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_23" value="COMPETITIVE_CAT
+(Subclass)
+[PK: category_id]" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=12;strokeWidth=2;fillColor=#c8e6c9;strokeColor=#2e7d32;" parent="1" vertex="1">
+          <mxGeometry x="1440" y="380" width="160" height="55" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_24" value="SPECIAL_MERIT_CAT
+(Subclass)
+[PK: category_id]" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=12;strokeWidth=2;fillColor=#c8e6c9;strokeColor=#2e7d32;" parent="1" vertex="1">
+          <mxGeometry x="1680" y="380" width="160" height="55" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_25" value="CATEGORY_LINEAGE
+[PK: lineage_id]" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=12;strokeWidth=2;fillColor=#c8e6c9;strokeColor=#2e7d32;" parent="1" vertex="1">
+          <mxGeometry x="1180" y="520" width="170" height="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_26" value="ELIGIBILITY_RULE
+[PK: rule_id]" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=12;strokeWidth=2;fillColor=#c8e6c9;strokeColor=#2e7d32;" parent="1" vertex="1">
+          <mxGeometry x="1540" y="520" width="170" height="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_27" value="VOTING_PROCEDURE
+[PK: procedure_id]" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=12;strokeWidth=2;fillColor=#c8e6c9;strokeColor=#2e7d32;" parent="1" vertex="1">
+          <mxGeometry x="1180" y="720" width="170" height="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_28" value="CATEGORY_QUOTA
+[PK: quota_id]" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=12;strokeWidth=2;fillColor=#c8e6c9;strokeColor=#2e7d32;" parent="1" vertex="1">
+          <mxGeometry x="1540" y="720" width="170" height="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_29" value="CRAFT_CREDIT_DEF
+[PK: craft_rule_id]" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=12;strokeWidth=2;fillColor=#c8e6c9;strokeColor=#2e7d32;" parent="1" vertex="1">
+          <mxGeometry x="1180" y="920" width="170" height="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_30" value="DISCONTINUED_CAT
+[PK: discontinued_id]" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=12;strokeWidth=2;fillColor=#c8e6c9;strokeColor=#2e7d32;" parent="1" vertex="1">
+          <mxGeometry x="1540" y="920" width="170" height="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_31" value="CONTAINS
+(1:N)" style="rhombus;whiteSpace=wrap;html=1;fontStyle=1;fontSize=11;strokeWidth=2;fillColor=#a5d6a7;" parent="1" vertex="1">
+          <mxGeometry x="1390" y="190" width="90" height="45" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_32" value="GOVERNED_BY
+(N:M)" style="rhombus;whiteSpace=wrap;html=1;fontStyle=1;fontSize=11;strokeWidth=2;fillColor=#a5d6a7;" parent="1" vertex="1">
+          <mxGeometry x="1400" y="530" width="95" height="45" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_33" value="NOMINATION_ENTRY
+[PK: nomination_id]" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=12;strokeWidth=2;fillColor=#ffe0b2;strokeColor=#ef6c00;" parent="1" vertex="1">
+          <mxGeometry x="2280" y="180" width="180" height="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_34" value="WORK
+(Superclass)
+[PK: work_id]" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=12;strokeWidth=2;fillColor=#ffe0b2;strokeColor=#ef6c00;" parent="1" vertex="1">
+          <mxGeometry x="2680" y="180" width="180" height="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_35" value="d" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontStyle=1;fontSize=14;strokeWidth=2;fillColor=#ffffff;strokeColor=#ef6c00;" parent="1" vertex="1">
+          <mxGeometry x="2750" y="290" width="40" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_36" value="TRACK_RECORDING
+(Subclass)
+[PK: work_id]" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=12;strokeWidth=2;fillColor=#ffe0b2;strokeColor=#ef6c00;" parent="1" vertex="1">
+          <mxGeometry x="2500" y="380" width="150" height="55" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_37" value="ALBUM_RECORDING
+(Subclass)
+[PK: work_id]" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=12;strokeWidth=2;fillColor=#ffe0b2;strokeColor=#ef6c00;" parent="1" vertex="1">
+          <mxGeometry x="2700" y="380" width="150" height="55" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_38" value="MUSIC_VIDEO
+(Subclass)
+[PK: work_id]" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=12;strokeWidth=2;fillColor=#ffe0b2;strokeColor=#ef6c00;" parent="1" vertex="1">
+          <mxGeometry x="2900" y="380" width="140" height="55" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_39" value="SUBMISSION_BATCH
+[PK: batch_id]" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=12;strokeWidth=2;fillColor=#ffe0b2;strokeColor=#ef6c00;" parent="1" vertex="1">
+          <mxGeometry x="2280" y="520" width="170" height="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_40" value="SCREENING_BATCH
+[PK: screening_id]" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=12;strokeWidth=2;fillColor=#ffe0b2;strokeColor=#ef6c00;" parent="1" vertex="1">
+          <mxGeometry x="2680" y="520" width="170" height="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_41" value="TIED_NOMINATION
+[PK: tie_id]" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=12;strokeWidth=2;fillColor=#ffe0b2;strokeColor=#ef6c00;" parent="1" vertex="1">
+          <mxGeometry x="2280" y="720" width="170" height="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_42" value="AUDIT_LOG
+[PK: audit_id]" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=12;strokeWidth=2;fillColor=#ffe0b2;strokeColor=#ef6c00;" parent="1" vertex="1">
+          <mxGeometry x="2680" y="720" width="170" height="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_43" value="FOR_WORK
+(N:1)" style="rhombus;whiteSpace=wrap;html=1;fontStyle=1;fontSize=11;strokeWidth=2;fillColor=#ffcc80;" parent="1" vertex="1">
+          <mxGeometry x="2510" y="190" width="95" height="45" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_44" value="AGGREGATION: NOMINATION_CREDIT
+AGGREGATE(CREATOR, WORK, AWARD_CATEGORY)
+[Attributes: credit_id, role_type, playing_time_%, billing_order]
+Participates in: AUDITED_BY and TROPHY_ALLOCATION" style="rounded=1;dashed=1;dashPattern=5 5;fillColor=#fff8e1;strokeColor=#ff8f00;strokeWidth=2.5;fontStyle=1;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="2280" y="850" width="570" height="95" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_45" value="WINNER_RECORD
+[PK: winner_id]" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=12;strokeWidth=2;fillColor=#e1bee7;strokeColor=#7b1fa2;" parent="1" vertex="1">
+          <mxGeometry x="3480" y="180" width="170" height="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_46" value="ACCEPTANCE_SPEECH
+[PK: speech_id]" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=12;strokeWidth=2;fillColor=#e1bee7;strokeColor=#7b1fa2;" parent="1" vertex="1">
+          <mxGeometry x="3860" y="180" width="170" height="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_47" value="TROPHY_TRACKING
+[PK: serial_no]" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=12;strokeWidth=2;fillColor=#e1bee7;strokeColor=#7b1fa2;" parent="1" vertex="1">
+          <mxGeometry x="3480" y="420" width="170" height="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_48" value="BIG_FOUR_SWEEP
+[PK: sweep_id]" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=12;strokeWidth=2;fillColor=#e1bee7;strokeColor=#7b1fa2;" parent="1" vertex="1">
+          <mxGeometry x="3860" y="420" width="170" height="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_49" value="RECORD_BREAKER
+[PK: record_id]" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=12;strokeWidth=2;fillColor=#e1bee7;strokeColor=#7b1fa2;" parent="1" vertex="1">
+          <mxGeometry x="3480" y="660" width="170" height="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_50" value="CONSECUTIVE_WINNER
+[PK: streak_id]" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=12;strokeWidth=2;fillColor=#e1bee7;strokeColor=#7b1fa2;" parent="1" vertex="1">
+          <mxGeometry x="3860" y="660" width="170" height="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_51" value="HALL_OF_FAME
+[PK: induction_id]" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=12;strokeWidth=2;fillColor=#e1bee7;strokeColor=#7b1fa2;" parent="1" vertex="1">
+          <mxGeometry x="3480" y="900" width="170" height="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_52" value="POSTHUMOUS_AWARD
+[PK: posthumous_id]" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=12;strokeWidth=2;fillColor=#e1bee7;strokeColor=#7b1fa2;" parent="1" vertex="1">
+          <mxGeometry x="3860" y="900" width="170" height="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_53" value="DELIVERS
+(1:1)" style="rhombus;whiteSpace=wrap;html=1;fontStyle=1;fontSize=11;strokeWidth=2;fillColor=#ce93d8;" parent="1" vertex="1">
+          <mxGeometry x="3710" y="190" width="90" height="45" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_54" value="SHIPPED
+(1:N)" style="rhombus;whiteSpace=wrap;html=1;fontStyle=1;fontSize=11;strokeWidth=2;fillColor=#ce93d8;" parent="1" vertex="1">
+          <mxGeometry x="3520" y="310" width="90" height="45" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_55" value="CREATOR
+(Superclass)
+[PK: creator_id]" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=12;strokeWidth=2;fillColor=#b2dfdb;strokeColor=#00796b;" parent="1" vertex="1">
+          <mxGeometry x="1000" y="1280" width="200" height="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_56" value="o" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontStyle=1;fontSize=14;strokeWidth=2;fillColor=#ffffff;strokeColor=#00796b;" parent="1" vertex="1">
+          <mxGeometry x="1080" y="1390" width="40" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_57" value="ARTIST
+(Subclass)
+[PK: creator_id]" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=12;strokeWidth=2;fillColor=#b2dfdb;strokeColor=#00796b;" parent="1" vertex="1">
+          <mxGeometry x="640" y="1480" width="150" height="55" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_58" value="PRODUCER
+(Subclass)
+[PK: creator_id]" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=12;strokeWidth=2;fillColor=#b2dfdb;strokeColor=#00796b;" parent="1" vertex="1">
+          <mxGeometry x="830" y="1480" width="150" height="55" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_59" value="AUDIO_ENGINEER
+(Subclass)
+[PK: creator_id]" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=12;strokeWidth=2;fillColor=#b2dfdb;strokeColor=#00796b;" parent="1" vertex="1">
+          <mxGeometry x="1020" y="1480" width="160" height="55" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_60" value="SONGWRITER
+(Subclass)
+[PK: creator_id]" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=12;strokeWidth=2;fillColor=#b2dfdb;strokeColor=#00796b;" parent="1" vertex="1">
+          <mxGeometry x="1220" y="1480" width="150" height="55" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_61" value="ARRANGER_CONDUCTOR
+(Subclass)
+[PK: creator_id]" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=12;strokeWidth=2;fillColor=#b2dfdb;strokeColor=#00796b;" parent="1" vertex="1">
+          <mxGeometry x="1410" y="1480" width="180" height="55" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_62" value="RECORD_LABEL
+[PK: label_id]" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=12;strokeWidth=2;fillColor=#b2dfdb;strokeColor=#00796b;" parent="1" vertex="1">
+          <mxGeometry x="1800" y="1280" width="180" height="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_63" value="MUSICAL_GROUP
+[PK: group_id]" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=12;strokeWidth=2;fillColor=#b2dfdb;strokeColor=#00796b;" parent="1" vertex="1">
+          <mxGeometry x="640" y="1720" width="180" height="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_64" value="GROUP_MEMBERSHIP
+[PK: membership_id]" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=12;strokeWidth=2;fillColor=#b2dfdb;strokeColor=#00796b;" parent="1" vertex="1">
+          <mxGeometry x="1020" y="1720" width="180" height="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_65" value="HAS_MEMBER
+(1:N)" style="rhombus;whiteSpace=wrap;html=1;fontStyle=1;fontSize=11;strokeWidth=2;fillColor=#80cbc4;" parent="1" vertex="1">
+          <mxGeometry x="880" y="1730" width="95" height="45" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_66" value="U" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontStyle=1;fontSize=14;strokeWidth=2;fillColor=#ffffff;strokeColor=#004d40;" parent="1" vertex="1">
+          <mxGeometry x="860" y="1910" width="45" height="45" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_67" value="CATEGORY: AWARD_RECIPIENT
+(Union: ARTIST U MUSICAL_GROUP)
+[PK: recipient_id]" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;fontSize=12;fillColor=#80cbc4;strokeColor=#004d40;strokeWidth=2.2;" parent="1" vertex="1">
+          <mxGeometry x="700" y="2010" width="360" height="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_68" value="ceremony_id (PK)" style="ellipse;whiteSpace=wrap;html=1;fontStyle=4;fontSize=10;strokeWidth=1.5;fillColor=#e1f5fe;" parent="1" vertex="1">
+          <mxGeometry x="100" y="120" width="110" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_69" value="category_id (PK)" style="ellipse;whiteSpace=wrap;html=1;fontStyle=4;fontSize=10;strokeWidth=1.5;fillColor=#e8f5e9;" parent="1" vertex="1">
+          <mxGeometry x="1575" y="120" width="110" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_70" value="nomination_id (PK)" style="ellipse;whiteSpace=wrap;html=1;fontStyle=4;fontSize=10;strokeWidth=1.5;fillColor=#fff3e0;" parent="1" vertex="1">
+          <mxGeometry x="2315" y="120" width="110" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_71" value="winner_id (PK)" style="ellipse;whiteSpace=wrap;html=1;fontStyle=4;fontSize=10;strokeWidth=1.5;fillColor=#f3e5f5;" parent="1" vertex="1">
+          <mxGeometry x="3510" y="120" width="110" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_72" value="creator_id (PK)" style="ellipse;whiteSpace=wrap;html=1;fontStyle=4;fontSize=10;strokeWidth=1.5;fillColor=#e0f2f1;" parent="1" vertex="1">
+          <mxGeometry x="1045" y="1220" width="110" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_73" value="genres" style="ellipse;shape=doubleEllipse;whiteSpace=wrap;html=1;fontSize=10;strokeWidth=1.5;fillColor=#fff3e0;" parent="1" vertex="1">
+          <mxGeometry x="2890" y="120" width="80" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_74" value="instruments" style="ellipse;shape=doubleEllipse;whiteSpace=wrap;html=1;fontSize=10;strokeWidth=1.5;fillColor=#e0f2f1;" parent="1" vertex="1">
+          <mxGeometry x="530" y="1490" width="90" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_75" value="dedicated_to" style="ellipse;shape=doubleEllipse;whiteSpace=wrap;html=1;fontSize=10;strokeWidth=1.5;fillColor=#f3e5f5;" parent="1" vertex="1">
+          <mxGeometry x="4060" y="190" width="90" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_76" value="age_at_win" style="ellipse;whiteSpace=wrap;html=1;dashed=1;dashPattern=3 3;fontSize=10;strokeWidth=1;fillColor=#f3e5f5;" parent="1" vertex="1">
+          <mxGeometry x="3680" y="120" width="85" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="cell_77" value="total_wins" style="ellipse;whiteSpace=wrap;html=1;dashed=1;dashPattern=3 3;fontSize=10;strokeWidth=1;fillColor=#e0f2f1;" parent="1" vertex="1">
+          <mxGeometry x="1230" y="1290" width="85" height="30" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
