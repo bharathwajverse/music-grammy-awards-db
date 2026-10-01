@@ -2,7 +2,7 @@
 
 > **Course**: Advanced Database Management Systems (ADBMS)  
 > **Project Title**: GRAMMY Awards Information & Analytics System  
-> **Current Phase**: Phase 1 — Initial Project Structure & Governance Setup  
+> **Current Phase**: Phase 5 — System Architecture (Completed)  
 > **Status Date**: October 2026  
 > **Version Control**: Git / GitHub (`bharathwajverse/music-grammy-awards-db`)  
 > **Database Engine**: MongoDB Atlas & MongoDB Compass  
@@ -111,11 +111,17 @@ The system architecture partitions the domain across five dedicated databases. E
   - 50-collection feasibility specification: [`schemas/proposed-collections.md`](../schemas/proposed-collections.md)
   - Machine-readable feasibility matrix: [`schemas/collection-feasibility-matrix.csv`](../schemas/collection-feasibility-matrix.csv)
   - All 50 collections audited: 100% verified capable of $\ge 50$ legitimate documents and $\ge 10$ meaningful domain attributes. Zero collections flagged `REPLACE_REQUIRED`.
+- **Completed in Phase 5 (System Architecture)**:
+  - Master distributed system architecture specification: [`docs/architecture/system-architecture.md`](architecture/system-architecture.md)
+  - End-to-end data flow & validation pipeline: [`docs/architecture/data-flow.md`](architecture/data-flow.md)
+  - Database boundaries & domain encapsulation: [`docs/architecture/database-boundaries.md`](architecture/database-boundaries.md)
+  - 5-database distributed topology, shared entities, universal deterministic identifiers, source vs. derived data partitioning, ADRs, and client-side aggregation models fully specified.
 - **Phase Rule Compliance**:
   - No MongoDB database operations were executed.
   - No data import was run.
   - No application code was written.
-- **Next Authorized Phase**: Phase 5 — Conceptual Enhanced Entity-Relationship (EER) Modeling (Awaiting user checkpoint approval).
+- **Next Authorized Phase**: Phase 6 — Conceptual Modeling & EER Diagrams (Awaiting user checkpoint approval).
+
 
 
 

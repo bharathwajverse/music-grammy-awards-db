@@ -164,8 +164,12 @@ Detailed design documents are maintained in [`docs/`](docs/):
 - **Collection Feasibility Analysis (Phase 4)**:
   - [Proposed 50 Collections Feasibility Specification](schemas/proposed-collections.md)
   - [Collection Feasibility Matrix (CSV)](schemas/collection-feasibility-matrix.csv)
-- **System Architecture**: [`docs/architecture/system_topology.md`](docs/architecture/system_topology.md)
-- **Data Dictionary (All 50 Collections)**: [`docs/architecture/data_dictionary.md`](docs/architecture/data_dictionary.md)
+- **System Architecture (Phase 5)**:
+  - [Master System Architecture Specification](docs/architecture/system-architecture.md)
+  - [End-to-End Data Flow & Validation Pipeline](docs/architecture/data-flow.md)
+  - [Database Boundaries & Domain Encapsulation](docs/architecture/database-boundaries.md)
+  - [System Topology Architecture](docs/architecture/system_topology.md)
+  - [Data Dictionary (All 50 Collections)](docs/architecture/data_dictionary.md)
 - **Conceptual EER Specification**: [`docs/eer_diagrams/conceptual_eer_spec.md`](docs/eer_diagrams/conceptual_eer_spec.md)
 - **Relational DDL Reference**: [`schemas/relational_ddl/relational_reference_schema.sql`](schemas/relational_ddl/relational_reference_schema.sql)
 - **Functional Dependencies (1NF/2NF)**: [`docs/normalization/functional_dependencies.md`](docs/normalization/functional_dependencies.md)
