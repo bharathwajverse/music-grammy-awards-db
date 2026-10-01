@@ -151,6 +151,11 @@ python scripts/etl/load_atlas_databases.py
 Detailed design documents are maintained in [`docs/`](docs/):
 - **Current Project Status & Roadmap**: [`docs/project-status.md`](docs/project-status.md)
 - **Master Project Instructions**: [`docs/MASTER_PROJECT_INSTRUCTIONS.md`](docs/MASTER_PROJECT_INSTRUCTIONS.md)
+- **Requirements Specifications**:
+  - [Project Requirements Baseline](docs/requirements/project-requirements.md)
+  - [Formal Acceptance Criteria](docs/requirements/acceptance-criteria.md)
+  - [Team Responsibilities & Work Breakdown](docs/requirements/team-responsibilities.md)
+  - [Database Boundaries & Partitioning](docs/requirements/database-boundaries.md)
 - **System Architecture**: [`docs/architecture/system_topology.md`](docs/architecture/system_topology.md)
 - **Data Dictionary (All 50 Collections)**: [`docs/architecture/data_dictionary.md`](docs/architecture/data_dictionary.md)
 - **Conceptual EER Specification**: [`docs/eer_diagrams/conceptual_eer_spec.md`](docs/eer_diagrams/conceptual_eer_spec.md)

@@ -89,15 +89,19 @@ The system architecture partitions the domain across five dedicated databases. E
 
 ## 6. Current Phase Boundary & Next Steps
 
-- **Completed in Phase 1**:
-  - Full 17-directory structure created and tracked.
-  - Strict `.gitignore` configured and verified against git status.
+- **Completed in Phase 1 (Initial Setup & Requirements Freeze)**:
+  - Full 17-directory structure created and tracked in version control.
+  - Strict `.gitignore` configured, verified, and active against secrets, environments, caches, and dumps.
+  - Local `.env` initialized securely with Atlas cluster credentials (untracked, zero secret exposure).
+  - Formal requirements baseline documents created and frozen:
+    - [`docs/requirements/project-requirements.md`](requirements/project-requirements.md)
+    - [`docs/requirements/acceptance-criteria.md`](requirements/acceptance-criteria.md)
+    - [`docs/requirements/team-responsibilities.md`](requirements/team-responsibilities.md)
+    - [`docs/requirements/database-boundaries.md`](requirements/database-boundaries.md)
   - Root `README.md` updated with architecture, setup instructions, and syllabus mapping.
-  - Local `.env` initialized securely with Atlas cluster credentials.
-  - Initial `docs/project-status.md` established.
 - **Phase Rule Compliance**:
   - No MongoDB database operations were executed.
   - No data import was run.
   - No application code was written.
-  - No data research was performed.
-- **Next Authorized Phase**: Phase 2 — Research & Source Verification (Awaiting user checkpoint approval).
+- **Next Authorized Phase**: Phase 2 — Research & Source/License Verification (Awaiting user checkpoint approval).
+
