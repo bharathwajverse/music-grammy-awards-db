@@ -182,9 +182,14 @@ Detailed design documents are maintained in [`docs/`](docs/):
 - **Functional Dependency & Key Analysis (Phase 8)**:
   - [Functional Dependencies & Dependency Theory](normalization/functional-dependencies.md)
   - [Candidate Keys & Prime Attribute Analysis](normalization/key-analysis.md)
-- **Functional Dependencies Reference (1NF/2NF)**: [`docs/normalization/functional_dependencies.md`](docs/normalization/functional_dependencies.md)
-- **Normalization Proofs Reference (3NF/BCNF/4NF/5NF)**: [`docs/normalization/normalization_proofs.md`](docs/normalization/normalization_proofs.md)
-- **Denormalization Strategy**: [`docs/normalization/denormalization_strategy.md`](docs/normalization/denormalization_strategy.md)
+- **Schema Normalization Proofs (Phase 9)**:
+  - [First Normal Form (1NF) Specification & Transformation](normalization/1nf.md)
+  - [Second Normal Form (2NF) Partial Dependencies & Heath's Theorem](normalization/2nf.md)
+  - [Third Normal Form (3NF) Transitive Dependencies & Bernstein Synthesis](normalization/3nf.md)
+  - [Boyce-Codd Normal Form (BCNF) Overlapping Keys & Auditor Slate](normalization/bcnf.md)
+  - [Fourth Normal Form (4NF) Multivalued Dependencies & Fagin's Theorem](normalization/4nf.md)
+  - [Fifth Normal Form (5NF/PJNF) Join Dependencies & Triadic Lossless Join](normalization/5nf.md)
+  - [Master Normalization Summary & NoSQL Denormalization Synthesis](normalization/normalization-summary.md)
 - **Data Provenance & Licensing**: [`docs/data_sources_and_licensing.md`](docs/data_sources_and_licensing.md)
 - **Curriculum Syllabus Mapping**: [`docs/syllabus_mapping.md`](docs/syllabus_mapping.md)
 

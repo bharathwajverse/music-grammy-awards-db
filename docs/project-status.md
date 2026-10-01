@@ -67,7 +67,7 @@ The system architecture partitions the domain across five dedicated databases. E
 | :---: | :--- | :--- | :---: |
 | **1** | Relational Query Languages, Relational Algebra, EER Modeling | `eer/`, `relational-model/`, formal algebraic queries | **Completed** |
 | **2** | Functional Dependencies, Armstrong's Axioms, 1NF & 2NF | `normalization/`, dependency matrices, minimal cover | **Completed** |
-| **3** | 3NF, BCNF, 4NF, 5NF, Decomposition & Denormalization | `normalization/`, lossless join proofs, BCNF algorithms | Planned |
+| **3** | 3NF, BCNF, 4NF, 5NF, Decomposition & Denormalization | `normalization/`, lossless join proofs, BCNF algorithms | **Completed** |
 | **4** | ACID Transactions, Lifecycle, States & Serializability | `scripts/transactions/`, multi-document sessions | Planned |
 | **5** | Concurrency Control, Locks, Timestamp Protocols, Deadlocks | `scripts/concurrency/`, 2PL simulation, wait-for-graphs | Planned |
 | **6** | Storage Architecture, RAID, Record Formats, Data Dictionary | `docs/architecture/data_dictionary.md`, WiredTiger study | Planned |
@@ -130,11 +130,20 @@ The system architecture partitions the domain across five dedicated databases. E
   - Master functional dependency specifications: [`normalization/functional-dependencies.md`](../normalization/functional-dependencies.md) (Armstrong's axioms, attribute closure algorithms, minimal cover $F_{min}$, partial dependencies, transitive dependencies, MVDs, and JDs using actual GRAMMY entities).
   - Exhaustive candidate key analysis: [`normalization/key-analysis.md`](../normalization/key-analysis.md) (systematic key finding algorithm, universal relation key derivation, prime vs. non-prime classification, and candidate key registry for all 50 tables).
   - Verified with automated test suite (`tests/test_functional_dependencies.py`, 303 total passed tests).
+- **Completed in Phase 9 (Schema Normalization Proofs 1NF to 5NF & Summary)**:
+  - 1NF specification: [`normalization/1nf.md`](../normalization/1nf.md) (domain atomicity, unnormalized record $\mathcal{U}_{\text{UNF}}$, non-atomic/repeating group elimination, primary key designation, lossless flat schema).
+  - 2NF specification: [`normalization/2nf.md`](../normalization/2nf.md) (partial functional dependencies on composite keys, projection decomposition, Heath's Theorem lossless-join proof, dependency preservation).
+  - 3NF specification: [`normalization/3nf.md`](../normalization/3nf.md) (transitive dependencies, Bernstein 3NF synthesis algorithm, lossless decomposition proofs for venues, categories, works, and record labels).
+  - BCNF specification: [`normalization/bcnf.md`](../normalization/bcnf.md) (overlapping candidate keys, prime attribute exception loophole, Deloitte audit slate case study, BCNF decomposition algorithm, dependency preservation trade-off analysis).
+  - 4NF specification: [`normalization/4nf.md`](../normalization/4nf.md) (multivalued dependencies $X \twoheadrightarrow Y \mid Z$, tuple proliferation cross-product anomalies, Fagin's 4NF lossless decomposition theorem for artist instruments and PRO affiliations).
+  - 5NF / PJNF specification: [`normalization/5nf.md`](../normalization/5nf.md) (join dependencies $\bowtie [R_1, \dots, R_n]$, Project-Join Normal Form, cyclic triadic dependency on producer/category/workflow, 3-way lossless join proof via set-inclusion and Aho-Beeri-Ullman tableau).
+  - Master normalization summary: [`normalization/normalization-summary.md`](../normalization/normalization-summary.md) (comparative progression matrix, anomaly elimination audit, lossless-join/dependency preservation ledger, and NoSQL document denormalization bridge to the 5 MongoDB databases).
+  - Verified with 21 automated pytest tests (`tests/test_normalization_proofs.py`, 324 total system tests passing).
 - **Phase Rule Compliance**:
   - No MongoDB database operations were executed.
   - No data import was run.
   - No application code was written.
-- **Next Authorized Phase**: Phase 9 — Schema Normalization Proofs (1NF, 2NF, 3NF, BCNF, 4NF, 5NF, Lossless Join Proofs, Dependency Preservation & Denormalization) (Awaiting user checkpoint approval).
+- **Next Authorized Phase**: Phase 10 — Physical Schema Design & JSON Schemas / Validation Rules (Awaiting user checkpoint approval).
 
 
 
