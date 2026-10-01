@@ -1,0 +1,24 @@
+# Core Database Drivers
+pymongo>=4.6.0
+dnspython>=2.4.0
+
+# Data Validation & Schema Enforcement
+jsonschema>=4.20.0
+pydantic>=2.5.0
+
+# Data Processing & Analysis
+pandas>=2.1.0
+numpy>=1.26.0
+
+# Web Scraping & HTTP Clients (Official Recording Academy & MusicBrainz Data)
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+httpx>=0.25.0
+
+# Environment & Utilities
+python-dotenv>=1.0.0
+tabulate>=0.9.0
+
+# Testing Framework
+pytest>=7.4.0
+pytest-subtests>=0.11.0
