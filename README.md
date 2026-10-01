@@ -1,10 +1,12 @@
 # GRAMMY Awards Information & Analytics System
 
+[![ADBMS System Validation CI](https://github.com/bharathwajverse/music-grammy-awards-db/actions/workflows/ci.yml/badge.svg)](https://github.com/bharathwajverse/music-grammy-awards-db/actions)
 [![Academic Project](https://img.shields.io/badge/Course-Advanced%20DBMS-blue.svg)](#)
 [![Database](https://img.shields.io/badge/Database-MongoDB%20Atlas-green.svg)](#)
 [![Architecture](https://img.shields.io/badge/Architecture-5%20Distributed%20Databases-orange.svg)](#)
 [![Collections](https://img.shields.io/badge/Collections-50%20Collections-purple.svg)](#)
-[![Syllabus](https://img.shields.io/badge/Modules-10%20Modules%20Demonstrated-brightgreen.svg)](#)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Python 3.11](https://img.shields.io/badge/Python-3.11%2B-blue.svg)](#)
 
 An enterprise-grade, distributed academic DBMS project modeling, ingesting, validating, and analyzing the complete historical and operational corpus of the **National Academy of Recording Arts and Sciences (Recording Academy) GRAMMY Awards (1959–Present)**.
 
@@ -21,7 +23,7 @@ The **GRAMMY Awards Information & Analytics System** partitions the entire GRAMM
 | **Member 3** | `grammy_nominations_db` | Nomination entries, works, credits, submissions, screening, tied ballots, audits | 10 | 50+ | 10+ |
 | **Member 4** | `grammy_winners_db` | Winners, Big Four sweeps, record breakers, speeches, trophies, streaks, benchmarks | 10 | 50+ | 10+ |
 | **Member 5** | `grammy_creators_db` | Artists, producers, engineers, songwriters, arrangers, record labels, groups | 10 | 50+ | 10+ |
-| **Total** | **5 Databases** | **Integrated GRAMMY Awards Analytics System** | **50** | **2,500+ Total** | **500+ Total Fields** |
+| **Total** | **5 Databases** | **Integrated GRAMMY Awards Analytics System** | **50** | **4,500+ Ingested** | **500+ Typed Fields** |
 
 ---
 
@@ -58,19 +60,83 @@ Referential integrity across all five distributed databases is maintained using 
 
 ---
 
-## 4. Documentation & Verification Roadmap
+## 4. Quick Start & Setup
 
-Detailed architectural design documents are maintained in [`docs/`](docs/):
+### Prerequisites
+- Python 3.11+
+- Git
+- MongoDB Atlas account (for cloud deployment) or MongoDB Compass (for local exploration)
+
+### Clone & Install
+```bash
+git clone https://github.com/bharathwajverse/music-grammy-awards-db.git
+cd music-grammy-awards-db
+
+# Create virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows: .\venv\Scripts\activate
+
+# Install dependencies
+pip install -r requirements.txt
+```
+
+### Run Validation & Tests
+```bash
+# Pre-flight schema validation across all 50 collections
+python scripts/validation/validate_system.py
+
+# Run full pytest regression suite (162 tests)
+pytest tests -v
+```
+
+### Run Syllabus Demonstrations
+```bash
+# Module 4: ACID Transactions
+python scripts/transactions/demo_acid_transactions.py
+
+# Module 5: Concurrency Control & Deadlock Handling
+python scripts/concurrency/simulate_concurrent_voting.py
+
+# Module 7: Log-Based Recovery & Backups
+python scripts/recovery/backup_and_restore_drill.py
+
+# Module 9: CRUD Demonstrations
+python queries/basic_crud/crud_demonstration_suite.py
+
+# Module 10: Advanced Aggregations & Query Plans
+python queries/advanced_aggregation/module_10_pipelines.py
+```
+
+### Deploy to MongoDB Atlas
+```bash
+# Copy and configure environment variables
+cp .env.example .env
+# Edit .env and supply your MONGODB_ATLAS_URI
+
+# Ingest all 50 collections into MongoDB Atlas
+python scripts/etl/load_atlas_databases.py
+```
+
+---
+
+## 5. Documentation & Technical Specifications
+
+Detailed design documents are maintained in [`docs/`](docs/):
 - **System Architecture**: [`docs/architecture/system_topology.md`](docs/architecture/system_topology.md)
-- **Data Dictionary (50 Collections)**: [`docs/architecture/data_dictionary.md`](docs/architecture/data_dictionary.md)
+- **Data Dictionary (All 50 Collections)**: [`docs/architecture/data_dictionary.md`](docs/architecture/data_dictionary.md)
 - **Conceptual EER Specification**: [`docs/eer_diagrams/conceptual_eer_spec.md`](docs/eer_diagrams/conceptual_eer_spec.md)
+- **Relational DDL Reference**: [`schemas/relational_ddl/relational_reference_schema.sql`](schemas/relational_ddl/relational_reference_schema.sql)
+- **Relational Algebra Suite**: [`queries/relational_algebra/algebraic_expressions.md`](queries/relational_algebra/algebraic_expressions.md)
+- **Functional Dependencies (1NF/2NF)**: [`docs/normalization/functional_dependencies.md`](docs/normalization/functional_dependencies.md)
+- **Normalization Proofs (3NF/BCNF/4NF/5NF)**: [`docs/normalization/normalization_proofs.md`](docs/normalization/normalization_proofs.md)
+- **Denormalization Strategy**: [`docs/normalization/denormalization_strategy.md`](docs/normalization/denormalization_strategy.md)
 - **Data Provenance & Licensing**: [`docs/data_sources_and_licensing.md`](docs/data_sources_and_licensing.md)
 - **Curriculum Syllabus Mapping**: [`docs/syllabus_mapping.md`](docs/syllabus_mapping.md)
 
 ---
 
-## 5. Security & Academic Integrity Guidelines
+## 6. License & Academic Integrity
 
-1. **Zero Secrets in Git**: Never commit `.env` or plain text connection strings. Use `.env.example` as a template.
-2. **Authentic Data Only**: No synthetic or fabricated dummy data. All information originates from official Recording Academy archives, verified CC0/CC-BY datasets, or MusicBrainz open data.
-3. **Phased Execution**: Every phase requires automated schema validation and human checkpoint approval before advancing.
+- **License**: Released under the [MIT License](LICENSE).
+- **Zero Secrets Policy**: Credentials must never be pushed to version control. See [`SECURITY.md`](SECURITY.md).
+- **Academic Standards**: Real-world factual data only; no synthetic or fabricated information. See [`CONTRIBUTING.md`](CONTRIBUTING.md).

@@ -1,0 +1,46 @@
+name: ADBMS System Validation CI
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  validate:
+    name: Run Quota, Schema & Integrity Validation
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.11"]
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: 'pip'
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Pre-flight Schema Audit
+        run: |
+          python scripts/validation/validate_system.py
+
+      - name: Run Pytest Test Suite
+        run: |
+          pytest tests -v --tb=short
+
+      - name: Execute Syllabus Demonstration Suites
+        run: |
+          python scripts/transactions/demo_acid_transactions.py
+          python scripts/concurrency/simulate_concurrent_voting.py
+          python scripts/recovery/backup_and_restore_drill.py
+          python queries/basic_crud/crud_demonstration_suite.py
+          python queries/advanced_aggregation/module_10_pipelines.py

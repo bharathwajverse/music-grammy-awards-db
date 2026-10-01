@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "grammy-advanced-dbms"
+version = "1.0.0"
+description = "GRAMMY Awards Information & Analytics System - Advanced DBMS Academic Project"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [
+  {name = "Bharathwaj", email = "bharathwaj@users.noreply.github.com"}
+]
+keywords = [
+  "mongodb",
+  "nosql",
+  "database-management-system",
+  "grammy-awards",
+  "academic-project",
+  "eer-modeling",
+  "normalization"
+]
+dependencies = [
+  "pymongo>=4.6.0",
+  "dnspython>=2.4.0",
+  "jsonschema>=4.20.0",
+  "pydantic>=2.5.0",
+  "pandas>=2.1.0",
+  "numpy>=1.26.0",
+  "requests>=2.31.0",
+  "beautifulsoup4>=4.12.0",
+  "httpx>=0.25.0",
+  "python-dotenv>=1.0.0",
+  "tabulate>=0.9.0",
+  "pytest>=7.4.0"
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-v --strict-markers"

@@ -1,9 +1,11 @@
-# Environment Variables
+# Environment Variables & Secrets (CRITICAL: ZERO SECRETS IN GIT)
 .env
 .env.local
 .env.*.local
+*.pem
+*.key
 
-# Python
+# Python Virtual Environments & Bytecode
 __pycache__/
 *.py[cod]
 *$py.class
@@ -15,24 +17,23 @@ ENV/
 env.bak/
 venv.bak/
 
-# Testing & Coverage
+# Testing & Coverage Artifacts
 .pytest_cache/
 .coverage
 htmlcov/
+.tox/
 
-# Data & Raw Cache (Keep data dumps out of version control if large)
+# Data Cache
 data/raw/*
 !data/raw/.gitkeep
-data/processed/*
-!data/processed/.gitkeep
+data/backups/*
+!data/backups/.gitkeep
 
-# IDE & Editor
+# IDEs & Operating System Artifacts
 .vscode/
 .idea/
 *.swp
 *.swo
-
-# OS
 Thumbs.db
 Desktop.ini
 .DS_Store
