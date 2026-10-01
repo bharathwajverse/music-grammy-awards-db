@@ -161,6 +161,9 @@ Detailed design documents are maintained in [`docs/`](docs/):
   - [50-Collection Data Coverage Matrix](research/data-coverage-matrix.md)
   - [Master Source Register (CSV)](sources/source-register.csv)
   - [Formal Licensing & IP Audit Report](sources/licensing-report.md)
+- **Collection Feasibility Analysis (Phase 4)**:
+  - [Proposed 50 Collections Feasibility Specification](schemas/proposed-collections.md)
+  - [Collection Feasibility Matrix (CSV)](schemas/collection-feasibility-matrix.csv)
 - **System Architecture**: [`docs/architecture/system_topology.md`](docs/architecture/system_topology.md)
 - **Data Dictionary (All 50 Collections)**: [`docs/architecture/data_dictionary.md`](docs/architecture/data_dictionary.md)
 - **Conceptual EER Specification**: [`docs/eer_diagrams/conceptual_eer_spec.md`](docs/eer_diagrams/conceptual_eer_spec.md)
