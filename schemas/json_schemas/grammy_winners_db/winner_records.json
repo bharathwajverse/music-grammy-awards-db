@@ -1,0 +1,66 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "grammy_winners_db.winner_records",
+  "description": "Formal MongoDB schema for winner_records collection in grammy_winners_db",
+  "type": "object",
+  "required": [
+    "winner_record_id",
+    "nomination_id",
+    "ceremony_id",
+    "category_id",
+    "winning_work_id",
+    "primary_artist_id",
+    "broadcast_presentation_order",
+    "presented_live_on_telecast",
+    "acceptance_speech_delivered",
+    "trophy_statuettes_awarded_count",
+    "verified_timestamp"
+  ],
+  "properties": {
+    "winner_record_id": {
+      "type": "string",
+      "description": "Domain attribute: winner_record_id"
+    },
+    "nomination_id": {
+      "type": "string",
+      "description": "Domain attribute: nomination_id"
+    },
+    "ceremony_id": {
+      "type": "string",
+      "description": "Domain attribute: ceremony_id"
+    },
+    "category_id": {
+      "type": "string",
+      "description": "Domain attribute: category_id"
+    },
+    "winning_work_id": {
+      "type": "string",
+      "description": "Domain attribute: winning_work_id"
+    },
+    "primary_artist_id": {
+      "type": "string",
+      "description": "Domain attribute: primary_artist_id"
+    },
+    "broadcast_presentation_order": {
+      "type": "integer",
+      "description": "Domain attribute: broadcast_presentation_order"
+    },
+    "presented_live_on_telecast": {
+      "type": "boolean",
+      "description": "Domain attribute: presented_live_on_telecast"
+    },
+    "acceptance_speech_delivered": {
+      "type": "boolean",
+      "description": "Domain attribute: acceptance_speech_delivered"
+    },
+    "trophy_statuettes_awarded_count": {
+      "type": "integer",
+      "description": "Domain attribute: trophy_statuettes_awarded_count"
+    },
+    "verified_timestamp": {
+      "type": "string",
+      "description": "Domain attribute: verified_timestamp"
+    }
+  },
+  "additionalProperties": true
+}

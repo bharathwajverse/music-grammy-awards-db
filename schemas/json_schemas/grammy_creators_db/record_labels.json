@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "grammy_creators_db.record_labels",
+  "description": "Formal MongoDB schema for record_labels collection in grammy_creators_db",
+  "type": "object",
+  "required": [
+    "label_id",
+    "label_corporate_name",
+    "parent_music_group",
+    "foundation_year",
+    "corporate_headquarters_city",
+    "origin_country",
+    "commercial_distribution_channel",
+    "riaa_member_standing",
+    "historical_catalog_size",
+    "current_operational_status"
+  ],
+  "properties": {
+    "label_id": {
+      "type": "string",
+      "description": "Domain attribute: label_id"
+    },
+    "label_corporate_name": {
+      "type": "string",
+      "description": "Domain attribute: label_corporate_name"
+    },
+    "parent_music_group": {
+      "type": "string",
+      "description": "Domain attribute: parent_music_group"
+    },
+    "foundation_year": {
+      "type": "integer",
+      "description": "Domain attribute: foundation_year"
+    },
+    "corporate_headquarters_city": {
+      "type": "string",
+      "description": "Domain attribute: corporate_headquarters_city"
+    },
+    "origin_country": {
+      "type": "string",
+      "description": "Domain attribute: origin_country"
+    },
+    "commercial_distribution_channel": {
+      "type": "string",
+      "description": "Domain attribute: commercial_distribution_channel"
+    },
+    "riaa_member_standing": {
+      "type": "boolean",
+      "description": "Domain attribute: riaa_member_standing"
+    },
+    "historical_catalog_size": {
+      "type": "integer",
+      "description": "Domain attribute: historical_catalog_size"
+    },
+    "current_operational_status": {
+      "type": "string",
+      "description": "Domain attribute: current_operational_status"
+    }
+  },
+  "additionalProperties": true
+}

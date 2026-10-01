@@ -1,0 +1,64 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "grammy_nominations_db.genre_classifications",
+  "description": "Formal MongoDB schema for genre_classifications collection in grammy_nominations_db",
+  "type": "object",
+  "required": [
+    "classification_id",
+    "work_id",
+    "submitted_field_id",
+    "assigned_field_id",
+    "primary_genre_tag",
+    "secondary_genre_tags",
+    "screening_committee_consensus",
+    "contested_by_label_flag",
+    "reclassification_justification",
+    "determination_date"
+  ],
+  "properties": {
+    "classification_id": {
+      "type": "string",
+      "description": "Domain attribute: classification_id"
+    },
+    "work_id": {
+      "type": "string",
+      "description": "Domain attribute: work_id"
+    },
+    "submitted_field_id": {
+      "type": "string",
+      "description": "Domain attribute: submitted_field_id"
+    },
+    "assigned_field_id": {
+      "type": "string",
+      "description": "Domain attribute: assigned_field_id"
+    },
+    "primary_genre_tag": {
+      "type": "string",
+      "description": "Domain attribute: primary_genre_tag"
+    },
+    "secondary_genre_tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Domain attribute: secondary_genre_tags"
+    },
+    "screening_committee_consensus": {
+      "type": "string",
+      "description": "Domain attribute: screening_committee_consensus"
+    },
+    "contested_by_label_flag": {
+      "type": "boolean",
+      "description": "Domain attribute: contested_by_label_flag"
+    },
+    "reclassification_justification": {
+      "type": "string",
+      "description": "Domain attribute: reclassification_justification"
+    },
+    "determination_date": {
+      "type": "string",
+      "description": "Domain attribute: determination_date"
+    }
+  },
+  "additionalProperties": true
+}

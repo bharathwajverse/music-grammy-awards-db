@@ -1,0 +1,66 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "grammy_nominations_db.nominated_works",
+  "description": "Formal MongoDB schema for nominated_works collection in grammy_nominations_db",
+  "type": "object",
+  "required": [
+    "work_id",
+    "work_type",
+    "work_title",
+    "commercial_release_date",
+    "primary_label_id",
+    "isrc_code",
+    "upc_barcode",
+    "duration_total_seconds",
+    "track_count",
+    "parental_advisory_flag",
+    "language_iso_code"
+  ],
+  "properties": {
+    "work_id": {
+      "type": "string",
+      "description": "Domain attribute: work_id"
+    },
+    "work_type": {
+      "type": "string",
+      "description": "Domain attribute: work_type"
+    },
+    "work_title": {
+      "type": "string",
+      "description": "Domain attribute: work_title"
+    },
+    "commercial_release_date": {
+      "type": "string",
+      "description": "Domain attribute: commercial_release_date"
+    },
+    "primary_label_id": {
+      "type": "string",
+      "description": "Domain attribute: primary_label_id"
+    },
+    "isrc_code": {
+      "type": "string",
+      "description": "Domain attribute: isrc_code"
+    },
+    "upc_barcode": {
+      "type": "string",
+      "description": "Domain attribute: upc_barcode"
+    },
+    "duration_total_seconds": {
+      "type": "integer",
+      "description": "Domain attribute: duration_total_seconds"
+    },
+    "track_count": {
+      "type": "integer",
+      "description": "Domain attribute: track_count"
+    },
+    "parental_advisory_flag": {
+      "type": "boolean",
+      "description": "Domain attribute: parental_advisory_flag"
+    },
+    "language_iso_code": {
+      "type": "string",
+      "description": "Domain attribute: language_iso_code"
+    }
+  },
+  "additionalProperties": true
+}

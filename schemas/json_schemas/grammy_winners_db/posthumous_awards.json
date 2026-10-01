@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "grammy_winners_db.posthumous_awards",
+  "description": "Formal MongoDB schema for posthumous_awards collection in grammy_winners_db",
+  "type": "object",
+  "required": [
+    "posthumous_id",
+    "winner_record_id",
+    "deceased_creator_id",
+    "date_of_passing",
+    "award_ceremony_date",
+    "accepted_by_representative",
+    "representative_legal_relationship",
+    "in_memoriam_segment_aired",
+    "estate_concurrence_status",
+    "tribute_performance_id"
+  ],
+  "properties": {
+    "posthumous_id": {
+      "type": "string",
+      "description": "Domain attribute: posthumous_id"
+    },
+    "winner_record_id": {
+      "type": "string",
+      "description": "Domain attribute: winner_record_id"
+    },
+    "deceased_creator_id": {
+      "type": "string",
+      "description": "Domain attribute: deceased_creator_id"
+    },
+    "date_of_passing": {
+      "type": "string",
+      "description": "Domain attribute: date_of_passing"
+    },
+    "award_ceremony_date": {
+      "type": "string",
+      "description": "Domain attribute: award_ceremony_date"
+    },
+    "accepted_by_representative": {
+      "type": "string",
+      "description": "Domain attribute: accepted_by_representative"
+    },
+    "representative_legal_relationship": {
+      "type": "string",
+      "description": "Domain attribute: representative_legal_relationship"
+    },
+    "in_memoriam_segment_aired": {
+      "type": "boolean",
+      "description": "Domain attribute: in_memoriam_segment_aired"
+    },
+    "estate_concurrence_status": {
+      "type": "string",
+      "description": "Domain attribute: estate_concurrence_status"
+    },
+    "tribute_performance_id": {
+      "type": "string",
+      "description": "Domain attribute: tribute_performance_id"
+    }
+  },
+  "additionalProperties": true
+}

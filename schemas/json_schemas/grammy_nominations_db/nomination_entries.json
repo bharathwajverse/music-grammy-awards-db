@@ -1,0 +1,66 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "grammy_nominations_db.nomination_entries",
+  "description": "Formal MongoDB schema for nomination_entries collection in grammy_nominations_db",
+  "type": "object",
+  "required": [
+    "nomination_id",
+    "ceremony_id",
+    "category_id",
+    "work_id",
+    "nomination_year",
+    "entry_billing_title",
+    "primary_artist_id",
+    "is_winner_flag",
+    "ballot_slot_order",
+    "auditor_validation_code",
+    "created_timestamp"
+  ],
+  "properties": {
+    "nomination_id": {
+      "type": "string",
+      "description": "Domain attribute: nomination_id"
+    },
+    "ceremony_id": {
+      "type": "string",
+      "description": "Domain attribute: ceremony_id"
+    },
+    "category_id": {
+      "type": "string",
+      "description": "Domain attribute: category_id"
+    },
+    "work_id": {
+      "type": "string",
+      "description": "Domain attribute: work_id"
+    },
+    "nomination_year": {
+      "type": "integer",
+      "description": "Domain attribute: nomination_year"
+    },
+    "entry_billing_title": {
+      "type": "string",
+      "description": "Domain attribute: entry_billing_title"
+    },
+    "primary_artist_id": {
+      "type": "string",
+      "description": "Domain attribute: primary_artist_id"
+    },
+    "is_winner_flag": {
+      "type": "boolean",
+      "description": "Domain attribute: is_winner_flag"
+    },
+    "ballot_slot_order": {
+      "type": "integer",
+      "description": "Domain attribute: ballot_slot_order"
+    },
+    "auditor_validation_code": {
+      "type": "string",
+      "description": "Domain attribute: auditor_validation_code"
+    },
+    "created_timestamp": {
+      "type": "string",
+      "description": "Domain attribute: created_timestamp"
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "grammy_creators_db.musical_groups",
+  "description": "Formal MongoDB schema for musical_groups collection in grammy_creators_db",
+  "type": "object",
+  "required": [
+    "group_id",
+    "group_name",
+    "formation_calendar_year",
+    "disbandment_year",
+    "ensemble_structure_type",
+    "origin_city",
+    "origin_country",
+    "current_activity_status",
+    "signature_musical_style",
+    "musicbrainz_group_gid"
+  ],
+  "properties": {
+    "group_id": {
+      "type": "string",
+      "description": "Domain attribute: group_id"
+    },
+    "group_name": {
+      "type": "string",
+      "description": "Domain attribute: group_name"
+    },
+    "formation_calendar_year": {
+      "type": "integer",
+      "description": "Domain attribute: formation_calendar_year"
+    },
+    "disbandment_year": {
+      "type": "integer",
+      "description": "Domain attribute: disbandment_year"
+    },
+    "ensemble_structure_type": {
+      "type": "string",
+      "description": "Domain attribute: ensemble_structure_type"
+    },
+    "origin_city": {
+      "type": "string",
+      "description": "Domain attribute: origin_city"
+    },
+    "origin_country": {
+      "type": "string",
+      "description": "Domain attribute: origin_country"
+    },
+    "current_activity_status": {
+      "type": "boolean",
+      "description": "Domain attribute: current_activity_status"
+    },
+    "signature_musical_style": {
+      "type": "string",
+      "description": "Domain attribute: signature_musical_style"
+    },
+    "musicbrainz_group_gid": {
+      "type": "string",
+      "description": "Domain attribute: musicbrainz_group_gid"
+    }
+  },
+  "additionalProperties": true
+}

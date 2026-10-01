@@ -1,0 +1,64 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "grammy_nominations_db.tied_nominations",
+  "description": "Formal MongoDB schema for tied_nominations collection in grammy_nominations_db",
+  "type": "object",
+  "required": [
+    "tie_id",
+    "ceremony_id",
+    "category_id",
+    "tied_nomination_ids",
+    "tied_vote_count_audited",
+    "ballot_auditor_token",
+    "board_tie_waiver_approved",
+    "expanded_slate_size",
+    "adjudication_timestamp",
+    "bylaw_clause_reference"
+  ],
+  "properties": {
+    "tie_id": {
+      "type": "string",
+      "description": "Domain attribute: tie_id"
+    },
+    "ceremony_id": {
+      "type": "string",
+      "description": "Domain attribute: ceremony_id"
+    },
+    "category_id": {
+      "type": "string",
+      "description": "Domain attribute: category_id"
+    },
+    "tied_nomination_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Domain attribute: tied_nomination_ids"
+    },
+    "tied_vote_count_audited": {
+      "type": "integer",
+      "description": "Domain attribute: tied_vote_count_audited"
+    },
+    "ballot_auditor_token": {
+      "type": "string",
+      "description": "Domain attribute: ballot_auditor_token"
+    },
+    "board_tie_waiver_approved": {
+      "type": "boolean",
+      "description": "Domain attribute: board_tie_waiver_approved"
+    },
+    "expanded_slate_size": {
+      "type": "integer",
+      "description": "Domain attribute: expanded_slate_size"
+    },
+    "adjudication_timestamp": {
+      "type": "string",
+      "description": "Domain attribute: adjudication_timestamp"
+    },
+    "bylaw_clause_reference": {
+      "type": "string",
+      "description": "Domain attribute: bylaw_clause_reference"
+    }
+  },
+  "additionalProperties": true
+}

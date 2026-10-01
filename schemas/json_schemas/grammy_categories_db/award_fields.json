@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "grammy_categories_db.award_fields",
+  "description": "Formal MongoDB schema for award_fields collection in grammy_categories_db",
+  "type": "object",
+  "required": [
+    "field_id",
+    "field_name",
+    "field_abbreviation",
+    "field_description",
+    "inaugural_ceremony_edition",
+    "current_active_status",
+    "active_categories_count",
+    "specialist_committee_jurisdiction",
+    "field_curator_role",
+    "last_bylaw_revision_year"
+  ],
+  "properties": {
+    "field_id": {
+      "type": "string",
+      "description": "Domain attribute: field_id"
+    },
+    "field_name": {
+      "type": "string",
+      "description": "Domain attribute: field_name"
+    },
+    "field_abbreviation": {
+      "type": "string",
+      "description": "Domain attribute: field_abbreviation"
+    },
+    "field_description": {
+      "type": "string",
+      "description": "Domain attribute: field_description"
+    },
+    "inaugural_ceremony_edition": {
+      "type": "integer",
+      "description": "Domain attribute: inaugural_ceremony_edition"
+    },
+    "current_active_status": {
+      "type": "boolean",
+      "description": "Domain attribute: current_active_status"
+    },
+    "active_categories_count": {
+      "type": "integer",
+      "description": "Domain attribute: active_categories_count"
+    },
+    "specialist_committee_jurisdiction": {
+      "type": "string",
+      "description": "Domain attribute: specialist_committee_jurisdiction"
+    },
+    "field_curator_role": {
+      "type": "string",
+      "description": "Domain attribute: field_curator_role"
+    },
+    "last_bylaw_revision_year": {
+      "type": "integer",
+      "description": "Domain attribute: last_bylaw_revision_year"
+    }
+  },
+  "additionalProperties": true
+}

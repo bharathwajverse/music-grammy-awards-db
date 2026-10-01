@@ -1,0 +1,67 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "grammy_winners_db.winner_press_releases",
+  "description": "Formal MongoDB schema for winner_press_releases collection in grammy_winners_db",
+  "type": "object",
+  "required": [
+    "release_id",
+    "ceremony_id",
+    "release_headline",
+    "publication_timestamp_utc",
+    "headlining_creator_ids",
+    "telecast_highlights_summary",
+    "pr_communications_director",
+    "syndication_wire_distribution",
+    "press_asset_bundle_url",
+    "archival_digest_id"
+  ],
+  "properties": {
+    "release_id": {
+      "type": "string",
+      "description": "Domain attribute: release_id"
+    },
+    "ceremony_id": {
+      "type": "string",
+      "description": "Domain attribute: ceremony_id"
+    },
+    "release_headline": {
+      "type": "string",
+      "description": "Domain attribute: release_headline"
+    },
+    "publication_timestamp_utc": {
+      "type": "string",
+      "description": "Domain attribute: publication_timestamp_utc"
+    },
+    "headlining_creator_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Domain attribute: headlining_creator_ids"
+    },
+    "telecast_highlights_summary": {
+      "type": "string",
+      "description": "Domain attribute: telecast_highlights_summary"
+    },
+    "pr_communications_director": {
+      "type": "string",
+      "description": "Domain attribute: pr_communications_director"
+    },
+    "syndication_wire_distribution": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Domain attribute: syndication_wire_distribution"
+    },
+    "press_asset_bundle_url": {
+      "type": "string",
+      "description": "Domain attribute: press_asset_bundle_url"
+    },
+    "archival_digest_id": {
+      "type": "string",
+      "description": "Domain attribute: archival_digest_id"
+    }
+  },
+  "additionalProperties": true
+}

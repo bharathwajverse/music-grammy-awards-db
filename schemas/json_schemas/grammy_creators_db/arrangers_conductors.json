@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "grammy_creators_db.arrangers_conductors",
+  "description": "Formal MongoDB schema for arrangers_conductors collection in grammy_creators_db",
+  "type": "object",
+  "required": [
+    "arranger_id",
+    "creator_id",
+    "arrangement_discipline",
+    "resident_orchestra_ensemble",
+    "formal_conservatory_education",
+    "sheet_music_publisher",
+    "conducts_own_compositions",
+    "classical_crossover_experience",
+    "union_musicians_local",
+    "career_commission_count"
+  ],
+  "properties": {
+    "arranger_id": {
+      "type": "string",
+      "description": "Domain attribute: arranger_id"
+    },
+    "creator_id": {
+      "type": "string",
+      "description": "Domain attribute: creator_id"
+    },
+    "arrangement_discipline": {
+      "type": "string",
+      "description": "Domain attribute: arrangement_discipline"
+    },
+    "resident_orchestra_ensemble": {
+      "type": "string",
+      "description": "Domain attribute: resident_orchestra_ensemble"
+    },
+    "formal_conservatory_education": {
+      "type": "string",
+      "description": "Domain attribute: formal_conservatory_education"
+    },
+    "sheet_music_publisher": {
+      "type": "string",
+      "description": "Domain attribute: sheet_music_publisher"
+    },
+    "conducts_own_compositions": {
+      "type": "boolean",
+      "description": "Domain attribute: conducts_own_compositions"
+    },
+    "classical_crossover_experience": {
+      "type": "boolean",
+      "description": "Domain attribute: classical_crossover_experience"
+    },
+    "union_musicians_local": {
+      "type": "string",
+      "description": "Domain attribute: union_musicians_local"
+    },
+    "career_commission_count": {
+      "type": "integer",
+      "description": "Domain attribute: career_commission_count"
+    }
+  },
+  "additionalProperties": true
+}

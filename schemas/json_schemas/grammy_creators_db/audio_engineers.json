@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "grammy_creators_db.audio_engineers",
+  "description": "Formal MongoDB schema for audio_engineers collection in grammy_creators_db",
+  "type": "object",
+  "required": [
+    "engineer_id",
+    "creator_id",
+    "engineering_specialization",
+    "primary_mastering_facility",
+    "hardware_console_credits",
+    "dolby_atmos_certified_status",
+    "aes_professional_membership",
+    "first_album_engineering_year",
+    "technical_patents_held",
+    "discogs_engineer_id"
+  ],
+  "properties": {
+    "engineer_id": {
+      "type": "string",
+      "description": "Domain attribute: engineer_id"
+    },
+    "creator_id": {
+      "type": "string",
+      "description": "Domain attribute: creator_id"
+    },
+    "engineering_specialization": {
+      "type": "string",
+      "description": "Domain attribute: engineering_specialization"
+    },
+    "primary_mastering_facility": {
+      "type": "string",
+      "description": "Domain attribute: primary_mastering_facility"
+    },
+    "hardware_console_credits": {
+      "type": "string",
+      "description": "Domain attribute: hardware_console_credits"
+    },
+    "dolby_atmos_certified_status": {
+      "type": "boolean",
+      "description": "Domain attribute: dolby_atmos_certified_status"
+    },
+    "aes_professional_membership": {
+      "type": "boolean",
+      "description": "Domain attribute: aes_professional_membership"
+    },
+    "first_album_engineering_year": {
+      "type": "integer",
+      "description": "Domain attribute: first_album_engineering_year"
+    },
+    "technical_patents_held": {
+      "type": "integer",
+      "description": "Domain attribute: technical_patents_held"
+    },
+    "discogs_engineer_id": {
+      "type": "string",
+      "description": "Domain attribute: discogs_engineer_id"
+    }
+  },
+  "additionalProperties": true
+}

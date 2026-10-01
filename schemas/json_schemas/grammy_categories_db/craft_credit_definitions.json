@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "grammy_categories_db.craft_credit_definitions",
+  "description": "Formal MongoDB schema for craft_credit_definitions collection in grammy_categories_db",
+  "type": "object",
+  "required": [
+    "craft_def_id",
+    "category_id",
+    "craft_role_name",
+    "mandatory_statuette_recipient",
+    "certificate_of_merit_alternative",
+    "audio_stem_mastering_threshold",
+    "assistant_engineer_eligibility",
+    "sample_creator_eligibility",
+    "documentation_proof_standard",
+    "union_credit_registry_crosscheck"
+  ],
+  "properties": {
+    "craft_def_id": {
+      "type": "string",
+      "description": "Domain attribute: craft_def_id"
+    },
+    "category_id": {
+      "type": "string",
+      "description": "Domain attribute: category_id"
+    },
+    "craft_role_name": {
+      "type": "string",
+      "description": "Domain attribute: craft_role_name"
+    },
+    "mandatory_statuette_recipient": {
+      "type": "boolean",
+      "description": "Domain attribute: mandatory_statuette_recipient"
+    },
+    "certificate_of_merit_alternative": {
+      "type": "boolean",
+      "description": "Domain attribute: certificate_of_merit_alternative"
+    },
+    "audio_stem_mastering_threshold": {
+      "type": "number",
+      "description": "Domain attribute: audio_stem_mastering_threshold"
+    },
+    "assistant_engineer_eligibility": {
+      "type": "boolean",
+      "description": "Domain attribute: assistant_engineer_eligibility"
+    },
+    "sample_creator_eligibility": {
+      "type": "boolean",
+      "description": "Domain attribute: sample_creator_eligibility"
+    },
+    "documentation_proof_standard": {
+      "type": "string",
+      "description": "Domain attribute: documentation_proof_standard"
+    },
+    "union_credit_registry_crosscheck": {
+      "type": "string",
+      "description": "Domain attribute: union_credit_registry_crosscheck"
+    }
+  },
+  "additionalProperties": true
+}

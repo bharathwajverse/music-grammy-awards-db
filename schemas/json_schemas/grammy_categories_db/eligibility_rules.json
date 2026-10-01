@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "grammy_categories_db.eligibility_rules",
+  "description": "Formal MongoDB schema for eligibility_rules collection in grammy_categories_db",
+  "type": "object",
+  "required": [
+    "rule_id",
+    "category_id",
+    "effective_edition",
+    "minimum_playing_time_minutes",
+    "minimum_track_count",
+    "featured_performance_threshold_pct",
+    "us_release_commercial_requirement",
+    "language_composition_restrictions",
+    "sample_replay_clearance_rule",
+    "entry_window_months"
+  ],
+  "properties": {
+    "rule_id": {
+      "type": "string",
+      "description": "Domain attribute: rule_id"
+    },
+    "category_id": {
+      "type": "string",
+      "description": "Domain attribute: category_id"
+    },
+    "effective_edition": {
+      "type": "integer",
+      "description": "Domain attribute: effective_edition"
+    },
+    "minimum_playing_time_minutes": {
+      "type": "number",
+      "description": "Domain attribute: minimum_playing_time_minutes"
+    },
+    "minimum_track_count": {
+      "type": "integer",
+      "description": "Domain attribute: minimum_track_count"
+    },
+    "featured_performance_threshold_pct": {
+      "type": "number",
+      "description": "Domain attribute: featured_performance_threshold_pct"
+    },
+    "us_release_commercial_requirement": {
+      "type": "boolean",
+      "description": "Domain attribute: us_release_commercial_requirement"
+    },
+    "language_composition_restrictions": {
+      "type": "string",
+      "description": "Domain attribute: language_composition_restrictions"
+    },
+    "sample_replay_clearance_rule": {
+      "type": "string",
+      "description": "Domain attribute: sample_replay_clearance_rule"
+    },
+    "entry_window_months": {
+      "type": "integer",
+      "description": "Domain attribute: entry_window_months"
+    }
+  },
+  "additionalProperties": true
+}

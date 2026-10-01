@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "grammy_nominations_db.voter_screening_batches",
+  "description": "Formal MongoDB schema for voter_screening_batches collection in grammy_nominations_db",
+  "type": "object",
+  "required": [
+    "screening_batch_id",
+    "ceremony_id",
+    "field_id",
+    "panel_chair_creator_id",
+    "session_start_timestamp",
+    "session_end_timestamp",
+    "works_screened_count",
+    "disqualifications_ordered",
+    "quorum_certified",
+    "panel_confidentiality_hash"
+  ],
+  "properties": {
+    "screening_batch_id": {
+      "type": "string",
+      "description": "Domain attribute: screening_batch_id"
+    },
+    "ceremony_id": {
+      "type": "string",
+      "description": "Domain attribute: ceremony_id"
+    },
+    "field_id": {
+      "type": "string",
+      "description": "Domain attribute: field_id"
+    },
+    "panel_chair_creator_id": {
+      "type": "string",
+      "description": "Domain attribute: panel_chair_creator_id"
+    },
+    "session_start_timestamp": {
+      "type": "string",
+      "description": "Domain attribute: session_start_timestamp"
+    },
+    "session_end_timestamp": {
+      "type": "string",
+      "description": "Domain attribute: session_end_timestamp"
+    },
+    "works_screened_count": {
+      "type": "integer",
+      "description": "Domain attribute: works_screened_count"
+    },
+    "disqualifications_ordered": {
+      "type": "integer",
+      "description": "Domain attribute: disqualifications_ordered"
+    },
+    "quorum_certified": {
+      "type": "boolean",
+      "description": "Domain attribute: quorum_certified"
+    },
+    "panel_confidentiality_hash": {
+      "type": "string",
+      "description": "Domain attribute: panel_confidentiality_hash"
+    }
+  },
+  "additionalProperties": true
+}

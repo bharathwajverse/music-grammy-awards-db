@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "grammy_history_db.ceremony_hosts",
+  "description": "Formal MongoDB schema for ceremony_hosts collection in grammy_history_db",
+  "type": "object",
+  "required": [
+    "host_assignment_id",
+    "ceremony_id",
+    "creator_id",
+    "host_full_name",
+    "hosting_style",
+    "solo_or_duo",
+    "host_sequence_count",
+    "monologue_duration_seconds",
+    "emmy_nomination_received",
+    "contracted_talent_agency"
+  ],
+  "properties": {
+    "host_assignment_id": {
+      "type": "string",
+      "description": "Domain attribute: host_assignment_id"
+    },
+    "ceremony_id": {
+      "type": "string",
+      "description": "Domain attribute: ceremony_id"
+    },
+    "creator_id": {
+      "type": "string",
+      "description": "Domain attribute: creator_id"
+    },
+    "host_full_name": {
+      "type": "string",
+      "description": "Domain attribute: host_full_name"
+    },
+    "hosting_style": {
+      "type": "string",
+      "description": "Domain attribute: hosting_style"
+    },
+    "solo_or_duo": {
+      "type": "string",
+      "description": "Domain attribute: solo_or_duo"
+    },
+    "host_sequence_count": {
+      "type": "integer",
+      "description": "Domain attribute: host_sequence_count"
+    },
+    "monologue_duration_seconds": {
+      "type": "integer",
+      "description": "Domain attribute: monologue_duration_seconds"
+    },
+    "emmy_nomination_received": {
+      "type": "boolean",
+      "description": "Domain attribute: emmy_nomination_received"
+    },
+    "contracted_talent_agency": {
+      "type": "string",
+      "description": "Domain attribute: contracted_talent_agency"
+    }
+  },
+  "additionalProperties": true
+}

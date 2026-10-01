@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "grammy_winners_db.hall_of_fame_inductions",
+  "description": "Formal MongoDB schema for hall_of_fame_inductions collection in grammy_winners_db",
+  "type": "object",
+  "required": [
+    "induction_id",
+    "inducted_work_title",
+    "recording_artist_name",
+    "original_release_year",
+    "induction_ceremony_year",
+    "recording_medium_format",
+    "qualifying_minimum_age_years",
+    "historical_impact_essay",
+    "museum_exhibition_status",
+    "catalog_archival_code"
+  ],
+  "properties": {
+    "induction_id": {
+      "type": "string",
+      "description": "Domain attribute: induction_id"
+    },
+    "inducted_work_title": {
+      "type": "string",
+      "description": "Domain attribute: inducted_work_title"
+    },
+    "recording_artist_name": {
+      "type": "string",
+      "description": "Domain attribute: recording_artist_name"
+    },
+    "original_release_year": {
+      "type": "integer",
+      "description": "Domain attribute: original_release_year"
+    },
+    "induction_ceremony_year": {
+      "type": "integer",
+      "description": "Domain attribute: induction_ceremony_year"
+    },
+    "recording_medium_format": {
+      "type": "string",
+      "description": "Domain attribute: recording_medium_format"
+    },
+    "qualifying_minimum_age_years": {
+      "type": "integer",
+      "description": "Domain attribute: qualifying_minimum_age_years"
+    },
+    "historical_impact_essay": {
+      "type": "string",
+      "description": "Domain attribute: historical_impact_essay"
+    },
+    "museum_exhibition_status": {
+      "type": "string",
+      "description": "Domain attribute: museum_exhibition_status"
+    },
+    "catalog_archival_code": {
+      "type": "string",
+      "description": "Domain attribute: catalog_archival_code"
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "grammy_winners_db.trophy_tracking",
+  "description": "Formal MongoDB schema for trophy_tracking collection in grammy_winners_db",
+  "type": "object",
+  "required": [
+    "trophy_id",
+    "winner_record_id",
+    "recipient_creator_id",
+    "statuette_serial_number",
+    "engraved_billing_text",
+    "manufacturing_foundry_name",
+    "grammium_alloy_specification",
+    "gold_plating_thickness_microns",
+    "dispatch_shipment_date",
+    "custody_receipt_hash"
+  ],
+  "properties": {
+    "trophy_id": {
+      "type": "string",
+      "description": "Domain attribute: trophy_id"
+    },
+    "winner_record_id": {
+      "type": "string",
+      "description": "Domain attribute: winner_record_id"
+    },
+    "recipient_creator_id": {
+      "type": "string",
+      "description": "Domain attribute: recipient_creator_id"
+    },
+    "statuette_serial_number": {
+      "type": "string",
+      "description": "Domain attribute: statuette_serial_number"
+    },
+    "engraved_billing_text": {
+      "type": "string",
+      "description": "Domain attribute: engraved_billing_text"
+    },
+    "manufacturing_foundry_name": {
+      "type": "string",
+      "description": "Domain attribute: manufacturing_foundry_name"
+    },
+    "grammium_alloy_specification": {
+      "type": "string",
+      "description": "Domain attribute: grammium_alloy_specification"
+    },
+    "gold_plating_thickness_microns": {
+      "type": "number",
+      "description": "Domain attribute: gold_plating_thickness_microns"
+    },
+    "dispatch_shipment_date": {
+      "type": "string",
+      "description": "Domain attribute: dispatch_shipment_date"
+    },
+    "custody_receipt_hash": {
+      "type": "string",
+      "description": "Domain attribute: custody_receipt_hash"
+    }
+  },
+  "additionalProperties": true
+}

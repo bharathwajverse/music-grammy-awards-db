@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "grammy_winners_db.big_four_sweeps",
+  "description": "Formal MongoDB schema for big_four_sweeps collection in grammy_winners_db",
+  "type": "object",
+  "required": [
+    "sweep_id",
+    "ceremony_id",
+    "creator_id",
+    "sweep_achievement_type",
+    "aoty_nomination_id",
+    "roty_nomination_id",
+    "soty_nomination_id",
+    "bna_nomination_id",
+    "sweep_calendar_year",
+    "career_significance_rating"
+  ],
+  "properties": {
+    "sweep_id": {
+      "type": "string",
+      "description": "Domain attribute: sweep_id"
+    },
+    "ceremony_id": {
+      "type": "string",
+      "description": "Domain attribute: ceremony_id"
+    },
+    "creator_id": {
+      "type": "string",
+      "description": "Domain attribute: creator_id"
+    },
+    "sweep_achievement_type": {
+      "type": "string",
+      "description": "Domain attribute: sweep_achievement_type"
+    },
+    "aoty_nomination_id": {
+      "type": "string",
+      "description": "Domain attribute: aoty_nomination_id"
+    },
+    "roty_nomination_id": {
+      "type": "string",
+      "description": "Domain attribute: roty_nomination_id"
+    },
+    "soty_nomination_id": {
+      "type": "string",
+      "description": "Domain attribute: soty_nomination_id"
+    },
+    "bna_nomination_id": {
+      "type": "string",
+      "description": "Domain attribute: bna_nomination_id"
+    },
+    "sweep_calendar_year": {
+      "type": "integer",
+      "description": "Domain attribute: sweep_calendar_year"
+    },
+    "career_significance_rating": {
+      "type": "string",
+      "description": "Domain attribute: career_significance_rating"
+    }
+  },
+  "additionalProperties": true
+}

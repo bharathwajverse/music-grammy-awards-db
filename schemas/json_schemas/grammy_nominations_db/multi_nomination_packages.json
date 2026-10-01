@@ -1,0 +1,64 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "grammy_nominations_db.multi_nomination_packages",
+  "description": "Formal MongoDB schema for multi_nomination_packages collection in grammy_nominations_db",
+  "type": "object",
+  "required": [
+    "package_id",
+    "ceremony_id",
+    "creator_id",
+    "total_nominations_count",
+    "general_field_nominations_count",
+    "genre_field_nominations_count",
+    "leading_nominee_rank",
+    "nominated_work_ids",
+    "public_announcement_tier",
+    "ceremony_year"
+  ],
+  "properties": {
+    "package_id": {
+      "type": "string",
+      "description": "Domain attribute: package_id"
+    },
+    "ceremony_id": {
+      "type": "string",
+      "description": "Domain attribute: ceremony_id"
+    },
+    "creator_id": {
+      "type": "string",
+      "description": "Domain attribute: creator_id"
+    },
+    "total_nominations_count": {
+      "type": "integer",
+      "description": "Domain attribute: total_nominations_count"
+    },
+    "general_field_nominations_count": {
+      "type": "integer",
+      "description": "Domain attribute: general_field_nominations_count"
+    },
+    "genre_field_nominations_count": {
+      "type": "integer",
+      "description": "Domain attribute: genre_field_nominations_count"
+    },
+    "leading_nominee_rank": {
+      "type": "integer",
+      "description": "Domain attribute: leading_nominee_rank"
+    },
+    "nominated_work_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Domain attribute: nominated_work_ids"
+    },
+    "public_announcement_tier": {
+      "type": "string",
+      "description": "Domain attribute: public_announcement_tier"
+    },
+    "ceremony_year": {
+      "type": "integer",
+      "description": "Domain attribute: ceremony_year"
+    }
+  },
+  "additionalProperties": true
+}

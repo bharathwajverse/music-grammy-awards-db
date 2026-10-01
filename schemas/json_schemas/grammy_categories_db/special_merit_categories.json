@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "grammy_categories_db.special_merit_categories",
+  "description": "Formal MongoDB schema for special_merit_categories collection in grammy_categories_db",
+  "type": "object",
+  "required": [
+    "special_merit_id",
+    "award_title",
+    "conferral_frequency",
+    "governing_board_supermajority_pct",
+    "candidate_selection_protocol",
+    "trophy_or_plaque_type",
+    "first_conferred_year",
+    "target_industry_discipline",
+    "peer_nomination_permitted",
+    "ceremony_segment_placement"
+  ],
+  "properties": {
+    "special_merit_id": {
+      "type": "string",
+      "description": "Domain attribute: special_merit_id"
+    },
+    "award_title": {
+      "type": "string",
+      "description": "Domain attribute: award_title"
+    },
+    "conferral_frequency": {
+      "type": "string",
+      "description": "Domain attribute: conferral_frequency"
+    },
+    "governing_board_supermajority_pct": {
+      "type": "number",
+      "description": "Domain attribute: governing_board_supermajority_pct"
+    },
+    "candidate_selection_protocol": {
+      "type": "string",
+      "description": "Domain attribute: candidate_selection_protocol"
+    },
+    "trophy_or_plaque_type": {
+      "type": "string",
+      "description": "Domain attribute: trophy_or_plaque_type"
+    },
+    "first_conferred_year": {
+      "type": "integer",
+      "description": "Domain attribute: first_conferred_year"
+    },
+    "target_industry_discipline": {
+      "type": "string",
+      "description": "Domain attribute: target_industry_discipline"
+    },
+    "peer_nomination_permitted": {
+      "type": "boolean",
+      "description": "Domain attribute: peer_nomination_permitted"
+    },
+    "ceremony_segment_placement": {
+      "type": "string",
+      "description": "Domain attribute: ceremony_segment_placement"
+    }
+  },
+  "additionalProperties": true
+}

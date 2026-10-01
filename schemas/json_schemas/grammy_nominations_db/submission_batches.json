@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "grammy_nominations_db.submission_batches",
+  "description": "Formal MongoDB schema for submission_batches collection in grammy_nominations_db",
+  "type": "object",
+  "required": [
+    "batch_id",
+    "ceremony_id",
+    "submitting_label_id",
+    "submission_timestamp",
+    "total_entries_count",
+    "entry_fee_total_usd",
+    "compliance_officer_name",
+    "first_round_accepted_count",
+    "disqualified_entries_count",
+    "payment_reconciliation_hash"
+  ],
+  "properties": {
+    "batch_id": {
+      "type": "string",
+      "description": "Domain attribute: batch_id"
+    },
+    "ceremony_id": {
+      "type": "string",
+      "description": "Domain attribute: ceremony_id"
+    },
+    "submitting_label_id": {
+      "type": "string",
+      "description": "Domain attribute: submitting_label_id"
+    },
+    "submission_timestamp": {
+      "type": "string",
+      "description": "Domain attribute: submission_timestamp"
+    },
+    "total_entries_count": {
+      "type": "integer",
+      "description": "Domain attribute: total_entries_count"
+    },
+    "entry_fee_total_usd": {
+      "type": "number",
+      "description": "Domain attribute: entry_fee_total_usd"
+    },
+    "compliance_officer_name": {
+      "type": "string",
+      "description": "Domain attribute: compliance_officer_name"
+    },
+    "first_round_accepted_count": {
+      "type": "integer",
+      "description": "Domain attribute: first_round_accepted_count"
+    },
+    "disqualified_entries_count": {
+      "type": "integer",
+      "description": "Domain attribute: disqualified_entries_count"
+    },
+    "payment_reconciliation_hash": {
+      "type": "string",
+      "description": "Domain attribute: payment_reconciliation_hash"
+    }
+  },
+  "additionalProperties": true
+}

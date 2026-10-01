@@ -1,0 +1,66 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "grammy_creators_db.artists",
+  "description": "Formal MongoDB schema for artists collection in grammy_creators_db",
+  "type": "object",
+  "required": [
+    "artist_id",
+    "full_legal_name",
+    "stage_name",
+    "primary_musical_genre",
+    "birth_or_formation_date",
+    "country_of_citizenship",
+    "active_career_start_year",
+    "is_group_ensemble_flag",
+    "musicbrainz_artist_gid",
+    "official_website_url",
+    "biography_overview"
+  ],
+  "properties": {
+    "artist_id": {
+      "type": "string",
+      "description": "Domain attribute: artist_id"
+    },
+    "full_legal_name": {
+      "type": "string",
+      "description": "Domain attribute: full_legal_name"
+    },
+    "stage_name": {
+      "type": "string",
+      "description": "Domain attribute: stage_name"
+    },
+    "primary_musical_genre": {
+      "type": "string",
+      "description": "Domain attribute: primary_musical_genre"
+    },
+    "birth_or_formation_date": {
+      "type": "string",
+      "description": "Domain attribute: birth_or_formation_date"
+    },
+    "country_of_citizenship": {
+      "type": "string",
+      "description": "Domain attribute: country_of_citizenship"
+    },
+    "active_career_start_year": {
+      "type": "integer",
+      "description": "Domain attribute: active_career_start_year"
+    },
+    "is_group_ensemble_flag": {
+      "type": "boolean",
+      "description": "Domain attribute: is_group_ensemble_flag"
+    },
+    "musicbrainz_artist_gid": {
+      "type": "string",
+      "description": "Domain attribute: musicbrainz_artist_gid"
+    },
+    "official_website_url": {
+      "type": "string",
+      "description": "Domain attribute: official_website_url"
+    },
+    "biography_overview": {
+      "type": "string",
+      "description": "Domain attribute: biography_overview"
+    }
+  },
+  "additionalProperties": true
+}

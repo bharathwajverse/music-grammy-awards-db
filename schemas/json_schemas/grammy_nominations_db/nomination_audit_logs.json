@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "grammy_nominations_db.nomination_audit_logs",
+  "description": "Formal MongoDB schema for nomination_audit_logs collection in grammy_nominations_db",
+  "type": "object",
+  "required": [
+    "audit_id",
+    "nomination_id",
+    "auditing_firm_id",
+    "lead_auditor_name",
+    "audit_timestamp",
+    "digital_signature_hash",
+    "tabulation_vault_partition",
+    "discrepancy_check_passed",
+    "recount_required_flag",
+    "compliance_certificate_code"
+  ],
+  "properties": {
+    "audit_id": {
+      "type": "string",
+      "description": "Domain attribute: audit_id"
+    },
+    "nomination_id": {
+      "type": "string",
+      "description": "Domain attribute: nomination_id"
+    },
+    "auditing_firm_id": {
+      "type": "string",
+      "description": "Domain attribute: auditing_firm_id"
+    },
+    "lead_auditor_name": {
+      "type": "string",
+      "description": "Domain attribute: lead_auditor_name"
+    },
+    "audit_timestamp": {
+      "type": "string",
+      "description": "Domain attribute: audit_timestamp"
+    },
+    "digital_signature_hash": {
+      "type": "string",
+      "description": "Domain attribute: digital_signature_hash"
+    },
+    "tabulation_vault_partition": {
+      "type": "string",
+      "description": "Domain attribute: tabulation_vault_partition"
+    },
+    "discrepancy_check_passed": {
+      "type": "boolean",
+      "description": "Domain attribute: discrepancy_check_passed"
+    },
+    "recount_required_flag": {
+      "type": "boolean",
+      "description": "Domain attribute: recount_required_flag"
+    },
+    "compliance_certificate_code": {
+      "type": "string",
+      "description": "Domain attribute: compliance_certificate_code"
+    }
+  },
+  "additionalProperties": true
+}

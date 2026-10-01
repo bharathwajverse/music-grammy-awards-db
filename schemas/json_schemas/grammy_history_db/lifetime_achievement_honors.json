@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "grammy_history_db.lifetime_achievement_honors",
+  "description": "Formal MongoDB schema for lifetime_achievement_honors collection in grammy_history_db",
+  "type": "object",
+  "required": [
+    "honor_id",
+    "ceremony_id",
+    "recipient_creator_id",
+    "honor_type",
+    "announcement_year",
+    "career_span_decades",
+    "presenting_dignitary_name",
+    "citation_text",
+    "is_posthumous_award",
+    "special_tribute_performance_flag"
+  ],
+  "properties": {
+    "honor_id": {
+      "type": "string",
+      "description": "Domain attribute: honor_id"
+    },
+    "ceremony_id": {
+      "type": "string",
+      "description": "Domain attribute: ceremony_id"
+    },
+    "recipient_creator_id": {
+      "type": "string",
+      "description": "Domain attribute: recipient_creator_id"
+    },
+    "honor_type": {
+      "type": "string",
+      "description": "Domain attribute: honor_type"
+    },
+    "announcement_year": {
+      "type": "integer",
+      "description": "Domain attribute: announcement_year"
+    },
+    "career_span_decades": {
+      "type": "integer",
+      "description": "Domain attribute: career_span_decades"
+    },
+    "presenting_dignitary_name": {
+      "type": "string",
+      "description": "Domain attribute: presenting_dignitary_name"
+    },
+    "citation_text": {
+      "type": "string",
+      "description": "Domain attribute: citation_text"
+    },
+    "is_posthumous_award": {
+      "type": "boolean",
+      "description": "Domain attribute: is_posthumous_award"
+    },
+    "special_tribute_performance_flag": {
+      "type": "boolean",
+      "description": "Domain attribute: special_tribute_performance_flag"
+    }
+  },
+  "additionalProperties": true
+}

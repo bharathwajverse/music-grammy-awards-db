@@ -1,0 +1,64 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "grammy_winners_db.consecutive_winners",
+  "description": "Formal MongoDB schema for consecutive_winners collection in grammy_winners_db",
+  "type": "object",
+  "required": [
+    "streak_id",
+    "creator_id",
+    "category_id",
+    "streak_span_years",
+    "initial_ceremony_edition",
+    "terminal_ceremony_edition",
+    "winning_work_ids_list",
+    "is_streak_currently_active",
+    "historical_streak_rank",
+    "category_monopoly_notes"
+  ],
+  "properties": {
+    "streak_id": {
+      "type": "string",
+      "description": "Domain attribute: streak_id"
+    },
+    "creator_id": {
+      "type": "string",
+      "description": "Domain attribute: creator_id"
+    },
+    "category_id": {
+      "type": "string",
+      "description": "Domain attribute: category_id"
+    },
+    "streak_span_years": {
+      "type": "integer",
+      "description": "Domain attribute: streak_span_years"
+    },
+    "initial_ceremony_edition": {
+      "type": "integer",
+      "description": "Domain attribute: initial_ceremony_edition"
+    },
+    "terminal_ceremony_edition": {
+      "type": "integer",
+      "description": "Domain attribute: terminal_ceremony_edition"
+    },
+    "winning_work_ids_list": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Domain attribute: winning_work_ids_list"
+    },
+    "is_streak_currently_active": {
+      "type": "boolean",
+      "description": "Domain attribute: is_streak_currently_active"
+    },
+    "historical_streak_rank": {
+      "type": "integer",
+      "description": "Domain attribute: historical_streak_rank"
+    },
+    "category_monopoly_notes": {
+      "type": "string",
+      "description": "Domain attribute: category_monopoly_notes"
+    }
+  },
+  "additionalProperties": true
+}

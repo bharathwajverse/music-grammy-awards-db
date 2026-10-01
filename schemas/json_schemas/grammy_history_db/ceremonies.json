@@ -1,0 +1,66 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "grammy_history_db.ceremonies",
+  "description": "Formal MongoDB schema for ceremonies collection in grammy_history_db",
+  "type": "object",
+  "required": [
+    "ceremony_id",
+    "edition_number",
+    "ceremony_date",
+    "broadcast_year",
+    "eligibility_period_start",
+    "eligibility_period_end",
+    "host_city",
+    "venue_id",
+    "primary_network",
+    "total_awards_presented",
+    "created_at"
+  ],
+  "properties": {
+    "ceremony_id": {
+      "type": "string",
+      "description": "Domain attribute: ceremony_id"
+    },
+    "edition_number": {
+      "type": "integer",
+      "description": "Domain attribute: edition_number"
+    },
+    "ceremony_date": {
+      "type": "string",
+      "description": "Domain attribute: ceremony_date"
+    },
+    "broadcast_year": {
+      "type": "integer",
+      "description": "Domain attribute: broadcast_year"
+    },
+    "eligibility_period_start": {
+      "type": "string",
+      "description": "Domain attribute: eligibility_period_start"
+    },
+    "eligibility_period_end": {
+      "type": "string",
+      "description": "Domain attribute: eligibility_period_end"
+    },
+    "host_city": {
+      "type": "string",
+      "description": "Domain attribute: host_city"
+    },
+    "venue_id": {
+      "type": "string",
+      "description": "Domain attribute: venue_id"
+    },
+    "primary_network": {
+      "type": "string",
+      "description": "Domain attribute: primary_network"
+    },
+    "total_awards_presented": {
+      "type": "integer",
+      "description": "Domain attribute: total_awards_presented"
+    },
+    "created_at": {
+      "type": "string",
+      "description": "Domain attribute: created_at"
+    }
+  },
+  "additionalProperties": true
+}

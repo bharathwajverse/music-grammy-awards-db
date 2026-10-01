@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "grammy_categories_db.category_quotas_limits",
+  "description": "Formal MongoDB schema for category_quotas_limits collection in grammy_categories_db",
+  "type": "object",
+  "required": [
+    "quota_id",
+    "category_id",
+    "ceremony_edition",
+    "standard_nominee_limit",
+    "emergency_tie_allowance",
+    "max_credited_producers_eligible",
+    "max_credited_engineers_eligible",
+    "playing_time_contribution_threshold_pct",
+    "lyricist_track_threshold_pct",
+    "pro_rata_trophy_rule"
+  ],
+  "properties": {
+    "quota_id": {
+      "type": "string",
+      "description": "Domain attribute: quota_id"
+    },
+    "category_id": {
+      "type": "string",
+      "description": "Domain attribute: category_id"
+    },
+    "ceremony_edition": {
+      "type": "integer",
+      "description": "Domain attribute: ceremony_edition"
+    },
+    "standard_nominee_limit": {
+      "type": "integer",
+      "description": "Domain attribute: standard_nominee_limit"
+    },
+    "emergency_tie_allowance": {
+      "type": "integer",
+      "description": "Domain attribute: emergency_tie_allowance"
+    },
+    "max_credited_producers_eligible": {
+      "type": "integer",
+      "description": "Domain attribute: max_credited_producers_eligible"
+    },
+    "max_credited_engineers_eligible": {
+      "type": "integer",
+      "description": "Domain attribute: max_credited_engineers_eligible"
+    },
+    "playing_time_contribution_threshold_pct": {
+      "type": "number",
+      "description": "Domain attribute: playing_time_contribution_threshold_pct"
+    },
+    "lyricist_track_threshold_pct": {
+      "type": "number",
+      "description": "Domain attribute: lyricist_track_threshold_pct"
+    },
+    "pro_rata_trophy_rule": {
+      "type": "string",
+      "description": "Domain attribute: pro_rata_trophy_rule"
+    }
+  },
+  "additionalProperties": true
+}

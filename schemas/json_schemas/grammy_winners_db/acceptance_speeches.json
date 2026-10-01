@@ -1,0 +1,64 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "grammy_winners_db.acceptance_speeches",
+  "description": "Formal MongoDB schema for acceptance_speeches collection in grammy_winners_db",
+  "type": "object",
+  "required": [
+    "speech_id",
+    "winner_record_id",
+    "primary_speaker_creator_id",
+    "speech_duration_seconds",
+    "playoff_music_interrupted",
+    "primary_quote_transcript",
+    "individuals_acknowledged",
+    "social_political_message_flag",
+    "press_room_followup_id",
+    "broadcast_clip_timecode"
+  ],
+  "properties": {
+    "speech_id": {
+      "type": "string",
+      "description": "Domain attribute: speech_id"
+    },
+    "winner_record_id": {
+      "type": "string",
+      "description": "Domain attribute: winner_record_id"
+    },
+    "primary_speaker_creator_id": {
+      "type": "string",
+      "description": "Domain attribute: primary_speaker_creator_id"
+    },
+    "speech_duration_seconds": {
+      "type": "integer",
+      "description": "Domain attribute: speech_duration_seconds"
+    },
+    "playoff_music_interrupted": {
+      "type": "boolean",
+      "description": "Domain attribute: playoff_music_interrupted"
+    },
+    "primary_quote_transcript": {
+      "type": "string",
+      "description": "Domain attribute: primary_quote_transcript"
+    },
+    "individuals_acknowledged": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Domain attribute: individuals_acknowledged"
+    },
+    "social_political_message_flag": {
+      "type": "boolean",
+      "description": "Domain attribute: social_political_message_flag"
+    },
+    "press_room_followup_id": {
+      "type": "string",
+      "description": "Domain attribute: press_room_followup_id"
+    },
+    "broadcast_clip_timecode": {
+      "type": "string",
+      "description": "Domain attribute: broadcast_clip_timecode"
+    }
+  },
+  "additionalProperties": true
+}

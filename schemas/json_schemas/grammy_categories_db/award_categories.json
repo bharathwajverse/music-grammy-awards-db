@@ -1,0 +1,66 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "grammy_categories_db.award_categories",
+  "description": "Formal MongoDB schema for award_categories collection in grammy_categories_db",
+  "type": "object",
+  "required": [
+    "category_id",
+    "field_id",
+    "official_category_name",
+    "standard_short_code",
+    "inaugural_edition",
+    "is_general_field",
+    "current_status",
+    "maximum_nominees_allowed",
+    "voting_tier_access",
+    "trophy_statuette_eligibility_rule",
+    "entry_fee_tier"
+  ],
+  "properties": {
+    "category_id": {
+      "type": "string",
+      "description": "Domain attribute: category_id"
+    },
+    "field_id": {
+      "type": "string",
+      "description": "Domain attribute: field_id"
+    },
+    "official_category_name": {
+      "type": "string",
+      "description": "Domain attribute: official_category_name"
+    },
+    "standard_short_code": {
+      "type": "string",
+      "description": "Domain attribute: standard_short_code"
+    },
+    "inaugural_edition": {
+      "type": "integer",
+      "description": "Domain attribute: inaugural_edition"
+    },
+    "is_general_field": {
+      "type": "boolean",
+      "description": "Domain attribute: is_general_field"
+    },
+    "current_status": {
+      "type": "string",
+      "description": "Domain attribute: current_status"
+    },
+    "maximum_nominees_allowed": {
+      "type": "integer",
+      "description": "Domain attribute: maximum_nominees_allowed"
+    },
+    "voting_tier_access": {
+      "type": "string",
+      "description": "Domain attribute: voting_tier_access"
+    },
+    "trophy_statuette_eligibility_rule": {
+      "type": "string",
+      "description": "Domain attribute: trophy_statuette_eligibility_rule"
+    },
+    "entry_fee_tier": {
+      "type": "string",
+      "description": "Domain attribute: entry_fee_tier"
+    }
+  },
+  "additionalProperties": true
+}

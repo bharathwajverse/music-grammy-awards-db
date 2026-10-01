@@ -1,0 +1,64 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "grammy_categories_db.merged_split_history",
+  "description": "Formal MongoDB schema for merged_split_history collection in grammy_categories_db",
+  "type": "object",
+  "required": [
+    "event_id",
+    "restructuring_type",
+    "effective_year",
+    "primary_category_id",
+    "source_category_ids",
+    "consolidation_justification",
+    "gender_neutral_reform_flag",
+    "member_feedback_period_days",
+    "trustee_vote_tally",
+    "published_press_bulletin_id"
+  ],
+  "properties": {
+    "event_id": {
+      "type": "string",
+      "description": "Domain attribute: event_id"
+    },
+    "restructuring_type": {
+      "type": "string",
+      "description": "Domain attribute: restructuring_type"
+    },
+    "effective_year": {
+      "type": "integer",
+      "description": "Domain attribute: effective_year"
+    },
+    "primary_category_id": {
+      "type": "string",
+      "description": "Domain attribute: primary_category_id"
+    },
+    "source_category_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Domain attribute: source_category_ids"
+    },
+    "consolidation_justification": {
+      "type": "string",
+      "description": "Domain attribute: consolidation_justification"
+    },
+    "gender_neutral_reform_flag": {
+      "type": "boolean",
+      "description": "Domain attribute: gender_neutral_reform_flag"
+    },
+    "member_feedback_period_days": {
+      "type": "integer",
+      "description": "Domain attribute: member_feedback_period_days"
+    },
+    "trustee_vote_tally": {
+      "type": "string",
+      "description": "Domain attribute: trustee_vote_tally"
+    },
+    "published_press_bulletin_id": {
+      "type": "string",
+      "description": "Domain attribute: published_press_bulletin_id"
+    }
+  },
+  "additionalProperties": true
+}

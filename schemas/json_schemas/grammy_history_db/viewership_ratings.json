@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "grammy_history_db.viewership_ratings",
+  "description": "Formal MongoDB schema for viewership_ratings collection in grammy_history_db",
+  "type": "object",
+  "required": [
+    "rating_id",
+    "ceremony_id",
+    "us_viewers_millions",
+    "household_rating_pct",
+    "household_share_pct",
+    "demo_18_49_rating",
+    "peak_viewers_millions",
+    "peak_broadcast_segment",
+    "digital_streaming_views_millions",
+    "measurement_agency"
+  ],
+  "properties": {
+    "rating_id": {
+      "type": "string",
+      "description": "Domain attribute: rating_id"
+    },
+    "ceremony_id": {
+      "type": "string",
+      "description": "Domain attribute: ceremony_id"
+    },
+    "us_viewers_millions": {
+      "type": "number",
+      "description": "Domain attribute: us_viewers_millions"
+    },
+    "household_rating_pct": {
+      "type": "number",
+      "description": "Domain attribute: household_rating_pct"
+    },
+    "household_share_pct": {
+      "type": "number",
+      "description": "Domain attribute: household_share_pct"
+    },
+    "demo_18_49_rating": {
+      "type": "number",
+      "description": "Domain attribute: demo_18_49_rating"
+    },
+    "peak_viewers_millions": {
+      "type": "number",
+      "description": "Domain attribute: peak_viewers_millions"
+    },
+    "peak_broadcast_segment": {
+      "type": "string",
+      "description": "Domain attribute: peak_broadcast_segment"
+    },
+    "digital_streaming_views_millions": {
+      "type": "number",
+      "description": "Domain attribute: digital_streaming_views_millions"
+    },
+    "measurement_agency": {
+      "type": "string",
+      "description": "Domain attribute: measurement_agency"
+    }
+  },
+  "additionalProperties": true
+}

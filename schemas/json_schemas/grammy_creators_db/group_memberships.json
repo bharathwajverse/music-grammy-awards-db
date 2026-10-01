@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "grammy_creators_db.group_memberships",
+  "description": "Formal MongoDB schema for group_memberships collection in grammy_creators_db",
+  "type": "object",
+  "required": [
+    "membership_id",
+    "group_id",
+    "artist_id",
+    "role_within_group",
+    "tenure_start_year",
+    "tenure_end_year",
+    "is_founding_member",
+    "is_primary_frontperson",
+    "royalty_split_contract_percentage",
+    "member_departure_reason"
+  ],
+  "properties": {
+    "membership_id": {
+      "type": "string",
+      "description": "Domain attribute: membership_id"
+    },
+    "group_id": {
+      "type": "string",
+      "description": "Domain attribute: group_id"
+    },
+    "artist_id": {
+      "type": "string",
+      "description": "Domain attribute: artist_id"
+    },
+    "role_within_group": {
+      "type": "string",
+      "description": "Domain attribute: role_within_group"
+    },
+    "tenure_start_year": {
+      "type": "integer",
+      "description": "Domain attribute: tenure_start_year"
+    },
+    "tenure_end_year": {
+      "type": "integer",
+      "description": "Domain attribute: tenure_end_year"
+    },
+    "is_founding_member": {
+      "type": "boolean",
+      "description": "Domain attribute: is_founding_member"
+    },
+    "is_primary_frontperson": {
+      "type": "boolean",
+      "description": "Domain attribute: is_primary_frontperson"
+    },
+    "royalty_split_contract_percentage": {
+      "type": "number",
+      "description": "Domain attribute: royalty_split_contract_percentage"
+    },
+    "member_departure_reason": {
+      "type": "string",
+      "description": "Domain attribute: member_departure_reason"
+    }
+  },
+  "additionalProperties": true
+}

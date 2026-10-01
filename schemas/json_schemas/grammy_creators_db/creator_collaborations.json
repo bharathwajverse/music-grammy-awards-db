@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "grammy_creators_db.creator_collaborations",
+  "description": "Formal MongoDB schema for creator_collaborations collection in grammy_creators_db",
+  "type": "object",
+  "required": [
+    "collab_id",
+    "work_id",
+    "creator_a_id",
+    "creator_b_id",
+    "collaboration_nature",
+    "billing_credit_format",
+    "publishing_split_percentage",
+    "joint_grammy_nominations_count",
+    "clearance_agreement_date",
+    "inter_label_licensing_waiver"
+  ],
+  "properties": {
+    "collab_id": {
+      "type": "string",
+      "description": "Domain attribute: collab_id"
+    },
+    "work_id": {
+      "type": "string",
+      "description": "Domain attribute: work_id"
+    },
+    "creator_a_id": {
+      "type": "string",
+      "description": "Domain attribute: creator_a_id"
+    },
+    "creator_b_id": {
+      "type": "string",
+      "description": "Domain attribute: creator_b_id"
+    },
+    "collaboration_nature": {
+      "type": "string",
+      "description": "Domain attribute: collaboration_nature"
+    },
+    "billing_credit_format": {
+      "type": "string",
+      "description": "Domain attribute: billing_credit_format"
+    },
+    "publishing_split_percentage": {
+      "type": "number",
+      "description": "Domain attribute: publishing_split_percentage"
+    },
+    "joint_grammy_nominations_count": {
+      "type": "integer",
+      "description": "Domain attribute: joint_grammy_nominations_count"
+    },
+    "clearance_agreement_date": {
+      "type": "string",
+      "description": "Domain attribute: clearance_agreement_date"
+    },
+    "inter_label_licensing_waiver": {
+      "type": "string",
+      "description": "Domain attribute: inter_label_licensing_waiver"
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "grammy_nominations_db.nomination_credits",
+  "description": "Formal MongoDB schema for nomination_credits collection in grammy_nominations_db",
+  "type": "object",
+  "required": [
+    "credit_id",
+    "nomination_id",
+    "creator_id",
+    "credit_role",
+    "credit_billing_rank",
+    "work_contribution_summary",
+    "contribution_percentage",
+    "is_lead_performer",
+    "is_producer_credit",
+    "academy_verified_status"
+  ],
+  "properties": {
+    "credit_id": {
+      "type": "string",
+      "description": "Domain attribute: credit_id"
+    },
+    "nomination_id": {
+      "type": "string",
+      "description": "Domain attribute: nomination_id"
+    },
+    "creator_id": {
+      "type": "string",
+      "description": "Domain attribute: creator_id"
+    },
+    "credit_role": {
+      "type": "string",
+      "description": "Domain attribute: credit_role"
+    },
+    "credit_billing_rank": {
+      "type": "integer",
+      "description": "Domain attribute: credit_billing_rank"
+    },
+    "work_contribution_summary": {
+      "type": "string",
+      "description": "Domain attribute: work_contribution_summary"
+    },
+    "contribution_percentage": {
+      "type": "number",
+      "description": "Domain attribute: contribution_percentage"
+    },
+    "is_lead_performer": {
+      "type": "boolean",
+      "description": "Domain attribute: is_lead_performer"
+    },
+    "is_producer_credit": {
+      "type": "boolean",
+      "description": "Domain attribute: is_producer_credit"
+    },
+    "academy_verified_status": {
+      "type": "boolean",
+      "description": "Domain attribute: academy_verified_status"
+    }
+  },
+  "additionalProperties": true
+}

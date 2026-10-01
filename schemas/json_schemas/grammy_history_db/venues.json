@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "grammy_history_db.venues",
+  "description": "Formal MongoDB schema for venues collection in grammy_history_db",
+  "type": "object",
+  "required": [
+    "venue_id",
+    "venue_name",
+    "venue_type",
+    "street_address",
+    "city",
+    "state",
+    "postal_code",
+    "max_seating_capacity",
+    "first_hosted_year",
+    "total_ceremonies_hosted"
+  ],
+  "properties": {
+    "venue_id": {
+      "type": "string",
+      "description": "Domain attribute: venue_id"
+    },
+    "venue_name": {
+      "type": "string",
+      "description": "Domain attribute: venue_name"
+    },
+    "venue_type": {
+      "type": "string",
+      "description": "Domain attribute: venue_type"
+    },
+    "street_address": {
+      "type": "string",
+      "description": "Domain attribute: street_address"
+    },
+    "city": {
+      "type": "string",
+      "description": "Domain attribute: city"
+    },
+    "state": {
+      "type": "string",
+      "description": "Domain attribute: state"
+    },
+    "postal_code": {
+      "type": "string",
+      "description": "Domain attribute: postal_code"
+    },
+    "max_seating_capacity": {
+      "type": "integer",
+      "description": "Domain attribute: max_seating_capacity"
+    },
+    "first_hosted_year": {
+      "type": "integer",
+      "description": "Domain attribute: first_hosted_year"
+    },
+    "total_ceremonies_hosted": {
+      "type": "integer",
+      "description": "Domain attribute: total_ceremonies_hosted"
+    }
+  },
+  "additionalProperties": true
+}

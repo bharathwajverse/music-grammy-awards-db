@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "grammy_categories_db.discontinued_categories",
+  "description": "Formal MongoDB schema for discontinued_categories collection in grammy_categories_db",
+  "type": "object",
+  "required": [
+    "discontinued_id",
+    "category_name",
+    "final_active_ceremony_edition",
+    "cumulative_years_active",
+    "retirement_rationale",
+    "merged_into_category_id",
+    "total_winners_awarded",
+    "total_nominations_recorded",
+    "historic_significance_tag",
+    "archive_vault_reference"
+  ],
+  "properties": {
+    "discontinued_id": {
+      "type": "string",
+      "description": "Domain attribute: discontinued_id"
+    },
+    "category_name": {
+      "type": "string",
+      "description": "Domain attribute: category_name"
+    },
+    "final_active_ceremony_edition": {
+      "type": "integer",
+      "description": "Domain attribute: final_active_ceremony_edition"
+    },
+    "cumulative_years_active": {
+      "type": "integer",
+      "description": "Domain attribute: cumulative_years_active"
+    },
+    "retirement_rationale": {
+      "type": "string",
+      "description": "Domain attribute: retirement_rationale"
+    },
+    "merged_into_category_id": {
+      "type": "string",
+      "description": "Domain attribute: merged_into_category_id"
+    },
+    "total_winners_awarded": {
+      "type": "integer",
+      "description": "Domain attribute: total_winners_awarded"
+    },
+    "total_nominations_recorded": {
+      "type": "integer",
+      "description": "Domain attribute: total_nominations_recorded"
+    },
+    "historic_significance_tag": {
+      "type": "string",
+      "description": "Domain attribute: historic_significance_tag"
+    },
+    "archive_vault_reference": {
+      "type": "string",
+      "description": "Domain attribute: archive_vault_reference"
+    }
+  },
+  "additionalProperties": true
+}

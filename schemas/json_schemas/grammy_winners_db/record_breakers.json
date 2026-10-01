@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "grammy_winners_db.record_breakers",
+  "description": "Formal MongoDB schema for record_breakers collection in grammy_winners_db",
+  "type": "object",
+  "required": [
+    "record_id",
+    "winner_record_id",
+    "creator_id",
+    "record_metric_name",
+    "previous_record_holder_name",
+    "previous_record_value",
+    "new_record_value",
+    "record_establishment_year",
+    "creator_age_at_record",
+    "academy_verified_announcement_url"
+  ],
+  "properties": {
+    "record_id": {
+      "type": "string",
+      "description": "Domain attribute: record_id"
+    },
+    "winner_record_id": {
+      "type": "string",
+      "description": "Domain attribute: winner_record_id"
+    },
+    "creator_id": {
+      "type": "string",
+      "description": "Domain attribute: creator_id"
+    },
+    "record_metric_name": {
+      "type": "string",
+      "description": "Domain attribute: record_metric_name"
+    },
+    "previous_record_holder_name": {
+      "type": "string",
+      "description": "Domain attribute: previous_record_holder_name"
+    },
+    "previous_record_value": {
+      "type": "number",
+      "description": "Domain attribute: previous_record_value"
+    },
+    "new_record_value": {
+      "type": "number",
+      "description": "Domain attribute: new_record_value"
+    },
+    "record_establishment_year": {
+      "type": "integer",
+      "description": "Domain attribute: record_establishment_year"
+    },
+    "creator_age_at_record": {
+      "type": "number",
+      "description": "Domain attribute: creator_age_at_record"
+    },
+    "academy_verified_announcement_url": {
+      "type": "string",
+      "description": "Domain attribute: academy_verified_announcement_url"
+    }
+  },
+  "additionalProperties": true
+}

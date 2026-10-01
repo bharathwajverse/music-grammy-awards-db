@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "grammy_categories_db.voting_procedures",
+  "description": "Formal MongoDB schema for voting_procedures collection in grammy_categories_db",
+  "type": "object",
+  "required": [
+    "procedure_id",
+    "category_id",
+    "voting_round_number",
+    "electorate_body_type",
+    "is_ranked_choice_ballot",
+    "craft_committee_review_required",
+    "committee_member_roster_count",
+    "nomination_slot_capacity",
+    "tie_breaking_protocol",
+    "auditing_firm_signoff_flag"
+  ],
+  "properties": {
+    "procedure_id": {
+      "type": "string",
+      "description": "Domain attribute: procedure_id"
+    },
+    "category_id": {
+      "type": "string",
+      "description": "Domain attribute: category_id"
+    },
+    "voting_round_number": {
+      "type": "integer",
+      "description": "Domain attribute: voting_round_number"
+    },
+    "electorate_body_type": {
+      "type": "string",
+      "description": "Domain attribute: electorate_body_type"
+    },
+    "is_ranked_choice_ballot": {
+      "type": "boolean",
+      "description": "Domain attribute: is_ranked_choice_ballot"
+    },
+    "craft_committee_review_required": {
+      "type": "boolean",
+      "description": "Domain attribute: craft_committee_review_required"
+    },
+    "committee_member_roster_count": {
+      "type": "integer",
+      "description": "Domain attribute: committee_member_roster_count"
+    },
+    "nomination_slot_capacity": {
+      "type": "integer",
+      "description": "Domain attribute: nomination_slot_capacity"
+    },
+    "tie_breaking_protocol": {
+      "type": "string",
+      "description": "Domain attribute: tie_breaking_protocol"
+    },
+    "auditing_firm_signoff_flag": {
+      "type": "boolean",
+      "description": "Domain attribute: auditing_firm_signoff_flag"
+    }
+  },
+  "additionalProperties": true
+}

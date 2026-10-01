@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "grammy_winners_db.historic_win_benchmarks",
+  "description": "Formal MongoDB schema for historic_win_benchmarks collection in grammy_winners_db",
+  "type": "object",
+  "required": [
+    "benchmark_id",
+    "benchmark_title",
+    "qualifying_win_threshold",
+    "total_qualifying_creators",
+    "pioneering_creator_id",
+    "year_threshold_first_achieved",
+    "most_recent_qualifier_id",
+    "egot_component_flag",
+    "rarity_index_score",
+    "hall_of_records_citation"
+  ],
+  "properties": {
+    "benchmark_id": {
+      "type": "string",
+      "description": "Domain attribute: benchmark_id"
+    },
+    "benchmark_title": {
+      "type": "string",
+      "description": "Domain attribute: benchmark_title"
+    },
+    "qualifying_win_threshold": {
+      "type": "integer",
+      "description": "Domain attribute: qualifying_win_threshold"
+    },
+    "total_qualifying_creators": {
+      "type": "integer",
+      "description": "Domain attribute: total_qualifying_creators"
+    },
+    "pioneering_creator_id": {
+      "type": "string",
+      "description": "Domain attribute: pioneering_creator_id"
+    },
+    "year_threshold_first_achieved": {
+      "type": "integer",
+      "description": "Domain attribute: year_threshold_first_achieved"
+    },
+    "most_recent_qualifier_id": {
+      "type": "string",
+      "description": "Domain attribute: most_recent_qualifier_id"
+    },
+    "egot_component_flag": {
+      "type": "boolean",
+      "description": "Domain attribute: egot_component_flag"
+    },
+    "rarity_index_score": {
+      "type": "number",
+      "description": "Domain attribute: rarity_index_score"
+    },
+    "hall_of_records_citation": {
+      "type": "string",
+      "description": "Domain attribute: hall_of_records_citation"
+    }
+  },
+  "additionalProperties": true
+}

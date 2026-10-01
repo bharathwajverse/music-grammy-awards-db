@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "grammy_history_db.telecast_broadcasters",
+  "description": "Formal MongoDB schema for telecast_broadcasters collection in grammy_history_db",
+  "type": "object",
+  "required": [
+    "broadcast_id",
+    "ceremony_id",
+    "network_name",
+    "country_code",
+    "broadcast_start_time_utc",
+    "scheduled_duration_minutes",
+    "executive_producer",
+    "director_name",
+    "parental_advisory_rating",
+    "hd_4k_feed_enabled"
+  ],
+  "properties": {
+    "broadcast_id": {
+      "type": "string",
+      "description": "Domain attribute: broadcast_id"
+    },
+    "ceremony_id": {
+      "type": "string",
+      "description": "Domain attribute: ceremony_id"
+    },
+    "network_name": {
+      "type": "string",
+      "description": "Domain attribute: network_name"
+    },
+    "country_code": {
+      "type": "string",
+      "description": "Domain attribute: country_code"
+    },
+    "broadcast_start_time_utc": {
+      "type": "string",
+      "description": "Domain attribute: broadcast_start_time_utc"
+    },
+    "scheduled_duration_minutes": {
+      "type": "integer",
+      "description": "Domain attribute: scheduled_duration_minutes"
+    },
+    "executive_producer": {
+      "type": "string",
+      "description": "Domain attribute: executive_producer"
+    },
+    "director_name": {
+      "type": "string",
+      "description": "Domain attribute: director_name"
+    },
+    "parental_advisory_rating": {
+      "type": "string",
+      "description": "Domain attribute: parental_advisory_rating"
+    },
+    "hd_4k_feed_enabled": {
+      "type": "boolean",
+      "description": "Domain attribute: hd_4k_feed_enabled"
+    }
+  },
+  "additionalProperties": true
+}

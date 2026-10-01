@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "grammy_history_db.historic_milestones",
+  "description": "Formal MongoDB schema for historic_milestones collection in grammy_history_db",
+  "type": "object",
+  "required": [
+    "milestone_id",
+    "ceremony_id",
+    "milestone_title",
+    "calendar_year",
+    "primary_subject_creator_id",
+    "cultural_significance_summary",
+    "official_academy_recognition",
+    "controversy_flag",
+    "archival_video_reel_id",
+    "citation_source_url"
+  ],
+  "properties": {
+    "milestone_id": {
+      "type": "string",
+      "description": "Domain attribute: milestone_id"
+    },
+    "ceremony_id": {
+      "type": "string",
+      "description": "Domain attribute: ceremony_id"
+    },
+    "milestone_title": {
+      "type": "string",
+      "description": "Domain attribute: milestone_title"
+    },
+    "calendar_year": {
+      "type": "integer",
+      "description": "Domain attribute: calendar_year"
+    },
+    "primary_subject_creator_id": {
+      "type": "string",
+      "description": "Domain attribute: primary_subject_creator_id"
+    },
+    "cultural_significance_summary": {
+      "type": "string",
+      "description": "Domain attribute: cultural_significance_summary"
+    },
+    "official_academy_recognition": {
+      "type": "boolean",
+      "description": "Domain attribute: official_academy_recognition"
+    },
+    "controversy_flag": {
+      "type": "boolean",
+      "description": "Domain attribute: controversy_flag"
+    },
+    "archival_video_reel_id": {
+      "type": "string",
+      "description": "Domain attribute: archival_video_reel_id"
+    },
+    "citation_source_url": {
+      "type": "string",
+      "description": "Domain attribute: citation_source_url"
+    }
+  },
+  "additionalProperties": true
+}

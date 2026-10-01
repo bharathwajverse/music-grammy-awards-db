@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "grammy_history_db.academy_leadership",
+  "description": "Formal MongoDB schema for academy_leadership collection in grammy_history_db",
+  "type": "object",
+  "required": [
+    "leadership_id",
+    "officer_name",
+    "executive_role_title",
+    "tenure_start_year",
+    "tenure_end_year",
+    "professional_music_background",
+    "trustee_chapter_location",
+    "notable_policy_amendment",
+    "board_voting_privileges",
+    "appointed_by"
+  ],
+  "properties": {
+    "leadership_id": {
+      "type": "string",
+      "description": "Domain attribute: leadership_id"
+    },
+    "officer_name": {
+      "type": "string",
+      "description": "Domain attribute: officer_name"
+    },
+    "executive_role_title": {
+      "type": "string",
+      "description": "Domain attribute: executive_role_title"
+    },
+    "tenure_start_year": {
+      "type": "integer",
+      "description": "Domain attribute: tenure_start_year"
+    },
+    "tenure_end_year": {
+      "type": "integer",
+      "description": "Domain attribute: tenure_end_year"
+    },
+    "professional_music_background": {
+      "type": "string",
+      "description": "Domain attribute: professional_music_background"
+    },
+    "trustee_chapter_location": {
+      "type": "string",
+      "description": "Domain attribute: trustee_chapter_location"
+    },
+    "notable_policy_amendment": {
+      "type": "string",
+      "description": "Domain attribute: notable_policy_amendment"
+    },
+    "board_voting_privileges": {
+      "type": "boolean",
+      "description": "Domain attribute: board_voting_privileges"
+    },
+    "appointed_by": {
+      "type": "string",
+      "description": "Domain attribute: appointed_by"
+    }
+  },
+  "additionalProperties": true
+}

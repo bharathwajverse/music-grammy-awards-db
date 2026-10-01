@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "grammy_creators_db.creator_discographies",
+  "description": "Formal MongoDB schema for creator_discographies collection in grammy_creators_db",
+  "type": "object",
+  "required": [
+    "discography_id",
+    "creator_id",
+    "work_id",
+    "release_calendar_year",
+    "primary_credit_type",
+    "catalog_matrix_code",
+    "billboard_200_peak_position",
+    "riaa_certification_status",
+    "recording_studio_facility",
+    "master_rights_holder_label_id"
+  ],
+  "properties": {
+    "discography_id": {
+      "type": "string",
+      "description": "Domain attribute: discography_id"
+    },
+    "creator_id": {
+      "type": "string",
+      "description": "Domain attribute: creator_id"
+    },
+    "work_id": {
+      "type": "string",
+      "description": "Domain attribute: work_id"
+    },
+    "release_calendar_year": {
+      "type": "integer",
+      "description": "Domain attribute: release_calendar_year"
+    },
+    "primary_credit_type": {
+      "type": "string",
+      "description": "Domain attribute: primary_credit_type"
+    },
+    "catalog_matrix_code": {
+      "type": "string",
+      "description": "Domain attribute: catalog_matrix_code"
+    },
+    "billboard_200_peak_position": {
+      "type": "integer",
+      "description": "Domain attribute: billboard_200_peak_position"
+    },
+    "riaa_certification_status": {
+      "type": "string",
+      "description": "Domain attribute: riaa_certification_status"
+    },
+    "recording_studio_facility": {
+      "type": "string",
+      "description": "Domain attribute: recording_studio_facility"
+    },
+    "master_rights_holder_label_id": {
+      "type": "string",
+      "description": "Domain attribute: master_rights_holder_label_id"
+    }
+  },
+  "additionalProperties": true
+}
