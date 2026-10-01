@@ -60,7 +60,34 @@ Referential integrity across all five distributed databases is maintained using 
 
 ---
 
-## 4. Quick Start & Setup
+## 4. Standard Project Directory Structure
+
+```text
+├── docs/                     # Architecture, instructions, data dictionary, status tracking
+├── research/                 # Academic DBMS background research & citations
+├── sources/                  # Dataset provenance records & licensing metadata
+├── eer/                      # Conceptual EER diagrams & specialization models
+├── relational-model/         # Relational schema translations & integrity constraints
+├── normalization/            # Functional dependencies, NF proofs & denormalization strategies
+├── mongodb/                  # MongoDB document models & Atlas connection configs
+├── data/
+│   ├── raw/                  # Pristine source data (strictly gitignored)
+│   ├── processed/            # Processed JSON documents across 50 collections
+│   └── validated/            # Production validated documents ready for cluster
+├── scripts/
+│   ├── processing/           # Extraction, transformation, and ID assignment scripts
+│   └── validation/           # Schema, typing, and numerical quota validators
+├── queries/
+│   ├── crud/                 # Basic CRUD queries & filter operations
+│   ├── advanced/             # Complex boolean, regex, array & logical operators
+│   └── aggregation/          # Multi-stage aggregation pipelines ($group, $lookup, $facet)
+├── tests/                    # Automated pytest test suites & schema verification
+└── presentation/             # Final presentation slides, demos & system reports
+```
+
+---
+
+## 5. Quick Start & Setup
 
 ### Prerequisites
 - Python 3.11+
@@ -119,14 +146,15 @@ python scripts/etl/load_atlas_databases.py
 
 ---
 
-## 5. Documentation & Technical Specifications
+## 6. Documentation & Technical Specifications
 
 Detailed design documents are maintained in [`docs/`](docs/):
+- **Current Project Status & Roadmap**: [`docs/project-status.md`](docs/project-status.md)
+- **Master Project Instructions**: [`docs/MASTER_PROJECT_INSTRUCTIONS.md`](docs/MASTER_PROJECT_INSTRUCTIONS.md)
 - **System Architecture**: [`docs/architecture/system_topology.md`](docs/architecture/system_topology.md)
 - **Data Dictionary (All 50 Collections)**: [`docs/architecture/data_dictionary.md`](docs/architecture/data_dictionary.md)
 - **Conceptual EER Specification**: [`docs/eer_diagrams/conceptual_eer_spec.md`](docs/eer_diagrams/conceptual_eer_spec.md)
 - **Relational DDL Reference**: [`schemas/relational_ddl/relational_reference_schema.sql`](schemas/relational_ddl/relational_reference_schema.sql)
-- **Relational Algebra Suite**: [`queries/relational_algebra/algebraic_expressions.md`](queries/relational_algebra/algebraic_expressions.md)
 - **Functional Dependencies (1NF/2NF)**: [`docs/normalization/functional_dependencies.md`](docs/normalization/functional_dependencies.md)
 - **Normalization Proofs (3NF/BCNF/4NF/5NF)**: [`docs/normalization/normalization_proofs.md`](docs/normalization/normalization_proofs.md)
 - **Denormalization Strategy**: [`docs/normalization/denormalization_strategy.md`](docs/normalization/denormalization_strategy.md)
@@ -135,8 +163,9 @@ Detailed design documents are maintained in [`docs/`](docs/):
 
 ---
 
-## 6. License & Academic Integrity
+## 7. License & Academic Integrity
 
 - **License**: Released under the [MIT License](LICENSE).
 - **Zero Secrets Policy**: Credentials must never be pushed to version control. See [`SECURITY.md`](SECURITY.md).
 - **Academic Standards**: Real-world factual data only; no synthetic or fabricated information. See [`CONTRIBUTING.md`](CONTRIBUTING.md).
+
