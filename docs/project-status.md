@@ -2,7 +2,7 @@
 
 > **Course**: Advanced Database Management Systems (ADBMS)  
 > **Project Title**: GRAMMY Awards Information & Analytics System  
-> **Current Phase**: Phase 7 — Relational Model (Completed)  
+> **Current Phase**: Phase 8 — Functional Dependency Analysis (Completed)  
 > **Status Date**: October 2026  
 > **Version Control**: Git / GitHub (`bharathwajverse/music-grammy-awards-db`)  
 > **Database Engine**: MongoDB Atlas & MongoDB Compass  
@@ -66,7 +66,7 @@ The system architecture partitions the domain across five dedicated databases. E
 | Module | Curriculum Subject | Implementation & Artifact Target | Status |
 | :---: | :--- | :--- | :---: |
 | **1** | Relational Query Languages, Relational Algebra, EER Modeling | `eer/`, `relational-model/`, formal algebraic queries | **Completed** |
-| **2** | Functional Dependencies, Armstrong's Axioms, 1NF & 2NF | `normalization/`, dependency matrices, minimal cover | Planned |
+| **2** | Functional Dependencies, Armstrong's Axioms, 1NF & 2NF | `normalization/`, dependency matrices, minimal cover | **Completed** |
 | **3** | 3NF, BCNF, 4NF, 5NF, Decomposition & Denormalization | `normalization/`, lossless join proofs, BCNF algorithms | Planned |
 | **4** | ACID Transactions, Lifecycle, States & Serializability | `scripts/transactions/`, multi-document sessions | Planned |
 | **5** | Concurrency Control, Locks, Timestamp Protocols, Deadlocks | `scripts/concurrency/`, 2PL simulation, wait-for-graphs | Planned |
@@ -126,11 +126,15 @@ The system architecture partitions the domain across five dedicated databases. E
   - Comprehensive keys and relationships matrix: [`relational-model/keys-and-relationships.md`](../relational-model/keys-and-relationships.md) (primary, candidate, foreign keys, referential actions, specialization/aggregation/union mappings).
   - Formal Relational Algebra query specifications: [`relational-model/relational-algebra-examples.md`](../relational-model/relational-algebra-examples.md) (demonstrations of Selection $\sigma$, Projection $\pi$, Cartesian Product $\times$, Join $\bowtie$, Union $\cup$, Set Difference $-$, and Relational Division $\div$ with query execution trees and SQL equivalents).
   - Verified with 195/195 automated pytest test suite (`tests/test_relational_model.py`).
+- **Completed in Phase 8 (Functional Dependency Analysis & Keys)**:
+  - Master functional dependency specifications: [`normalization/functional-dependencies.md`](../normalization/functional-dependencies.md) (Armstrong's axioms, attribute closure algorithms, minimal cover $F_{min}$, partial dependencies, transitive dependencies, MVDs, and JDs using actual GRAMMY entities).
+  - Exhaustive candidate key analysis: [`normalization/key-analysis.md`](../normalization/key-analysis.md) (systematic key finding algorithm, universal relation key derivation, prime vs. non-prime classification, and candidate key registry for all 50 tables).
+  - Verified with automated test suite (`tests/test_functional_dependencies.py`, 303 total passed tests).
 - **Phase Rule Compliance**:
   - No MongoDB database operations were executed.
   - No data import was run.
   - No application code was written.
-- **Next Authorized Phase**: Phase 8 — Normalization (1NF, 2NF, 3NF, BCNF, 4NF, 5NF, Functional Dependencies, Decomposition & Denormalization) (Awaiting user checkpoint approval).
+- **Next Authorized Phase**: Phase 9 — Schema Normalization Proofs (1NF, 2NF, 3NF, BCNF, 4NF, 5NF, Lossless Join Proofs, Dependency Preservation & Denormalization) (Awaiting user checkpoint approval).
 
 
 

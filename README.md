@@ -179,8 +179,11 @@ Detailed design documents are maintained in [`docs/`](docs/):
   - [Primary, Candidate & Foreign Keys Matrix](relational-model/keys-and-relationships.md)
   - [Formal Relational Algebra Query Specifications & Trees](relational-model/relational-algebra-examples.md)
   - [Relational Reference DDL Schema](schemas/relational_ddl/relational_reference_schema.sql)
-- **Functional Dependencies (1NF/2NF)**: [`docs/normalization/functional_dependencies.md`](docs/normalization/functional_dependencies.md)
-- **Normalization Proofs (3NF/BCNF/4NF/5NF)**: [`docs/normalization/normalization_proofs.md`](docs/normalization/normalization_proofs.md)
+- **Functional Dependency & Key Analysis (Phase 8)**:
+  - [Functional Dependencies & Dependency Theory](normalization/functional-dependencies.md)
+  - [Candidate Keys & Prime Attribute Analysis](normalization/key-analysis.md)
+- **Functional Dependencies Reference (1NF/2NF)**: [`docs/normalization/functional_dependencies.md`](docs/normalization/functional_dependencies.md)
+- **Normalization Proofs Reference (3NF/BCNF/4NF/5NF)**: [`docs/normalization/normalization_proofs.md`](docs/normalization/normalization_proofs.md)
 - **Denormalization Strategy**: [`docs/normalization/denormalization_strategy.md`](docs/normalization/denormalization_strategy.md)
 - **Data Provenance & Licensing**: [`docs/data_sources_and_licensing.md`](docs/data_sources_and_licensing.md)
 - **Curriculum Syllabus Mapping**: [`docs/syllabus_mapping.md`](docs/syllabus_mapping.md)
