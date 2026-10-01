@@ -88,10 +88,10 @@ The conversion from the Conceptual EER Model into the normalized relational mode
 ├──────────────────────┼────────────────────────────────┼───────────────────────────────────────┤
 │ grammy_creators_db   │ creators                       │ creator_id                            │
 │ (Creators & Labels)  │ artists                        │ creator_id                            │
-│                      │ producers                      │ producer_id (or creator_id)           │
-│                      │ audio_engineers                │ engineer_id (or creator_id)           │
-│                      │ songwriters_composers          │ songwriter_id (or creator_id)         │
-│                      │ arrangers_conductors           │ arranger_id (or creator_id)           │
+│                      │ producers                      │ producer_id                           │
+│                      │ audio_engineers                │ engineer_id                           │
+│                      │ songwriters_composers          │ songwriter_id                         │
+│                      │ arrangers_conductors           │ arranger_id                           │
 │                      │ record_labels                  │ label_id                              │
 │                      │ musical_groups                 │ group_id                              │
 │                      │ group_memberships              │ membership_id                         │
@@ -125,273 +125,371 @@ The conversion from the Conceptual EER Model into the normalized relational mode
 
 ## 4. Domain 1: History & Operations Domain (`grammy_history_db`)
 
-### 4.1. Relation: `venues`
+### 4.1. `venues`
 - **Formal Notation**: $\text{venues}(\underline{\text{venue\_id}}, \text{venue\_name}, \text{venue\_type}, \text{street\_address}, \text{city}, \text{state}, \text{postal\_code}, \text{max\_seating\_capacity}, \text{first\_hosted\_year}, \text{total\_ceremonies\_hosted})$
-- **Attribute Dictionary**:
+- **Primary Key**: `venue_id`
+- **Candidate Keys**: `venue_name`
+- **Foreign Keys**: None
+- **Relationships**: $1:N$ with `ceremonies` (one venue hosts many ceremonies).
 
-| Attribute Name | Domain / Data Type | Nullability | Constraints / Defaults | Domain Semantics |
-| :--- | :--- | :---: | :--- | :--- |
-| `venue_id` | `VARCHAR(32)` | NOT NULL | **PRIMARY KEY** | Unique alphanumeric venue code (e.g., `VEN_CRYPTO_COM_ARENA`) |
-| `venue_name` | `VARCHAR(128)` | NOT NULL | None | Official commercial facility name |
-| `venue_type` | `VARCHAR(64)` | NOT NULL | Enum: Arena, Theater, Auditorium, Hotel Ballroom | Architecture classification of facility |
-| `street_address` | `VARCHAR(255)` | NULL | None | Physical street address |
-| `city` | `VARCHAR(64)` | NOT NULL | None | Host municipality |
-| `state` | `VARCHAR(32)` | NOT NULL | None | State, province, or federal district |
-| `postal_code` | `VARCHAR(16)` | NULL | None | Postal routing zip code |
-| `max_seating_capacity` | `INT` | NULL | `CHECK (max_seating_capacity > 0)` | Maximum audience seating capacity |
-| `first_hosted_year` | `INT` | NULL | `CHECK (first_hosted_year >= 1958)` | Earliest year the venue staged the telecast |
-| `total_ceremonies_hosted` | `INT` | NOT NULL | `DEFAULT 0, CHECK (>= 0)` | Cumulative telecast count held at venue |
-
-### 4.2. Relation: `ceremonies`
+### 4.2. `ceremonies`
 - **Formal Notation**: $\text{ceremonies}(\underline{\text{ceremony\_id}}, \text{edition\_number}, \text{ceremony\_date}, \text{broadcast\_year}, \text{eligibility\_period\_start}, \text{eligibility\_period\_end}, \text{host\_city}, \text{venue\_id}, \text{primary\_network}, \text{total\_awards\_presented}, \text{created\_at})$
-- **Attribute Dictionary**:
+- **Primary Key**: `ceremony_id`
+- **Candidate Keys**: `edition_number`
+- **Foreign Keys**: `venue_id REFERENCES venues(venue_id)` (`ON DELETE RESTRICT`)
+- **Relationships**: $N:1$ with `venues`; $1:1$ with `viewership_ratings`; $1:N$ with `telecast_broadcasters`, `ceremony_hosts`, `historic_milestones`, `press_media_accreditations`.
 
-| Attribute Name | Domain / Data Type | Nullability | Constraints / Defaults | Domain Semantics |
-| :--- | :--- | :---: | :--- | :--- |
-| `ceremony_id` | `VARCHAR(32)` | NOT NULL | **PRIMARY KEY** | Canonical ceremony identifier (e.g., `CEREMONY_065`) |
-| `edition_number` | `INT` | NOT NULL | **UNIQUE**, `CHECK (> 0)` | Sequential edition number (e.g., 65 for 65th Annual) |
-| `ceremony_date` | `DATE` | NOT NULL | ISO-8601 Date | Telecast live event date |
-| `broadcast_year` | `INT` | NOT NULL | `CHECK (>= 1959)` | Calendar year of telecast broadcast |
-| `eligibility_period_start`| `DATE` | NOT NULL | ISO-8601 Date | Start date of eligibility evaluation window |
-| `eligibility_period_end` | `DATE` | NOT NULL | `CHECK (end >= start)` | Cutoff date for commercial eligibility |
-| `host_city` | `VARCHAR(64)` | NOT NULL | None | Metropolitan city hosting ceremony |
-| `venue_id` | `VARCHAR(32)` | NOT NULL | **FOREIGN KEY** $\rightarrow$ `venues(venue_id)` | Venue location identifier |
-| `primary_network` | `VARCHAR(32)` | NOT NULL | Enum: CBS, NBC, ABC, Syndication | Primary television broadcast rights holder |
-| `total_awards_presented` | `INT` | NOT NULL | `CHECK (> 0)` | Total competitive + honorary statuettes awarded |
-| `created_at` | `TIMESTAMP` | NOT NULL | `DEFAULT CURRENT_TIMESTAMP` | Audit record insertion timestamp |
-
-### 4.3. Relation: `telecast_broadcasters`
+### 4.3. `telecast_broadcasters`
 - **Formal Notation**: $\text{telecast\_broadcasters}(\underline{\text{broadcast\_id}}, \text{ceremony\_id}, \text{network\_name}, \text{country\_code}, \text{broadcast\_start\_time\_utc}, \text{scheduled\_duration\_minutes}, \text{executive\_producer}, \text{director\_name}, \text{parental\_advisory\_rating}, \text{hd\_4k\_feed\_enabled})$
-- **Attribute Dictionary**:
+- **Primary Key**: `broadcast_id`
+- **Candidate Keys**: `(ceremony_id, network_name)`
+- **Foreign Keys**: `ceremony_id REFERENCES ceremonies(ceremony_id)` (`ON DELETE CASCADE`)
+- **Relationships**: $N:1$ with `ceremonies`.
 
-| Attribute Name | Domain / Data Type | Nullability | Constraints / Defaults | Domain Semantics |
-| :--- | :--- | :---: | :--- | :--- |
-| `broadcast_id` | `VARCHAR(32)` | NOT NULL | **PRIMARY KEY** | Unique telecast contract broadcast key |
-| `ceremony_id` | `VARCHAR(32)` | NOT NULL | **FOREIGN KEY** $\rightarrow$ `ceremonies(ceremony_id)` | Associated telecast ceremony |
-| `network_name` | `VARCHAR(64)` | NOT NULL | None | Commercial television network name |
-| `country_code` | `CHAR(2)` | NOT NULL | `DEFAULT 'US'` | ISO 3166-1 alpha-2 sovereign territory code |
-| `broadcast_start_time_utc`| `TIMESTAMP` | NOT NULL | UTC Timestamp | Official airtime kickoff |
-| `scheduled_duration_minutes`| `INT` | NOT NULL | `CHECK (> 0)` | Planned program length |
-| `executive_producer` | `VARCHAR(128)` | NOT NULL | None | Lead showrunner producing the live telecast |
-| `director_name` | `VARCHAR(128)` | NOT NULL | None | Multi-camera television director |
-| `parental_advisory_rating` | `VARCHAR(16)` | NOT NULL | TV-14, TV-PG, TV-G | FCC television parental guidance rating |
-| `hd_4k_feed_enabled` | `BOOLEAN` | NOT NULL | `DEFAULT TRUE` | Ultra-high definition feed transmission status |
-
-### 4.4. Relation: `viewership_ratings` (Weak Entity Mapped)
+### 4.4. `viewership_ratings` (Weak Entity)
 - **Formal Notation**: $\text{viewership\_ratings}(\underline{\text{rating\_id}}, \text{ceremony\_id}, \text{us\_viewers\_millions}, \text{household\_rating\_pct}, \text{household\_share\_pct}, \text{demo\_18\_49\_rating}, \text{peak\_viewers\_millions}, \text{peak\_broadcast\_segment}, \text{digital\_streaming\_views\_millions}, \text{measurement\_agency})$
-- **Attribute Dictionary**:
+- **Primary Key**: `rating_id`
+- **Candidate Keys**: `ceremony_id` (enforcing $1:1$ total relationship)
+- **Foreign Keys**: `ceremony_id REFERENCES ceremonies(ceremony_id)` (`ON DELETE CASCADE`)
+- **Relationships**: $1:1$ identifying relationship with `ceremonies`.
 
-| Attribute Name | Domain / Data Type | Nullability | Constraints / Defaults | Domain Semantics |
-| :--- | :--- | :---: | :--- | :--- |
-| `rating_id` | `VARCHAR(32)` | NOT NULL | **PRIMARY KEY** | Unique rating audit identifier |
-| `ceremony_id` | `VARCHAR(32)` | NOT NULL | **UNIQUE, FOREIGN KEY** $\rightarrow$ `ceremonies(ceremony_id)` | Identifying ceremony relationship |
-| `us_viewers_millions` | `NUMERIC(5,2)` | NOT NULL | `CHECK (>= 0)` | Average live+same day US viewers |
-| `household_rating_pct` | `NUMERIC(4,2)` | NOT NULL | `CHECK (>= 0)` | Percentage of all US households tuned |
-| `household_share_pct` | `NUMERIC(4,2)` | NOT NULL | `CHECK (>= 0)` | Percentage of television sets in use |
-| `demo_18_49_rating` | `NUMERIC(4,2)` | NOT NULL | `CHECK (>= 0)` | Key commercial demographic rating point |
-| `peak_viewers_millions` | `NUMERIC(5,2)` | NULL | `CHECK (peak >= avg)` | Maximum instantaneous viewer peak |
-| `peak_broadcast_segment` | `VARCHAR(128)` | NULL | None | Telecast performance segment during peak |
-| `digital_streaming_views_millions`| `NUMERIC(5,2)` | NOT NULL | `DEFAULT 0.0` | Digital Paramount+/CBS app OTT live streams |
-| `measurement_agency` | `VARCHAR(64)` | NOT NULL | `DEFAULT 'Nielsen Media Research'` | Accredited rating auditing authority |
-
-### 4.5. Relation: `ceremony_hosts`
+### 4.5. `ceremony_hosts`
 - **Formal Notation**: $\text{ceremony\_hosts}(\underline{\text{host\_record\_id}}, \text{ceremony\_id}, \text{creator\_id}, \text{host\_name}, \text{monologue\_minutes}, \text{is\_solo\_host}, \text{performance\_open\_flag}, \text{emmy\_nominated\_for\_show}, \text{compensation\_tier}, \text{notes})$
-- **Attribute Dictionary**:
+- **Primary Key**: `host_record_id`
+- **Candidate Keys**: `(ceremony_id, host_name)`
+- **Foreign Keys**: `ceremony_id REFERENCES ceremonies(ceremony_id)` (`ON DELETE CASCADE`), `creator_id REFERENCES creators(creator_id)` (`ON DELETE SET NULL`)
+- **Relationships**: $N:1$ with `ceremonies`, $N:1$ with `creators`.
 
-| Attribute Name | Domain / Data Type | Nullability | Constraints / Defaults | Domain Semantics |
-| :--- | :--- | :---: | :--- | :--- |
-| `host_record_id` | `VARCHAR(32)` | NOT NULL | **PRIMARY KEY** | Unique hosting appearance identifier |
-| `ceremony_id` | `VARCHAR(32)` | NOT NULL | **FOREIGN KEY** $\rightarrow$ `ceremonies(ceremony_id)` | Staged ceremony edition |
-| `creator_id` | `VARCHAR(32)` | NULL | **FOREIGN KEY** $\rightarrow$ `creators(creator_id)` | Pointer to master talent directory (DB5) |
-| `host_name` | `VARCHAR(128)` | NOT NULL | None | Public billed name of master of ceremonies |
-| `monologue_minutes` | `INT` | NOT NULL | `CHECK (>= 0)` | Duration of introductory standup/speech |
-| `is_solo_host` | `BOOLEAN` | NOT NULL | `DEFAULT TRUE` | False if ensemble co-hosted |
-| `performance_open_flag` | `BOOLEAN` | NOT NULL | `DEFAULT FALSE` | True if host delivered a musical performance |
-| `emmy_nominated_for_show`| `BOOLEAN` | NOT NULL | `DEFAULT FALSE` | Primetime Emmy Outstanding Variety Special nomination |
-| `compensation_tier` | `VARCHAR(32)` | NOT NULL | Standard SAG-AFTRA scale classification | Union compensation bracket tier |
-| `notes` | `TEXT` | NULL | None | Anecdotes or archival context |
+### 4.6. `historic_milestones`
+- **Formal Notation**: $\text{historic\_milestones}(\underline{\text{milestone\_id}}, \text{ceremony\_id}, \text{milestone\_title}, \text{calendar\_year}, \text{primary\_subject_creator_id}, \text{cultural\_significance\_summary}, \text{official\_academy\_recognition}, \text{controversy\_flag}, \text{archival\_video\_reel\_id}, \text{citation\_source\_url})$
+- **Primary Key**: `milestone_id`
+- **Candidate Keys**: `(ceremony_id, milestone_title)`
+- **Foreign Keys**: `ceremony_id REFERENCES ceremonies(ceremony_id)` (`ON DELETE CASCADE`)
+- **Relationships**: $N:1$ with `ceremonies`.
 
-### 4.6. Relations: `historic_milestones`, `academy_leadership`, `timeline_historical_eras`, `press_media_accreditations`, `lifetime_achievement_honors`
-- Defined in full alignment with [`schemas/relational_ddl/relational_reference_schema.sql`](../schemas/relational_ddl/relational_reference_schema.sql), enforcing 10+ meaningful fields, rigorous check constraints, and referential integrity to `ceremonies` and `creators`.
+### 4.7. `academy_leadership`
+- **Formal Notation**: $\text{academy\_leadership}(\underline{\text{leadership\_id}}, \text{officer\_name}, \text{executive\_role\_title}, \text{tenure\_start\_year}, \text{tenure\_end\_year}, \text{professional\_music\_background}, \text{trustee\_chapter\_location}, \text{notable\_policy\_amendment}, \text{board\_voting\_privileges}, \text{appointed\_by})$
+- **Primary Key**: `leadership_id`
+- **Candidate Keys**: `(officer_name, executive_role_title, tenure_start_year)`
+- **Foreign Keys**: None
+- **Relationships**: Autonomous governance entity representing executive leadership.
+
+### 4.8. `timeline_historical_eras`
+- **Formal Notation**: $\text{timeline\_historical\_eras}(\underline{\text{era\_id}}, \text{era\_name}, \text{start\_calendar\_year}, \text{end\_calendar\_year}, \text{dominant\_audio\_format}, \text{voting\_tabulation\_method}, \text{predominant\_music\_genre}, \text{total\_ceremonies\_contained}, \text{headquarters\_city}, \text{industry\_paradigm\_shift\_notes})$
+- **Primary Key**: `era_id`
+- **Candidate Keys**: `era_name`
+- **Foreign Keys**: None
+- **Relationships**: Temporal grouping entity joined via theta joins ($\bowtie_\theta$) with `ceremonies`.
+
+### 4.9. `press_media_accreditations`
+- **Formal Notation**: $\text{press\_media\_accreditations}(\underline{\text{accreditation\_id}}, \text{ceremony\_id}, \text{media\_organization\_name}, \text{media\_channel\_type}, \text{origin\_country}, \text{passes\_granted\_count}, \text{red\_carpet\_position\_tier}, \text{press\_room\_interview\_quota}, \text{pool\_broadcaster\_status}, \text{compliance\_clearance\_status})$
+- **Primary Key**: `accreditation_id`
+- **Candidate Keys**: `(ceremony_id, media_organization_name)`
+- **Foreign Keys**: `ceremony_id REFERENCES ceremonies(ceremony_id)` (`ON DELETE CASCADE`)
+- **Relationships**: $N:1$ with `ceremonies`.
+
+### 4.10. `lifetime_achievement_honors`
+- **Formal Notation**: $\text{lifetime\_achievement\_honors}(\underline{\text{honor\_id}}, \text{creator\_id}, \text{honoree\_name}, \text{conferral\_ceremony\_edition}, \text{career\_active\_span}, \text{genre\_contribution}, \text{trustee\_citation}, \text{special_merit_category_id}, \text{posthumous_flag}, \text{presentation_date})$
+- **Primary Key**: `honor_id`
+- **Candidate Keys**: `(honoree_name, conferral_ceremony_edition)`
+- **Foreign Keys**: `creator_id REFERENCES creators(creator_id)` (`ON DELETE SET NULL`)
+- **Relationships**: $N:1$ with `creators`.
 
 ---
 
 ## 5. Domain 2: Categories & Taxonomy Domain (`grammy_categories_db`)
 
-### 5.1. Relation: `award_fields`
+### 5.1. `award_fields`
 - **Formal Notation**: $\text{award\_fields}(\underline{\text{field\_id}}, \text{field\_name}, \text{field\_abbreviation}, \text{field\_description}, \text{inaugural\_ceremony\_edition}, \text{current\_active\_status}, \text{active\_categories\_count}, \text{specialist\_committee\_jurisdiction}, \text{field\_curator\_role}, \text{last\_bylaw\_revision\_year})$
-- **Attribute Dictionary**:
+- **Primary Key**: `field_id`
+- **Candidate Keys**: `field_name`
+- **Foreign Keys**: None
+- **Relationships**: $1:N$ with `award_categories`.
 
-| Attribute Name | Domain / Data Type | Nullability | Constraints / Defaults | Domain Semantics |
-| :--- | :--- | :---: | :--- | :--- |
-| `field_id` | `VARCHAR(32)` | NOT NULL | **PRIMARY KEY** | Canonical field key (e.g., `FLD_GENERAL_FIELD`, `FLD_POP`) |
-| `field_name` | `VARCHAR(64)` | NOT NULL | **UNIQUE** | Formal genre field title |
-| `field_abbreviation` | `VARCHAR(16)` | NOT NULL | Code identifier (e.g., `GEN`, `POP`, `ROC`, `RAP`) | Compact field acronym |
-| `field_description` | `TEXT` | NOT NULL | None | Scope of musical traditions enclosed |
-| `inaugural_ceremony_edition`| `INT` | NOT NULL | `CHECK (> 0)` | Ceremony edition when field was recognized |
-| `current_active_status`| `BOOLEAN` | NOT NULL | `DEFAULT TRUE` | Active voting status in current cycle |
-| `active_categories_count`| `INT` | NOT NULL | `DEFAULT 0, CHECK (>= 0)` | Subordinate active categories tally |
-| `specialist_committee_jurisdiction`| `VARCHAR(128)` | NOT NULL | None | Craft screening committee oversight body |
-| `field_curator_role` | `VARCHAR(64)` | NOT NULL | None | Academy executive trustee overseeing genre |
-| `last_bylaw_revision_year`| `INT` | NULL | `CHECK (>= 1958)` | Year field boundaries were last updated |
-
-### 5.2. Relation: `award_categories` (Superclass Mapped)
+### 5.2. `award_categories` (Superclass Mapped)
 - **Formal Notation**: $\text{award\_categories}(\underline{\text{category\_id}}, \text{field\_id}, \text{official\_category\_name}, \text{standard\_short\_code}, \text{inaugural\_edition}, \text{is\_general\_field}, \text{current\_status}, \text{maximum\_nominees\_allowed}, \text{voting\_tier\_access}, \text{trophy\_statuette\_eligibility\_rule}, \text{entry\_fee\_tier})$
-- **Attribute Dictionary**:
+- **Primary Key**: `category_id`
+- **Candidate Keys**: `official_category_name`
+- **Foreign Keys**: `field_id REFERENCES award_fields(field_id)` (`ON DELETE RESTRICT`)
+- **Relationships**: $N:1$ with `award_fields`; $1:N$ with `eligibility_rules`, `voting_procedures`, `category_lineage`, `category_quotas_limits`, `craft_credit_definitions`.
 
-| Attribute Name | Domain / Data Type | Nullability | Constraints / Defaults | Domain Semantics |
-| :--- | :--- | :---: | :--- | :--- |
-| `category_id` | `VARCHAR(32)` | NOT NULL | **PRIMARY KEY** | Category code (e.g., `CAT_ALBUM_OF_THE_YEAR`) |
-| `field_id` | `VARCHAR(32)` | NOT NULL | **FOREIGN KEY** $\rightarrow$ `award_fields(field_id)` | Containing genre field reference |
-| `official_category_name`| `VARCHAR(128)` | NOT NULL | **UNIQUE** | Legal Grammy category title on ballots |
-| `standard_short_code` | `VARCHAR(32)` | NOT NULL | Code (e.g., `AOTY`, `ROTY`, `SOTY`, `BNA`) | Standard abbreviated shorthand code |
-| `inaugural_edition` | `INT` | NOT NULL | `CHECK (> 0)` | First ceremony edition presented |
-| `is_general_field` | `BOOLEAN` | NOT NULL | `DEFAULT FALSE` | True if open to all voting members (Big Four) |
-| `current_status` | `VARCHAR(32)` | NOT NULL | `DEFAULT 'Active'` (Active, Retired, Suspended) | Present operational status |
-| `maximum_nominees_allowed`| `INT` | NOT NULL | `DEFAULT 5, CHECK (>= 3)` | Maximum slots on final ballot (5, 8, 10) |
-| `voting_tier_access` | `VARCHAR(64)` | NOT NULL | All Members, Specialist Peer Review | Electorate eligibility classification |
-| `trophy_statuette_eligibility_rule`| `VARCHAR(128)` | NOT NULL | Bylaw rule for physical statuette awards | Criteria for physical Grammy conferral |
-| `entry_fee_tier` | `VARCHAR(32)` | NOT NULL | Member-Free, Label Tier 1, Label Tier 2 | Academy submission fee schedule |
+### 5.3. `category_lineage`
+- **Formal Notation**: $\text{category\_lineage}(\underline{\text{lineage\_id}}, \text{category\_id}, \text{predecessor\_category\_name}, \text{successor\_category\_name}, \text{effective\_ceremony\_edition}, \text{transition\_classification}, \text{structural\_rationale}, \text{nominee\_slate\_impact\_count}, \text{trustee\_resolution\_reference}, \text{ballot\_clarification\_bulletin})$
+- **Primary Key**: `lineage_id`
+- **Candidate Keys**: `(category_id, effective_ceremony_edition)`
+- **Foreign Keys**: `category_id REFERENCES award_categories(category_id)` (`ON DELETE CASCADE`)
+- **Relationships**: $N:1$ with `award_categories`.
 
-### 5.3. Relations: `eligibility_rules`, `voting_procedures`, `category_lineage`, `category_quotas_limits`, `discontinued_categories`, `special_merit_categories`, `craft_credit_definitions`, `merged_split_history`
-- Modeled to capture the complete governance, lineage restructuring, and ballot quota algorithms of the Academy, with explicit foreign keys to `award_categories(category_id)`.
+### 5.4. `eligibility_rules`
+- **Formal Notation**: $\text{eligibility\_rules}(\underline{\text{rule\_id}}, \text{category\_id}, \text{effective\_edition}, \text{minimum\_playing\_time\_minutes}, \text{minimum\_track\_count}, \text{featured\_performance\_threshold\_pct}, \text{us\_release\_commercial\_requirement}, \text{language\_composition\_restrictions}, \text{sample\_replay\_clearance\_rule}, \text{entry\_window\_months})$
+- **Primary Key**: `rule_id`
+- **Candidate Keys**: `(category_id, effective_edition)`
+- **Foreign Keys**: `category_id REFERENCES award_categories(category_id)` (`ON DELETE CASCADE`)
+- **Relationships**: $N:1$ with `award_categories`.
+
+### 5.5. `voting_procedures`
+- **Formal Notation**: $\text{voting\_procedures}(\underline{\text{procedure\_id}}, \text{category\_id}, \text{voting\_round\_number}, \text{electorate\_body\_type}, \text{is\_ranked\_choice\_ballot}, \text{craft\_committee\_review\_required}, \text{committee\_member\_roster\_count}, \text{nomination\_slot\_capacity}, \text{tie\_breaking\_protocol}, \text{auditing\_firm\_signoff\_flag})$
+- **Primary Key**: `procedure_id`
+- **Candidate Keys**: `(category_id, voting_round_number)`
+- **Foreign Keys**: `category_id REFERENCES award_categories(category_id)` (`ON DELETE CASCADE`)
+- **Relationships**: $N:1$ with `award_categories`.
+
+### 5.6. `discontinued_categories`
+- **Formal Notation**: $\text{discontinued\_categories}(\underline{\text{discontinued\_id}}, \text{category\_name}, \text{final\_active\_ceremony\_edition}, \text{cumulative\_years\_active}, \text{retirement\_rationale}, \text{merged\_into\_category\_id}, \text{total\_winners\_awarded}, \text{total\_nominations\_recorded}, \text{historic\_significance\_tag}, \text{archive\_vault\_reference})$
+- **Primary Key**: `discontinued_id`
+- **Candidate Keys**: `category_name`
+- **Foreign Keys**: `merged_into_category_id REFERENCES award_categories(category_id)` (`ON DELETE SET NULL`)
+- **Relationships**: $N:1$ with `award_categories` (optional successor).
+
+### 5.7. `category_quotas_limits`
+- **Formal Notation**: $\text{category\_quotas\_limits}(\underline{\text{quota\_id}}, \text{category\_id}, \text{ceremony\_edition}, \text{standard\_nominee\_limit}, \text{emergency\_tie\_allowance}, \text{max\_credited\_producers\_eligible}, \text{max\_credited\_engineers\_eligible}, \text{playing\_time\_contribution\_threshold\_pct}, \text{lyricist\_track\_threshold\_pct}, \text{pro\_rata\_trophy\_rule})$
+- **Primary Key**: `quota_id`
+- **Candidate Keys**: `(category_id, ceremony_edition)`
+- **Foreign Keys**: `category_id REFERENCES award_categories(category_id)` (`ON DELETE CASCADE`)
+- **Relationships**: $N:1$ with `award_categories`.
+
+### 5.8. `special_merit_categories`
+- **Formal Notation**: $\text{special\_merit\_categories}(\underline{\text{special\_merit\_id}}, \text{award\_title}, \text{conferral\_frequency}, \text{governing\_board\_supermajority\_pct}, \text{candidate\_selection\_protocol}, \text{trophy\_or\_plaque\_type}, \text{first\_conferred\_year}, \text{target\_industry\_discipline}, \text{peer\_nomination\_permitted}, \text{ceremony\_segment\_placement})$
+- **Primary Key**: `special_merit_id`
+- **Candidate Keys**: `award_title`
+- **Foreign Keys**: None
+- **Relationships**: Disjoint specialization sibling of `award_categories`.
+
+### 5.9. `craft_credit_definitions`
+- **Formal Notation**: $\text{craft\_credit\_definitions}(\underline{\text{craft\_def\_id}}, \text{category\_id}, \text{craft\_role\_name}, \text{mandatory\_statuette\_recipient}, \text{certificate\_of\_merit\_alternative}, \text{audio\_stem\_mastering\_threshold}, \text{assistant\_engineer\_eligibility}, \text{sample\_creator\_eligibility}, \text{documentation\_proof\_standard}, \text{union\_credit\_registry\_crosscheck})$
+- **Primary Key**: `craft_def_id`
+- **Candidate Keys**: `(category_id, craft_role_name)`
+- **Foreign Keys**: `category_id REFERENCES award_categories(category_id)` (`ON DELETE CASCADE`)
+- **Relationships**: $N:1$ with `award_categories`.
+
+### 5.10. `merged_split_history`
+- **Formal Notation**: $\text{merged\_split\_history}(\underline{\text{event\_id}}, \text{restructuring\_type}, \text{effective\_year}, \text{primary\_category\_id}, \text{consolidation\_justification}, \text{gender\_neutral\_reform\_flag}, \text{member\_feedback\_period\_days}, \text{trustee\_vote\_tally}, \text{published\_press\_bulletin\_id}, \text{notes})$
+- **Primary Key**: `event_id`
+- **Candidate Keys**: `(primary_category_id, effective_year)`
+- **Foreign Keys**: `primary_category_id REFERENCES award_categories(category_id)` (`ON DELETE CASCADE`)
+- **Relationships**: $N:1$ with `award_categories`.
 
 ---
 
 ## 6. Domain 3: Creators & Labels Domain (`grammy_creators_db`)
 
-### 6.1. Relation: `creators` (Superclass Mapped)
+### 6.1. `creators` (Superclass Mapped)
 - **Formal Notation**: $\text{creators}(\underline{\text{creator\_id}}, \text{full\_legal\_name}, \text{stage\_name}, \text{primary\_musical\_genre}, \text{birth\_or\_formation\_date}, \text{country\_of\_citizenship}, \text{active\_career\_start\_year}, \text{is\_group\_ensemble\_flag}, \text{musicbrainz\_gid}, \text{official\_website\_url}, \text{biography\_overview})$
-- **Attribute Dictionary**:
+- **Primary Key**: `creator_id`
+- **Candidate Keys**: `musicbrainz_gid`
+- **Foreign Keys**: None
+- **Relationships**: Superclass of `artists`, `producers`, `audio_engineers`, `songwriters_composers`, `arrangers_conductors`; $1:N$ with `group_memberships`.
 
-| Attribute Name | Domain / Data Type | Nullability | Constraints / Defaults | Domain Semantics |
-| :--- | :--- | :---: | :--- | :--- |
-| `creator_id` | `VARCHAR(32)` | NOT NULL | **PRIMARY KEY** | Canonical creator identifier (e.g., `CRT_BEYONCE_KNOWLES`) |
-| `full_legal_name` | `VARCHAR(128)` | NOT NULL | None | Legal birth/corporate name of practitioner |
-| `stage_name` | `VARCHAR(128)` | NULL | None | Billed professional performance alias |
-| `primary_musical_genre`| `VARCHAR(64)` | NULL | None | Primary artistic musical tradition |
-| `birth_or_formation_date`| `DATE` | NULL | ISO-8601 Date | Date of birth (or legal ensemble founding) |
-| `country_of_citizenship`| `VARCHAR(64)` | NOT NULL | None | Sovereign nationality for world music quotas |
-| `active_career_start_year`| `INT` | NULL | `CHECK (>= 1920)` | First professional commercial release year |
-| `is_group_ensemble_flag`| `BOOLEAN` | NOT NULL | `DEFAULT FALSE` | True if multi-person musical collective |
-| `musicbrainz_gid` | `CHAR(36)` | NULL | **UNIQUE**, UUID format | Open-source linked authority key |
-| `official_website_url` | `VARCHAR(255)` | NULL | None | Official verified web portal |
-| `biography_overview` | `TEXT` | NULL | None | Archival biographical abstract |
+### 6.2. `artists` (Overlapping Subclass)
+- **Formal Notation**: $\text{artists}(\underline{\text{creator\_id}}, \text{stage\_name}, \text{vocal\_range}, \text{primary\_instrument}, \text{solo\_billing\_tier}, \text{hall\_of\_fame\_eligible\_year}, \text{riaa\_gold_platinum_count}, \text{signature_sound}, \text{spotify_artist_id}, \text{is_active})$
+- **Primary Key**: `creator_id`
+- **Candidate Keys**: `stage_name`
+- **Foreign Keys**: `creator_id REFERENCES creators(creator_id)` (`ON DELETE CASCADE`)
+- **Relationships**: Overlapping subclass of `creators`.
 
-### 6.2. Relations: Overlapping Subclasses of `CREATOR`
-Following Elmasri & Navathe Algorithm 8 for **Overlapping Specialization**:
-- $\text{artists}(\underline{\text{creator\_id}}, \text{vocal\_range}, \text{primary\_instrument}, \text{solo\_billing\_tier}, \text{hall\_of\_fame\_eligible\_year})$
-- $\text{producers}(\underline{\text{producer\_id}}, \text{creator\_id}, \text{primary\_production\_genre}, \text{headquarters\_studio\_location}, \text{analog\_digital\_workflow\_preference}, \dots)$
-- $\text{audio\_engineers}(\underline{\text{engineer\_id}}, \text{creator\_id}, \text{engineering\_specialization}, \text{primary\_mastering\_facility}, \text{dolby\_atmos\_certified\_status}, \dots)$
-- $\text{songwriters\_composers}(\underline{\text{songwriter\_id}}, \text{creator\_id}, \text{pro\_affiliation}, \text{ipi\_cae\_identifier}, \text{music\_publisher\_company}, \dots)$
-- $\text{arrangers\_conductors}(\underline{\text{arranger\_id}}, \text{creator\_id}, \text{arrangement\_discipline}, \text{resident\_orchestra\_ensemble}, \text{union\_musicians\_local}, \dots)$
+### 6.3. `producers` (Overlapping Subclass)
+- **Formal Notation**: $\text{producers}(\underline{\text{producer\_id}}, \text{creator\_id}, \text{primary\_production\_genre}, \text{headquarters\_studio\_location}, \text{production\_company\_affiliation}, \text{analog\_digital\_workflow\_preference}, \text{total\_career\_credits\_count}, \text{discogs\_producer\_id}, \text{first\_notable\_production\_year}, \text{signature\_sound\_profile})$
+- **Primary Key**: `producer_id`
+- **Candidate Keys**: `creator_id`
+- **Foreign Keys**: `creator_id REFERENCES creators(creator_id)` (`ON DELETE CASCADE`)
+- **Relationships**: Overlapping subclass of `creators`.
 
-### 6.3. Relations: `record_labels`, `musical_groups`, `group_memberships`, `creator_collaborations`
-- `group_memberships` maps the $M:N$ tenure between `creators` and `musical_groups`.
+### 6.4. `audio_engineers` (Overlapping Subclass)
+- **Formal Notation**: $\text{audio\_engineers}(\underline{\text{engineer\_id}}, \text{creator\_id}, \text{engineering\_specialization}, \text{primary\_mastering\_facility}, \text{hardware\_console\_credits}, \text{dolby\_atmos\_certified\_status}, \text{aes\_professional\_membership}, \text{first\_album\_engineering\_year}, \text{technical\_patents\_held}, \text{discogs\_engineer\_id})$
+- **Primary Key**: `engineer_id`
+- **Candidate Keys**: `creator_id`
+- **Foreign Keys**: `creator_id REFERENCES creators(creator_id)` (`ON DELETE CASCADE`)
+- **Relationships**: Overlapping subclass of `creators`.
+
+### 6.5. `songwriters_composers` (Overlapping Subclass)
+- **Formal Notation**: $\text{songwriters\_composers}(\underline{\text{songwriter\_id}}, \text{creator\_id}, \text{pro\_affiliation}, \text{ipi\_cae\_identifier}, \text{music\_publisher\_company}, \text{lyric\_vs\_composition\_focus}, \text{registered\_works\_count}, \text{inducted\_songwriters\_hof}, \text{primary\_songwriting\_instrument}, \text{signature\_melodic\_style})$
+- **Primary Key**: `songwriter_id`
+- **Candidate Keys**: `(creator_id, ipi_cae_identifier)`
+- **Foreign Keys**: `creator_id REFERENCES creators(creator_id)` (`ON DELETE CASCADE`)
+- **Relationships**: Overlapping subclass of `creators`.
+
+### 6.6. `arrangers_conductors` (Overlapping Subclass)
+- **Formal Notation**: $\text{arrangers\_conductors}(\underline{\text{arranger\_id}}, \text{creator\_id}, \text{arrangement\_discipline}, \text{resident\_orchestra\_ensemble}, \text{formal\_conservatory\_education}, \text{sheet\_music\_publisher}, \text{conducts\_own\_compositions}, \text{classical\_crossover\_experience}, \text{union\_musicians\_local}, \text{career\_commission\_count})$
+- **Primary Key**: `arranger_id`
+- **Candidate Keys**: `creator_id`
+- **Foreign Keys**: `creator_id REFERENCES creators(creator_id)` (`ON DELETE CASCADE`)
+- **Relationships**: Overlapping subclass of `creators`.
+
+### 6.7. `record_labels`
+- **Formal Notation**: $\text{record\_labels}(\underline{\text{label\_id}}, \text{label\_corporate\_name}, \text{parent\_music\_group}, \text{foundation\_year}, \text{corporate\_headquarters\_city}, \text{origin\_country}, \text{commercial\_distribution\_channel}, \text{riaa\_member\_standing}, \text{historical\_catalog\_size}, \text{current\_operational\_status})$
+- **Primary Key**: `label_id`
+- **Candidate Keys**: `label_corporate_name`
+- **Foreign Keys**: None
+- **Relationships**: $1:N$ with `nominated_works`, $1:N$ with `submission_batches`.
+
+### 6.8. `musical_groups`
+- **Formal Notation**: $\text{musical\_groups}(\underline{\text{group\_id}}, \text{group\_name}, \text{formation\_calendar\_year}, \text{disbandment\_year}, \text{ensemble\_structure_type}, \text{origin\_city}, \text{origin\_country}, \text{current\_activity\_status}, \text{signature\_musical\_style}, \text{musicbrainz\_group\_gid})$
+- **Primary Key**: `group_id`
+- **Candidate Keys**: `group_name`, `musicbrainz_group_gid`
+- **Foreign Keys**: None
+- **Relationships**: $1:N$ with `group_memberships`; part of Union Type `AWARD_RECIPIENT`.
+
+### 6.9. `group_memberships` (Associative Entity)
+- **Formal Notation**: $\text{group\_memberships}(\underline{\text{membership\_id}}, \text{group\_id}, \text{creator\_id}, \text{role\_within\_group}, \text{tenure\_start\_year}, \text{tenure\_end\_year}, \text{is\_founding\_member}, \text{is\_primary\_frontperson}, \text{royalty\_split\_contract\_percentage}, \text{member\_departure\_reason})$
+- **Primary Key**: `membership_id`
+- **Candidate Keys**: `(group_id, creator_id)`
+- **Foreign Keys**: `group_id REFERENCES musical_groups(group_id)` (`ON DELETE CASCADE`), `creator_id REFERENCES creators(creator_id)` (`ON DELETE CASCADE`)
+- **Relationships**: Resolves $M:N$ relationship between `creators` and `musical_groups`.
+
+### 6.10. `creator_collaborations`
+- **Formal Notation**: $\text{creator\_collaborations}(\underline{\text{collaboration\_id}}, \text{lead\_creator\_id}, \text{collaborating\_creator\_id}, \text{collaboration\_type}, \text{joint\_project\_title}, \text{release\_year}, \text{award\_category\_targeted}, \text{commercial\_success\_tier}, \text{label_affiliation}, \text{verified_status})$
+- **Primary Key**: `collaboration_id`
+- **Candidate Keys**: `(lead_creator_id, collaborating_creator_id, release_year)`
+- **Foreign Keys**: `lead_creator_id REFERENCES creators(creator_id)`, `collaborating_creator_id REFERENCES creators(creator_id)`
+- **Relationships**: Recursive $M:N$ relationship between creators.
 
 ---
 
 ## 7. Domain 4: Nominations & Ballots Domain (`grammy_nominations_db`)
 
-### 7.1. Relation: `nominated_works` (Superclass Mapped)
+### 7.1. `nominated_works` (Superclass Mapped)
 - **Formal Notation**: $\text{nominated\_works}(\underline{\text{work\_id}}, \text{work\_type}, \text{work\_title}, \text{commercial\_release\_date}, \text{primary\_label\_id}, \text{isrc\_code}, \text{upc\_barcode}, \text{duration\_total\_seconds}, \text{track\_count}, \text{parental\_advisory\_flag}, \text{language\_iso\_code})$
-- **Attribute Dictionary**:
+- **Primary Key**: `work_id`
+- **Candidate Keys**: `isrc_code`, `upc_barcode`
+- **Foreign Keys**: `primary_label_id REFERENCES record_labels(label_id)` (`ON DELETE RESTRICT`)
+- **Relationships**: $N:1$ with `record_labels`; $1:N$ with `nomination_entries`, `genre_classifications`.
 
-| Attribute Name | Domain / Data Type | Nullability | Constraints / Defaults | Domain Semantics |
-| :--- | :--- | :---: | :--- | :--- |
-| `work_id` | `VARCHAR(32)` | NOT NULL | **PRIMARY KEY** | Canonical master catalog key (e.g., `WRK_RENAISSANCE_2022`) |
-| `work_type` | `VARCHAR(32)` | NOT NULL | Enum: Album, Single/Track, Video, Box Set | Physical medium classification |
-| `work_title` | `VARCHAR(255)` | NOT NULL | None | Official release title |
-| `commercial_release_date`| `DATE` | NOT NULL | ISO-8601 Date | Initial commercial public release date |
-| `primary_label_id` | `VARCHAR(32)` | NOT NULL | **FOREIGN KEY** $\rightarrow$ `record_labels(label_id)` | Releasing record company (DB5) |
-| `isrc_code` | `VARCHAR(32)` | NULL | Unique Track ISRC standard | International Standard Recording Code |
-| `upc_barcode` | `VARCHAR(32)` | NULL | Barcode standard | Universal Product Code (Albums) |
-| `duration_total_seconds`| `INT` | NOT NULL | `CHECK (> 0)` | Total runtime in seconds |
-| `track_count` | `INT` | NOT NULL | `DEFAULT 1, CHECK (>= 1)` | Total audio tracks on album |
-| `parental_advisory_flag`| `BOOLEAN` | NOT NULL | `DEFAULT FALSE` | Explicit lyrics content advisory |
-| `language_iso_code` | `CHAR(2)` | NOT NULL | `DEFAULT 'en'` | ISO 639-1 dominant language |
-
-### 7.2. Relation: `nomination_entries`
+### 7.2. `nomination_entries`
 - **Formal Notation**: $\text{nomination\_entries}(\underline{\text{nomination\_id}}, \text{ceremony\_id}, \text{category\_id}, \text{work\_id}, \text{nomination\_year}, \text{entry\_billing\_title}, \text{primary\_artist\_id}, \text{is\_winner\_flag}, \text{ballot\_slot\_order}, \text{auditor\_validation\_code}, \text{created\_timestamp})$
-- **Attribute Dictionary**:
+- **Primary Key**: `nomination_id`
+- **Candidate Keys**: `(ceremony_id, category_id, work_id)`
+- **Foreign Keys**: `ceremony_id REFERENCES ceremonies(ceremony_id)`, `category_id REFERENCES award_categories(category_id)`, `work_id REFERENCES nominated_works(work_id)`, `primary_artist_id REFERENCES creators(creator_id)`
+- **Relationships**: Central cross-database junction entity; $1:N$ with `nomination_credits`; $1:1$ with `winner_records`.
 
-| Attribute Name | Domain / Data Type | Nullability | Constraints / Defaults | Domain Semantics |
-| :--- | :--- | :---: | :--- | :--- |
-| `nomination_id` | `VARCHAR(32)` | NOT NULL | **PRIMARY KEY** | Certified nomination ID (e.g., `NOM_065_AOTY_01`) |
-| `ceremony_id` | `VARCHAR(32)` | NOT NULL | **FOREIGN KEY** $\rightarrow$ `ceremonies(ceremony_id)` | Staging ceremony edition (DB1) |
-| `category_id` | `VARCHAR(32)` | NOT NULL | **FOREIGN KEY** $\rightarrow$ `award_categories(category_id)` | Competing award category (DB2) |
-| `work_id` | `VARCHAR(32)` | NOT NULL | **FOREIGN KEY** $\rightarrow$ `nominated_works(work_id)` | Master creative entry |
-| `nomination_year` | `INT` | NOT NULL | `CHECK (>= 1959)` | Calendar year of ceremony ballot |
-| `entry_billing_title` | `VARCHAR(255)` | NOT NULL | None | Official printed title on the ballot |
-| `primary_artist_id` | `VARCHAR(32)` | NOT NULL | **FOREIGN KEY** $\rightarrow$ `creators(creator_id)` | Lead credited recording artist (DB5) |
-| `is_winner_flag` | `BOOLEAN` | NOT NULL | `DEFAULT FALSE` | True if elevated to winner record |
-| `ballot_slot_order` | `INT` | NOT NULL | `CHECK (> 0)` | Alphabetical slot on voting paper/screen |
-| `auditor_validation_code`| `VARCHAR(64)` | NOT NULL | Deloitte certified token | Cryptographic ballot tally signoff |
-| `created_timestamp` | `TIMESTAMP` | NOT NULL | `DEFAULT CURRENT_TIMESTAMP` | Initial tabulation record creation time |
-| *Composite Constraint* | None | - | **UNIQUE** (`ceremony_id`, `category_id`, `work_id`) | Prevent duplicate nominations in one category |
-
-### 7.3. Relation: `nomination_credits` (Conceptual Aggregation Mapped)
+### 7.3. `nomination_credits` (Conceptual Aggregation Mapped)
 - **Formal Notation**: $\text{nomination\_credits}(\underline{\text{credit\_id}}, \text{nomination\_id}, \text{creator\_id}, \text{credit\_role}, \text{credit\_billing\_rank}, \text{work\_contribution\_summary}, \text{contribution\_percentage}, \text{is\_lead\_performer}, \text{is\_producer\_credit}, \text{academy\_verified\_status})$
-- **Attribute Dictionary**:
+- **Primary Key**: `credit_id`
+- **Candidate Keys**: `(nomination_id, creator_id, credit_role)`
+- **Foreign Keys**: `nomination_id REFERENCES nomination_entries(nomination_id)` (`ON DELETE CASCADE`), `creator_id REFERENCES creators(creator_id)` (`ON DELETE RESTRICT`)
+- **Relationships**: Aggregation of `(nomination_id, creator_id, credit_role)`; participates in trophy allocations.
 
-| Attribute Name | Domain / Data Type | Nullability | Constraints / Defaults | Domain Semantics |
-| :--- | :--- | :---: | :--- | :--- |
-| `credit_id` | `VARCHAR(32)` | NOT NULL | **PRIMARY KEY** | Unique aggregated credit identifier |
-| `nomination_id` | `VARCHAR(32)` | NOT NULL | **FOREIGN KEY** $\rightarrow$ `nomination_entries(nomination_id)` | Parent nomination entry |
-| `creator_id` | `VARCHAR(32)` | NOT NULL | **FOREIGN KEY** $\rightarrow$ `creators(creator_id)` | Credited talent individual (DB5) |
-| `credit_role` | `VARCHAR(64)` | NOT NULL | Enum: Producer, Engineer, Songwriter, Artist | Specific craft contribution role |
-| `credit_billing_rank` | `INT` | NOT NULL | `DEFAULT 1` | Official priority order on ballot citation |
-| `work_contribution_summary`| `VARCHAR(128)`| NOT NULL | None | Specific tracks produced or engineered |
-| `contribution_percentage`| `NUMERIC(5,2)` | NOT NULL | `DEFAULT 0.0, CHECK (0 to 100)` | Playing time contribution percentage |
-| `is_lead_performer` | `BOOLEAN` | NOT NULL | `DEFAULT FALSE` | True if primary headline artist |
-| `is_producer_credit` | `BOOLEAN` | NOT NULL | `DEFAULT FALSE` | True if eligible under Producer/Engineer rules |
-| `academy_verified_status`| `BOOLEAN` | NOT NULL | `DEFAULT TRUE` | Craft committee audit verification passed |
-| *Composite Constraint* | None | - | **UNIQUE** (`nomination_id`, `creator_id`, `credit_role`) | No duplicate identical roles for one creator |
+### 7.4. `submission_batches`
+- **Formal Notation**: $\text{submission\_batches}(\underline{\text{batch\_id}}, \text{ceremony\_id}, \text{submitting\_label\_id}, \text{submission\_timestamp}, \text{total\_entries\_count}, \text{entry\_fee\_total\_usd}, \text{compliance\_officer\_name}, \text{first\_round\_accepted\_count}, \text{disqualified\_entries\_count}, \text{payment\_reconciliation\_hash})$
+- **Primary Key**: `batch_id`
+- **Candidate Keys**: `(ceremony_id, payment_reconciliation_hash)`
+- **Foreign Keys**: `ceremony_id REFERENCES ceremonies(ceremony_id)`, `submitting_label_id REFERENCES record_labels(label_id)`
+- **Relationships**: $N:1$ with `ceremonies` and `record_labels`.
 
-### 7.4. Relations: `submission_batches`, `genre_classifications`, `first_time_nominees`, `tied_nominations`, `multi_nomination_packages`, `voter_screening_batches`, `nomination_audit_logs`
-- Full tabular definitions enforcing intake batches, first-round screening, ties, and Deloitte auditing.
+### 7.5. `genre_classifications`
+- **Formal Notation**: $\text{genre\_classifications}(\underline{\text{classification\_id}}, \text{work\_id}, \text{submitted\_field\_id}, \text{assigned\_field\_id}, \text{primary\_genre\_tag}, \text{screening\_committee\_consensus}, \text{contested\_by\_label\_flag}, \text{reclassification\_justification}, \text{determination\_date})$
+- **Primary Key**: `classification_id`
+- **Candidate Keys**: `(work_id, submitted_field_id)`
+- **Foreign Keys**: `work_id REFERENCES nominated_works(work_id)`, `submitted_field_id REFERENCES award_fields(field_id)`, `assigned_field_id REFERENCES award_fields(field_id)`
+- **Relationships**: $N:1$ with `nominated_works` and `award_fields`.
+
+### 7.6. `first_time_nominees`
+- **Formal Notation**: $\text{first\_time\_nominees}(\underline{\text{first\_nom\_id}}, \text{nomination\_id}, \text{creator\_id}, \text{debut\_ceremony\_edition}, \text{breakout\_work\_id}, \text{best\_new\_artist\_nominated}, \text{age\_at\_debut\_nomination}, \text{prior\_uncredited\_appearances}, \text{commercial\_breakout\_tier}, \text{career\_inception\_year})$
+- **Primary Key**: `first_nom_id`
+- **Candidate Keys**: `nomination_id`
+- **Foreign Keys**: `nomination_id REFERENCES nomination_entries(nomination_id)` (`ON DELETE CASCADE`), `creator_id REFERENCES creators(creator_id)`, `breakout_work_id REFERENCES nominated_works(work_id)`
+- **Relationships**: $1:1$ specialization of `nomination_entries` for debut nominees.
+
+### 7.7. `tied_nominations`
+- **Formal Notation**: $\text{tied\_nominations}(\underline{\text{tie\_id}}, \text{ceremony\_id}, \text{category\_id}, \text{tied\_vote\_count\_audited}, \text{ballot\_auditor\_token}, \text{board\_tie\_waiver\_approved}, \text{expanded\_slate\_size}, \text{adjudication\_timestamp}, \text{bylaw\_clause\_reference})$
+- **Primary Key**: `tie_id`
+- **Candidate Keys**: `(ceremony_id, category_id)`
+- **Foreign Keys**: `ceremony_id REFERENCES ceremonies(ceremony_id)`, `category_id REFERENCES award_categories(category_id)`
+- **Relationships**: $N:1$ with `ceremonies` and `award_categories`.
+
+### 7.8. `multi_nomination_packages`
+- **Formal Notation**: $\text{multi\_nomination\_packages}(\underline{\text{package\_id}}, \text{ceremony\_id}, \text{creator\_id}, \text{total\_nominations\_count}, \text{general\_field\_nominations\_count}, \text{genre\_field\_nominations\_count}, \text{leading\_nominee\_rank}, \text{public\_announcement\_tier}, \text{ceremony\_year})$
+- **Primary Key**: `package_id`
+- **Candidate Keys**: `(ceremony_id, creator_id)`
+- **Foreign Keys**: `ceremony_id REFERENCES ceremonies(ceremony_id)`, `creator_id REFERENCES creators(creator_id)`
+- **Relationships**: Aggregated analytical entity connecting `ceremonies` and `creators`.
+
+### 7.9. `voter_screening_batches`
+- **Formal Notation**: $\text{voter\_screening\_batches}(\underline{\text{screening\_batch\_id}}, \text{ceremony\_id}, \text{field\_id}, \text{panel\_chair\_creator\_id}, \text{session\_start\_timestamp}, \text{session\_end\_timestamp}, \text{works\_screened\_count}, \text{disqualifications\_ordered}, \text{quorum\_certified}, \text{panel\_confidentiality\_hash})$
+- **Primary Key**: `screening_batch_id`
+- **Candidate Keys**: `(ceremony_id, field_id)`
+- **Foreign Keys**: `ceremony_id REFERENCES ceremonies(ceremony_id)`, `field_id REFERENCES award_fields(field_id)`, `panel_chair_creator_id REFERENCES creators(creator_id)`
+- **Relationships**: $N:1$ with `ceremonies`, `award_fields`, and `creators`.
+
+### 7.10. `nomination_audit_logs`
+- **Formal Notation**: $\text{nomination\_audit\_logs}(\underline{\text{audit\_id}}, \text{nomination\_id}, \text{auditing\_firm\_id}, \text{lead\_auditor\_name}, \text{audit\_timestamp}, \text{digital\_signature\_hash}, \text{tabulation\_vault\_partition}, \text{discrepancy\_check\_passed}, \text{recount\_required\_flag}, \text{compliance\_certificate\_code})$
+- **Primary Key**: `audit_id`
+- **Candidate Keys**: `nomination_id`
+- **Foreign Keys**: `nomination_id REFERENCES nomination_entries(nomination_id)` (`ON DELETE RESTRICT`)
+- **Relationships**: $1:1$ audit verification log for certified ballot entries.
 
 ---
 
 ## 8. Domain 5: Winners & Trophies Domain (`grammy_winners_db`)
 
-### 8.1. Relation: `winner_records`
+### 8.1. `winner_records`
 - **Formal Notation**: $\text{winner\_records}(\underline{\text{winner\_record\_id}}, \text{nomination\_id}, \text{ceremony\_id}, \text{category\_id}, \text{winning\_work\_id}, \text{primary\_artist\_id}, \text{broadcast\_presentation\_order}, \text{presented\_live\_on\_telecast}, \text{acceptance\_speech\_delivered}, \text{trophy\_statuettes\_awarded\_count}, \text{verified\_timestamp})$
-- **Attribute Dictionary**:
+- **Primary Key**: `winner_record_id`
+- **Candidate Keys**: `nomination_id`
+- **Foreign Keys**: `nomination_id REFERENCES nomination_entries(nomination_id)`, `ceremony_id REFERENCES ceremonies(ceremony_id)`, `category_id REFERENCES award_categories(category_id)`, `winning_work_id REFERENCES nominated_works(work_id)`, `primary_artist_id REFERENCES creators(creator_id)`
+- **Relationships**: $1:1$ elevation of winning `nomination_entries`; $1:1$ with `acceptance_speeches`; $1:N$ with `trophy_tracking`.
 
-| Attribute Name | Domain / Data Type | Nullability | Constraints / Defaults | Domain Semantics |
-| :--- | :--- | :---: | :--- | :--- |
-| `winner_record_id` | `VARCHAR(32)` | NOT NULL | **PRIMARY KEY** | Canonical winner record key |
-| `nomination_id` | `VARCHAR(32)` | NOT NULL | **UNIQUE, FOREIGN KEY** $\rightarrow$ `nomination_entries` | Associated elevated nomination (DB3) |
-| `ceremony_id` | `VARCHAR(32)` | NOT NULL | **FOREIGN KEY** $\rightarrow$ `ceremonies(ceremony_id)` | Ceremony staging the win (DB1) |
-| `category_id` | `VARCHAR(32)` | NOT NULL | **FOREIGN KEY** $\rightarrow$ `award_categories(category_id)`| Won category (DB2) |
-| `winning_work_id` | `VARCHAR(32)` | NOT NULL | **FOREIGN KEY** $\rightarrow$ `nominated_works(work_id)` | Victorious master work (DB3) |
-| `primary_artist_id` | `VARCHAR(32)` | NOT NULL | **FOREIGN KEY** $\rightarrow$ `creators(creator_id)` | Headline artist recipient (DB5) |
-| `broadcast_presentation_order`| `INT` | NOT NULL | `CHECK (> 0)` | Presentation sequence during show |
-| `presented_live_on_telecast`| `BOOLEAN` | NOT NULL | `DEFAULT TRUE` | False if awarded at Premiere Ceremony |
-| `acceptance_speech_delivered`| `BOOLEAN` | NOT NULL | `DEFAULT TRUE` | True if live speech delivered from stage |
-| `trophy_statuettes_awarded_count`| `INT` | NOT NULL | `CHECK (>= 1)` | Physical gold statuettes authorized |
-| `verified_timestamp` | `TIMESTAMP` | NOT NULL | `DEFAULT CURRENT_TIMESTAMP` | Official Deloitte envelope confirmation time |
+### 8.2. `big_four_sweeps`
+- **Formal Notation**: $\text{big\_four\_sweeps}(\underline{\text{sweep\_id}}, \text{ceremony\_id}, \text{creator\_id}, \text{sweep\_achievement\_type}, \text{aoty\_nomination\_id}, \text{roty\_nomination\_id}, \text{soty\_nomination\_id}, \text{bna\_nomination\_id}, \text{sweep\_calendar\_year}, \text{career\_significance\_rating})$
+- **Primary Key**: `sweep_id`
+- **Candidate Keys**: `(ceremony_id, creator_id)`
+- **Foreign Keys**: `ceremony_id REFERENCES ceremonies(ceremony_id)`, `creator_id REFERENCES creators(creator_id)`, `aoty_nomination_id REFERENCES nomination_entries(nomination_id)`, `roty_nomination_id REFERENCES nomination_entries(nomination_id)`, `soty_nomination_id REFERENCES nomination_entries(nomination_id)`, `bna_nomination_id REFERENCES nomination_entries(nomination_id)`
+- **Relationships**: High-order analytical relation linking four General Field victories.
 
-### 8.2. Relation: `trophy_tracking`
+### 8.3. `record_breakers`
+- **Formal Notation**: $\text{record\_breakers}(\underline{\text{record\_id}}, \text{winner\_record\_id}, \text{creator\_id}, \text{record\_metric\_name}, \text{previous\_record\_holder\_name}, \text{previous\_record\_value}, \text{new\_record\_value}, \text{record\_establishment\_year}, \text{creator\_age\_at\_record}, \text{academy\_verified\_announcement\_url})$
+- **Primary Key**: `record_id`
+- **Candidate Keys**: `(record_metric_name, record_establishment_year)`
+- **Foreign Keys**: `winner_record_id REFERENCES winner_records(winner_record_id)` (`ON DELETE SET NULL`), `creator_id REFERENCES creators(creator_id)`
+- **Relationships**: $N:1$ with `creators` and optional $N:1$ with `winner_records`.
+
+### 8.4. `acceptance_speeches`
+- **Formal Notation**: $\text{acceptance\_speeches}(\underline{\text{speech\_id}}, \text{winner\_record\_id}, \text{primary\_speaker\_creator\_id}, \text{speech\_duration\_seconds}, \text{playoff\_music\_interrupted}, \text{primary\_quote\_transcript}, \text{social\_political\_message\_flag}, \text{press\_room\_followup\_id}, \text{broadcast\_clip\_timecode})$
+- **Primary Key**: `speech_id`
+- **Candidate Keys**: `winner_record_id`
+- **Foreign Keys**: `winner_record_id REFERENCES winner_records(winner_record_id)` (`ON DELETE CASCADE`), `primary_speaker_creator_id REFERENCES creators(creator_id)`
+- **Relationships**: $1:1$ dependent entity of `winner_records`.
+
+### 8.5. `trophy_tracking`
 - **Formal Notation**: $\text{trophy\_tracking}(\underline{\text{trophy\_id}}, \text{winner\_record\_id}, \text{recipient\_creator\_id}, \text{statuette\_serial\_number}, \text{engraved\_billing\_text}, \text{manufacturing\_foundry\_name}, \text{grammium\_alloy\_specification}, \text{gold\_plating\_thickness\_microns}, \text{dispatch\_shipment\_date}, \text{custody\_receipt\_hash})$
-- **Attribute Dictionary**:
+- **Primary Key**: `trophy_id`
+- **Candidate Keys**: `statuette_serial_number`
+- **Foreign Keys**: `winner_record_id REFERENCES winner_records(winner_record_id)` (`ON DELETE RESTRICT`), `recipient_creator_id REFERENCES creators(creator_id)`
+- **Relationships**: $N:1$ physical statuette fulfillment relationship with `winner_records`.
 
-| Attribute Name | Domain / Data Type | Nullability | Constraints / Defaults | Domain Semantics |
-| :--- | :--- | :---: | :--- | :--- |
-| `trophy_id` | `VARCHAR(32)` | NOT NULL | **PRIMARY KEY** | Unique statuette inventory key |
-| `winner_record_id` | `VARCHAR(32)` | NOT NULL | **FOREIGN KEY** $\rightarrow$ `winner_records` | Parent elevated victory |
-| `recipient_creator_id`| `VARCHAR(32)` | NOT NULL | **FOREIGN KEY** $\rightarrow$ `creators(creator_id)` | Physical statuette recipient (DB5) |
-| `statuette_serial_number`| `VARCHAR(64)` | NOT NULL | **UNIQUE** | Inscribed physical serial identifier |
-| `engraved_billing_text`| `TEXT` | NOT NULL | None | Precision engraving text on brass plate |
-| `manufacturing_foundry_name`| `VARCHAR(128)`| NOT NULL | `DEFAULT 'Billings Artworks'` | Foundry casting the statuette |
-| `grammium_alloy_specification`| `VARCHAR(64)`| NOT NULL | Zinc-based custom alloy specification | Custom metallurgic alloy formulation |
-| `gold_plating_thickness_microns`| `NUMERIC(4,2)`| NOT NULL | `DEFAULT 5.0, CHECK (> 0)` | 24-karat gold plating layer depth |
-| `dispatch_shipment_date`| `DATE` | NULL | ISO-8601 Date | Date statuette shipped to recipient |
-| `custody_receipt_hash`| `VARCHAR(64)` | NULL | Courier delivery verification digest | Signature cryptographic delivery receipt |
+### 8.6. `consecutive_winners`
+- **Formal Notation**: $\text{consecutive\_winners}(\underline{\text{streak\_id}}, \text{creator\_id}, \text{category\_id}, \text{streak\_span\_years}, \text{initial\_ceremony\_edition}, \text{terminal\_ceremony\_edition}, \text{is\_streak\_currently\_active}, \text{historical\_streak\_rank}, \text{category\_monopoly\_notes})$
+- **Primary Key**: `streak_id`
+- **Candidate Keys**: `(creator_id, category_id, initial_ceremony_edition)`
+- **Foreign Keys**: `creator_id REFERENCES creators(creator_id)`, `category_id REFERENCES award_categories(category_id)`
+- **Relationships**: Derived longitudinal analytical entity.
 
-### 8.3. Relations: `big_four_sweeps`, `record_breakers`, `acceptance_speeches`, `consecutive_winners`, `posthumous_awards`, `historic_win_benchmarks`, `hall_of_fame_inductions`, `winner_press_releases`
-- Model derived analytics (Big Four sweeps, all-time record breakers), historical milestones (Hall of Fame), acceptance speeches, and media distribution.
+### 8.7. `posthumous_awards`
+- **Formal Notation**: $\text{posthumous\_awards}(\underline{\text{posthumous\_id}}, \text{winner\_record\_id}, \text{deceased\_creator\_id}, \text{date\_of\_passing}, \text{award\_ceremony\_date}, \text{accepted\_by\_representative}, \text{representative\_legal\_relationship}, \text{in\_memoriam\_segment\_aired}, \text{estate\_concurrence\_status}, \text{tribute\_performance\_id})$
+- **Primary Key**: `posthumous_id`
+- **Candidate Keys**: `winner_record_id`
+- **Foreign Keys**: `winner_record_id REFERENCES winner_records(winner_record_id)` (`ON DELETE CASCADE`), `deceased_creator_id REFERENCES creators(creator_id)`
+- **Relationships**: $1:1$ specialized extension of `winner_records`.
+
+### 8.8. `historic_win_benchmarks`
+- **Formal Notation**: $\text{historic\_win\_benchmarks}(\underline{\text{benchmark\_id}}, \text{benchmark\_title}, \text{qualifying\_win\_threshold}, \text{total\_qualifying\_creators}, \text{pioneering\_creator\_id}, \text{year\_threshold\_first\_achieved}, \text{most\_recent\_qualifier\_id}, \text{egot\_component\_flag}, \text{rarity\_index\_score}, \text{hall\_of\_records\_citation})$
+- **Primary Key**: `benchmark_id`
+- **Candidate Keys**: `benchmark_title`
+- **Foreign Keys**: `pioneering_creator_id REFERENCES creators(creator_id)`, `most_recent_qualifier_id REFERENCES creators(creator_id)`
+- **Relationships**: Macro analytical entity referencing pioneer and recent milestone creators.
+
+### 8.9. `hall_of_fame_inductions`
+- **Formal Notation**: $\text{hall\_of\_fame\_inductions}(\underline{\text{induction\_id}}, \text{inducted\_work\_title}, \text{recording\_artist\_name}, \text{original\_release\_year}, \text{induction\_ceremony\_year}, \text{recording\_medium\_format}, \text{qualifying\_minimum\_age\_years}, \text{historical\_impact\_essay}, \text{museum\_exhibition\_status}, \text{catalog\_archival\_code})$
+- **Primary Key**: `induction_id`
+- **Candidate Keys**: `(inducted_work_title, induction_ceremony_year)`
+- **Foreign Keys**: None
+- **Relationships**: Autonomous historical catalog induction registry.
+
+### 8.10. `winner_press_releases`
+- **Formal Notation**: $\text{winner\_press\_releases}(\underline{\text{release\_id}}, \text{ceremony\_id}, \text{release\_headline}, \text{publication\_timestamp\_utc}, \text{telecast\_highlights\_summary}, \text{pr\_communications\_director}, \text{press\_asset\_bundle\_url}, \text{archival\_digest\_id})$
+- **Primary Key**: `release_id`
+- **Candidate Keys**: `(ceremony_id, release_headline)`
+- **Foreign Keys**: `ceremony_id REFERENCES ceremonies(ceremony_id)` (`ON DELETE CASCADE`)
+- **Relationships**: $N:1$ press dissemination entity tied to `ceremonies`.
 
 ---
 

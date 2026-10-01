@@ -25,12 +25,27 @@ EXPECTED_DATABASES = [
     "grammy_winners_db",
 ]
 
-CORE_RELATIONS = [
+ALL_50_RELATIONS = [
+    # 1. History & Operations (10)
     "venues", "ceremonies", "telecast_broadcasters", "viewership_ratings",
+    "ceremony_hosts", "historic_milestones", "academy_leadership",
+    "timeline_historical_eras", "press_media_accreditations", "lifetime_achievement_honors",
+    # 2. Categories & Taxonomy (10)
     "award_fields", "award_categories", "category_lineage", "eligibility_rules",
-    "creators", "artists", "producers", "audio_engineers", "songwriters_composers", "musical_groups",
-    "nominated_works", "nomination_entries", "nomination_credits",
-    "winner_records", "big_four_sweeps", "acceptance_speeches", "trophy_tracking"
+    "voting_procedures", "discontinued_categories", "category_quotas_limits",
+    "special_merit_categories", "craft_credit_definitions", "merged_split_history",
+    # 3. Creators & Labels (10)
+    "creators", "artists", "producers", "audio_engineers", "songwriters_composers",
+    "arrangers_conductors", "record_labels", "musical_groups", "group_memberships",
+    "creator_collaborations",
+    # 4. Nominations & Ballots (10)
+    "nominated_works", "nomination_entries", "nomination_credits", "submission_batches",
+    "genre_classifications", "first_time_nominees", "tied_nominations",
+    "multi_nomination_packages", "voter_screening_batches", "nomination_audit_logs",
+    # 5. Winners & Trophies (10)
+    "winner_records", "big_four_sweeps", "record_breakers", "acceptance_speeches",
+    "trophy_tracking", "consecutive_winners", "posthumous_awards",
+    "historic_win_benchmarks", "hall_of_fame_inductions", "winner_press_releases"
 ]
 
 RELATIONAL_ALGEBRA_OPS = [
@@ -57,8 +72,8 @@ def test_schema_covers_all_domains():
         assert db in schema_text, f"Database domain '{db}' not documented in schema.md"
 
 
-@pytest.mark.parametrize("rel_name", CORE_RELATIONS)
-def test_schema_covers_core_relations(rel_name):
+@pytest.mark.parametrize("rel_name", ALL_50_RELATIONS)
+def test_schema_covers_all_50_relations(rel_name):
     schema_text = (RELATIONAL_DIR / "schema.md").read_text(encoding="utf-8")
     assert rel_name in schema_text, f"Relation '{rel_name}' missing from schema.md"
 
@@ -72,6 +87,12 @@ def test_keys_and_relationships_integrity():
     assert "ON DELETE RESTRICT" in keys_text
     assert "NOMINATION_CREDIT" in keys_text
     assert "AWARD_RECIPIENT" in keys_text
+
+
+@pytest.mark.parametrize("rel_name", ALL_50_RELATIONS)
+def test_keys_document_all_50_relations(rel_name):
+    keys_text = (RELATIONAL_DIR / "keys-and-relationships.md").read_text(encoding="utf-8")
+    assert rel_name in keys_text, f"Relation '{rel_name}' missing from keys-and-relationships.md"
 
 
 @pytest.mark.parametrize("op_name", RELATIONAL_ALGEBRA_OPS)
