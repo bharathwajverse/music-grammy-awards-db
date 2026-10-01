@@ -190,6 +190,9 @@ Detailed design documents are maintained in [`docs/`](docs/):
   - [Fourth Normal Form (4NF) Multivalued Dependencies & Fagin's Theorem](normalization/4nf.md)
   - [Fifth Normal Form (5NF/PJNF) Join Dependencies & Triadic Lossless Join](normalization/5nf.md)
   - [Master Normalization Summary & NoSQL Denormalization Synthesis](normalization/normalization-summary.md)
+- **Physical Schema Denormalization (Phase 10)**:
+  - [MongoDB Denormalization Decisions Catalog (12 Architecture Decisions)](denormalization/decisions.md)
+  - [Embedding vs. Referencing Decision Framework & Anti-Pattern Prevention](denormalization/embed-vs-reference.md)
 - **Data Provenance & Licensing**: [`docs/data_sources_and_licensing.md`](docs/data_sources_and_licensing.md)
 - **Curriculum Syllabus Mapping**: [`docs/syllabus_mapping.md`](docs/syllabus_mapping.md)
 

@@ -139,11 +139,15 @@ The system architecture partitions the domain across five dedicated databases. E
   - 5NF / PJNF specification: [`normalization/5nf.md`](../normalization/5nf.md) (join dependencies $\bowtie [R_1, \dots, R_n]$, Project-Join Normal Form, cyclic triadic dependency on producer/category/workflow, 3-way lossless join proof via set-inclusion and Aho-Beeri-Ullman tableau).
   - Master normalization summary: [`normalization/normalization-summary.md`](../normalization/normalization-summary.md) (comparative progression matrix, anomaly elimination audit, lossless-join/dependency preservation ledger, and NoSQL document denormalization bridge to the 5 MongoDB databases).
   - Verified with 21 automated pytest tests (`tests/test_normalization_proofs.py`, 324 total system tests passing).
+- **Completed in Phase 10 (Physical Schema Denormalization Architecture)**:
+  - Master denormalization decisions catalog: [`denormalization/decisions.md`](../denormalization/decisions.md) (12 concrete decisions spanning all 5 databases, each covering all 8 evaluation criteria: original normalized structure, MongoDB structure, embed vs. reference pattern, business reason, read/write implications, redundancy introduced, consistency risk, and validation strategy).
+  - Embed vs. Reference decision framework: [`denormalization/embed-vs-reference.md`](../denormalization/embed-vs-reference.md) (5-rule decision rubric, 16MB BSON limit and RAM working set constraints, system-wide relationship classification matrix, anti-pattern prevention, and 4-level consistency synchronization architecture).
+  - Verified with 26 automated pytest tests (`tests/test_denormalization.py`, 350 total system tests passing).
 - **Phase Rule Compliance**:
   - No MongoDB database operations were executed.
   - No data import was run.
   - No application code was written.
-- **Next Authorized Phase**: Phase 10 — Physical Schema Design & JSON Schemas / Validation Rules (Awaiting user checkpoint approval).
+- **Next Authorized Phase**: Phase 11 — Physical MongoDB JSON Schema Definitions & Data Generation / Validation (Awaiting user checkpoint approval).
 
 
 
