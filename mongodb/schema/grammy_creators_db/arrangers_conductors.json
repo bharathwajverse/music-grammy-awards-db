@@ -1,0 +1,67 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "title": "grammy_creators_db.arrangers_conductors",
+    "description": "MongoDB collection validator for arrangers_conductors in grammy_creators_db",
+    "required": [
+      "_id",
+      "arranger_id",
+      "creator_id",
+      "arrangement_discipline",
+      "resident_orchestra_ensemble",
+      "formal_conservatory_education",
+      "sheet_music_publisher",
+      "conducts_own_compositions",
+      "classical_crossover_experience",
+      "union_musicians_local",
+      "career_commission_count"
+    ],
+    "properties": {
+      "_id": {
+        "bsonType": "string",
+        "description": "Unique primary BSON document identifier (arranger_id)"
+      },
+      "arranger_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: arranger_id"
+      },
+      "creator_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: creator_id"
+      },
+      "arrangement_discipline": {
+        "bsonType": "string",
+        "description": "Domain attribute: arrangement_discipline"
+      },
+      "resident_orchestra_ensemble": {
+        "bsonType": "string",
+        "description": "Domain attribute: resident_orchestra_ensemble"
+      },
+      "formal_conservatory_education": {
+        "bsonType": "string",
+        "description": "Domain attribute: formal_conservatory_education"
+      },
+      "sheet_music_publisher": {
+        "bsonType": "string",
+        "description": "Domain attribute: sheet_music_publisher"
+      },
+      "conducts_own_compositions": {
+        "bsonType": "bool",
+        "description": "Domain attribute: conducts_own_compositions"
+      },
+      "classical_crossover_experience": {
+        "bsonType": "bool",
+        "description": "Domain attribute: classical_crossover_experience"
+      },
+      "union_musicians_local": {
+        "bsonType": "string",
+        "description": "Domain attribute: union_musicians_local"
+      },
+      "career_commission_count": {
+        "bsonType": "int",
+        "description": "Domain attribute: career_commission_count"
+      }
+    },
+    "additionalProperties": true
+  }
+}

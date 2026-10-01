@@ -1,0 +1,67 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "title": "grammy_winners_db.consecutive_winners",
+    "description": "MongoDB collection validator for consecutive_winners in grammy_winners_db",
+    "required": [
+      "_id",
+      "streak_id",
+      "creator_id",
+      "category_id",
+      "streak_span_years",
+      "initial_ceremony_edition",
+      "terminal_ceremony_edition",
+      "winning_work_ids_list",
+      "is_streak_currently_active",
+      "historical_streak_rank",
+      "category_monopoly_notes"
+    ],
+    "properties": {
+      "_id": {
+        "bsonType": "string",
+        "description": "Unique primary BSON document identifier (streak_id)"
+      },
+      "streak_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: streak_id"
+      },
+      "creator_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: creator_id"
+      },
+      "category_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: category_id"
+      },
+      "streak_span_years": {
+        "bsonType": "int",
+        "description": "Domain attribute: streak_span_years"
+      },
+      "initial_ceremony_edition": {
+        "bsonType": "int",
+        "description": "Domain attribute: initial_ceremony_edition"
+      },
+      "terminal_ceremony_edition": {
+        "bsonType": "int",
+        "description": "Domain attribute: terminal_ceremony_edition"
+      },
+      "winning_work_ids_list": {
+        "bsonType": "array",
+        "description": "Domain attribute: winning_work_ids_list"
+      },
+      "is_streak_currently_active": {
+        "bsonType": "bool",
+        "description": "Domain attribute: is_streak_currently_active"
+      },
+      "historical_streak_rank": {
+        "bsonType": "int",
+        "description": "Domain attribute: historical_streak_rank"
+      },
+      "category_monopoly_notes": {
+        "bsonType": "string",
+        "description": "Domain attribute: category_monopoly_notes"
+      }
+    },
+    "additionalProperties": true
+  }
+}

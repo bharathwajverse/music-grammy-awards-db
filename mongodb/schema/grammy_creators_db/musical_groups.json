@@ -1,0 +1,96 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "title": "grammy_creators_db.musical_groups",
+    "description": "MongoDB collection validator for musical_groups in grammy_creators_db",
+    "required": [
+      "_id",
+      "group_id",
+      "group_name",
+      "formation_calendar_year",
+      "disbandment_year",
+      "ensemble_structure_type",
+      "origin_city",
+      "origin_country",
+      "current_activity_status",
+      "signature_musical_style",
+      "musicbrainz_group_gid"
+    ],
+    "properties": {
+      "_id": {
+        "bsonType": "string",
+        "description": "Unique primary BSON document identifier (group_id)"
+      },
+      "group_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: group_id"
+      },
+      "group_name": {
+        "bsonType": "string",
+        "description": "Domain attribute: group_name"
+      },
+      "formation_calendar_year": {
+        "bsonType": "int",
+        "description": "Domain attribute: formation_calendar_year"
+      },
+      "disbandment_year": {
+        "bsonType": "int",
+        "description": "Domain attribute: disbandment_year"
+      },
+      "ensemble_structure_type": {
+        "bsonType": "string",
+        "description": "Domain attribute: ensemble_structure_type"
+      },
+      "origin_city": {
+        "bsonType": "string",
+        "description": "Domain attribute: origin_city"
+      },
+      "origin_country": {
+        "bsonType": "string",
+        "description": "Domain attribute: origin_country"
+      },
+      "current_activity_status": {
+        "bsonType": "bool",
+        "description": "Domain attribute: current_activity_status"
+      },
+      "signature_musical_style": {
+        "bsonType": "string",
+        "description": "Domain attribute: signature_musical_style"
+      },
+      "musicbrainz_group_gid": {
+        "bsonType": "string",
+        "description": "Domain attribute: musicbrainz_group_gid"
+      },
+      "members": {
+        "bsonType": "array",
+        "description": "Embedded roster of musical group members",
+        "items": {
+          "bsonType": "object",
+          "required": [
+            "creator_id",
+            "member_name",
+            "role"
+          ],
+          "properties": {
+            "creator_id": {
+              "bsonType": "string"
+            },
+            "member_name": {
+              "bsonType": "string"
+            },
+            "role": {
+              "bsonType": "string"
+            },
+            "join_year": {
+              "bsonType": "int"
+            },
+            "leave_year": {
+              "bsonType": "int"
+            }
+          }
+        }
+      }
+    },
+    "additionalProperties": true
+  }
+}

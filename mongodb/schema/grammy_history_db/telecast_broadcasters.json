@@ -1,0 +1,67 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "title": "grammy_history_db.telecast_broadcasters",
+    "description": "MongoDB collection validator for telecast_broadcasters in grammy_history_db",
+    "required": [
+      "_id",
+      "broadcast_id",
+      "ceremony_id",
+      "network_name",
+      "country_code",
+      "broadcast_start_time_utc",
+      "scheduled_duration_minutes",
+      "executive_producer",
+      "director_name",
+      "parental_advisory_rating",
+      "hd_4k_feed_enabled"
+    ],
+    "properties": {
+      "_id": {
+        "bsonType": "string",
+        "description": "Unique primary BSON document identifier (broadcast_id)"
+      },
+      "broadcast_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: broadcast_id"
+      },
+      "ceremony_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: ceremony_id"
+      },
+      "network_name": {
+        "bsonType": "string",
+        "description": "Domain attribute: network_name"
+      },
+      "country_code": {
+        "bsonType": "string",
+        "description": "Domain attribute: country_code"
+      },
+      "broadcast_start_time_utc": {
+        "bsonType": "string",
+        "description": "Domain attribute: broadcast_start_time_utc"
+      },
+      "scheduled_duration_minutes": {
+        "bsonType": "int",
+        "description": "Domain attribute: scheduled_duration_minutes"
+      },
+      "executive_producer": {
+        "bsonType": "string",
+        "description": "Domain attribute: executive_producer"
+      },
+      "director_name": {
+        "bsonType": "string",
+        "description": "Domain attribute: director_name"
+      },
+      "parental_advisory_rating": {
+        "bsonType": "string",
+        "description": "Domain attribute: parental_advisory_rating"
+      },
+      "hd_4k_feed_enabled": {
+        "bsonType": "bool",
+        "description": "Domain attribute: hd_4k_feed_enabled"
+      }
+    },
+    "additionalProperties": true
+  }
+}

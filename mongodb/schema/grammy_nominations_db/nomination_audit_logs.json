@@ -1,0 +1,67 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "title": "grammy_nominations_db.nomination_audit_logs",
+    "description": "MongoDB collection validator for nomination_audit_logs in grammy_nominations_db",
+    "required": [
+      "_id",
+      "audit_id",
+      "nomination_id",
+      "auditing_firm_id",
+      "lead_auditor_name",
+      "audit_timestamp",
+      "digital_signature_hash",
+      "tabulation_vault_partition",
+      "discrepancy_check_passed",
+      "recount_required_flag",
+      "compliance_certificate_code"
+    ],
+    "properties": {
+      "_id": {
+        "bsonType": "string",
+        "description": "Unique primary BSON document identifier (audit_id)"
+      },
+      "audit_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: audit_id"
+      },
+      "nomination_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: nomination_id"
+      },
+      "auditing_firm_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: auditing_firm_id"
+      },
+      "lead_auditor_name": {
+        "bsonType": "string",
+        "description": "Domain attribute: lead_auditor_name"
+      },
+      "audit_timestamp": {
+        "bsonType": "string",
+        "description": "Domain attribute: audit_timestamp"
+      },
+      "digital_signature_hash": {
+        "bsonType": "string",
+        "description": "Domain attribute: digital_signature_hash"
+      },
+      "tabulation_vault_partition": {
+        "bsonType": "string",
+        "description": "Domain attribute: tabulation_vault_partition"
+      },
+      "discrepancy_check_passed": {
+        "bsonType": "bool",
+        "description": "Domain attribute: discrepancy_check_passed"
+      },
+      "recount_required_flag": {
+        "bsonType": "bool",
+        "description": "Domain attribute: recount_required_flag"
+      },
+      "compliance_certificate_code": {
+        "bsonType": "string",
+        "description": "Domain attribute: compliance_certificate_code"
+      }
+    },
+    "additionalProperties": true
+  }
+}

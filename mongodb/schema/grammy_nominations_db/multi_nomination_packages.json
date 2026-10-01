@@ -1,0 +1,67 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "title": "grammy_nominations_db.multi_nomination_packages",
+    "description": "MongoDB collection validator for multi_nomination_packages in grammy_nominations_db",
+    "required": [
+      "_id",
+      "package_id",
+      "ceremony_id",
+      "creator_id",
+      "total_nominations_count",
+      "general_field_nominations_count",
+      "genre_field_nominations_count",
+      "leading_nominee_rank",
+      "nominated_work_ids",
+      "public_announcement_tier",
+      "ceremony_year"
+    ],
+    "properties": {
+      "_id": {
+        "bsonType": "string",
+        "description": "Unique primary BSON document identifier (package_id)"
+      },
+      "package_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: package_id"
+      },
+      "ceremony_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: ceremony_id"
+      },
+      "creator_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: creator_id"
+      },
+      "total_nominations_count": {
+        "bsonType": "int",
+        "description": "Domain attribute: total_nominations_count"
+      },
+      "general_field_nominations_count": {
+        "bsonType": "int",
+        "description": "Domain attribute: general_field_nominations_count"
+      },
+      "genre_field_nominations_count": {
+        "bsonType": "int",
+        "description": "Domain attribute: genre_field_nominations_count"
+      },
+      "leading_nominee_rank": {
+        "bsonType": "int",
+        "description": "Domain attribute: leading_nominee_rank"
+      },
+      "nominated_work_ids": {
+        "bsonType": "array",
+        "description": "Domain attribute: nominated_work_ids"
+      },
+      "public_announcement_tier": {
+        "bsonType": "string",
+        "description": "Domain attribute: public_announcement_tier"
+      },
+      "ceremony_year": {
+        "bsonType": "int",
+        "description": "Domain attribute: ceremony_year"
+      }
+    },
+    "additionalProperties": true
+  }
+}

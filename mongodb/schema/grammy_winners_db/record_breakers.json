@@ -1,0 +1,67 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "title": "grammy_winners_db.record_breakers",
+    "description": "MongoDB collection validator for record_breakers in grammy_winners_db",
+    "required": [
+      "_id",
+      "record_id",
+      "winner_record_id",
+      "creator_id",
+      "record_metric_name",
+      "previous_record_holder_name",
+      "previous_record_value",
+      "new_record_value",
+      "record_establishment_year",
+      "creator_age_at_record",
+      "academy_verified_announcement_url"
+    ],
+    "properties": {
+      "_id": {
+        "bsonType": "string",
+        "description": "Unique primary BSON document identifier (record_id)"
+      },
+      "record_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: record_id"
+      },
+      "winner_record_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: winner_record_id"
+      },
+      "creator_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: creator_id"
+      },
+      "record_metric_name": {
+        "bsonType": "string",
+        "description": "Domain attribute: record_metric_name"
+      },
+      "previous_record_holder_name": {
+        "bsonType": "string",
+        "description": "Domain attribute: previous_record_holder_name"
+      },
+      "previous_record_value": {
+        "bsonType": "double",
+        "description": "Domain attribute: previous_record_value"
+      },
+      "new_record_value": {
+        "bsonType": "double",
+        "description": "Domain attribute: new_record_value"
+      },
+      "record_establishment_year": {
+        "bsonType": "int",
+        "description": "Domain attribute: record_establishment_year"
+      },
+      "creator_age_at_record": {
+        "bsonType": "double",
+        "description": "Domain attribute: creator_age_at_record"
+      },
+      "academy_verified_announcement_url": {
+        "bsonType": "string",
+        "description": "Domain attribute: academy_verified_announcement_url"
+      }
+    },
+    "additionalProperties": true
+  }
+}

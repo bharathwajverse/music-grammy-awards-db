@@ -1,0 +1,67 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "title": "grammy_history_db.historic_milestones",
+    "description": "MongoDB collection validator for historic_milestones in grammy_history_db",
+    "required": [
+      "_id",
+      "milestone_id",
+      "ceremony_id",
+      "milestone_title",
+      "calendar_year",
+      "primary_subject_creator_id",
+      "cultural_significance_summary",
+      "official_academy_recognition",
+      "controversy_flag",
+      "archival_video_reel_id",
+      "citation_source_url"
+    ],
+    "properties": {
+      "_id": {
+        "bsonType": "string",
+        "description": "Unique primary BSON document identifier (milestone_id)"
+      },
+      "milestone_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: milestone_id"
+      },
+      "ceremony_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: ceremony_id"
+      },
+      "milestone_title": {
+        "bsonType": "string",
+        "description": "Domain attribute: milestone_title"
+      },
+      "calendar_year": {
+        "bsonType": "int",
+        "description": "Domain attribute: calendar_year"
+      },
+      "primary_subject_creator_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: primary_subject_creator_id"
+      },
+      "cultural_significance_summary": {
+        "bsonType": "string",
+        "description": "Domain attribute: cultural_significance_summary"
+      },
+      "official_academy_recognition": {
+        "bsonType": "bool",
+        "description": "Domain attribute: official_academy_recognition"
+      },
+      "controversy_flag": {
+        "bsonType": "bool",
+        "description": "Domain attribute: controversy_flag"
+      },
+      "archival_video_reel_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: archival_video_reel_id"
+      },
+      "citation_source_url": {
+        "bsonType": "string",
+        "description": "Domain attribute: citation_source_url"
+      }
+    },
+    "additionalProperties": true
+  }
+}

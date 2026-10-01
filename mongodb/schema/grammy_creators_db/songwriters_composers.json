@@ -1,0 +1,67 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "title": "grammy_creators_db.songwriters_composers",
+    "description": "MongoDB collection validator for songwriters_composers in grammy_creators_db",
+    "required": [
+      "_id",
+      "songwriter_id",
+      "creator_id",
+      "pro_affiliation",
+      "ipi_cae_identifier",
+      "music_publisher_company",
+      "lyric_vs_composition_focus",
+      "registered_works_count",
+      "inducted_songwriters_hof",
+      "primary_songwriting_instrument",
+      "signature_melodic_style"
+    ],
+    "properties": {
+      "_id": {
+        "bsonType": "string",
+        "description": "Unique primary BSON document identifier (songwriter_id)"
+      },
+      "songwriter_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: songwriter_id"
+      },
+      "creator_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: creator_id"
+      },
+      "pro_affiliation": {
+        "bsonType": "string",
+        "description": "Domain attribute: pro_affiliation"
+      },
+      "ipi_cae_identifier": {
+        "bsonType": "string",
+        "description": "Domain attribute: ipi_cae_identifier"
+      },
+      "music_publisher_company": {
+        "bsonType": "string",
+        "description": "Domain attribute: music_publisher_company"
+      },
+      "lyric_vs_composition_focus": {
+        "bsonType": "string",
+        "description": "Domain attribute: lyric_vs_composition_focus"
+      },
+      "registered_works_count": {
+        "bsonType": "int",
+        "description": "Domain attribute: registered_works_count"
+      },
+      "inducted_songwriters_hof": {
+        "bsonType": "bool",
+        "description": "Domain attribute: inducted_songwriters_hof"
+      },
+      "primary_songwriting_instrument": {
+        "bsonType": "string",
+        "description": "Domain attribute: primary_songwriting_instrument"
+      },
+      "signature_melodic_style": {
+        "bsonType": "string",
+        "description": "Domain attribute: signature_melodic_style"
+      }
+    },
+    "additionalProperties": true
+  }
+}

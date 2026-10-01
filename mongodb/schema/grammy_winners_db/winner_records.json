@@ -1,0 +1,115 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "title": "grammy_winners_db.winner_records",
+    "description": "MongoDB collection validator for winner_records in grammy_winners_db",
+    "required": [
+      "_id",
+      "winner_record_id",
+      "nomination_id",
+      "ceremony_id",
+      "category_id",
+      "winning_work_id",
+      "primary_artist_id",
+      "broadcast_presentation_order",
+      "presented_live_on_telecast",
+      "acceptance_speech_delivered",
+      "trophy_statuettes_awarded_count",
+      "verified_timestamp"
+    ],
+    "properties": {
+      "_id": {
+        "bsonType": "string",
+        "description": "Unique primary BSON document identifier (winner_record_id)"
+      },
+      "winner_record_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: winner_record_id"
+      },
+      "nomination_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: nomination_id"
+      },
+      "ceremony_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: ceremony_id"
+      },
+      "category_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: category_id"
+      },
+      "winning_work_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: winning_work_id"
+      },
+      "primary_artist_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: primary_artist_id"
+      },
+      "broadcast_presentation_order": {
+        "bsonType": "int",
+        "description": "Domain attribute: broadcast_presentation_order"
+      },
+      "presented_live_on_telecast": {
+        "bsonType": "bool",
+        "description": "Domain attribute: presented_live_on_telecast"
+      },
+      "acceptance_speech_delivered": {
+        "bsonType": "bool",
+        "description": "Domain attribute: acceptance_speech_delivered"
+      },
+      "trophy_statuettes_awarded_count": {
+        "bsonType": "int",
+        "description": "Domain attribute: trophy_statuettes_awarded_count"
+      },
+      "verified_timestamp": {
+        "bsonType": "string",
+        "description": "Domain attribute: verified_timestamp"
+      },
+      "trophy": {
+        "bsonType": "object",
+        "description": "Embedded physical statuette fulfillment specs",
+        "properties": {
+          "trophy_id": {
+            "bsonType": "string"
+          },
+          "serial_number": {
+            "bsonType": "string"
+          },
+          "alloy_composition": {
+            "bsonType": "string"
+          },
+          "engraved_date": {
+            "bsonType": "string"
+          },
+          "status": {
+            "bsonType": "string"
+          }
+        }
+      },
+      "is_big_four_category": {
+        "bsonType": "bool",
+        "description": "Denormalized General Field flag"
+      },
+      "sweep_context": {
+        "bsonType": "object",
+        "description": "Historical sweep milestone context",
+        "properties": {
+          "is_part_of_sweep": {
+            "bsonType": "bool"
+          },
+          "sweep_type": {
+            "bsonType": "string"
+          },
+          "swept_categories": {
+            "bsonType": "array",
+            "items": {
+              "bsonType": "string"
+            }
+          }
+        }
+      }
+    },
+    "additionalProperties": true
+  }
+}

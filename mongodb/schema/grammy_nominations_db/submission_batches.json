@@ -1,0 +1,67 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "title": "grammy_nominations_db.submission_batches",
+    "description": "MongoDB collection validator for submission_batches in grammy_nominations_db",
+    "required": [
+      "_id",
+      "batch_id",
+      "ceremony_id",
+      "submitting_label_id",
+      "submission_timestamp",
+      "total_entries_count",
+      "entry_fee_total_usd",
+      "compliance_officer_name",
+      "first_round_accepted_count",
+      "disqualified_entries_count",
+      "payment_reconciliation_hash"
+    ],
+    "properties": {
+      "_id": {
+        "bsonType": "string",
+        "description": "Unique primary BSON document identifier (batch_id)"
+      },
+      "batch_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: batch_id"
+      },
+      "ceremony_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: ceremony_id"
+      },
+      "submitting_label_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: submitting_label_id"
+      },
+      "submission_timestamp": {
+        "bsonType": "string",
+        "description": "Domain attribute: submission_timestamp"
+      },
+      "total_entries_count": {
+        "bsonType": "int",
+        "description": "Domain attribute: total_entries_count"
+      },
+      "entry_fee_total_usd": {
+        "bsonType": "double",
+        "description": "Domain attribute: entry_fee_total_usd"
+      },
+      "compliance_officer_name": {
+        "bsonType": "string",
+        "description": "Domain attribute: compliance_officer_name"
+      },
+      "first_round_accepted_count": {
+        "bsonType": "int",
+        "description": "Domain attribute: first_round_accepted_count"
+      },
+      "disqualified_entries_count": {
+        "bsonType": "int",
+        "description": "Domain attribute: disqualified_entries_count"
+      },
+      "payment_reconciliation_hash": {
+        "bsonType": "string",
+        "description": "Domain attribute: payment_reconciliation_hash"
+      }
+    },
+    "additionalProperties": true
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "title": "grammy_history_db.press_media_accreditations",
+    "description": "MongoDB collection validator for press_media_accreditations in grammy_history_db",
+    "required": [
+      "_id",
+      "accreditation_id",
+      "ceremony_id",
+      "media_organization_name",
+      "media_channel_type",
+      "origin_country",
+      "passes_granted_count",
+      "red_carpet_position_tier",
+      "press_room_interview_quota",
+      "pool_broadcaster_status",
+      "compliance_clearance_status"
+    ],
+    "properties": {
+      "_id": {
+        "bsonType": "string",
+        "description": "Unique primary BSON document identifier (accreditation_id)"
+      },
+      "accreditation_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: accreditation_id"
+      },
+      "ceremony_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: ceremony_id"
+      },
+      "media_organization_name": {
+        "bsonType": "string",
+        "description": "Domain attribute: media_organization_name"
+      },
+      "media_channel_type": {
+        "bsonType": "string",
+        "description": "Domain attribute: media_channel_type"
+      },
+      "origin_country": {
+        "bsonType": "string",
+        "description": "Domain attribute: origin_country"
+      },
+      "passes_granted_count": {
+        "bsonType": "int",
+        "description": "Domain attribute: passes_granted_count"
+      },
+      "red_carpet_position_tier": {
+        "bsonType": "string",
+        "description": "Domain attribute: red_carpet_position_tier"
+      },
+      "press_room_interview_quota": {
+        "bsonType": "int",
+        "description": "Domain attribute: press_room_interview_quota"
+      },
+      "pool_broadcaster_status": {
+        "bsonType": "bool",
+        "description": "Domain attribute: pool_broadcaster_status"
+      },
+      "compliance_clearance_status": {
+        "bsonType": "string",
+        "description": "Domain attribute: compliance_clearance_status"
+      }
+    },
+    "additionalProperties": true
+  }
+}

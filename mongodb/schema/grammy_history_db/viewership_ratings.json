@@ -1,0 +1,67 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "title": "grammy_history_db.viewership_ratings",
+    "description": "MongoDB collection validator for viewership_ratings in grammy_history_db",
+    "required": [
+      "_id",
+      "rating_id",
+      "ceremony_id",
+      "us_viewers_millions",
+      "household_rating_pct",
+      "household_share_pct",
+      "demo_18_49_rating",
+      "peak_viewers_millions",
+      "peak_broadcast_segment",
+      "digital_streaming_views_millions",
+      "measurement_agency"
+    ],
+    "properties": {
+      "_id": {
+        "bsonType": "string",
+        "description": "Unique primary BSON document identifier (rating_id)"
+      },
+      "rating_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: rating_id"
+      },
+      "ceremony_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: ceremony_id"
+      },
+      "us_viewers_millions": {
+        "bsonType": "double",
+        "description": "Domain attribute: us_viewers_millions"
+      },
+      "household_rating_pct": {
+        "bsonType": "double",
+        "description": "Domain attribute: household_rating_pct"
+      },
+      "household_share_pct": {
+        "bsonType": "double",
+        "description": "Domain attribute: household_share_pct"
+      },
+      "demo_18_49_rating": {
+        "bsonType": "double",
+        "description": "Domain attribute: demo_18_49_rating"
+      },
+      "peak_viewers_millions": {
+        "bsonType": "double",
+        "description": "Domain attribute: peak_viewers_millions"
+      },
+      "peak_broadcast_segment": {
+        "bsonType": "string",
+        "description": "Domain attribute: peak_broadcast_segment"
+      },
+      "digital_streaming_views_millions": {
+        "bsonType": "double",
+        "description": "Domain attribute: digital_streaming_views_millions"
+      },
+      "measurement_agency": {
+        "bsonType": "string",
+        "description": "Domain attribute: measurement_agency"
+      }
+    },
+    "additionalProperties": true
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "title": "grammy_nominations_db.first_time_nominees",
+    "description": "MongoDB collection validator for first_time_nominees in grammy_nominations_db",
+    "required": [
+      "_id",
+      "first_nom_id",
+      "nomination_id",
+      "creator_id",
+      "debut_ceremony_edition",
+      "breakout_work_id",
+      "best_new_artist_nominated",
+      "age_at_debut_nomination",
+      "prior_uncredited_appearances",
+      "commercial_breakout_tier",
+      "career_inception_year"
+    ],
+    "properties": {
+      "_id": {
+        "bsonType": "string",
+        "description": "Unique primary BSON document identifier (first_nom_id)"
+      },
+      "first_nom_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: first_nom_id"
+      },
+      "nomination_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: nomination_id"
+      },
+      "creator_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: creator_id"
+      },
+      "debut_ceremony_edition": {
+        "bsonType": "int",
+        "description": "Domain attribute: debut_ceremony_edition"
+      },
+      "breakout_work_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: breakout_work_id"
+      },
+      "best_new_artist_nominated": {
+        "bsonType": "bool",
+        "description": "Domain attribute: best_new_artist_nominated"
+      },
+      "age_at_debut_nomination": {
+        "bsonType": "int",
+        "description": "Domain attribute: age_at_debut_nomination"
+      },
+      "prior_uncredited_appearances": {
+        "bsonType": "int",
+        "description": "Domain attribute: prior_uncredited_appearances"
+      },
+      "commercial_breakout_tier": {
+        "bsonType": "string",
+        "description": "Domain attribute: commercial_breakout_tier"
+      },
+      "career_inception_year": {
+        "bsonType": "int",
+        "description": "Domain attribute: career_inception_year"
+      }
+    },
+    "additionalProperties": true
+  }
+}

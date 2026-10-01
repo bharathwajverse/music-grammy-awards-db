@@ -1,0 +1,67 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "title": "grammy_history_db.academy_leadership",
+    "description": "MongoDB collection validator for academy_leadership in grammy_history_db",
+    "required": [
+      "_id",
+      "leadership_id",
+      "officer_name",
+      "executive_role_title",
+      "tenure_start_year",
+      "tenure_end_year",
+      "professional_music_background",
+      "trustee_chapter_location",
+      "notable_policy_amendment",
+      "board_voting_privileges",
+      "appointed_by"
+    ],
+    "properties": {
+      "_id": {
+        "bsonType": "string",
+        "description": "Unique primary BSON document identifier (leadership_id)"
+      },
+      "leadership_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: leadership_id"
+      },
+      "officer_name": {
+        "bsonType": "string",
+        "description": "Domain attribute: officer_name"
+      },
+      "executive_role_title": {
+        "bsonType": "string",
+        "description": "Domain attribute: executive_role_title"
+      },
+      "tenure_start_year": {
+        "bsonType": "int",
+        "description": "Domain attribute: tenure_start_year"
+      },
+      "tenure_end_year": {
+        "bsonType": "int",
+        "description": "Domain attribute: tenure_end_year"
+      },
+      "professional_music_background": {
+        "bsonType": "string",
+        "description": "Domain attribute: professional_music_background"
+      },
+      "trustee_chapter_location": {
+        "bsonType": "string",
+        "description": "Domain attribute: trustee_chapter_location"
+      },
+      "notable_policy_amendment": {
+        "bsonType": "string",
+        "description": "Domain attribute: notable_policy_amendment"
+      },
+      "board_voting_privileges": {
+        "bsonType": "bool",
+        "description": "Domain attribute: board_voting_privileges"
+      },
+      "appointed_by": {
+        "bsonType": "string",
+        "description": "Domain attribute: appointed_by"
+      }
+    },
+    "additionalProperties": true
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "title": "grammy_creators_db.artists",
+    "description": "MongoDB collection validator for artists in grammy_creators_db",
+    "required": [
+      "_id",
+      "artist_id",
+      "full_legal_name",
+      "stage_name",
+      "primary_musical_genre",
+      "birth_or_formation_date",
+      "country_of_citizenship",
+      "active_career_start_year",
+      "is_group_ensemble_flag",
+      "musicbrainz_artist_gid",
+      "official_website_url",
+      "biography_overview"
+    ],
+    "properties": {
+      "_id": {
+        "bsonType": "string",
+        "description": "Unique primary BSON document identifier (artist_id)"
+      },
+      "artist_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: artist_id"
+      },
+      "full_legal_name": {
+        "bsonType": "string",
+        "description": "Domain attribute: full_legal_name"
+      },
+      "stage_name": {
+        "bsonType": "string",
+        "description": "Domain attribute: stage_name"
+      },
+      "primary_musical_genre": {
+        "bsonType": "string",
+        "description": "Domain attribute: primary_musical_genre"
+      },
+      "birth_or_formation_date": {
+        "bsonType": "string",
+        "description": "Domain attribute: birth_or_formation_date"
+      },
+      "country_of_citizenship": {
+        "bsonType": "string",
+        "description": "Domain attribute: country_of_citizenship"
+      },
+      "active_career_start_year": {
+        "bsonType": "int",
+        "description": "Domain attribute: active_career_start_year"
+      },
+      "is_group_ensemble_flag": {
+        "bsonType": "bool",
+        "description": "Domain attribute: is_group_ensemble_flag"
+      },
+      "musicbrainz_artist_gid": {
+        "bsonType": "string",
+        "description": "Domain attribute: musicbrainz_artist_gid"
+      },
+      "official_website_url": {
+        "bsonType": "string",
+        "description": "Domain attribute: official_website_url"
+      },
+      "biography_overview": {
+        "bsonType": "string",
+        "description": "Domain attribute: biography_overview"
+      },
+      "instruments": {
+        "bsonType": "array",
+        "description": "Orthogonal 4NF musical instrument competencies",
+        "items": {
+          "bsonType": "string"
+        }
+      },
+      "pro_affiliations": {
+        "bsonType": "array",
+        "description": "Orthogonal 4NF performing rights organizations",
+        "items": {
+          "bsonType": "string"
+        }
+      },
+      "groups": {
+        "bsonType": "array",
+        "description": "Embedded summaries of musical group memberships",
+        "items": {
+          "bsonType": "object",
+          "properties": {
+            "group_id": {
+              "bsonType": "string"
+            },
+            "group_name": {
+              "bsonType": "string"
+            }
+          }
+        }
+      }
+    },
+    "additionalProperties": true
+  }
+}

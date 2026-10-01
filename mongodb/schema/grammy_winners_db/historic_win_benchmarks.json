@@ -1,0 +1,67 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "title": "grammy_winners_db.historic_win_benchmarks",
+    "description": "MongoDB collection validator for historic_win_benchmarks in grammy_winners_db",
+    "required": [
+      "_id",
+      "benchmark_id",
+      "benchmark_title",
+      "qualifying_win_threshold",
+      "total_qualifying_creators",
+      "pioneering_creator_id",
+      "year_threshold_first_achieved",
+      "most_recent_qualifier_id",
+      "egot_component_flag",
+      "rarity_index_score",
+      "hall_of_records_citation"
+    ],
+    "properties": {
+      "_id": {
+        "bsonType": "string",
+        "description": "Unique primary BSON document identifier (benchmark_id)"
+      },
+      "benchmark_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: benchmark_id"
+      },
+      "benchmark_title": {
+        "bsonType": "string",
+        "description": "Domain attribute: benchmark_title"
+      },
+      "qualifying_win_threshold": {
+        "bsonType": "int",
+        "description": "Domain attribute: qualifying_win_threshold"
+      },
+      "total_qualifying_creators": {
+        "bsonType": "int",
+        "description": "Domain attribute: total_qualifying_creators"
+      },
+      "pioneering_creator_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: pioneering_creator_id"
+      },
+      "year_threshold_first_achieved": {
+        "bsonType": "int",
+        "description": "Domain attribute: year_threshold_first_achieved"
+      },
+      "most_recent_qualifier_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: most_recent_qualifier_id"
+      },
+      "egot_component_flag": {
+        "bsonType": "bool",
+        "description": "Domain attribute: egot_component_flag"
+      },
+      "rarity_index_score": {
+        "bsonType": "double",
+        "description": "Domain attribute: rarity_index_score"
+      },
+      "hall_of_records_citation": {
+        "bsonType": "string",
+        "description": "Domain attribute: hall_of_records_citation"
+      }
+    },
+    "additionalProperties": true
+  }
+}

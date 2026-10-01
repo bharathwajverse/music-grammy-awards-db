@@ -1,0 +1,67 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "title": "grammy_creators_db.group_memberships",
+    "description": "MongoDB collection validator for group_memberships in grammy_creators_db",
+    "required": [
+      "_id",
+      "membership_id",
+      "group_id",
+      "artist_id",
+      "role_within_group",
+      "tenure_start_year",
+      "tenure_end_year",
+      "is_founding_member",
+      "is_primary_frontperson",
+      "royalty_split_contract_percentage",
+      "member_departure_reason"
+    ],
+    "properties": {
+      "_id": {
+        "bsonType": "string",
+        "description": "Unique primary BSON document identifier (membership_id)"
+      },
+      "membership_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: membership_id"
+      },
+      "group_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: group_id"
+      },
+      "artist_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: artist_id"
+      },
+      "role_within_group": {
+        "bsonType": "string",
+        "description": "Domain attribute: role_within_group"
+      },
+      "tenure_start_year": {
+        "bsonType": "int",
+        "description": "Domain attribute: tenure_start_year"
+      },
+      "tenure_end_year": {
+        "bsonType": "int",
+        "description": "Domain attribute: tenure_end_year"
+      },
+      "is_founding_member": {
+        "bsonType": "bool",
+        "description": "Domain attribute: is_founding_member"
+      },
+      "is_primary_frontperson": {
+        "bsonType": "bool",
+        "description": "Domain attribute: is_primary_frontperson"
+      },
+      "royalty_split_contract_percentage": {
+        "bsonType": "double",
+        "description": "Domain attribute: royalty_split_contract_percentage"
+      },
+      "member_departure_reason": {
+        "bsonType": "string",
+        "description": "Domain attribute: member_departure_reason"
+      }
+    },
+    "additionalProperties": true
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "title": "grammy_winners_db.big_four_sweeps",
+    "description": "MongoDB collection validator for big_four_sweeps in grammy_winners_db",
+    "required": [
+      "_id",
+      "sweep_id",
+      "ceremony_id",
+      "creator_id",
+      "sweep_achievement_type",
+      "aoty_nomination_id",
+      "roty_nomination_id",
+      "soty_nomination_id",
+      "bna_nomination_id",
+      "sweep_calendar_year",
+      "career_significance_rating"
+    ],
+    "properties": {
+      "_id": {
+        "bsonType": "string",
+        "description": "Unique primary BSON document identifier (sweep_id)"
+      },
+      "sweep_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: sweep_id"
+      },
+      "ceremony_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: ceremony_id"
+      },
+      "creator_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: creator_id"
+      },
+      "sweep_achievement_type": {
+        "bsonType": "string",
+        "description": "Domain attribute: sweep_achievement_type"
+      },
+      "aoty_nomination_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: aoty_nomination_id"
+      },
+      "roty_nomination_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: roty_nomination_id"
+      },
+      "soty_nomination_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: soty_nomination_id"
+      },
+      "bna_nomination_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: bna_nomination_id"
+      },
+      "sweep_calendar_year": {
+        "bsonType": "int",
+        "description": "Domain attribute: sweep_calendar_year"
+      },
+      "career_significance_rating": {
+        "bsonType": "string",
+        "description": "Domain attribute: career_significance_rating"
+      }
+    },
+    "additionalProperties": true
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "title": "grammy_nominations_db.voter_screening_batches",
+    "description": "MongoDB collection validator for voter_screening_batches in grammy_nominations_db",
+    "required": [
+      "_id",
+      "screening_batch_id",
+      "ceremony_id",
+      "field_id",
+      "panel_chair_creator_id",
+      "session_start_timestamp",
+      "session_end_timestamp",
+      "works_screened_count",
+      "disqualifications_ordered",
+      "quorum_certified",
+      "panel_confidentiality_hash"
+    ],
+    "properties": {
+      "_id": {
+        "bsonType": "string",
+        "description": "Unique primary BSON document identifier (screening_batch_id)"
+      },
+      "screening_batch_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: screening_batch_id"
+      },
+      "ceremony_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: ceremony_id"
+      },
+      "field_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: field_id"
+      },
+      "panel_chair_creator_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: panel_chair_creator_id"
+      },
+      "session_start_timestamp": {
+        "bsonType": "string",
+        "description": "Domain attribute: session_start_timestamp"
+      },
+      "session_end_timestamp": {
+        "bsonType": "string",
+        "description": "Domain attribute: session_end_timestamp"
+      },
+      "works_screened_count": {
+        "bsonType": "int",
+        "description": "Domain attribute: works_screened_count"
+      },
+      "disqualifications_ordered": {
+        "bsonType": "int",
+        "description": "Domain attribute: disqualifications_ordered"
+      },
+      "quorum_certified": {
+        "bsonType": "bool",
+        "description": "Domain attribute: quorum_certified"
+      },
+      "panel_confidentiality_hash": {
+        "bsonType": "string",
+        "description": "Domain attribute: panel_confidentiality_hash"
+      }
+    },
+    "additionalProperties": true
+  }
+}

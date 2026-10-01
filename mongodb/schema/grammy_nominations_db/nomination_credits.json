@@ -1,0 +1,67 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "title": "grammy_nominations_db.nomination_credits",
+    "description": "MongoDB collection validator for nomination_credits in grammy_nominations_db",
+    "required": [
+      "_id",
+      "credit_id",
+      "nomination_id",
+      "creator_id",
+      "credit_role",
+      "credit_billing_rank",
+      "work_contribution_summary",
+      "contribution_percentage",
+      "is_lead_performer",
+      "is_producer_credit",
+      "academy_verified_status"
+    ],
+    "properties": {
+      "_id": {
+        "bsonType": "string",
+        "description": "Unique primary BSON document identifier (credit_id)"
+      },
+      "credit_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: credit_id"
+      },
+      "nomination_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: nomination_id"
+      },
+      "creator_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: creator_id"
+      },
+      "credit_role": {
+        "bsonType": "string",
+        "description": "Domain attribute: credit_role"
+      },
+      "credit_billing_rank": {
+        "bsonType": "int",
+        "description": "Domain attribute: credit_billing_rank"
+      },
+      "work_contribution_summary": {
+        "bsonType": "string",
+        "description": "Domain attribute: work_contribution_summary"
+      },
+      "contribution_percentage": {
+        "bsonType": "double",
+        "description": "Domain attribute: contribution_percentage"
+      },
+      "is_lead_performer": {
+        "bsonType": "bool",
+        "description": "Domain attribute: is_lead_performer"
+      },
+      "is_producer_credit": {
+        "bsonType": "bool",
+        "description": "Domain attribute: is_producer_credit"
+      },
+      "academy_verified_status": {
+        "bsonType": "bool",
+        "description": "Domain attribute: academy_verified_status"
+      }
+    },
+    "additionalProperties": true
+  }
+}

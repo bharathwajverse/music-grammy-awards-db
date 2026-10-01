@@ -1,0 +1,67 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "title": "grammy_winners_db.winner_press_releases",
+    "description": "MongoDB collection validator for winner_press_releases in grammy_winners_db",
+    "required": [
+      "_id",
+      "release_id",
+      "ceremony_id",
+      "release_headline",
+      "publication_timestamp_utc",
+      "headlining_creator_ids",
+      "telecast_highlights_summary",
+      "pr_communications_director",
+      "syndication_wire_distribution",
+      "press_asset_bundle_url",
+      "archival_digest_id"
+    ],
+    "properties": {
+      "_id": {
+        "bsonType": "string",
+        "description": "Unique primary BSON document identifier (release_id)"
+      },
+      "release_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: release_id"
+      },
+      "ceremony_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: ceremony_id"
+      },
+      "release_headline": {
+        "bsonType": "string",
+        "description": "Domain attribute: release_headline"
+      },
+      "publication_timestamp_utc": {
+        "bsonType": "string",
+        "description": "Domain attribute: publication_timestamp_utc"
+      },
+      "headlining_creator_ids": {
+        "bsonType": "array",
+        "description": "Domain attribute: headlining_creator_ids"
+      },
+      "telecast_highlights_summary": {
+        "bsonType": "string",
+        "description": "Domain attribute: telecast_highlights_summary"
+      },
+      "pr_communications_director": {
+        "bsonType": "string",
+        "description": "Domain attribute: pr_communications_director"
+      },
+      "syndication_wire_distribution": {
+        "bsonType": "array",
+        "description": "Domain attribute: syndication_wire_distribution"
+      },
+      "press_asset_bundle_url": {
+        "bsonType": "string",
+        "description": "Domain attribute: press_asset_bundle_url"
+      },
+      "archival_digest_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: archival_digest_id"
+      }
+    },
+    "additionalProperties": true
+  }
+}

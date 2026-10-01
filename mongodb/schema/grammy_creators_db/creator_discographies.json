@@ -1,0 +1,67 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "title": "grammy_creators_db.creator_discographies",
+    "description": "MongoDB collection validator for creator_discographies in grammy_creators_db",
+    "required": [
+      "_id",
+      "discography_id",
+      "creator_id",
+      "work_id",
+      "release_calendar_year",
+      "primary_credit_type",
+      "catalog_matrix_code",
+      "billboard_200_peak_position",
+      "riaa_certification_status",
+      "recording_studio_facility",
+      "master_rights_holder_label_id"
+    ],
+    "properties": {
+      "_id": {
+        "bsonType": "string",
+        "description": "Unique primary BSON document identifier (discography_id)"
+      },
+      "discography_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: discography_id"
+      },
+      "creator_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: creator_id"
+      },
+      "work_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: work_id"
+      },
+      "release_calendar_year": {
+        "bsonType": "int",
+        "description": "Domain attribute: release_calendar_year"
+      },
+      "primary_credit_type": {
+        "bsonType": "string",
+        "description": "Domain attribute: primary_credit_type"
+      },
+      "catalog_matrix_code": {
+        "bsonType": "string",
+        "description": "Domain attribute: catalog_matrix_code"
+      },
+      "billboard_200_peak_position": {
+        "bsonType": "int",
+        "description": "Domain attribute: billboard_200_peak_position"
+      },
+      "riaa_certification_status": {
+        "bsonType": "string",
+        "description": "Domain attribute: riaa_certification_status"
+      },
+      "recording_studio_facility": {
+        "bsonType": "string",
+        "description": "Domain attribute: recording_studio_facility"
+      },
+      "master_rights_holder_label_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: master_rights_holder_label_id"
+      }
+    },
+    "additionalProperties": true
+  }
+}

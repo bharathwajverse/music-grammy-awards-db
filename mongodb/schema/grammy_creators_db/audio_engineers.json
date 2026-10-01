@@ -1,0 +1,67 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "title": "grammy_creators_db.audio_engineers",
+    "description": "MongoDB collection validator for audio_engineers in grammy_creators_db",
+    "required": [
+      "_id",
+      "engineer_id",
+      "creator_id",
+      "engineering_specialization",
+      "primary_mastering_facility",
+      "hardware_console_credits",
+      "dolby_atmos_certified_status",
+      "aes_professional_membership",
+      "first_album_engineering_year",
+      "technical_patents_held",
+      "discogs_engineer_id"
+    ],
+    "properties": {
+      "_id": {
+        "bsonType": "string",
+        "description": "Unique primary BSON document identifier (engineer_id)"
+      },
+      "engineer_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: engineer_id"
+      },
+      "creator_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: creator_id"
+      },
+      "engineering_specialization": {
+        "bsonType": "string",
+        "description": "Domain attribute: engineering_specialization"
+      },
+      "primary_mastering_facility": {
+        "bsonType": "string",
+        "description": "Domain attribute: primary_mastering_facility"
+      },
+      "hardware_console_credits": {
+        "bsonType": "string",
+        "description": "Domain attribute: hardware_console_credits"
+      },
+      "dolby_atmos_certified_status": {
+        "bsonType": "bool",
+        "description": "Domain attribute: dolby_atmos_certified_status"
+      },
+      "aes_professional_membership": {
+        "bsonType": "bool",
+        "description": "Domain attribute: aes_professional_membership"
+      },
+      "first_album_engineering_year": {
+        "bsonType": "int",
+        "description": "Domain attribute: first_album_engineering_year"
+      },
+      "technical_patents_held": {
+        "bsonType": "int",
+        "description": "Domain attribute: technical_patents_held"
+      },
+      "discogs_engineer_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: discogs_engineer_id"
+      }
+    },
+    "additionalProperties": true
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "title": "grammy_history_db.ceremonies",
+    "description": "MongoDB collection validator for ceremonies in grammy_history_db",
+    "required": [
+      "_id",
+      "ceremony_id",
+      "edition_number",
+      "ceremony_date",
+      "broadcast_year",
+      "eligibility_period_start",
+      "eligibility_period_end",
+      "host_city",
+      "venue_id",
+      "primary_network",
+      "total_awards_presented",
+      "created_at"
+    ],
+    "properties": {
+      "_id": {
+        "bsonType": "string",
+        "description": "Unique primary BSON document identifier (ceremony_id)"
+      },
+      "ceremony_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: ceremony_id"
+      },
+      "edition_number": {
+        "bsonType": "int",
+        "description": "Domain attribute: edition_number"
+      },
+      "ceremony_date": {
+        "bsonType": "string",
+        "description": "Domain attribute: ceremony_date"
+      },
+      "broadcast_year": {
+        "bsonType": "int",
+        "description": "Domain attribute: broadcast_year"
+      },
+      "eligibility_period_start": {
+        "bsonType": "string",
+        "description": "Domain attribute: eligibility_period_start"
+      },
+      "eligibility_period_end": {
+        "bsonType": "string",
+        "description": "Domain attribute: eligibility_period_end"
+      },
+      "host_city": {
+        "bsonType": "string",
+        "description": "Domain attribute: host_city"
+      },
+      "venue_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: venue_id"
+      },
+      "primary_network": {
+        "bsonType": "string",
+        "description": "Domain attribute: primary_network"
+      },
+      "total_awards_presented": {
+        "bsonType": "int",
+        "description": "Domain attribute: total_awards_presented"
+      },
+      "created_at": {
+        "bsonType": "string",
+        "description": "Domain attribute: created_at"
+      },
+      "venue": {
+        "bsonType": "object",
+        "description": "Embedded extended reference of host venue",
+        "required": [
+          "venue_id",
+          "venue_name",
+          "city"
+        ],
+        "properties": {
+          "venue_id": {
+            "bsonType": "string",
+            "description": "Venue foreign key"
+          },
+          "venue_name": {
+            "bsonType": "string",
+            "description": "Venue display name"
+          },
+          "city": {
+            "bsonType": "string",
+            "description": "Host city"
+          },
+          "state": {
+            "bsonType": "string",
+            "description": "Host state or region"
+          },
+          "seating_capacity": {
+            "bsonType": "int",
+            "description": "Auditorium capacity"
+          }
+        }
+      },
+      "hosts": {
+        "bsonType": "array",
+        "description": "Embedded list of broadcast hosts",
+        "items": {
+          "bsonType": "object",
+          "required": [
+            "host_name",
+            "host_role"
+          ],
+          "properties": {
+            "host_name": {
+              "bsonType": "string"
+            },
+            "host_role": {
+              "bsonType": "string"
+            },
+            "consecutive_year": {
+              "bsonType": "int"
+            }
+          }
+        }
+      }
+    },
+    "additionalProperties": true
+  }
+}

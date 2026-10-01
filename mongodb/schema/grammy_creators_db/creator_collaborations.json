@@ -1,0 +1,67 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "title": "grammy_creators_db.creator_collaborations",
+    "description": "MongoDB collection validator for creator_collaborations in grammy_creators_db",
+    "required": [
+      "_id",
+      "collab_id",
+      "work_id",
+      "creator_a_id",
+      "creator_b_id",
+      "collaboration_nature",
+      "billing_credit_format",
+      "publishing_split_percentage",
+      "joint_grammy_nominations_count",
+      "clearance_agreement_date",
+      "inter_label_licensing_waiver"
+    ],
+    "properties": {
+      "_id": {
+        "bsonType": "string",
+        "description": "Unique primary BSON document identifier (collab_id)"
+      },
+      "collab_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: collab_id"
+      },
+      "work_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: work_id"
+      },
+      "creator_a_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: creator_a_id"
+      },
+      "creator_b_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: creator_b_id"
+      },
+      "collaboration_nature": {
+        "bsonType": "string",
+        "description": "Domain attribute: collaboration_nature"
+      },
+      "billing_credit_format": {
+        "bsonType": "string",
+        "description": "Domain attribute: billing_credit_format"
+      },
+      "publishing_split_percentage": {
+        "bsonType": "double",
+        "description": "Domain attribute: publishing_split_percentage"
+      },
+      "joint_grammy_nominations_count": {
+        "bsonType": "int",
+        "description": "Domain attribute: joint_grammy_nominations_count"
+      },
+      "clearance_agreement_date": {
+        "bsonType": "string",
+        "description": "Domain attribute: clearance_agreement_date"
+      },
+      "inter_label_licensing_waiver": {
+        "bsonType": "string",
+        "description": "Domain attribute: inter_label_licensing_waiver"
+      }
+    },
+    "additionalProperties": true
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "title": "grammy_nominations_db.nominated_works",
+    "description": "MongoDB collection validator for nominated_works in grammy_nominations_db",
+    "required": [
+      "_id",
+      "work_id",
+      "work_type",
+      "work_title",
+      "commercial_release_date",
+      "primary_label_id",
+      "isrc_code",
+      "upc_barcode",
+      "duration_total_seconds",
+      "track_count",
+      "parental_advisory_flag",
+      "language_iso_code"
+    ],
+    "properties": {
+      "_id": {
+        "bsonType": "string",
+        "description": "Unique primary BSON document identifier (work_id)"
+      },
+      "work_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: work_id"
+      },
+      "work_type": {
+        "bsonType": "string",
+        "description": "Domain attribute: work_type"
+      },
+      "work_title": {
+        "bsonType": "string",
+        "description": "Domain attribute: work_title"
+      },
+      "commercial_release_date": {
+        "bsonType": "string",
+        "description": "Domain attribute: commercial_release_date"
+      },
+      "primary_label_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: primary_label_id"
+      },
+      "isrc_code": {
+        "bsonType": "string",
+        "description": "Domain attribute: isrc_code"
+      },
+      "upc_barcode": {
+        "bsonType": "string",
+        "description": "Domain attribute: upc_barcode"
+      },
+      "duration_total_seconds": {
+        "bsonType": "int",
+        "description": "Domain attribute: duration_total_seconds"
+      },
+      "track_count": {
+        "bsonType": "int",
+        "description": "Domain attribute: track_count"
+      },
+      "parental_advisory_flag": {
+        "bsonType": "bool",
+        "description": "Domain attribute: parental_advisory_flag"
+      },
+      "language_iso_code": {
+        "bsonType": "string",
+        "description": "Domain attribute: language_iso_code"
+      },
+      "record_label": {
+        "bsonType": "object",
+        "description": "Embedded record label imprint",
+        "required": [
+          "label_id",
+          "label_name"
+        ],
+        "properties": {
+          "label_id": {
+            "bsonType": "string"
+          },
+          "label_name": {
+            "bsonType": "string"
+          },
+          "parent_conglomerate": {
+            "bsonType": "string"
+          }
+        }
+      },
+      "genres": {
+        "bsonType": "array",
+        "description": "Embedded scalar genre tags",
+        "items": {
+          "bsonType": "string"
+        }
+      }
+    },
+    "additionalProperties": true
+  }
+}

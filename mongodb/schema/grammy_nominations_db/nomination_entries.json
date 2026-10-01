@@ -1,0 +1,102 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "title": "grammy_nominations_db.nomination_entries",
+    "description": "MongoDB collection validator for nomination_entries in grammy_nominations_db",
+    "required": [
+      "_id",
+      "nomination_id",
+      "ceremony_id",
+      "category_id",
+      "work_id",
+      "nomination_year",
+      "entry_billing_title",
+      "primary_artist_id",
+      "is_winner_flag",
+      "ballot_slot_order",
+      "auditor_validation_code",
+      "created_timestamp"
+    ],
+    "properties": {
+      "_id": {
+        "bsonType": "string",
+        "description": "Unique primary BSON document identifier (nomination_id)"
+      },
+      "nomination_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: nomination_id"
+      },
+      "ceremony_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: ceremony_id"
+      },
+      "category_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: category_id"
+      },
+      "work_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: work_id"
+      },
+      "nomination_year": {
+        "bsonType": "int",
+        "description": "Domain attribute: nomination_year"
+      },
+      "entry_billing_title": {
+        "bsonType": "string",
+        "description": "Domain attribute: entry_billing_title"
+      },
+      "primary_artist_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: primary_artist_id"
+      },
+      "is_winner_flag": {
+        "bsonType": "bool",
+        "description": "Domain attribute: is_winner_flag"
+      },
+      "ballot_slot_order": {
+        "bsonType": "int",
+        "description": "Domain attribute: ballot_slot_order"
+      },
+      "auditor_validation_code": {
+        "bsonType": "string",
+        "description": "Domain attribute: auditor_validation_code"
+      },
+      "created_timestamp": {
+        "bsonType": "string",
+        "description": "Domain attribute: created_timestamp"
+      },
+      "credited_talent": {
+        "bsonType": "array",
+        "description": "Embedded array of credited personnel on nomination",
+        "items": {
+          "bsonType": "object",
+          "required": [
+            "credit_id",
+            "creator_id",
+            "creator_name",
+            "credit_role"
+          ],
+          "properties": {
+            "credit_id": {
+              "bsonType": "string"
+            },
+            "creator_id": {
+              "bsonType": "string"
+            },
+            "creator_name": {
+              "bsonType": "string"
+            },
+            "credit_role": {
+              "bsonType": "string"
+            },
+            "contribution_percentage": {
+              "bsonType": "double"
+            }
+          }
+        }
+      }
+    },
+    "additionalProperties": true
+  }
+}

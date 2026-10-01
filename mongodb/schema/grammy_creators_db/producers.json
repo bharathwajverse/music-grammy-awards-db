@@ -1,0 +1,81 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "title": "grammy_creators_db.producers",
+    "description": "MongoDB collection validator for producers in grammy_creators_db",
+    "required": [
+      "_id",
+      "producer_id",
+      "creator_id",
+      "primary_production_genre",
+      "headquarters_studio_location",
+      "production_company_affiliation",
+      "analog_digital_workflow_preference",
+      "total_career_credits_count",
+      "discogs_producer_id",
+      "first_notable_production_year",
+      "signature_sound_profile"
+    ],
+    "properties": {
+      "_id": {
+        "bsonType": "string",
+        "description": "Unique primary BSON document identifier (producer_id)"
+      },
+      "producer_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: producer_id"
+      },
+      "creator_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: creator_id"
+      },
+      "primary_production_genre": {
+        "bsonType": "string",
+        "description": "Domain attribute: primary_production_genre"
+      },
+      "headquarters_studio_location": {
+        "bsonType": "string",
+        "description": "Domain attribute: headquarters_studio_location"
+      },
+      "production_company_affiliation": {
+        "bsonType": "string",
+        "description": "Domain attribute: production_company_affiliation"
+      },
+      "analog_digital_workflow_preference": {
+        "bsonType": "string",
+        "description": "Domain attribute: analog_digital_workflow_preference"
+      },
+      "total_career_credits_count": {
+        "bsonType": "int",
+        "description": "Domain attribute: total_career_credits_count"
+      },
+      "discogs_producer_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: discogs_producer_id"
+      },
+      "first_notable_production_year": {
+        "bsonType": "int",
+        "description": "Domain attribute: first_notable_production_year"
+      },
+      "signature_sound_profile": {
+        "bsonType": "string",
+        "description": "Domain attribute: signature_sound_profile"
+      },
+      "certified_workflows": {
+        "bsonType": "array",
+        "description": "5NF multi-key certified acoustic and spatial mixing workflows",
+        "items": {
+          "bsonType": "string"
+        }
+      },
+      "eligible_categories": {
+        "bsonType": "array",
+        "description": "Categories admissible for producer submissions",
+        "items": {
+          "bsonType": "string"
+        }
+      }
+    },
+    "additionalProperties": true
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "title": "grammy_winners_db.trophy_tracking",
+    "description": "MongoDB collection validator for trophy_tracking in grammy_winners_db",
+    "required": [
+      "_id",
+      "trophy_id",
+      "winner_record_id",
+      "recipient_creator_id",
+      "statuette_serial_number",
+      "engraved_billing_text",
+      "manufacturing_foundry_name",
+      "grammium_alloy_specification",
+      "gold_plating_thickness_microns",
+      "dispatch_shipment_date",
+      "custody_receipt_hash"
+    ],
+    "properties": {
+      "_id": {
+        "bsonType": "string",
+        "description": "Unique primary BSON document identifier (trophy_id)"
+      },
+      "trophy_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: trophy_id"
+      },
+      "winner_record_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: winner_record_id"
+      },
+      "recipient_creator_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: recipient_creator_id"
+      },
+      "statuette_serial_number": {
+        "bsonType": "string",
+        "description": "Domain attribute: statuette_serial_number"
+      },
+      "engraved_billing_text": {
+        "bsonType": "string",
+        "description": "Domain attribute: engraved_billing_text"
+      },
+      "manufacturing_foundry_name": {
+        "bsonType": "string",
+        "description": "Domain attribute: manufacturing_foundry_name"
+      },
+      "grammium_alloy_specification": {
+        "bsonType": "string",
+        "description": "Domain attribute: grammium_alloy_specification"
+      },
+      "gold_plating_thickness_microns": {
+        "bsonType": "double",
+        "description": "Domain attribute: gold_plating_thickness_microns"
+      },
+      "dispatch_shipment_date": {
+        "bsonType": "string",
+        "description": "Domain attribute: dispatch_shipment_date"
+      },
+      "custody_receipt_hash": {
+        "bsonType": "string",
+        "description": "Domain attribute: custody_receipt_hash"
+      }
+    },
+    "additionalProperties": true
+  }
+}

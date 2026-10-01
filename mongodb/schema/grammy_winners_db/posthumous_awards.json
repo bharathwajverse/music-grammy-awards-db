@@ -1,0 +1,67 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "title": "grammy_winners_db.posthumous_awards",
+    "description": "MongoDB collection validator for posthumous_awards in grammy_winners_db",
+    "required": [
+      "_id",
+      "posthumous_id",
+      "winner_record_id",
+      "deceased_creator_id",
+      "date_of_passing",
+      "award_ceremony_date",
+      "accepted_by_representative",
+      "representative_legal_relationship",
+      "in_memoriam_segment_aired",
+      "estate_concurrence_status",
+      "tribute_performance_id"
+    ],
+    "properties": {
+      "_id": {
+        "bsonType": "string",
+        "description": "Unique primary BSON document identifier (posthumous_id)"
+      },
+      "posthumous_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: posthumous_id"
+      },
+      "winner_record_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: winner_record_id"
+      },
+      "deceased_creator_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: deceased_creator_id"
+      },
+      "date_of_passing": {
+        "bsonType": "string",
+        "description": "Domain attribute: date_of_passing"
+      },
+      "award_ceremony_date": {
+        "bsonType": "string",
+        "description": "Domain attribute: award_ceremony_date"
+      },
+      "accepted_by_representative": {
+        "bsonType": "string",
+        "description": "Domain attribute: accepted_by_representative"
+      },
+      "representative_legal_relationship": {
+        "bsonType": "string",
+        "description": "Domain attribute: representative_legal_relationship"
+      },
+      "in_memoriam_segment_aired": {
+        "bsonType": "bool",
+        "description": "Domain attribute: in_memoriam_segment_aired"
+      },
+      "estate_concurrence_status": {
+        "bsonType": "string",
+        "description": "Domain attribute: estate_concurrence_status"
+      },
+      "tribute_performance_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: tribute_performance_id"
+      }
+    },
+    "additionalProperties": true
+  }
+}

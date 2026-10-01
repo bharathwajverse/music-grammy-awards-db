@@ -1,0 +1,67 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "title": "grammy_categories_db.special_merit_categories",
+    "description": "MongoDB collection validator for special_merit_categories in grammy_categories_db",
+    "required": [
+      "_id",
+      "special_merit_id",
+      "award_title",
+      "conferral_frequency",
+      "governing_board_supermajority_pct",
+      "candidate_selection_protocol",
+      "trophy_or_plaque_type",
+      "first_conferred_year",
+      "target_industry_discipline",
+      "peer_nomination_permitted",
+      "ceremony_segment_placement"
+    ],
+    "properties": {
+      "_id": {
+        "bsonType": "string",
+        "description": "Unique primary BSON document identifier (special_merit_id)"
+      },
+      "special_merit_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: special_merit_id"
+      },
+      "award_title": {
+        "bsonType": "string",
+        "description": "Domain attribute: award_title"
+      },
+      "conferral_frequency": {
+        "bsonType": "string",
+        "description": "Domain attribute: conferral_frequency"
+      },
+      "governing_board_supermajority_pct": {
+        "bsonType": "double",
+        "description": "Domain attribute: governing_board_supermajority_pct"
+      },
+      "candidate_selection_protocol": {
+        "bsonType": "string",
+        "description": "Domain attribute: candidate_selection_protocol"
+      },
+      "trophy_or_plaque_type": {
+        "bsonType": "string",
+        "description": "Domain attribute: trophy_or_plaque_type"
+      },
+      "first_conferred_year": {
+        "bsonType": "int",
+        "description": "Domain attribute: first_conferred_year"
+      },
+      "target_industry_discipline": {
+        "bsonType": "string",
+        "description": "Domain attribute: target_industry_discipline"
+      },
+      "peer_nomination_permitted": {
+        "bsonType": "bool",
+        "description": "Domain attribute: peer_nomination_permitted"
+      },
+      "ceremony_segment_placement": {
+        "bsonType": "string",
+        "description": "Domain attribute: ceremony_segment_placement"
+      }
+    },
+    "additionalProperties": true
+  }
+}

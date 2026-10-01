@@ -193,6 +193,10 @@ Detailed design documents are maintained in [`docs/`](docs/):
 - **Physical Schema Denormalization (Phase 10)**:
   - [MongoDB Denormalization Decisions Catalog (12 Architecture Decisions)](denormalization/decisions.md)
   - [Embedding vs. Referencing Decision Framework & Anti-Pattern Prevention](denormalization/embed-vs-reference.md)
+- **MongoDB Document Model & Validators (Phase 11)**:
+  - [Master MongoDB Document Model Architecture](docs/mongodb-design.md)
+  - [Master Collection Specifications Catalog (All 50 Collections)](mongodb/collection-specifications/README.md)
+  - [Physical MongoDB Collection Validators Directory](mongodb/schema/README.md)
 - **Data Provenance & Licensing**: [`docs/data_sources_and_licensing.md`](docs/data_sources_and_licensing.md)
 - **Curriculum Syllabus Mapping**: [`docs/syllabus_mapping.md`](docs/syllabus_mapping.md)
 

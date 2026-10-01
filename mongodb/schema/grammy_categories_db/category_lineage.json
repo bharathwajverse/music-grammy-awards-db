@@ -1,0 +1,67 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "title": "grammy_categories_db.category_lineage",
+    "description": "MongoDB collection validator for category_lineage in grammy_categories_db",
+    "required": [
+      "_id",
+      "lineage_id",
+      "category_id",
+      "predecessor_category_name",
+      "successor_category_name",
+      "effective_ceremony_edition",
+      "transition_classification",
+      "structural_rationale",
+      "nominee_slate_impact_count",
+      "trustee_resolution_reference",
+      "ballot_clarification_bulletin"
+    ],
+    "properties": {
+      "_id": {
+        "bsonType": "string",
+        "description": "Unique primary BSON document identifier (lineage_id)"
+      },
+      "lineage_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: lineage_id"
+      },
+      "category_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: category_id"
+      },
+      "predecessor_category_name": {
+        "bsonType": "string",
+        "description": "Domain attribute: predecessor_category_name"
+      },
+      "successor_category_name": {
+        "bsonType": "string",
+        "description": "Domain attribute: successor_category_name"
+      },
+      "effective_ceremony_edition": {
+        "bsonType": "int",
+        "description": "Domain attribute: effective_ceremony_edition"
+      },
+      "transition_classification": {
+        "bsonType": "string",
+        "description": "Domain attribute: transition_classification"
+      },
+      "structural_rationale": {
+        "bsonType": "string",
+        "description": "Domain attribute: structural_rationale"
+      },
+      "nominee_slate_impact_count": {
+        "bsonType": "int",
+        "description": "Domain attribute: nominee_slate_impact_count"
+      },
+      "trustee_resolution_reference": {
+        "bsonType": "string",
+        "description": "Domain attribute: trustee_resolution_reference"
+      },
+      "ballot_clarification_bulletin": {
+        "bsonType": "string",
+        "description": "Domain attribute: ballot_clarification_bulletin"
+      }
+    },
+    "additionalProperties": true
+  }
+}

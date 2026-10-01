@@ -1,0 +1,67 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "title": "grammy_nominations_db.genre_classifications",
+    "description": "MongoDB collection validator for genre_classifications in grammy_nominations_db",
+    "required": [
+      "_id",
+      "classification_id",
+      "work_id",
+      "submitted_field_id",
+      "assigned_field_id",
+      "primary_genre_tag",
+      "secondary_genre_tags",
+      "screening_committee_consensus",
+      "contested_by_label_flag",
+      "reclassification_justification",
+      "determination_date"
+    ],
+    "properties": {
+      "_id": {
+        "bsonType": "string",
+        "description": "Unique primary BSON document identifier (classification_id)"
+      },
+      "classification_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: classification_id"
+      },
+      "work_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: work_id"
+      },
+      "submitted_field_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: submitted_field_id"
+      },
+      "assigned_field_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: assigned_field_id"
+      },
+      "primary_genre_tag": {
+        "bsonType": "string",
+        "description": "Domain attribute: primary_genre_tag"
+      },
+      "secondary_genre_tags": {
+        "bsonType": "array",
+        "description": "Domain attribute: secondary_genre_tags"
+      },
+      "screening_committee_consensus": {
+        "bsonType": "string",
+        "description": "Domain attribute: screening_committee_consensus"
+      },
+      "contested_by_label_flag": {
+        "bsonType": "bool",
+        "description": "Domain attribute: contested_by_label_flag"
+      },
+      "reclassification_justification": {
+        "bsonType": "string",
+        "description": "Domain attribute: reclassification_justification"
+      },
+      "determination_date": {
+        "bsonType": "string",
+        "description": "Domain attribute: determination_date"
+      }
+    },
+    "additionalProperties": true
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "title": "grammy_nominations_db.tied_nominations",
+    "description": "MongoDB collection validator for tied_nominations in grammy_nominations_db",
+    "required": [
+      "_id",
+      "tie_id",
+      "ceremony_id",
+      "category_id",
+      "tied_nomination_ids",
+      "tied_vote_count_audited",
+      "ballot_auditor_token",
+      "board_tie_waiver_approved",
+      "expanded_slate_size",
+      "adjudication_timestamp",
+      "bylaw_clause_reference"
+    ],
+    "properties": {
+      "_id": {
+        "bsonType": "string",
+        "description": "Unique primary BSON document identifier (tie_id)"
+      },
+      "tie_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: tie_id"
+      },
+      "ceremony_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: ceremony_id"
+      },
+      "category_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: category_id"
+      },
+      "tied_nomination_ids": {
+        "bsonType": "array",
+        "description": "Domain attribute: tied_nomination_ids"
+      },
+      "tied_vote_count_audited": {
+        "bsonType": "int",
+        "description": "Domain attribute: tied_vote_count_audited"
+      },
+      "ballot_auditor_token": {
+        "bsonType": "string",
+        "description": "Domain attribute: ballot_auditor_token"
+      },
+      "board_tie_waiver_approved": {
+        "bsonType": "bool",
+        "description": "Domain attribute: board_tie_waiver_approved"
+      },
+      "expanded_slate_size": {
+        "bsonType": "int",
+        "description": "Domain attribute: expanded_slate_size"
+      },
+      "adjudication_timestamp": {
+        "bsonType": "string",
+        "description": "Domain attribute: adjudication_timestamp"
+      },
+      "bylaw_clause_reference": {
+        "bsonType": "string",
+        "description": "Domain attribute: bylaw_clause_reference"
+      }
+    },
+    "additionalProperties": true
+  }
+}

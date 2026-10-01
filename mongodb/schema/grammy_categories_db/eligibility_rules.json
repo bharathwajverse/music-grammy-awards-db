@@ -1,0 +1,67 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "title": "grammy_categories_db.eligibility_rules",
+    "description": "MongoDB collection validator for eligibility_rules in grammy_categories_db",
+    "required": [
+      "_id",
+      "rule_id",
+      "category_id",
+      "effective_edition",
+      "minimum_playing_time_minutes",
+      "minimum_track_count",
+      "featured_performance_threshold_pct",
+      "us_release_commercial_requirement",
+      "language_composition_restrictions",
+      "sample_replay_clearance_rule",
+      "entry_window_months"
+    ],
+    "properties": {
+      "_id": {
+        "bsonType": "string",
+        "description": "Unique primary BSON document identifier (rule_id)"
+      },
+      "rule_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: rule_id"
+      },
+      "category_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: category_id"
+      },
+      "effective_edition": {
+        "bsonType": "int",
+        "description": "Domain attribute: effective_edition"
+      },
+      "minimum_playing_time_minutes": {
+        "bsonType": "double",
+        "description": "Domain attribute: minimum_playing_time_minutes"
+      },
+      "minimum_track_count": {
+        "bsonType": "int",
+        "description": "Domain attribute: minimum_track_count"
+      },
+      "featured_performance_threshold_pct": {
+        "bsonType": "double",
+        "description": "Domain attribute: featured_performance_threshold_pct"
+      },
+      "us_release_commercial_requirement": {
+        "bsonType": "bool",
+        "description": "Domain attribute: us_release_commercial_requirement"
+      },
+      "language_composition_restrictions": {
+        "bsonType": "string",
+        "description": "Domain attribute: language_composition_restrictions"
+      },
+      "sample_replay_clearance_rule": {
+        "bsonType": "string",
+        "description": "Domain attribute: sample_replay_clearance_rule"
+      },
+      "entry_window_months": {
+        "bsonType": "int",
+        "description": "Domain attribute: entry_window_months"
+      }
+    },
+    "additionalProperties": true
+  }
+}

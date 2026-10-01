@@ -1,0 +1,67 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "title": "grammy_history_db.timeline_historical_eras",
+    "description": "MongoDB collection validator for timeline_historical_eras in grammy_history_db",
+    "required": [
+      "_id",
+      "era_id",
+      "era_name",
+      "start_calendar_year",
+      "end_calendar_year",
+      "dominant_audio_format",
+      "voting_tabulation_method",
+      "predominant_music_genre",
+      "total_ceremonies_contained",
+      "headquarters_city",
+      "industry_paradigm_shift_notes"
+    ],
+    "properties": {
+      "_id": {
+        "bsonType": "string",
+        "description": "Unique primary BSON document identifier (era_id)"
+      },
+      "era_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: era_id"
+      },
+      "era_name": {
+        "bsonType": "string",
+        "description": "Domain attribute: era_name"
+      },
+      "start_calendar_year": {
+        "bsonType": "int",
+        "description": "Domain attribute: start_calendar_year"
+      },
+      "end_calendar_year": {
+        "bsonType": "int",
+        "description": "Domain attribute: end_calendar_year"
+      },
+      "dominant_audio_format": {
+        "bsonType": "string",
+        "description": "Domain attribute: dominant_audio_format"
+      },
+      "voting_tabulation_method": {
+        "bsonType": "string",
+        "description": "Domain attribute: voting_tabulation_method"
+      },
+      "predominant_music_genre": {
+        "bsonType": "string",
+        "description": "Domain attribute: predominant_music_genre"
+      },
+      "total_ceremonies_contained": {
+        "bsonType": "int",
+        "description": "Domain attribute: total_ceremonies_contained"
+      },
+      "headquarters_city": {
+        "bsonType": "string",
+        "description": "Domain attribute: headquarters_city"
+      },
+      "industry_paradigm_shift_notes": {
+        "bsonType": "string",
+        "description": "Domain attribute: industry_paradigm_shift_notes"
+      }
+    },
+    "additionalProperties": true
+  }
+}

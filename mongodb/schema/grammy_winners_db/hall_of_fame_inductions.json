@@ -1,0 +1,67 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "title": "grammy_winners_db.hall_of_fame_inductions",
+    "description": "MongoDB collection validator for hall_of_fame_inductions in grammy_winners_db",
+    "required": [
+      "_id",
+      "induction_id",
+      "inducted_work_title",
+      "recording_artist_name",
+      "original_release_year",
+      "induction_ceremony_year",
+      "recording_medium_format",
+      "qualifying_minimum_age_years",
+      "historical_impact_essay",
+      "museum_exhibition_status",
+      "catalog_archival_code"
+    ],
+    "properties": {
+      "_id": {
+        "bsonType": "string",
+        "description": "Unique primary BSON document identifier (induction_id)"
+      },
+      "induction_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: induction_id"
+      },
+      "inducted_work_title": {
+        "bsonType": "string",
+        "description": "Domain attribute: inducted_work_title"
+      },
+      "recording_artist_name": {
+        "bsonType": "string",
+        "description": "Domain attribute: recording_artist_name"
+      },
+      "original_release_year": {
+        "bsonType": "int",
+        "description": "Domain attribute: original_release_year"
+      },
+      "induction_ceremony_year": {
+        "bsonType": "int",
+        "description": "Domain attribute: induction_ceremony_year"
+      },
+      "recording_medium_format": {
+        "bsonType": "string",
+        "description": "Domain attribute: recording_medium_format"
+      },
+      "qualifying_minimum_age_years": {
+        "bsonType": "int",
+        "description": "Domain attribute: qualifying_minimum_age_years"
+      },
+      "historical_impact_essay": {
+        "bsonType": "string",
+        "description": "Domain attribute: historical_impact_essay"
+      },
+      "museum_exhibition_status": {
+        "bsonType": "string",
+        "description": "Domain attribute: museum_exhibition_status"
+      },
+      "catalog_archival_code": {
+        "bsonType": "string",
+        "description": "Domain attribute: catalog_archival_code"
+      }
+    },
+    "additionalProperties": true
+  }
+}

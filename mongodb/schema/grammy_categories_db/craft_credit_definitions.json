@@ -1,0 +1,67 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "title": "grammy_categories_db.craft_credit_definitions",
+    "description": "MongoDB collection validator for craft_credit_definitions in grammy_categories_db",
+    "required": [
+      "_id",
+      "craft_def_id",
+      "category_id",
+      "craft_role_name",
+      "mandatory_statuette_recipient",
+      "certificate_of_merit_alternative",
+      "audio_stem_mastering_threshold",
+      "assistant_engineer_eligibility",
+      "sample_creator_eligibility",
+      "documentation_proof_standard",
+      "union_credit_registry_crosscheck"
+    ],
+    "properties": {
+      "_id": {
+        "bsonType": "string",
+        "description": "Unique primary BSON document identifier (craft_def_id)"
+      },
+      "craft_def_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: craft_def_id"
+      },
+      "category_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: category_id"
+      },
+      "craft_role_name": {
+        "bsonType": "string",
+        "description": "Domain attribute: craft_role_name"
+      },
+      "mandatory_statuette_recipient": {
+        "bsonType": "bool",
+        "description": "Domain attribute: mandatory_statuette_recipient"
+      },
+      "certificate_of_merit_alternative": {
+        "bsonType": "bool",
+        "description": "Domain attribute: certificate_of_merit_alternative"
+      },
+      "audio_stem_mastering_threshold": {
+        "bsonType": "double",
+        "description": "Domain attribute: audio_stem_mastering_threshold"
+      },
+      "assistant_engineer_eligibility": {
+        "bsonType": "bool",
+        "description": "Domain attribute: assistant_engineer_eligibility"
+      },
+      "sample_creator_eligibility": {
+        "bsonType": "bool",
+        "description": "Domain attribute: sample_creator_eligibility"
+      },
+      "documentation_proof_standard": {
+        "bsonType": "string",
+        "description": "Domain attribute: documentation_proof_standard"
+      },
+      "union_credit_registry_crosscheck": {
+        "bsonType": "string",
+        "description": "Domain attribute: union_credit_registry_crosscheck"
+      }
+    },
+    "additionalProperties": true
+  }
+}

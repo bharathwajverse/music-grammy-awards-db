@@ -1,0 +1,67 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "title": "grammy_categories_db.award_fields",
+    "description": "MongoDB collection validator for award_fields in grammy_categories_db",
+    "required": [
+      "_id",
+      "field_id",
+      "field_name",
+      "field_abbreviation",
+      "field_description",
+      "inaugural_ceremony_edition",
+      "current_active_status",
+      "active_categories_count",
+      "specialist_committee_jurisdiction",
+      "field_curator_role",
+      "last_bylaw_revision_year"
+    ],
+    "properties": {
+      "_id": {
+        "bsonType": "string",
+        "description": "Unique primary BSON document identifier (field_id)"
+      },
+      "field_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: field_id"
+      },
+      "field_name": {
+        "bsonType": "string",
+        "description": "Domain attribute: field_name"
+      },
+      "field_abbreviation": {
+        "bsonType": "string",
+        "description": "Domain attribute: field_abbreviation"
+      },
+      "field_description": {
+        "bsonType": "string",
+        "description": "Domain attribute: field_description"
+      },
+      "inaugural_ceremony_edition": {
+        "bsonType": "int",
+        "description": "Domain attribute: inaugural_ceremony_edition"
+      },
+      "current_active_status": {
+        "bsonType": "bool",
+        "description": "Domain attribute: current_active_status"
+      },
+      "active_categories_count": {
+        "bsonType": "int",
+        "description": "Domain attribute: active_categories_count"
+      },
+      "specialist_committee_jurisdiction": {
+        "bsonType": "string",
+        "description": "Domain attribute: specialist_committee_jurisdiction"
+      },
+      "field_curator_role": {
+        "bsonType": "string",
+        "description": "Domain attribute: field_curator_role"
+      },
+      "last_bylaw_revision_year": {
+        "bsonType": "int",
+        "description": "Domain attribute: last_bylaw_revision_year"
+      }
+    },
+    "additionalProperties": true
+  }
+}

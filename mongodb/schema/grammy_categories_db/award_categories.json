@@ -1,0 +1,106 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "title": "grammy_categories_db.award_categories",
+    "description": "MongoDB collection validator for award_categories in grammy_categories_db",
+    "required": [
+      "_id",
+      "category_id",
+      "field_id",
+      "official_category_name",
+      "standard_short_code",
+      "inaugural_edition",
+      "is_general_field",
+      "current_status",
+      "maximum_nominees_allowed",
+      "voting_tier_access",
+      "trophy_statuette_eligibility_rule",
+      "entry_fee_tier"
+    ],
+    "properties": {
+      "_id": {
+        "bsonType": "string",
+        "description": "Unique primary BSON document identifier (category_id)"
+      },
+      "category_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: category_id"
+      },
+      "field_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: field_id"
+      },
+      "official_category_name": {
+        "bsonType": "string",
+        "description": "Domain attribute: official_category_name"
+      },
+      "standard_short_code": {
+        "bsonType": "string",
+        "description": "Domain attribute: standard_short_code"
+      },
+      "inaugural_edition": {
+        "bsonType": "int",
+        "description": "Domain attribute: inaugural_edition"
+      },
+      "is_general_field": {
+        "bsonType": "bool",
+        "description": "Domain attribute: is_general_field"
+      },
+      "current_status": {
+        "bsonType": "string",
+        "description": "Domain attribute: current_status"
+      },
+      "maximum_nominees_allowed": {
+        "bsonType": "int",
+        "description": "Domain attribute: maximum_nominees_allowed"
+      },
+      "voting_tier_access": {
+        "bsonType": "string",
+        "description": "Domain attribute: voting_tier_access"
+      },
+      "trophy_statuette_eligibility_rule": {
+        "bsonType": "string",
+        "description": "Domain attribute: trophy_statuette_eligibility_rule"
+      },
+      "entry_fee_tier": {
+        "bsonType": "string",
+        "description": "Domain attribute: entry_fee_tier"
+      },
+      "award_field": {
+        "bsonType": "object",
+        "description": "Embedded umbrella field taxonomy metadata",
+        "required": [
+          "field_id",
+          "field_name"
+        ],
+        "properties": {
+          "field_id": {
+            "bsonType": "string"
+          },
+          "field_name": {
+            "bsonType": "string"
+          },
+          "field_abbreviation": {
+            "bsonType": "string"
+          }
+        }
+      },
+      "eligibility_rules": {
+        "bsonType": "object",
+        "description": "Embedded category eligibility guidelines",
+        "properties": {
+          "min_total_playing_time_minutes": {
+            "bsonType": "double"
+          },
+          "min_distinct_tracks": {
+            "bsonType": "int"
+          },
+          "playing_time_percentage_new_recordings": {
+            "bsonType": "double"
+          }
+        }
+      }
+    },
+    "additionalProperties": true
+  }
+}

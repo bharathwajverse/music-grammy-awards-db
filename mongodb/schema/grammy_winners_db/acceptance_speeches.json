@@ -1,0 +1,67 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "title": "grammy_winners_db.acceptance_speeches",
+    "description": "MongoDB collection validator for acceptance_speeches in grammy_winners_db",
+    "required": [
+      "_id",
+      "speech_id",
+      "winner_record_id",
+      "primary_speaker_creator_id",
+      "speech_duration_seconds",
+      "playoff_music_interrupted",
+      "primary_quote_transcript",
+      "individuals_acknowledged",
+      "social_political_message_flag",
+      "press_room_followup_id",
+      "broadcast_clip_timecode"
+    ],
+    "properties": {
+      "_id": {
+        "bsonType": "string",
+        "description": "Unique primary BSON document identifier (speech_id)"
+      },
+      "speech_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: speech_id"
+      },
+      "winner_record_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: winner_record_id"
+      },
+      "primary_speaker_creator_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: primary_speaker_creator_id"
+      },
+      "speech_duration_seconds": {
+        "bsonType": "int",
+        "description": "Domain attribute: speech_duration_seconds"
+      },
+      "playoff_music_interrupted": {
+        "bsonType": "bool",
+        "description": "Domain attribute: playoff_music_interrupted"
+      },
+      "primary_quote_transcript": {
+        "bsonType": "string",
+        "description": "Domain attribute: primary_quote_transcript"
+      },
+      "individuals_acknowledged": {
+        "bsonType": "array",
+        "description": "Domain attribute: individuals_acknowledged"
+      },
+      "social_political_message_flag": {
+        "bsonType": "bool",
+        "description": "Domain attribute: social_political_message_flag"
+      },
+      "press_room_followup_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: press_room_followup_id"
+      },
+      "broadcast_clip_timecode": {
+        "bsonType": "string",
+        "description": "Domain attribute: broadcast_clip_timecode"
+      }
+    },
+    "additionalProperties": true
+  }
+}

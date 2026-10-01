@@ -1,0 +1,67 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "title": "grammy_categories_db.voting_procedures",
+    "description": "MongoDB collection validator for voting_procedures in grammy_categories_db",
+    "required": [
+      "_id",
+      "procedure_id",
+      "category_id",
+      "voting_round_number",
+      "electorate_body_type",
+      "is_ranked_choice_ballot",
+      "craft_committee_review_required",
+      "committee_member_roster_count",
+      "nomination_slot_capacity",
+      "tie_breaking_protocol",
+      "auditing_firm_signoff_flag"
+    ],
+    "properties": {
+      "_id": {
+        "bsonType": "string",
+        "description": "Unique primary BSON document identifier (procedure_id)"
+      },
+      "procedure_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: procedure_id"
+      },
+      "category_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: category_id"
+      },
+      "voting_round_number": {
+        "bsonType": "int",
+        "description": "Domain attribute: voting_round_number"
+      },
+      "electorate_body_type": {
+        "bsonType": "string",
+        "description": "Domain attribute: electorate_body_type"
+      },
+      "is_ranked_choice_ballot": {
+        "bsonType": "bool",
+        "description": "Domain attribute: is_ranked_choice_ballot"
+      },
+      "craft_committee_review_required": {
+        "bsonType": "bool",
+        "description": "Domain attribute: craft_committee_review_required"
+      },
+      "committee_member_roster_count": {
+        "bsonType": "int",
+        "description": "Domain attribute: committee_member_roster_count"
+      },
+      "nomination_slot_capacity": {
+        "bsonType": "int",
+        "description": "Domain attribute: nomination_slot_capacity"
+      },
+      "tie_breaking_protocol": {
+        "bsonType": "string",
+        "description": "Domain attribute: tie_breaking_protocol"
+      },
+      "auditing_firm_signoff_flag": {
+        "bsonType": "bool",
+        "description": "Domain attribute: auditing_firm_signoff_flag"
+      }
+    },
+    "additionalProperties": true
+  }
+}

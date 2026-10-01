@@ -1,0 +1,67 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "title": "grammy_categories_db.merged_split_history",
+    "description": "MongoDB collection validator for merged_split_history in grammy_categories_db",
+    "required": [
+      "_id",
+      "event_id",
+      "restructuring_type",
+      "effective_year",
+      "primary_category_id",
+      "source_category_ids",
+      "consolidation_justification",
+      "gender_neutral_reform_flag",
+      "member_feedback_period_days",
+      "trustee_vote_tally",
+      "published_press_bulletin_id"
+    ],
+    "properties": {
+      "_id": {
+        "bsonType": "string",
+        "description": "Unique primary BSON document identifier (event_id)"
+      },
+      "event_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: event_id"
+      },
+      "restructuring_type": {
+        "bsonType": "string",
+        "description": "Domain attribute: restructuring_type"
+      },
+      "effective_year": {
+        "bsonType": "int",
+        "description": "Domain attribute: effective_year"
+      },
+      "primary_category_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: primary_category_id"
+      },
+      "source_category_ids": {
+        "bsonType": "array",
+        "description": "Domain attribute: source_category_ids"
+      },
+      "consolidation_justification": {
+        "bsonType": "string",
+        "description": "Domain attribute: consolidation_justification"
+      },
+      "gender_neutral_reform_flag": {
+        "bsonType": "bool",
+        "description": "Domain attribute: gender_neutral_reform_flag"
+      },
+      "member_feedback_period_days": {
+        "bsonType": "int",
+        "description": "Domain attribute: member_feedback_period_days"
+      },
+      "trustee_vote_tally": {
+        "bsonType": "string",
+        "description": "Domain attribute: trustee_vote_tally"
+      },
+      "published_press_bulletin_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: published_press_bulletin_id"
+      }
+    },
+    "additionalProperties": true
+  }
+}

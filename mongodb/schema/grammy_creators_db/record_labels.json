@@ -1,0 +1,67 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "title": "grammy_creators_db.record_labels",
+    "description": "MongoDB collection validator for record_labels in grammy_creators_db",
+    "required": [
+      "_id",
+      "label_id",
+      "label_corporate_name",
+      "parent_music_group",
+      "foundation_year",
+      "corporate_headquarters_city",
+      "origin_country",
+      "commercial_distribution_channel",
+      "riaa_member_standing",
+      "historical_catalog_size",
+      "current_operational_status"
+    ],
+    "properties": {
+      "_id": {
+        "bsonType": "string",
+        "description": "Unique primary BSON document identifier (label_id)"
+      },
+      "label_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: label_id"
+      },
+      "label_corporate_name": {
+        "bsonType": "string",
+        "description": "Domain attribute: label_corporate_name"
+      },
+      "parent_music_group": {
+        "bsonType": "string",
+        "description": "Domain attribute: parent_music_group"
+      },
+      "foundation_year": {
+        "bsonType": "int",
+        "description": "Domain attribute: foundation_year"
+      },
+      "corporate_headquarters_city": {
+        "bsonType": "string",
+        "description": "Domain attribute: corporate_headquarters_city"
+      },
+      "origin_country": {
+        "bsonType": "string",
+        "description": "Domain attribute: origin_country"
+      },
+      "commercial_distribution_channel": {
+        "bsonType": "string",
+        "description": "Domain attribute: commercial_distribution_channel"
+      },
+      "riaa_member_standing": {
+        "bsonType": "bool",
+        "description": "Domain attribute: riaa_member_standing"
+      },
+      "historical_catalog_size": {
+        "bsonType": "int",
+        "description": "Domain attribute: historical_catalog_size"
+      },
+      "current_operational_status": {
+        "bsonType": "string",
+        "description": "Domain attribute: current_operational_status"
+      }
+    },
+    "additionalProperties": true
+  }
+}

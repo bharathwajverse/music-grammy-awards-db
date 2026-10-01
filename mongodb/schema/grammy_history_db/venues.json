@@ -1,0 +1,67 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "title": "grammy_history_db.venues",
+    "description": "MongoDB collection validator for venues in grammy_history_db",
+    "required": [
+      "_id",
+      "venue_id",
+      "venue_name",
+      "venue_type",
+      "street_address",
+      "city",
+      "state",
+      "postal_code",
+      "max_seating_capacity",
+      "first_hosted_year",
+      "total_ceremonies_hosted"
+    ],
+    "properties": {
+      "_id": {
+        "bsonType": "string",
+        "description": "Unique primary BSON document identifier (venue_id)"
+      },
+      "venue_id": {
+        "bsonType": "string",
+        "description": "Domain attribute: venue_id"
+      },
+      "venue_name": {
+        "bsonType": "string",
+        "description": "Domain attribute: venue_name"
+      },
+      "venue_type": {
+        "bsonType": "string",
+        "description": "Domain attribute: venue_type"
+      },
+      "street_address": {
+        "bsonType": "string",
+        "description": "Domain attribute: street_address"
+      },
+      "city": {
+        "bsonType": "string",
+        "description": "Domain attribute: city"
+      },
+      "state": {
+        "bsonType": "string",
+        "description": "Domain attribute: state"
+      },
+      "postal_code": {
+        "bsonType": "string",
+        "description": "Domain attribute: postal_code"
+      },
+      "max_seating_capacity": {
+        "bsonType": "int",
+        "description": "Domain attribute: max_seating_capacity"
+      },
+      "first_hosted_year": {
+        "bsonType": "int",
+        "description": "Domain attribute: first_hosted_year"
+      },
+      "total_ceremonies_hosted": {
+        "bsonType": "int",
+        "description": "Domain attribute: total_ceremonies_hosted"
+      }
+    },
+    "additionalProperties": true
+  }
+}
