@@ -2,7 +2,7 @@
 
 > **Course**: Advanced Database Management Systems (ADBMS)  
 > **Project Title**: GRAMMY Awards Information & Analytics System  
-> **Current Phase**: Phase 6 — Conceptual EER Modeling (Completed)  
+> **Current Phase**: Phase 7 — Relational Model (Completed)  
 > **Status Date**: October 2026  
 > **Version Control**: Git / GitHub (`bharathwajverse/music-grammy-awards-db`)  
 > **Database Engine**: MongoDB Atlas & MongoDB Compass  
@@ -26,8 +26,8 @@ The repository follows a standardized, modular directory architecture establishe
 | `docs/` | System architecture, master instructions, data dictionary, syllabus mapping, and phase reports | **Active** |
 | `research/` | Academic DBMS research notes, literature citations, and algorithmic analyses | **Initialized** |
 | `sources/` | Dataset provenance manifests, license verifications, and citation registries | **Initialized** |
-| `eer/` | Enhanced Entity-Relationship (EER) diagrams, specialization/generalization hierarchies, union types | **Initialized** |
-| `relational-model/` | Relational schema translations, integrity constraints, and relational algebra operations | **Initialized** |
+| `eer/` | Enhanced Entity-Relationship (EER) diagrams, specialization/generalization hierarchies, union types | **Completed** |
+| `relational-model/` | Relational schema translations, integrity constraints, and relational algebra operations | **Completed** |
 | `normalization/` | Functional dependency matrices, minimal covers, 1NF/2NF/3NF/BCNF/4NF/5NF proofs, denormalization | **Initialized** |
 | `mongodb/` | MongoDB document schemas, Atlas cluster topologies, indexing strategies, and connection scripts | **Initialized** |
 | `data/raw/` | Pristine external source data archives (strictly excluded from Git commits via `.gitignore`) | **Initialized** |
@@ -65,7 +65,7 @@ The system architecture partitions the domain across five dedicated databases. E
 
 | Module | Curriculum Subject | Implementation & Artifact Target | Status |
 | :---: | :--- | :--- | :---: |
-| **1** | Relational Query Languages, Relational Algebra, EER Modeling | `eer/`, `relational-model/`, formal algebraic queries | Planned |
+| **1** | Relational Query Languages, Relational Algebra, EER Modeling | `eer/`, `relational-model/`, formal algebraic queries | **Completed** |
 | **2** | Functional Dependencies, Armstrong's Axioms, 1NF & 2NF | `normalization/`, dependency matrices, minimal cover | Planned |
 | **3** | 3NF, BCNF, 4NF, 5NF, Decomposition & Denormalization | `normalization/`, lossless join proofs, BCNF algorithms | Planned |
 | **4** | ACID Transactions, Lifecycle, States & Serializability | `scripts/transactions/`, multi-document sessions | Planned |
@@ -121,11 +121,16 @@ The system architecture partitions the domain across five dedicated databases. E
   - High-resolution rendered diagram (300 DPI): [`eer/grammy-eer.png`](../eer/grammy-eer.png)
   - Comprehensive conceptual EER specification: [`docs/eer-design.md`](eer-design.md)
   - Full representation across all 5 databases: entities, attributes, keys, relationships, cardinality ratios, participation constraints, overlapping specialization (`CREATOR`), disjoint specialization (`WORK`, `AWARD_CATEGORY`), conceptual aggregation (`NOMINATION_CREDIT`), and category/union types (`AWARD_RECIPIENT` = `ARTIST` ∪ `MUSICAL_GROUP`).
+- **Completed in Phase 7 (Relational Model & Relational Algebra)**:
+  - Complete relational schema catalog: [`relational-model/schema.md`](../relational-model/schema.md) (50 relations, attribute dictionaries, domain constraints, 3NF/BCNF classification).
+  - Comprehensive keys and relationships matrix: [`relational-model/keys-and-relationships.md`](../relational-model/keys-and-relationships.md) (primary, candidate, foreign keys, referential actions, specialization/aggregation/union mappings).
+  - Formal Relational Algebra query specifications: [`relational-model/relational-algebra-examples.md`](../relational-model/relational-algebra-examples.md) (demonstrations of Selection $\sigma$, Projection $\pi$, Cartesian Product $\times$, Join $\bowtie$, Union $\cup$, Set Difference $-$, and Relational Division $\div$ with query execution trees and SQL equivalents).
+  - Verified with 195/195 automated pytest test suite (`tests/test_relational_model.py`).
 - **Phase Rule Compliance**:
   - No MongoDB database operations were executed.
   - No data import was run.
   - No application code was written.
-- **Next Authorized Phase**: Phase 7 — Relational Schema Mapping & Relational Algebra (Awaiting user checkpoint approval).
+- **Next Authorized Phase**: Phase 8 — Normalization (1NF, 2NF, 3NF, BCNF, 4NF, 5NF, Functional Dependencies, Decomposition & Denormalization) (Awaiting user checkpoint approval).
 
 
 
