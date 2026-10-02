@@ -1,0 +1,340 @@
+{
+  "timestamp": "2026-10-02T12:26:05.032244+00:00",
+  "total_indexes_created": 44,
+  "queries": [
+    {
+      "id": "Q01_NOM_POINT_LOOKUP",
+      "database": "grammy_nominations_db",
+      "collection": "nomination_entries",
+      "description": "Point lookup by nomination_id",
+      "target_index": "idx_nom_entries_nomination_id",
+      "before": {
+        "executionSuccess": true,
+        "nReturned": 1,
+        "executionTimeMillis": 0,
+        "totalKeysExamined": 0,
+        "totalDocsExamined": 500,
+        "scanStage": "COLLSCAN",
+        "stages": [
+          "COLLSCAN"
+        ],
+        "indexName": null
+      },
+      "after": {
+        "executionSuccess": true,
+        "nReturned": 1,
+        "executionTimeMillis": 0,
+        "totalKeysExamined": 1,
+        "totalDocsExamined": 1,
+        "scanStage": "EXPRESS_IXSCAN",
+        "stages": [
+          "EXPRESS_IXSCAN"
+        ],
+        "indexName": "idx_nom_entries_nomination_id"
+      },
+      "docs_reduction_pct": 99.8
+    },
+    {
+      "id": "Q02_NOM_ARTIST_FILTER",
+      "database": "grammy_nominations_db",
+      "collection": "nomination_entries",
+      "description": "Analytical filter on primary_artist_id (Henry Mancini)",
+      "target_index": "idx_nom_entries_artist_id",
+      "before": {
+        "executionSuccess": true,
+        "nReturned": 19,
+        "executionTimeMillis": 0,
+        "totalKeysExamined": 0,
+        "totalDocsExamined": 500,
+        "scanStage": "COLLSCAN",
+        "stages": [
+          "COLLSCAN"
+        ],
+        "indexName": null
+      },
+      "after": {
+        "executionSuccess": true,
+        "nReturned": 19,
+        "executionTimeMillis": 0,
+        "totalKeysExamined": 19,
+        "totalDocsExamined": 19,
+        "scanStage": "IXSCAN",
+        "stages": [
+          "FETCH",
+          "IXSCAN"
+        ],
+        "indexName": "idx_nom_entries_artist_id"
+      },
+      "docs_reduction_pct": 96.2
+    },
+    {
+      "id": "Q03_NOM_ESR_COMPOUND",
+      "database": "grammy_nominations_db",
+      "collection": "nomination_entries",
+      "description": "ESR Compound query (Winner equality, year range, ballot sort)",
+      "target_index": "idx_nom_entries_winner_year_slot_esr",
+      "before": {
+        "executionSuccess": true,
+        "nReturned": 269,
+        "executionTimeMillis": 1,
+        "totalKeysExamined": 0,
+        "totalDocsExamined": 500,
+        "scanStage": "COLLSCAN",
+        "stages": [
+          "SORT",
+          "COLLSCAN"
+        ],
+        "indexName": null
+      },
+      "after": {
+        "executionSuccess": true,
+        "nReturned": 269,
+        "executionTimeMillis": 0,
+        "totalKeysExamined": 269,
+        "totalDocsExamined": 269,
+        "scanStage": "IXSCAN",
+        "stages": [
+          "FETCH",
+          "IXSCAN"
+        ],
+        "indexName": "idx_nom_entries_winner_year_slot_esr"
+      },
+      "docs_reduction_pct": 46.2
+    },
+    {
+      "id": "Q04_SPEECH_MULTIKEY_CONTAINMENT",
+      "database": "grammy_winners_db",
+      "collection": "acceptance_speeches",
+      "description": "Multikey array containment query on individuals_acknowledged ('Family')",
+      "target_index": "idx_speeches_ack_multikey",
+      "before": {
+        "executionSuccess": true,
+        "nReturned": 65,
+        "executionTimeMillis": 0,
+        "totalKeysExamined": 0,
+        "totalDocsExamined": 65,
+        "scanStage": "COLLSCAN",
+        "stages": [
+          "COLLSCAN"
+        ],
+        "indexName": null
+      },
+      "after": {
+        "executionSuccess": true,
+        "nReturned": 65,
+        "executionTimeMillis": 0,
+        "totalKeysExamined": 65,
+        "totalDocsExamined": 65,
+        "scanStage": "IXSCAN",
+        "stages": [
+          "FETCH",
+          "IXSCAN"
+        ],
+        "indexName": "idx_speeches_ack_multikey"
+      },
+      "docs_reduction_pct": 0.0
+    },
+    {
+      "id": "Q05_RESTRUCT_MULTIKEY_ALL",
+      "database": "grammy_categories_db",
+      "collection": "merged_split_history",
+      "description": "Multikey array $all query on source_category_ids",
+      "target_index": "idx_merged_split_source_cats_multikey",
+      "before": {
+        "executionSuccess": true,
+        "nReturned": 1,
+        "executionTimeMillis": 0,
+        "totalKeysExamined": 0,
+        "totalDocsExamined": 60,
+        "scanStage": "COLLSCAN",
+        "stages": [
+          "COLLSCAN"
+        ],
+        "indexName": null
+      },
+      "after": {
+        "executionSuccess": true,
+        "nReturned": 1,
+        "executionTimeMillis": 0,
+        "totalKeysExamined": 1,
+        "totalDocsExamined": 1,
+        "scanStage": "IXSCAN",
+        "stages": [
+          "FETCH",
+          "IXSCAN"
+        ],
+        "indexName": "idx_merged_split_source_cats_multikey"
+      },
+      "docs_reduction_pct": 98.33
+    },
+    {
+      "id": "Q06_TIES_MULTIKEY_CONTAINMENT",
+      "database": "grammy_nominations_db",
+      "collection": "tied_nominations",
+      "description": "Multikey array containment query on tied_nomination_ids",
+      "target_index": "idx_tied_noms_tied_ids_multikey",
+      "before": {
+        "executionSuccess": true,
+        "nReturned": 1,
+        "executionTimeMillis": 0,
+        "totalKeysExamined": 0,
+        "totalDocsExamined": 70,
+        "scanStage": "COLLSCAN",
+        "stages": [
+          "COLLSCAN"
+        ],
+        "indexName": null
+      },
+      "after": {
+        "executionSuccess": true,
+        "nReturned": 1,
+        "executionTimeMillis": 0,
+        "totalKeysExamined": 1,
+        "totalDocsExamined": 1,
+        "scanStage": "IXSCAN",
+        "stages": [
+          "FETCH",
+          "IXSCAN"
+        ],
+        "indexName": "idx_tied_noms_tied_ids_multikey"
+      },
+      "docs_reduction_pct": 98.57
+    },
+    {
+      "id": "Q07_WINNER_TELECAST_ESR",
+      "database": "grammy_winners_db",
+      "collection": "winner_records",
+      "description": "ESR compound query on telecast presentations sorted by trophy count",
+      "target_index": "idx_winner_records_telecast_statuettes_esr",
+      "before": {
+        "executionSuccess": true,
+        "nReturned": 200,
+        "executionTimeMillis": 0,
+        "totalKeysExamined": 0,
+        "totalDocsExamined": 400,
+        "scanStage": "COLLSCAN",
+        "stages": [
+          "SORT",
+          "COLLSCAN"
+        ],
+        "indexName": null
+      },
+      "after": {
+        "executionSuccess": true,
+        "nReturned": 200,
+        "executionTimeMillis": 0,
+        "totalKeysExamined": 200,
+        "totalDocsExamined": 200,
+        "scanStage": "IXSCAN",
+        "stages": [
+          "FETCH",
+          "IXSCAN"
+        ],
+        "indexName": "idx_winner_records_telecast_statuettes_esr"
+      },
+      "docs_reduction_pct": 50.0
+    },
+    {
+      "id": "Q08_CEREMONY_NETWORK_YEAR_ESR",
+      "database": "grammy_history_db",
+      "collection": "ceremonies",
+      "description": "ESR compound query on CBS network with year filter and sort",
+      "target_index": "idx_ceremonies_network_year_esr",
+      "before": {
+        "executionSuccess": true,
+        "nReturned": 26,
+        "executionTimeMillis": 0,
+        "totalKeysExamined": 0,
+        "totalDocsExamined": 67,
+        "scanStage": "COLLSCAN",
+        "stages": [
+          "SORT",
+          "COLLSCAN"
+        ],
+        "indexName": null
+      },
+      "after": {
+        "executionSuccess": true,
+        "nReturned": 26,
+        "executionTimeMillis": 0,
+        "totalKeysExamined": 26,
+        "totalDocsExamined": 26,
+        "scanStage": "IXSCAN",
+        "stages": [
+          "FETCH",
+          "IXSCAN"
+        ],
+        "indexName": "idx_ceremonies_network_year_esr"
+      },
+      "docs_reduction_pct": 61.19
+    },
+    {
+      "id": "Q09_CATEGORY_STATUS_NOMINEES_ESR",
+      "database": "grammy_categories_db",
+      "collection": "award_categories",
+      "description": "ESR compound query on active categories sorted by nominee capacity",
+      "target_index": "idx_categories_status_nominees_esr",
+      "before": {
+        "executionSuccess": true,
+        "nReturned": 120,
+        "executionTimeMillis": 0,
+        "totalKeysExamined": 0,
+        "totalDocsExamined": 120,
+        "scanStage": "COLLSCAN",
+        "stages": [
+          "SORT",
+          "COLLSCAN"
+        ],
+        "indexName": null
+      },
+      "after": {
+        "executionSuccess": true,
+        "nReturned": 120,
+        "executionTimeMillis": 0,
+        "totalKeysExamined": 120,
+        "totalDocsExamined": 120,
+        "scanStage": "IXSCAN",
+        "stages": [
+          "FETCH",
+          "IXSCAN"
+        ],
+        "indexName": "idx_categories_status_nominees_esr"
+      },
+      "docs_reduction_pct": 0.0
+    },
+    {
+      "id": "Q10_ARTIST_GROUP_CAREER_ESR",
+      "database": "grammy_creators_db",
+      "collection": "artists",
+      "description": "ESR compound query on solo artists with career start year filter and sort",
+      "target_index": "idx_artists_group_career_esr",
+      "before": {
+        "executionSuccess": true,
+        "nReturned": 223,
+        "executionTimeMillis": 0,
+        "totalKeysExamined": 0,
+        "totalDocsExamined": 300,
+        "scanStage": "COLLSCAN",
+        "stages": [
+          "SORT",
+          "COLLSCAN"
+        ],
+        "indexName": null
+      },
+      "after": {
+        "executionSuccess": true,
+        "nReturned": 223,
+        "executionTimeMillis": 0,
+        "totalKeysExamined": 223,
+        "totalDocsExamined": 223,
+        "scanStage": "IXSCAN",
+        "stages": [
+          "FETCH",
+          "IXSCAN"
+        ],
+        "indexName": "idx_artists_group_career_esr"
+      },
+      "docs_reduction_pct": 25.67
+    }
+  ]
+}
