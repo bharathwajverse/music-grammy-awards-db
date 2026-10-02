@@ -2,7 +2,7 @@
 
 > **Course**: Advanced Database Management Systems (ADBMS)  
 > **Project Title**: GRAMMY Awards Information & Analytics System  
-> **Current Phase**: Phase 28 — Final Documentation (All Phases 1–28 Completed & Certified)  
+> **Current Phase**: Phase 30 — Viva Preparation (All 30 Phases 1–30 Completed & Certified 30/30)  
 > **Status Date**: October 2026  
 > **Version Control**: Git / GitHub (`bharathwajverse/music-grammy-awards-db`)  
 > **Database Engine**: MongoDB Atlas (`Cluster0`) & MongoDB Compass  
@@ -39,7 +39,7 @@ The repository follows a standardized, modular directory architecture establishe
 | `queries/advanced/` | Complex conditional, logical, comparison, array, and element-matching queries | **Completed** |
 | `queries/aggregation/` | Multi-stage aggregation pipelines (`$group`, `$lookup`, `$unwind`, `$facet`, `$bucket`) | **Completed** |
 | `tests/` | Comprehensive test suites (schema validations, foreign reference checks, ACID, concurrency) | **Active** |
-| `presentation/` | Slide decks, video walkthrough artifacts, demonstration scripts, and final report assets | **Initialized** |
+| `presentation/` | Slide decks, video walkthrough artifacts, demonstration scripts, and final report assets | **Completed** |
 
 ---
 
@@ -352,7 +352,28 @@ The system architecture partitions the domain across five dedicated databases. E
   - Formulated and authored master capstone academic report: [`docs/final-report.md`](final-report.md).
   - Synthesized all 30 mandatory academic sections with zero invented claims, referencing concrete file artifacts, actual document counts (5,190), collection inventories (50), empirical benchmarks, and peer-reviewed DBMS literature:
     1. Abstract, 2. Introduction, 3. Problem Statement, 4. Objectives, 5. Requirements, 6. Data Sources, 7. Licensing, 8. Architecture, 9. EER, 10. Relational Model, 11. Functional Dependencies, 12. Normalization, 13. Denormalization, 14. MongoDB Design, 15. Five Databases, 16. Collections, 17. Sample Documents, 18. CRUD Operations, 19. Advanced Queries, 20. Aggregation, 21. Indexes, 22. Transactions, 23. Concurrency, 24. Storage, 25. Recovery, 26. Testing, 27. Results, 28. Limitations, 29. Future Scope, 30. References.
-- **Current System Status**: Phases 1 through 28 Fully Completed & Formally Certified. Full test suite passing at 100% fidelity (629 passing tests). Master ADBMS Capstone Complete. STOP condition satisfied.
+- **Completed in Phase 29 (Academic Presentation Slide Deck & Walkthrough)**:
+  - Authored formal 20-slide Marp-compatible academic presentation slide deck: [`presentation/grammy-presentation.md`](../presentation/grammy-presentation.md) covering all 20 required topics:
+    1. Title, 2. Problem, 3. Objectives, 4. Real-world data, 5. Architecture, 6. Five databases, 7. EER, 8. Relational model, 9. Normalization, 10. MongoDB model, 11. Data statistics, 12. CRUD, 13. Advanced queries, 14. Aggregation, 15. Transactions/concurrency, 16. Storage/recovery, 17. Validation, 18. Results, 19. Limitations, 20. Conclusion.
+  - Authored oral defense walkthrough script and live demo protocol: [`presentation/demo_walkthrough_script.md`](../presentation/demo_walkthrough_script.md) with slide-by-slide speaker notes, time budgeting, and live terminal demo runbook.
+- **Completed in Phase 30 (Comprehensive Viva Voce Preparation Guide & Examination Handbook)**:
+  - Authored master viva preparation handbook: [`docs/viva-preparation.md`](viva-preparation.md) containing 230 project-grounded questions and detailed model answers:
+    1. 50 basic viva questions (Q1 to Q50).
+    2. 50 intermediate viva questions (Q51 to Q100).
+    3. 30 advanced viva questions (Q101 to Q130).
+    4. Questions about our EER (Q131 to Q140).
+    5. Questions about normalization & functional dependencies (Q141 to Q150).
+    6. Questions about MongoDB document modeling & JSON schemas (Q151 to Q160).
+    7. Questions about aggregation pipelines (Q161 to Q170).
+    8. Questions about multi-document ACID transactions (Q171 to Q180).
+    9. Questions about concurrency control & serializability (Q181 to Q190).
+    10. Questions about physical storage architecture & RAID (Q191 to Q200).
+    11. Questions about crash recovery & ARIES (Q201 to Q210).
+    12. Questions about data sources & acquisition (Q211 to Q220).
+    13. Questions about licensing & provenance (Q221 to Q230).
+  - Formulated comprehensive Five-Member Viva Responsibility & Defense Matrix mapping Members 1 through 5 to their assigned databases, collection portfolios, syllabus modules, code scripts, test files, and defense specialties.
+  - Implemented automated verification test suite [`tests/test_presentation_and_viva.py`](../tests/test_presentation_and_viva.py) (40 tests).
+- **Current System Status**: Phases 1 through 30 Fully Completed & Formally Certified (30/30). Full test suite passing at 100% fidelity (669 passing tests). Master ADBMS Capstone Complete. STOP condition satisfied.
 
 
 

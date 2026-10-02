@@ -1,0 +1,51 @@
+database_name,collection_name,document_count,minimum_doc_req,doc_pass_fail,meaningful_field_count,minimum_field_req,field_pass_fail,provenance_attached,license_type,zero_duplicates,data_authenticity_tier,cross_db_refs_valid,overall_status
+grammy_history_db,academy_leadership,60,50,PASS,12,10,PASS,YES,Public Domain Historical Facts / Educational Fair Use,PASS,SEMI_SYNTHETIC,PASS,PASS
+grammy_history_db,ceremonies,67,50,PASS,13,10,PASS,YES,Public Domain Historical Facts / Educational Fair Use,PASS,AUTHENTIC_PRIMARY,PASS,PASS
+grammy_history_db,ceremony_hosts,67,50,PASS,12,10,PASS,YES,Public Historical Broadcast Facts / Fair Use,PASS,SYNTHETIC_CYCLED,PASS,PASS
+grammy_history_db,historic_milestones,67,50,PASS,12,10,PASS,YES,Public Domain Historical Facts / Educational Fair Use,PASS,SYNTHETIC_TEMPLATE,PASS,PASS
+grammy_history_db,lifetime_achievement_honors,65,50,PASS,12,10,PASS,YES,Public Domain Historical Facts / Educational Fair Use,PASS,AUTHENTIC_PRIMARY,PASS,PASS
+grammy_history_db,press_media_accreditations,70,50,PASS,12,10,PASS,YES,Public Historical Broadcast Facts / Fair Use,PASS,SYNTHETIC_TEMPLATE,PASS,PASS
+grammy_history_db,telecast_broadcasters,67,50,PASS,12,10,PASS,YES,Public Historical Broadcast Facts / Fair Use,PASS,SEMI_SYNTHETIC,PASS,PASS
+grammy_history_db,timeline_historical_eras,55,50,PASS,12,10,PASS,YES,Project MIT License (Academic DBMS),PASS,DERIVED_ANALYTICAL,PASS,PASS
+grammy_history_db,venues,60,50,PASS,12,10,PASS,YES,CC0 1.0 Universal Public Domain Dedication,PASS,AUTHENTIC_PRIMARY,PASS,PASS
+grammy_history_db,viewership_ratings,67,50,PASS,12,10,PASS,YES,Public Historical Broadcast Facts / Fair Use,PASS,SYNTHETIC_FORMULA,PASS,PASS
+grammy_categories_db,award_categories,120,50,PASS,13,10,PASS,YES,Public Domain Historical Facts / Educational Fair Use,PASS,AUTHENTIC_PRIMARY,PASS,PASS
+grammy_categories_db,award_fields,50,50,PASS,12,10,PASS,YES,Educational Fair Use / Regulatory Specifications,PASS,AUTHENTIC_PRIMARY,PASS,PASS
+grammy_categories_db,category_lineage,60,50,PASS,12,10,PASS,YES,Educational Fair Use / Regulatory Specifications,PASS,SEMI_SYNTHETIC,PASS,PASS
+grammy_categories_db,category_quotas_limits,60,50,PASS,12,10,PASS,YES,Educational Fair Use / Regulatory Specifications,PASS,SEMI_SYNTHETIC,PASS,PASS
+grammy_categories_db,craft_credit_definitions,60,50,PASS,12,10,PASS,YES,Educational Fair Use / Regulatory Specifications,PASS,SEMI_SYNTHETIC,PASS,PASS
+grammy_categories_db,discontinued_categories,60,50,PASS,12,10,PASS,YES,Educational Fair Use / Regulatory Specifications,PASS,SYNTHETIC_TEMPLATE,PASS,PASS
+grammy_categories_db,eligibility_rules,60,50,PASS,12,10,PASS,YES,Educational Fair Use / Regulatory Specifications,PASS,SEMI_SYNTHETIC,PASS,PASS
+grammy_categories_db,merged_split_history,60,50,PASS,12,10,PASS,YES,Educational Fair Use / Regulatory Specifications,PASS,DERIVED_ANALYTICAL,PASS,PASS
+grammy_categories_db,special_merit_categories,60,50,PASS,12,10,PASS,YES,Educational Fair Use / Regulatory Specifications,PASS,SYNTHETIC_TEMPLATE,PASS,PASS
+grammy_categories_db,voting_procedures,60,50,PASS,12,10,PASS,YES,Educational Fair Use / Regulatory Specifications,PASS,SEMI_SYNTHETIC,PASS,PASS
+grammy_nominations_db,first_time_nominees,70,50,PASS,12,10,PASS,YES,CC0: Public Domain,PASS,DERIVED_ANALYTICAL,PASS,PASS
+grammy_nominations_db,genre_classifications,70,50,PASS,12,10,PASS,YES,Educational Fair Use / Regulatory Specifications,PASS,SEMI_SYNTHETIC,PASS,PASS
+grammy_nominations_db,multi_nomination_packages,70,50,PASS,12,10,PASS,YES,Project MIT License (Academic DBMS),PASS,DERIVED_ANALYTICAL,PASS,PASS
+grammy_nominations_db,nominated_works,500,50,PASS,13,10,PASS,YES,CC0 1.0 Universal (Core Data) / CC BY-NC-SA 3.0 (Supplementary),PASS,AUTHENTIC_PRIMARY,PASS,PASS
+grammy_nominations_db,nomination_audit_logs,70,50,PASS,12,10,PASS,YES,Educational Fair Use / Regulatory Specifications,PASS,SYNTHETIC_TEMPLATE,PASS,PASS
+grammy_nominations_db,nomination_credits,500,50,PASS,12,10,PASS,YES,CC0: Public Domain,PASS,AUTHENTIC_PRIMARY,PASS,PASS
+grammy_nominations_db,nomination_entries,500,50,PASS,13,10,PASS,YES,CC0: Public Domain,PASS,AUTHENTIC_PRIMARY,PASS,PASS
+grammy_nominations_db,submission_batches,70,50,PASS,12,10,PASS,YES,Educational Fair Use / Regulatory Specifications,PASS,SYNTHETIC_TEMPLATE,PASS,PASS
+grammy_nominations_db,tied_nominations,70,50,PASS,12,10,PASS,YES,Educational Fair Use / Regulatory Specifications,PASS,DERIVED_ANALYTICAL,PASS,PASS
+grammy_nominations_db,voter_screening_batches,70,50,PASS,12,10,PASS,YES,Educational Fair Use / Regulatory Specifications,PASS,SYNTHETIC_TEMPLATE,PASS,PASS
+grammy_winners_db,acceptance_speeches,65,50,PASS,12,10,PASS,YES,Public Domain Historical Facts / Educational Fair Use,PASS,SEMI_SYNTHETIC,PASS,PASS
+grammy_winners_db,big_four_sweeps,65,50,PASS,12,10,PASS,YES,Project MIT License (Academic DBMS),PASS,DERIVED_ANALYTICAL,PASS,PASS
+grammy_winners_db,consecutive_winners,65,50,PASS,12,10,PASS,YES,Project MIT License (Academic DBMS),PASS,DERIVED_ANALYTICAL,PASS,PASS
+grammy_winners_db,hall_of_fame_inductions,65,50,PASS,12,10,PASS,YES,Public Domain Historical Facts / Educational Fair Use,PASS,AUTHENTIC_PRIMARY,PASS,PASS
+grammy_winners_db,historic_win_benchmarks,65,50,PASS,12,10,PASS,YES,Project MIT License (Academic DBMS),PASS,DERIVED_ANALYTICAL,PASS,PASS
+grammy_winners_db,posthumous_awards,65,50,PASS,12,10,PASS,YES,CC0 1.0 Universal Public Domain Dedication,PASS,AUTHENTIC_PRIMARY,PASS,PASS
+grammy_winners_db,record_breakers,65,50,PASS,12,10,PASS,YES,Project MIT License (Academic DBMS),PASS,DERIVED_ANALYTICAL,PASS,PASS
+grammy_winners_db,trophy_tracking,65,50,PASS,12,10,PASS,YES,Project MIT License (Academic DBMS),PASS,SYNTHETIC_TEMPLATE,PASS,PASS
+grammy_winners_db,winner_press_releases,65,50,PASS,12,10,PASS,YES,Public Domain Historical Facts / Educational Fair Use,PASS,SEMI_SYNTHETIC,PASS,PASS
+grammy_winners_db,winner_records,400,50,PASS,13,10,PASS,YES,CC0: Public Domain,PASS,AUTHENTIC_PRIMARY,PASS,PASS
+grammy_creators_db,arrangers_conductors,75,50,PASS,12,10,PASS,YES,CC0 1.0 Universal (Core Data) / CC BY-NC-SA 3.0 (Supplementary),PASS,SYNTHETIC_TEMPLATE,PASS,PASS
+grammy_creators_db,artists,300,50,PASS,13,10,PASS,YES,CC0 1.0 Universal (Core Data) / CC BY-NC-SA 3.0 (Supplementary),PASS,AUTHENTIC_PRIMARY_WITH_DATA_HYGIENE_ISSUES,PASS,PASS
+grammy_creators_db,audio_engineers,75,50,PASS,12,10,PASS,YES,CC0 1.0 Universal (Core Data) / CC BY-NC-SA 3.0 (Supplementary),PASS,SYNTHETIC_TEMPLATE,PASS,PASS
+grammy_creators_db,creator_collaborations,65,50,PASS,12,10,PASS,YES,Project MIT License (Academic DBMS),PASS,DERIVED_ANALYTICAL,PASS,PASS
+grammy_creators_db,creator_discographies,65,50,PASS,12,10,PASS,YES,CC0 1.0 Universal (Core Data) / CC BY-NC-SA 3.0 (Supplementary),PASS,SEMI_SYNTHETIC,PASS,PASS
+grammy_creators_db,group_memberships,65,50,PASS,12,10,PASS,YES,CC0 1.0 Universal (Core Data) / CC BY-NC-SA 3.0 (Supplementary),PASS,SEMI_SYNTHETIC,PASS,PASS
+grammy_creators_db,musical_groups,65,50,PASS,12,10,PASS,YES,CC0 1.0 Universal (Core Data) / CC BY-NC-SA 3.0 (Supplementary),PASS,SYNTHETIC_TEMPLATE,PASS,PASS
+grammy_creators_db,producers,75,50,PASS,12,10,PASS,YES,CC0 1.0 Universal (Core Data) / CC BY-NC-SA 3.0 (Supplementary),PASS,SYNTHETIC_TEMPLATE,PASS,PASS
+grammy_creators_db,record_labels,60,50,PASS,12,10,PASS,YES,CC0 1.0 Universal (Core Data) / CC BY-NC-SA 3.0 (Supplementary),PASS,SYNTHETIC_TEMPLATE,PASS,PASS
+grammy_creators_db,songwriters_composers,75,50,PASS,12,10,PASS,YES,CC0 1.0 Universal (Core Data) / CC BY-NC-SA 3.0 (Supplementary),PASS,SYNTHETIC_TEMPLATE,PASS,PASS
