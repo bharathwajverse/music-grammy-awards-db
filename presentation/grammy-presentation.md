@@ -16,6 +16,7 @@ footer: "Advanced Database Management Systems — October 2026"
 - **Target Domain**: National Academy of Recording Arts and Sciences (1959–Present)
 - **Certification Status**: **100% Certified** across 670 Automated Tests (629 baseline + 41 presentation/viva tests)
 - **Scale**: 5 Autonomous Databases | 50 Collections | 5,190 Schema-Validated Documents | 44 Custom B+ Tree Indexes
+- **Artifact Formats**: Available in Marp Markdown (`grammy-presentation.md`) and 16:9 Widescreen PowerPoint (`grammy-presentation.pptx`)
 
 ---
 

@@ -6,6 +6,7 @@
 > **Verification Status**: **100% Certified** across 670 Automated Tests (629 baseline + 41 capstone verification)  
 > **Authors**: Five-Member Distributed Database Team (Members 1–5)  
 > **Scope**: Master Question Bank (230 Project-Grounded Questions & Model Answers) + Five-Member Viva Responsibility Matrix  
+> **Handbook Formats**: Comprehensive Academic Markdown ([`viva-preparation.md`](viva-preparation.md)) and Publication-Ready PDF Handbook ([`viva-preparation.pdf`](viva-preparation.pdf))  
 
 ---
 

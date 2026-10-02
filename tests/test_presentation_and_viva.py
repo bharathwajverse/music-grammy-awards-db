@@ -18,8 +18,12 @@ import pytest
 REPO_ROOT = Path(__file__).resolve().parent.parent
 
 PRESENTATION_FILE = REPO_ROOT / "presentation" / "grammy-presentation.md"
+PRESENTATION_PPTX_FILE = REPO_ROOT / "presentation" / "grammy-presentation.pptx"
 WALKTHROUGH_FILE = REPO_ROOT / "presentation" / "demo_walkthrough_script.md"
 VIVA_FILE = REPO_ROOT / "docs" / "viva-preparation.md"
+VIVA_PDF_FILE = REPO_ROOT / "docs" / "viva-preparation.pdf"
+PPTX_GENERATOR = REPO_ROOT / "scripts" / "presentation" / "generate_presentation_pptx.py"
+PDF_GENERATOR = REPO_ROOT / "scripts" / "docs" / "generate_viva_pdf.py"
 
 
 def test_presentation_file_exists_and_is_non_empty():
@@ -200,4 +204,39 @@ def test_project_status_and_audit_completion():
     req_content = REQ_MATRIX_FILE.read_text(encoding="utf-8")
     assert "REQ-31,Presentation,Final presentation slides and project walkthrough video,Slide deck and video presentation artifacts,PASS" in req_content
     assert "REQ-32,Viva preparation,Oral defense questions; examiner answers; syllabus review,Viva voce question bank and academic defense notes,PASS" in req_content
+
+
+def test_presentation_pptx_exists_and_is_valid():
+    """Verifies that presentation/grammy-presentation.pptx exists, is > 20 KB, and valid."""
+    assert PRESENTATION_PPTX_FILE.exists(), "presentation/grammy-presentation.pptx does not exist!"
+    size_bytes = PRESENTATION_PPTX_FILE.stat().st_size
+    assert size_bytes > 20 * 1024, f"PPTX file size ({size_bytes} bytes) is too small (< 20 KB)!"
+
+    # Verify validity and slide count via python-pptx
+    from pptx import Presentation
+    prs = Presentation(str(PRESENTATION_PPTX_FILE))
+    assert len(prs.slides) == 20, f"Expected 20 slides in PPTX, found {len(prs.slides)}"
+    assert prs.slide_width > prs.slide_height, "Expected 16:9 widescreen orientation"
+
+
+def test_viva_pdf_exists_and_is_valid():
+    """Verifies that docs/viva-preparation.pdf exists, is > 20 KB, and has valid PDF structure."""
+    assert VIVA_PDF_FILE.exists(), "docs/viva-preparation.pdf does not exist!"
+    size_bytes = VIVA_PDF_FILE.stat().st_size
+    assert size_bytes > 20 * 1024, f"PDF file size ({size_bytes} bytes) is too small (< 20 KB)!"
+
+    # Verify binary PDF header and EOF trailer
+    with open(VIVA_PDF_FILE, "rb") as f:
+        header = f.read(10)
+        assert header.startswith(b"%PDF-"), f"Invalid PDF header: {header}"
+        f.seek(-1024, 2)
+        tail = f.read(1024)
+        assert b"%%EOF" in tail, "Missing %%EOF marker in PDF trailer!"
+
+
+def test_generator_scripts_exist():
+    """Verifies that automated generator scripts for PPTX and PDF exist."""
+    assert PPTX_GENERATOR.exists(), "scripts/presentation/generate_presentation_pptx.py is missing!"
+    assert PDF_GENERATOR.exists(), "scripts/docs/generate_viva_pdf.py is missing!"
+
 

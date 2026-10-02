@@ -5,6 +5,7 @@
 > **Document**: Formal Oral Defense Script & Live Demonstration Protocol  
 > **Presentation Duration**: 20 Minutes (15 min Presentation + 5 min Live Demo)  
 > **Team Structure**: Five-Member Distributed Database Team (Members 1–5)  
+> **Slide Deck Artifacts**: Marp Markdown ([`grammy-presentation.md`](grammy-presentation.md)) and Widescreen PowerPoint ([`grammy-presentation.pptx`](grammy-presentation.pptx))  
 
 ---
 

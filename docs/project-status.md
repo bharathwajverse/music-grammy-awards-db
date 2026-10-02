@@ -23,7 +23,7 @@ The repository follows a standardized, modular directory architecture establishe
 
 | Directory | Scope & Purpose | Status |
 | :--- | :--- | :--- |
-| `docs/` | System architecture, master instructions, data dictionary, syllabus mapping, and phase reports | **Active** |
+| `docs/` | System architecture, master instructions, data dictionary, syllabus mapping, viva handbook (PDF & Markdown), and phase reports | **Active** |
 | `research/` | Academic DBMS research notes, literature citations, and algorithmic analyses | **Initialized** |
 | `sources/` | Dataset provenance manifests, license verifications, and citation registries | **Initialized** |
 | `eer/` | Enhanced Entity-Relationship (EER) diagrams, specialization/generalization hierarchies, union types | **Completed** |
@@ -39,7 +39,7 @@ The repository follows a standardized, modular directory architecture establishe
 | `queries/advanced/` | Complex conditional, logical, comparison, array, and element-matching queries | **Completed** |
 | `queries/aggregation/` | Multi-stage aggregation pipelines (`$group`, `$lookup`, `$unwind`, `$facet`, `$bucket`) | **Completed** |
 | `tests/` | Comprehensive test suites (schema validations, foreign reference checks, ACID, concurrency) | **Active** |
-| `presentation/` | Slide decks, video walkthrough artifacts, demonstration scripts, and final report assets | **Completed** |
+| `presentation/` | Slide decks (PowerPoint PPTX & Marp Markdown), video walkthrough artifacts, demonstration scripts, and final report assets | **Completed** |
 
 ---
 
@@ -355,6 +355,7 @@ The system architecture partitions the domain across five dedicated databases. E
 - **Completed in Phase 29 (Academic Presentation Slide Deck & Walkthrough)**:
   - Authored formal 20-slide Marp-compatible academic presentation slide deck: [`presentation/grammy-presentation.md`](../presentation/grammy-presentation.md) covering all 20 required topics:
     1. Title, 2. Problem, 3. Objectives, 4. Real-world data, 5. Architecture, 6. Five databases, 7. EER, 8. Relational model, 9. Normalization, 10. MongoDB model, 11. Data statistics, 12. CRUD, 13. Advanced queries, 14. Aggregation, 15. Transactions/concurrency, 16. Storage/recovery, 17. Validation, 18. Results, 19. Limitations, 20. Conclusion.
+  - Generated executive 16:9 widescreen presentation slide deck in PowerPoint format: [`presentation/grammy-presentation.pptx`](../presentation/grammy-presentation.pptx) via automated generator [`scripts/presentation/generate_presentation_pptx.py`](../scripts/presentation/generate_presentation_pptx.py), featuring dark slate and Grammy gold academic styling, formatted data tables, styled callout cards, and syntax-highlighted code containers.
   - Authored oral defense walkthrough script and live demo protocol: [`presentation/demo_walkthrough_script.md`](../presentation/demo_walkthrough_script.md) with slide-by-slide speaker notes, time budgeting, and live terminal demo runbook.
 - **Completed in Phase 30 (Comprehensive Viva Voce Preparation Guide & Examination Handbook)**:
   - Authored master viva preparation handbook: [`docs/viva-preparation.md`](viva-preparation.md) containing 230 project-grounded questions and detailed model answers:
@@ -372,8 +373,9 @@ The system architecture partitions the domain across five dedicated databases. E
     12. Questions about data sources & acquisition (Q211 to Q220).
     13. Questions about licensing & provenance (Q221 to Q230).
   - Formulated comprehensive Five-Member Viva Responsibility & Defense Matrix mapping Members 1 through 5 to their assigned databases, collection portfolios, syllabus modules, code scripts, test files, and defense specialties.
-  - Implemented automated verification test suite [`tests/test_presentation_and_viva.py`](../tests/test_presentation_and_viva.py) (41 tests).
-- **Current System Status**: Phases 1 through 30 Fully Completed & Formally Certified (30/30). Full test suite passing at 100% fidelity (670 passing tests). Master ADBMS Capstone Complete. STOP condition satisfied.
+  - Generated publication-grade academic defense handbook in PDF format: [`docs/viva-preparation.pdf`](viva-preparation.pdf) via [`scripts/docs/generate_viva_pdf.py`](../scripts/docs/generate_viva_pdf.py), featuring title cover page, executive metadata block, 5-member responsibility matrix table, styled question callouts, and two-pass page numbering ("Page X of Y").
+  - Implemented automated verification test suite [`tests/test_presentation_and_viva.py`](../tests/test_presentation_and_viva.py) (44 tests verifying Markdown, PPTX, PDF, and generators).
+- **Current System Status**: Phases 1 through 30 Fully Completed & Formally Certified (30/30). Full test suite passing at 100% fidelity (673 passing tests). Master ADBMS Capstone Complete. STOP condition satisfied.
 
 
 
