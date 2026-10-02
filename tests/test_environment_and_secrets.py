@@ -89,3 +89,26 @@ def test_tracked_files_do_not_contain_hardcoded_atlas_passwords():
             pass
             
     assert not violations, f"Live credentials found in tracked files: {violations}"
+
+
+def test_mongodb_connection_doc_exists_and_is_sanitized():
+    """Verify that docs/mongodb/connection.md exists and contains only sanitized config."""
+    doc_path = REPO_ROOT / "docs" / "mongodb" / "connection.md"
+    assert doc_path.exists(), "docs/mongodb/connection.md must exist for Phase 12"
+    
+    content = doc_path.read_text(encoding="utf-8")
+    # Verify required sections
+    assert "Phase 12" in content
+    assert "MongoDB Atlas" in content
+    assert "Cluster Topology" in content
+    assert "Network Security" in content
+    assert "Target Logical Databases" in content
+    assert "Connectivity Verification" in content
+    
+    # Verify zero live credentials
+    assert "system:system" not in content, "docs/mongodb/connection.md must not contain live credentials"
+    assert "mongodb+srv://system:" not in content, "docs/mongodb/connection.md must not expose usernames with passwords"
+    
+    # Verify safe masking patterns are documented
+    assert "<username>:<password>" in content or ":****@" in content
+
