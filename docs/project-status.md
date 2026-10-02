@@ -148,11 +148,12 @@ The system architecture partitions the domain across five dedicated databases. E
   - Detailed collection specifications: [`mongodb/collection-specifications/`](../mongodb/collection-specifications/) (5 database markdown guides covering all 50 collections with all 12 defined dimensions: collection name, purpose, sample document, $\ge 10$ meaningful fields, BSON types, required fields, identifier, outbound references, embedded documents, arrays, source provenance, and derived-data indicators).
   - Master document model design architecture: [`docs/mongodb-design.md`](mongodb-design.md) (comprehensive multi-database topology, feasibility matrix compliance audit, deterministic universal `_id` patterns, BSON data types, indexing strategy, and client-side aggregation architecture).
   - Verified with 63 automated pytest tests (`tests/test_mongodb_document_model.py`, 413 total system tests passing).
-- **Phase Rule Compliance**:
-  - No MongoDB database operations were executed.
-  - No data import was run.
-  - No application code was written.
-- **Next Authorized Phase**: Phase 12 — Data Pipeline, Ingest Scripts & Collection Initialization (Awaiting user checkpoint approval).
+- **Completed in Step 16 (MongoDB Atlas Connection & Security Configuration)**:
+  - Local `.env` configured securely with `MONGODB_URI` and `MONGODB_ATLAS_URI` pointing to Atlas cluster.
+  - Strict zero-secrets enforcement: `.env` verified gitignored (`.gitignore:7:.env`), with zero connection credentials in tracked source code.
+  - Automated security scanner & connection diagnostic tool: [`scripts/test_atlas_connection.py`](../scripts/test_atlas_connection.py) with credential masking.
+  - Test suite verification: [`tests/test_environment_and_secrets.py`](../tests/test_environment_and_secrets.py) (5 tests passing, 418 total system tests passing).
+- **Next Authorized Phase**: Step 17 / Phase 12 — Collection Initialization, Data Ingest & Validation on MongoDB Atlas.
 
 
 

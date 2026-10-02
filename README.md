@@ -138,7 +138,10 @@ python queries/advanced_aggregation/module_10_pipelines.py
 ```bash
 # Copy and configure environment variables
 cp .env.example .env
-# Edit .env and supply your MONGODB_ATLAS_URI
+# Edit .env and supply your MONGODB_URI or MONGODB_ATLAS_URI
+
+# Verify Atlas connection & zero-secrets security compliance
+python scripts/test_atlas_connection.py
 
 # Ingest all 50 collections into MongoDB Atlas
 python scripts/etl/load_atlas_databases.py

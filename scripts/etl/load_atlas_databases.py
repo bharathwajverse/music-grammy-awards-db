@@ -25,9 +25,9 @@ DATABASES = [
 ]
 
 def load_data_to_atlas():
-    uri = os.getenv("MONGODB_ATLAS_URI")
+    uri = os.getenv("MONGODB_URI") or os.getenv("MONGODB_ATLAS_URI")
     if not uri or "username:password" in uri:
-        print("[ERROR] Please configure MONGODB_ATLAS_URI in your .env file with your Atlas credentials.")
+        print("[ERROR] Please configure MONGODB_URI or MONGODB_ATLAS_URI in your .env file with your Atlas credentials.")
         sys.exit(1)
 
     print("Connecting to MongoDB Atlas Cluster...")

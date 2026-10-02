@@ -15,9 +15,9 @@ from dotenv import load_dotenv
 load_dotenv()
 
 def run_acid_transaction_demo():
-    uri = os.getenv("MONGODB_ATLAS_URI")
+    uri = os.getenv("MONGODB_URI") or os.getenv("MONGODB_ATLAS_URI")
     if not uri or "username:password" in uri:
-        print("[NOTE] MONGODB_ATLAS_URI not set. Demonstrating ACID transaction logic in offline mode.")
+        print("[NOTE] MONGODB_URI / MONGODB_ATLAS_URI not set. Demonstrating ACID transaction logic in offline mode.")
         print_theoretical_acid_lifecycle()
         return
 

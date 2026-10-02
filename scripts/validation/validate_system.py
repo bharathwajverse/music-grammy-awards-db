@@ -80,10 +80,10 @@ def run_local_schema_check():
 
 def run_live_database_validation(mongo_uri: str = None):
     """Executes live validation against MongoDB Atlas."""
-    uri = mongo_uri or os.getenv("MONGODB_ATLAS_URI")
+    uri = mongo_uri or os.getenv("MONGODB_URI") or os.getenv("MONGODB_ATLAS_URI")
     if not uri or "username:password" in uri:
         print("\n[NOTE] Live MongoDB Atlas URI not configured in .env. Skipping live server checks.")
-        print("To run live validation, set MONGODB_ATLAS_URI in your .env file.")
+        print("To run live validation, set MONGODB_URI or MONGODB_ATLAS_URI in your .env file.")
         return True
 
     print("\n==================================================================")
