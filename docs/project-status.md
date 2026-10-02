@@ -2,7 +2,7 @@
 
 > **Course**: Advanced Database Management Systems (ADBMS)  
 > **Project Title**: GRAMMY Awards Information & Analytics System  
-> **Current Phase**: Phase 12 — MongoDB Connection (Completed)  
+> **Current Phase**: Phase 14 — Data Processing (Completed)  
 > **Status Date**: October 2026  
 > **Version Control**: Git / GitHub (`bharathwajverse/music-grammy-awards-db`)  
 > **Database Engine**: MongoDB Atlas (`Cluster0`) & MongoDB Compass  
@@ -154,4 +154,19 @@ The system architecture partitions the domain across five dedicated databases. E
   - Automated security scanner & connection diagnostic tool: [`scripts/test_atlas_connection.py`](../scripts/test_atlas_connection.py) with dynamic credential masking.
   - Comprehensive connection architecture documentation: [`docs/mongodb/connection.md`](mongodb/connection.md) (cluster topology, TLS 1.3/SNI encryption, firewall IP whitelisting, five domain databases catalog, zero production collections boundary, sanitized Python client factory).
   - Test suite verification: [`tests/test_environment_and_secrets.py`](../tests/test_environment_and_secrets.py) (6/6 tests passing, 419 total system tests passing).
-- **Next Authorized Phase**: Phase 13 — Collection Initialization, JSON Schema Validation & Database Deployment on MongoDB Atlas.
+- **Completed in Phase 13 (Approved Raw Data Acquisition & Provenance Recording)**:
+  - Raw data acquired across all 5 databases (`data/raw/<database>/`) from approved sources (`SRC-01` through `SRC-08`, `SRC-10`).
+  - Quarantined source `SRC-09` strictly excluded.
+  - 5,190 raw records acquired across all 50 collections ($\ge 50$ records per collection).
+  - Provenance embedded in raw records and tracked in [`data/raw/acquisition_manifest.json`](../data/raw/acquisition_manifest.json).
+  - Comprehensive acquisition report: [`docs/data_acquisition_report.md`](data_acquisition_report.md).
+  - Verified with 9 automated pytest tests ([`tests/test_raw_data_acquisition.py`](../tests/test_raw_data_acquisition.py), 428 total system tests passing).
+- **Completed in Phase 14 (Data Processing, Normalization & Entity Matching)**:
+  - Processed exclusively approved raw data without overwriting raw datasets.
+  - Performed parsing, cleaning, type normalization, date normalization, identifier normalization, duplicate detection, and cross-database entity matching.
+  - Fact preservation guaranteed: null/unknown preserved according to approved schemas without data fabrication.
+  - Processed collections written to `data/processed/<database>/`.
+  - 100% formal schema conformance: all 50 collections pass Draft-07 JSON Schema validation.
+  - Comprehensive processing report: [`docs/data_processing_report.md`](data_processing_report.md).
+  - Verified with 10 automated pytest tests ([`tests/test_data_processing_pipeline.py`](../tests/test_data_processing_pipeline.py), 438 total system tests passing).
+- **Next Authorized Phase**: Phase 15 — MongoDB Database Deployment, Collection Initialization & Ingestion on Atlas.
