@@ -27,5 +27,6 @@ Phase 25,Recovery Techniques; ARIES; Shadow Paging & Drills,WAL rules; ARIES 3 p
 Phase 26,Five-Database Integration & Cross-Database Join Federation,Global ID regex; 11 referential integrity checks (0 orphans); 4 cross-db join scenarios,COMPLETE,"scripts/integration/cross_database_validation.py; docs/integration.md",None
 Phase 27,Final Requirements Audit & Academic Compliance Engine,Automated 8-point audit harness; verify quotas; natural keys; security; test suite,COMPLETE,"scripts/audit/final_audit.py; tests/final-audit-report.md",None
 Phase 28,Final Documentation & Comprehensive Academic Report,30-section capstone report synthesize entire project with citations and metrics,COMPLETE,"docs/final-report.md",None
-Phase 29,Final Project Presentation & Slide Deck,Slide deck (presentation/); executive summary slides; system demo video walkthrough,MISSING,presentation/.gitkeep,"presentation/ contains only .gitkeep; no slide deck or presentation assets exist"
-Phase 30,Viva Voce Defense Preparation & Exam Questions,Viva voce preparation guide; theoretical defense Q&A across 10 modules; examiner defense notes,MISSING,None,"No viva preparation document or oral defense guide exists in the repository"
+Phase 29,Final Project Presentation & Slide Deck,Slide deck (presentation/); executive summary slides; system demo video walkthrough,COMPLETE,"presentation/grammy-presentation.md; presentation/demo_walkthrough_script.md",None
+Phase 30,Viva Voce Defense Preparation & Exam Questions,Viva voce preparation guide; theoretical defense Q&A across 10 modules; examiner defense notes,COMPLETE,"docs/viva-preparation.md; tests/test_presentation_and_viva.py",None
+

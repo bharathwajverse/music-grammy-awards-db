@@ -177,21 +177,27 @@ def test_viva_answers_contain_project_facts():
     assert "relational division" in content.lower()
 
 
-def test_git_status_and_commit():
-    """Stages, commits, and pushes changes to main branch if there are pending modifications."""
-    import subprocess
-    # Check status
-    st_res = subprocess.run(["git", "status", "--porcelain"], cwd=REPO_ROOT, capture_output=True, text=True)
-    if st_res.stdout.strip():
-        add_res = subprocess.run(["git", "add", "."], cwd=REPO_ROOT, capture_output=True, text=True)
-        assert add_res.returncode == 0, f"git add failed: {add_res.stderr}"
-        commit_res = subprocess.run(
-            ["git", "commit", "-m", "feat(phase-29-30): complete presentation slide deck and viva preparation handbook"],
-            cwd=REPO_ROOT,
-            capture_output=True,
-            text=True
-        )
-        assert commit_res.returncode == 0, f"git commit failed: {commit_res.stderr}"
-        push_res = subprocess.run(["git", "push", "origin", "main"], cwd=REPO_ROOT, capture_output=True, text=True)
-        # Note push result
-        print(f"Git push output: {push_res.stdout} {push_res.stderr}")
+PROJECT_STATUS_FILE = REPO_ROOT / "docs" / "project-status.md"
+PHASE_MATRIX_FILE = REPO_ROOT / "docs" / "final-audit" / "30-phase-completion-matrix.csv"
+REQ_MATRIX_FILE = REPO_ROOT / "docs" / "final-audit" / "requirements-compliance-matrix.csv"
+
+
+def test_project_status_and_audit_completion():
+    """Verifies that project status and final audit matrices formally record Phase 29 and 30 completed."""
+    assert PROJECT_STATUS_FILE.exists(), "docs/project-status.md is missing!"
+    status_content = PROJECT_STATUS_FILE.read_text(encoding="utf-8")
+    assert "Phase 29" in status_content, "Phase 29 missing from project status!"
+    assert "Phase 30" in status_content, "Phase 30 missing from project status!"
+    assert "30/30" in status_content or "30 of 30" in status_content, "Project status must record 30/30 phases complete!"
+    assert "Phases 1 through 30 Fully Completed" in status_content
+
+    assert PHASE_MATRIX_FILE.exists(), "30-phase-completion-matrix.csv is missing!"
+    phase_content = PHASE_MATRIX_FILE.read_text(encoding="utf-8")
+    assert "Phase 29,Final Project Presentation & Slide Deck,Slide deck (presentation/); executive summary slides; system demo video walkthrough,COMPLETE" in phase_content
+    assert "Phase 30,Viva Voce Defense Preparation & Exam Questions,Viva voce preparation guide; theoretical defense Q&A across 10 modules; examiner defense notes,COMPLETE" in phase_content
+
+    assert REQ_MATRIX_FILE.exists(), "requirements-compliance-matrix.csv is missing!"
+    req_content = REQ_MATRIX_FILE.read_text(encoding="utf-8")
+    assert "REQ-31,Presentation,Final presentation slides and project walkthrough video,Slide deck and video presentation artifacts,PASS" in req_content
+    assert "REQ-32,Viva preparation,Oral defense questions; examiner answers; syllabus review,Viva voce question bank and academic defense notes,PASS" in req_content
+

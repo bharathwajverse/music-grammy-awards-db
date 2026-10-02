@@ -3,7 +3,7 @@
 > **Course**: Advanced Database Management Systems (ADBMS) — Graduate Capstone  
 > **System Title**: GRAMMY Awards Information & Analytics System  
 > **Target Engine**: MongoDB Atlas (`Cluster0`) & WiredTiger Engine  
-> **Verification Status**: **100% Certified** across 629 Automated Tests  
+> **Verification Status**: **100% Certified** across 670 Automated Tests (629 baseline + 41 capstone verification)  
 > **Authors**: Five-Member Distributed Database Team (Members 1–5)  
 > **Scope**: Master Question Bank (230 Project-Grounded Questions & Model Answers) + Five-Member Viva Responsibility Matrix  
 
@@ -63,7 +63,8 @@
 **Answer**: `grammy_history_db`, `grammy_categories_db`, `grammy_nominations_db`, `grammy_winners_db`, and `grammy_creators_db`.
 
 #### Q8: How many tests exist in the automated test suite and what is the pass rate?
-**Answer**: 629 automated pytest tests spanning 24 test suites, achieving a 100% pass rate.
+**Answer**: 629 automated pytest tests spanning 24 test suites for Phases 1–28, expanding to 670 passing tests across 25 test suites with the Phase 29–30 capstone verification suite, achieving a 100% pass rate.
+
 
 #### Q9: What is the purpose of the `_source_provenance` subdocument?
 **Answer**: It guarantees 100% data auditability and lineage tracking on every document, recording `source_id`, `source_name`, `license_type`, `provenance_tier`, `attribution`, and `acquired_timestamp`.
@@ -346,7 +347,8 @@
 **Answer**: It introspects all 50 collections across the five live Atlas databases, extracting exact document counts, data sizes, storage sizes, compression ratios, and schema attributes into `docs/storage/data_dictionary.json`.
 
 #### Q100: What is the final readiness verdict of the GRAMMY DBMS project?
-**Answer**: 100% Certified Complete, satisfying all 30 project lifecycle phases and 10 graduate ADBMS syllabus modules with 629 passing tests.
+**Answer**: 100% Certified Complete, satisfying all 30 project lifecycle phases and 10 graduate ADBMS syllabus modules with 670 passing tests (including 629 core DBMS engine tests and 41 presentation/viva capstone verification tests).
+
 
 ---
 
