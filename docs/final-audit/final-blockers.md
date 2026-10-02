@@ -10,14 +10,14 @@
 
 ## 1. Executive Summary of Audit Findings
 
-The **GRAMMY Awards Information & Analytics System** represents an extraordinary, highly sophisticated academic database project with 5,190 validated documents across 50 collections in 5 databases on MongoDB Atlas, supported by 670 passing automated tests across 25 test suites and thorough academic documentation across all 10 syllabus modules.
+The **GRAMMY Awards Information & Analytics System** represents an extraordinary, highly sophisticated academic database project with 5,190 validated documents across 50 collections in 5 databases on MongoDB Atlas, supported by 673 passing automated tests across 25 test suites and thorough academic documentation across all 10 syllabus modules.
 
 All critical blockers identified during the preliminary Phase 27/28 audit have been **100% RESOLVED**:
 
-1. **Phase 29 Deliverables**: **RESOLVED**. Created formal 20-slide Marp-compatible academic slide deck ([`presentation/grammy-presentation.md`](../../presentation/grammy-presentation.md)) and oral presentation walkthrough script ([`presentation/demo_walkthrough_script.md`](../../presentation/demo_walkthrough_script.md)).
-2. **Phase 30 Deliverables**: **RESOLVED**. Created master viva examination handbook ([`docs/viva-preparation.md`](../viva-preparation.md)) with 230 project-grounded questions/answers across 13 categories and a five-member viva responsibility matrix.
+1. **Phase 29 Deliverables**: **RESOLVED**. Created formal 20-slide Marp-compatible academic slide deck ([`presentation/grammy-presentation.md`](../../presentation/grammy-presentation.md)), PowerPoint presentation ([`presentation/grammy-presentation.pptx`](../../presentation/grammy-presentation.pptx)), and oral presentation walkthrough script ([`presentation/demo_walkthrough_script.md`](../../presentation/demo_walkthrough_script.md)).
+2. **Phase 30 Deliverables**: **RESOLVED**. Created master viva examination handbook in Markdown ([`docs/viva-preparation.md`](../viva-preparation.md)) and publication-grade PDF ([`docs/viva-preparation.pdf`](../viva-preparation.pdf)) with 230 project-grounded questions/answers across 13 categories and a five-member viva responsibility matrix.
 3. **Data Authenticity Disclosure**: **RESOLVED**. Formally declared and transparently documented in `docs/final-report.md` (Section 28), `presentation/grammy-presentation.md` (Slide 19), and viva questions Q219.
-4. **Test Coverage**: **RESOLVED**. 41 automated tests created in [`tests/test_presentation_and_viva.py`](../../tests/test_presentation_and_viva.py), bringing total passing tests to 670 (100% pass rate).
+4. **Test Coverage**: **RESOLVED**. 44 automated tests created in [`tests/test_presentation_and_viva.py`](../../tests/test_presentation_and_viva.py), bringing total passing tests to 673 (100% pass rate).
 
 ---
 
@@ -96,7 +96,7 @@ All critical blockers identified during the preliminary Phase 27/28 audit have b
 ### ISSUE 3: Missing Test Coverage for Phase 29 & 30 — [RESOLVED]
 - **Location**: `tests/test_presentation_and_viva.py`
 - **Resolution Status**: **COMPLETE**
-- **Details**: 41 automated pytest tests implemented in `tests/test_presentation_and_viva.py` validating that all 20 required slides and all 230 viva questions exist and conform to standards, bringing the system-wide total to 670 passing tests (100% pass rate).
+- **Details**: 44 automated pytest tests implemented in `tests/test_presentation_and_viva.py` validating that all 20 required slides, PPTX file, PDF handbook, and all 230 viva questions exist and conform to standards, bringing the system-wide total to 673 passing tests (100% pass rate).
 
 ---
 
@@ -104,11 +104,11 @@ All critical blockers identified during the preliminary Phase 27/28 audit have b
 
 ### Status: 100% COMPLETED (All 30 Phases Certified)
 All mandatory and recommended deliverables have been implemented, verified, and certified:
-1. **Presentation Slide Deck**: Delivered in [`presentation/grammy-presentation.md`](../../presentation/grammy-presentation.md) (20 slides, Marp-compatible).
+1. **Presentation Slide Deck**: Delivered in [`presentation/grammy-presentation.md`](../../presentation/grammy-presentation.md) (20 slides, Marp-compatible) and [`presentation/grammy-presentation.pptx`](../../presentation/grammy-presentation.pptx) (16:9 widescreen PowerPoint).
 2. **Demonstration Script**: Delivered in [`presentation/demo_walkthrough_script.md`](../../presentation/demo_walkthrough_script.md) (20-minute defense walkthrough and 5-minute live demo protocol).
-3. **Viva Defense Preparation Document**: Delivered in [`docs/viva-preparation.md`](../viva-preparation.md) (230 questions across 13 categories + 5-member responsibility matrix).
+3. **Viva Defense Preparation Document**: Delivered in [`docs/viva-preparation.md`](../viva-preparation.md) (230 questions across 13 categories + 5-member responsibility matrix) and [`docs/viva-preparation.pdf`](../viva-preparation.pdf) (28-page publication PDF).
 4. **Data Tiering Documentation**: Documented in `docs/final-report.md` Section 28 and `presentation/grammy-presentation.md` Slide 19.
-5. **Automated Test Suite**: 670 passing pytest tests across 25 suites ([`tests/test_presentation_and_viva.py`](../../tests/test_presentation_and_viva.py)).
+5. **Automated Test Suite**: 673 passing pytest tests across 25 suites ([`tests/test_presentation_and_viva.py`](../../tests/test_presentation_and_viva.py)).
 
 The system has satisfied all academic and technical criteria with zero remaining blockers. Master ADBMS Capstone Complete.
 
