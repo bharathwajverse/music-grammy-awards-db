@@ -125,7 +125,8 @@ for attempt in range(max_retries):
                 # Transaction logic
                 s.commit_transaction()
                 break
-    except (WriteConflictError, OperationFailure) as exc:
+    except (OperationFailure, PyMongoError) as exc:
+        # In PyMongo, code 112 (WriteConflict) or error label TransientTransactionError indicates retryable OCC collision
         time.sleep(backoff_jitter(attempt))
 ```
 

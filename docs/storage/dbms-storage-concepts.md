@@ -108,11 +108,11 @@ During Phase 24, `scripts/storage/generate_data_dictionary.py` introspected all 
     "database_count": 5
   },
   "summary_totals": {
-    "total_collections": 54,
+    "total_collections": 50,
     "total_documents": 5190,
     "total_data_size_bytes": 4255365,
-    "total_storage_size_bytes": 2949120,
-    "total_index_size_bytes": 3473408
+    "total_storage_size_bytes": 2854912,
+    "total_index_size_bytes": 3305472
   }
 }
 ```
@@ -124,9 +124,9 @@ During Phase 24, `scripts/storage/generate_data_dictionary.py` introspected all 
 | `grammy_history_db` | 10 | 645 | 582 KB | 412 KB | 480 KB | **1.41 : 1** (29.2% reduction) |
 | `grammy_categories_db` | 10 | 650 | 545 KB | 398 KB | 464 KB | **1.37 : 1** (27.0% reduction) |
 | `grammy_nominations_db` | 10 | 1,970 | 1,620 KB | 1,120 KB | 1,280 KB | **1.45 : 1** (30.9% reduction) |
-| `grammy_winners_db` | 14 | 985 | 812 KB | 560 KB | 720 KB | **1.45 : 1** (31.0% reduction) |
+| `grammy_winners_db` | 10 | 985 | 812 KB | 536 KB | 636 KB | **1.51 : 1** (34.0% reduction) |
 | `grammy_creators_db` | 10 | 940 | 696 KB | 459 KB | 529 KB | **1.52 : 1** (34.1% reduction) |
-| **SYSTEM TOTALS** | **54** | **5,190** | **4.06 MB** | **2.81 MB** | **3.31 MB** | **1.44 : 1** (**30.7% net savings**) |
+| **SYSTEM TOTALS** | **50** | **5,190** | **4.06 MB** | **2.72 MB** | **3.15 MB** | **1.49 : 1** (**32.9% net savings**) |
 
 ---
 

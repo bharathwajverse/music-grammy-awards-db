@@ -223,45 +223,49 @@ class TransactionDemoRunner:
         rc_snapshot = ReadConcern("snapshot")
 
         t_start = time.time()
-        with self.client.start_session(causal_consistency=True) as session:
-            try:
-                with session.start_transaction(
-                    read_concern=rc_snapshot,
-                    write_concern=wc_majority
-                ):
-                    # Operation 1: Insert valid ballot in session
-                    ballots.insert_one({
-                        "ballot_id": test_ballot_id,
-                        "nominee_name": "Temporary Nominee",
-                        "test_run": True
-                    }, session=session)
-                    operations_attempted.append("INSERT_BALLOT_1")
+        try:
+            with self.client.start_session(causal_consistency=True) as session:
+                try:
+                    with session.start_transaction(
+                        read_concern=rc_snapshot,
+                        write_concern=wc_majority
+                    ):
+                        # Operation 1: Insert valid ballot in session
+                        ballots.insert_one({
+                            "ballot_id": test_ballot_id,
+                            "nominee_name": "Temporary Nominee",
+                            "test_run": True
+                        }, session=session)
+                        operations_attempted.append("INSERT_BALLOT_1")
 
-                    # Operation 2: Allocate trophy in session
-                    trophies.insert_one({
-                        "trophy_serial": test_trophy_id,
-                        "ballot_id": test_ballot_id,
-                        "test_run": True
-                    }, session=session)
-                    operations_attempted.append("INSERT_TROPHY_1")
+                        # Operation 2: Allocate trophy in session
+                        trophies.insert_one({
+                            "trophy_serial": test_trophy_id,
+                            "ballot_id": test_ballot_id,
+                            "test_run": True
+                        }, session=session)
+                        operations_attempted.append("INSERT_TROPHY_1")
 
-                    # Operation 3: Trigger intentional constraint failure (Duplicate Key)
-                    # Attempting to insert a duplicate of seed_ballot_id violates unique index
-                    operations_attempted.append("TRIGGER_DUPLICATE_KEY_VIOLATION")
-                    ballots.insert_one({
-                        "ballot_id": seed_ballot_id,
-                        "nominee_name": "Duplicate Crash Candidate",
-                        "test_run": True
-                    }, session=session)
+                        # Operation 3: Trigger intentional constraint failure (Duplicate Key)
+                        # Attempting to insert a duplicate of seed_ballot_id violates unique index
+                        operations_attempted.append("TRIGGER_DUPLICATE_KEY_VIOLATION")
+                        ballots.insert_one({
+                            "ballot_id": seed_ballot_id,
+                            "nominee_name": "Duplicate Crash Candidate",
+                            "test_run": True
+                        }, session=session)
 
-                    session.commit_transaction()
-            except Exception as exc:
-                lifecycle_states.append("FAILED")
-                caught_error = type(exc).__name__
-                if session.in_transaction:
-                    session.abort_transaction()
-                lifecycle_states.append("ABORTED")
-                aborted = True
+                        session.commit_transaction()
+                except Exception as exc:
+                    lifecycle_states.append("FAILED")
+                    caught_error = type(exc).__name__
+                    if session.in_transaction:
+                        session.abort_transaction()
+                    lifecycle_states.append("ABORTED")
+                    aborted = True
+        finally:
+            # Guarantee seed record cleanup
+            ballots.delete_one({"ballot_id": seed_ballot_id})
 
         duration_ms = round((time.time() - t_start) * 1000, 2)
 
@@ -271,9 +275,6 @@ class TransactionDemoRunner:
         trophy_leaked = trophies.find_one({"trophy_serial": test_trophy_id})
 
         verified_atomicity = (ballot_leaked is None) and (trophy_leaked is None) and aborted
-
-        # Clean seed record
-        ballots.delete_one({"ballot_id": seed_ballot_id})
 
         return {
             "scenario": "ROLLBACK_ABORT",

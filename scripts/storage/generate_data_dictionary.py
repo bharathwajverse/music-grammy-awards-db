@@ -94,7 +94,10 @@ class DataDictionaryGenerator:
             db_stats = db.command("dbStats")
 
             collections_metadata = {}
-            coll_names = [c for c in sorted(db.list_collection_names()) if not c.startswith("system.")]
+            coll_names = [
+                c for c in sorted(db.list_collection_names())
+                if not c.startswith("system.") and not c.startswith("controlled_") and not c.startswith("test_")
+            ]
 
             for coll_name in coll_names:
                 coll = db[coll_name]

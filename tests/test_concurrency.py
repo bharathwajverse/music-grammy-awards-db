@@ -120,3 +120,24 @@ def test_live_atlas_atomic_increments(env_vars):
         assert res["actual_total"] == 60
     finally:
         sim.teardown()
+
+def test_live_atlas_optimistic_write_conflict(env_vars):
+    """Verify WiredTiger OCC WriteConflict detection and automatic retry resolution."""
+    uri = env_vars["MONGODB_URI"]
+    if not uri:
+        pytest.skip("MONGODB_URI not set; skipping live Atlas concurrency test.")
+
+    from scripts.concurrency.simulate_concurrency import ConcurrencySimulator
+    sim = ConcurrencySimulator(uri)
+    sim.connect()
+    sim.setup()
+    try:
+        res = sim.simulate_optimistic_write_conflict()
+        assert res["tx1_outcome"] == "COMMITTED"
+        assert res["conflict_encountered"] is True
+        assert res["retry_succeeded"] is True
+        assert res["final_status"] == "TX2_RESOLVED"
+        assert res["final_version"] == 3
+    finally:
+        sim.teardown()
+

@@ -1616,7 +1616,7 @@
       "data_size_bytes": 1536342,
       "storage_size_bytes": 819200,
       "indexes_count": 23,
-      "index_size_bytes": 851968,
+      "index_size_bytes": 868352,
       "collections": {
         "first_time_nominees": {
           "document_count": 70,
@@ -2045,7 +2045,7 @@
           "document_count": 500,
           "data_size_bytes": 358428,
           "storage_size_bytes": 131072,
-          "total_index_size_bytes": 49152,
+          "total_index_size_bytes": 53248,
           "avg_obj_size_bytes": 716,
           "index_count": 1,
           "indexes": [
@@ -2116,7 +2116,7 @@
           "document_count": 500,
           "data_size_bytes": 402858,
           "storage_size_bytes": 196608,
-          "total_index_size_bytes": 290816,
+          "total_index_size_bytes": 303104,
           "avg_obj_size_bytes": 805,
           "index_count": 6,
           "indexes": [
@@ -2489,12 +2489,12 @@
       }
     },
     "grammy_winners_db": {
-      "collections_count": 14,
-      "objects_count": 985,
-      "data_size_bytes": 840940,
-      "storage_size_bytes": 667648,
-      "indexes_count": 25,
-      "index_size_bytes": 835584,
+      "collections_count": 10,
+      "objects_count": 986,
+      "data_size_bytes": 840963,
+      "storage_size_bytes": 569344,
+      "indexes_count": 20,
+      "index_size_bytes": 671744,
       "collections": {
         "acceptance_speeches": {
           "document_count": 65,
@@ -2758,114 +2758,6 @@
               "sample_repr": "{'source_id': 'SRC-10', 'source_name': 'GRAMMY System Analyt"
             }
           }
-        },
-        "controlled_concurrency_benchmarks": {
-          "document_count": 0,
-          "data_size_bytes": 0,
-          "storage_size_bytes": 20480,
-          "total_index_size_bytes": 20480,
-          "avg_obj_size_bytes": 0,
-          "index_count": 1,
-          "indexes": [
-            {
-              "name": "_id_",
-              "key": [
-                [
-                  "_id",
-                  1
-                ]
-              ],
-              "unique": false
-            }
-          ],
-          "field_count": 0,
-          "fields": {}
-        },
-        "controlled_tx_audit": {
-          "document_count": 0,
-          "data_size_bytes": 0,
-          "storage_size_bytes": 32768,
-          "total_index_size_bytes": 32768,
-          "avg_obj_size_bytes": 0,
-          "index_count": 1,
-          "indexes": [
-            {
-              "name": "_id_",
-              "key": [
-                [
-                  "_id",
-                  1
-                ]
-              ],
-              "unique": false
-            }
-          ],
-          "field_count": 0,
-          "fields": {}
-        },
-        "controlled_tx_ballots": {
-          "document_count": 0,
-          "data_size_bytes": 0,
-          "storage_size_bytes": 32768,
-          "total_index_size_bytes": 65536,
-          "avg_obj_size_bytes": 0,
-          "index_count": 2,
-          "indexes": [
-            {
-              "name": "_id_",
-              "key": [
-                [
-                  "_id",
-                  1
-                ]
-              ],
-              "unique": false
-            },
-            {
-              "name": "ballot_id_1",
-              "key": [
-                [
-                  "ballot_id",
-                  1
-                ]
-              ],
-              "unique": true
-            }
-          ],
-          "field_count": 0,
-          "fields": {}
-        },
-        "controlled_tx_trophies": {
-          "document_count": 0,
-          "data_size_bytes": 0,
-          "storage_size_bytes": 32768,
-          "total_index_size_bytes": 65536,
-          "avg_obj_size_bytes": 0,
-          "index_count": 2,
-          "indexes": [
-            {
-              "name": "_id_",
-              "key": [
-                [
-                  "_id",
-                  1
-                ]
-              ],
-              "unique": false
-            },
-            {
-              "name": "trophy_serial_1",
-              "key": [
-                [
-                  "trophy_serial",
-                  1
-                ]
-              ],
-              "unique": true
-            }
-          ],
-          "field_count": 0,
-          "fields": {}
         },
         "hall_of_fame_inductions": {
           "document_count": 65,
@@ -3422,7 +3314,7 @@
       "collections_count": 10,
       "objects_count": 920,
       "data_size_bytes": 792312,
-      "storage_size_bytes": 544768,
+      "storage_size_bytes": 569344,
       "indexes_count": 18,
       "index_size_bytes": 630784,
       "collections": {
@@ -3500,7 +3392,7 @@
         "artists": {
           "document_count": 300,
           "data_size_bytes": 289149,
-          "storage_size_bytes": 118784,
+          "storage_size_bytes": 143360,
           "total_index_size_bytes": 196608,
           "avg_obj_size_bytes": 963,
           "index_count": 4,
@@ -4232,10 +4124,10 @@
     }
   },
   "summary_totals": {
-    "total_collections": 54,
+    "total_collections": 50,
     "total_documents": 5190,
     "total_data_size_bytes": 4255365,
-    "total_storage_size_bytes": 2949120,
-    "total_index_size_bytes": 3473408
+    "total_storage_size_bytes": 2854912,
+    "total_index_size_bytes": 3305472
   }
 }

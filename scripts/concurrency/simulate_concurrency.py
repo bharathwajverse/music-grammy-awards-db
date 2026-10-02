@@ -253,10 +253,10 @@ class ConcurrencySimulator:
             "test_run": True
         })
 
+        tx1_updated = threading.Event()
         conflict_detected = threading.Event()
-        tx1_can_commit = threading.Event()
-        tx2_started = threading.Event()
-        results = {"tx1": None, "tx2_conflict_caught": False, "tx2_retry_success": False}
+        tx1_committed = threading.Event()
+        results = {"tx1": None, "tx2_conflict_caught": False, "tx2_retry_success": False, "tx2_error": None}
 
         def worker_tx1():
             try:
@@ -268,17 +268,22 @@ class ConcurrencySimulator:
                             session=s1
                         )
                         # Signal that TX1 has acquired document write lock in WiredTiger
-                        tx2_started.set()
+                        tx1_updated.set()
                         # Wait until TX2 hits the contention
                         conflict_detected.wait(timeout=5.0)
                         s1.commit_transaction()
                         results["tx1"] = "COMMITTED"
+                        tx1_committed.set()
             except Exception as e:
                 results["tx1"] = f"ERROR: {e}"
+                tx1_committed.set()
 
         def worker_tx2():
             try:
-                tx2_started.wait(timeout=5.0)
+                if not tx1_updated.wait(timeout=5.0):
+                    results["tx2_error"] = "Timeout waiting for tx1_updated"
+                    return
+
                 # Attempt to update the same document while TX1 holds uncommitted write lock
                 with self.client.start_session() as s2:
                     # Attempt 1: Should encounter WriteConflict or lock wait
@@ -294,13 +299,16 @@ class ConcurrencySimulator:
                                 session=s2
                             )
                             s2.commit_transaction()
-                    except (WriteConflictError, OperationFailure, Exception) as exc:
+                    except (OperationFailure, PyMongoError) as exc:
                         # Write conflict successfully detected!
                         results["tx2_conflict_caught"] = True
                         conflict_detected.set()
 
-                    # Retry Attempt with Backoff (Standard MongoDB OCC pattern)
+                    # Wait for TX1 to commit and release its lock
+                    tx1_committed.wait(timeout=5.0)
                     time.sleep(0.1)
+
+                    # Retry Attempt with Backoff (Standard MongoDB OCC pattern)
                     with s2.start_transaction(
                         read_concern=ReadConcern("snapshot"),
                         write_concern=WriteConcern("majority")
@@ -313,7 +321,7 @@ class ConcurrencySimulator:
                         s2.commit_transaction()
                         results["tx2_retry_success"] = True
             except Exception as e:
-                pass
+                results["tx2_error"] = str(e)
 
         t1 = threading.Thread(target=worker_tx1)
         t2 = threading.Thread(target=worker_tx2)
@@ -388,7 +396,13 @@ class ConcurrencySimulator:
             "wfg_deadlock_resolved": resolution["deadlock"],
             "atomic_increments": inc_res,
             "occ_simulation": occ_res,
-            "overall_status": "PASSED" if (compat_pass and resolution["deadlock"] and inc_res["success"]) else "FAILED"
+            "overall_status": "PASSED" if (
+                compat_pass and
+                resolution["deadlock"] and
+                inc_res["success"] and
+                occ_res["conflict_encountered"] and
+                occ_res["retry_succeeded"]
+            ) else "FAILED"
         }
 
 

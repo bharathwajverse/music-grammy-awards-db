@@ -295,7 +295,7 @@ The system architecture partitions the domain across five dedicated databases. E
     - [`docs/concurrency/concurrency.md`](concurrency/concurrency.md)
     - [`docs/concurrency/serializability.md`](concurrency/serializability.md)
     - [`docs/concurrency/deadlocks.md`](concurrency/deadlocks.md)
-  - Verified with 7 automated pytest tests on live Atlas cluster ([`tests/test_concurrency.py`](../tests/test_concurrency.py)).
+  - Verified with 8 automated pytest tests on live Atlas cluster ([`tests/test_concurrency.py`](../tests/test_concurrency.py)).
 - **Completed in Phase 24 (Physical Storage Architecture, RAID & Data Dictionary)**:
   - Analyzed physical memory hierarchy, access latency scale factors, and cache hit ratio mathematics ($\ge 99.5\%$).
   - Developed formal comparative matrix and write penalty equations for RAID 0, RAID 1, RAID 5 ($4 \text{ I/Os}$), RAID 6 ($6 \text{ I/Os}$), and RAID 10 ($2 \text{ I/Os}$).
@@ -303,7 +303,7 @@ The system architecture partitions the domain across five dedicated databases. E
   - Compared B+ Trees (read-optimized, leaf sibling chaining) with Log-Structured Merge Trees (write-optimized, SSTables, compaction).
   - Documented WiredTiger storage engine internals: in-memory uncompressed BSON cache, background eviction server (80% / 20% / 95% triggers), hazard pointers for lock-free reader concurrency, and prefix compression.
   - Built automated introspection tooling: [`scripts/storage/generate_data_dictionary.py`](../scripts/storage/generate_data_dictionary.py).
-  - Extracted live empirical Data Dictionary across all 5 databases and 54 collections: [`docs/storage/data_dictionary.json`](storage/data_dictionary.json) (5,190 documents, 4.06 MB uncompressed data, 2.81 MB compressed storage via Snappy — 30.7% net savings, 3.31 MB index footprint).
+  - Extracted live empirical Data Dictionary across all 5 databases and 50 domain collections: [`docs/storage/data_dictionary.json`](storage/data_dictionary.json) (5,190 documents, 4.06 MB uncompressed data, 2.72 MB compressed storage via Snappy — 32.9% net savings, 3.15 MB index footprint).
   - Published master academic documentation:
     - [`docs/storage/storage-architecture.md`](storage/storage-architecture.md)
     - [`docs/storage/dbms-storage-concepts.md`](storage/dbms-storage-concepts.md)

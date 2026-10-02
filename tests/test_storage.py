@@ -75,10 +75,10 @@ def test_data_dictionary_artifact_validity():
     for db_name in APPROVED_DATABASES:
         assert db_name in data["databases"], f"Database '{db_name}' missing from data dictionary"
         db_meta = data["databases"][db_name]
-        assert db_meta["collections_count"] >= 10
+        assert db_meta["collections_count"] == 10, f"Expected exactly 10 domain collections in {db_name}, got {db_meta['collections_count']}"
 
     totals = data["summary_totals"]
-    assert totals["total_collections"] >= 50
+    assert totals["total_collections"] == 50, f"Expected exactly 50 domain collections, got {totals['total_collections']}"
     assert totals["total_documents"] >= 5000
     assert totals["total_data_size_bytes"] > 0
     assert totals["total_storage_size_bytes"] > 0
