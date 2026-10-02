@@ -2,7 +2,7 @@
 
 > **Course**: Advanced Database Management Systems (ADBMS)  
 > **Project Title**: GRAMMY Awards Information & Analytics System  
-> **Current Phase**: Phase 14 — Data Processing (Completed)  
+> **Current Phase**: Phase 18 — CRUD Operations (Completed)  
 > **Status Date**: October 2026  
 > **Version Control**: Git / GitHub (`bharathwajverse/music-grammy-awards-db`)  
 > **Database Engine**: MongoDB Atlas (`Cluster0`) & MongoDB Compass  
@@ -35,7 +35,7 @@ The repository follows a standardized, modular directory architecture establishe
 | `data/validated/` | Certified, post-validation data artifacts ready for cluster deployment | **Initialized** |
 | `scripts/processing/` | ETL, transformation, enrichment, and deterministic ID allocation routines | **Initialized** |
 | `scripts/validation/` | Pre-flight schema validation, type checking, quota enforcement, and integrity verification | **Active** |
-| `queries/crud/` | Standard MongoDB CRUD operations (Insert, Read, Update, Delete) with projection and filters | **Initialized** |
+| `queries/crud/` | Standard MongoDB CRUD operations (Insert, Read, Update, Delete) with projection and filters | **Completed** |
 | `queries/advanced/` | Complex conditional, logical, comparison, array, and element-matching queries | **Initialized** |
 | `queries/aggregation/` | Multi-stage aggregation pipelines (`$group`, `$lookup`, `$unwind`, `$facet`, `$bucket`) | **Initialized** |
 | `tests/` | Comprehensive test suites (schema validations, foreign reference checks, ACID, concurrency) | **Active** |
@@ -204,4 +204,17 @@ The system architecture partitions the domain across five dedicated databases. E
     - [`tests/post-import-report-grammy_winners_db.md`](../tests/post-import-report-grammy_winners_db.md) (Member 4)
     - [`tests/post-import-report-grammy_creators_db.md`](../tests/post-import-report-grammy_creators_db.md) (Member 5)
   - Verified with 12 automated pytest tests on live Atlas cluster ([`tests/test_post_import_verification.py`](../tests/test_post_import_verification.py), 478 total system tests passing).
-- **Next Authorized Phase**: Phase 18 — Production Indexing, Performance Optimization & Query Tuning on MongoDB Atlas.
+- **Completed in Phase 18 (MongoDB CRUD Operations Suite & Verification)**:
+  - Implemented and documented all 8 mandatory CRUD operations (`insertOne`, `insertMany`, `find`, `findOne`, `updateOne`, `updateMany`, `deleteOne`, `deleteMany`) across all 5 databases.
+  - Demonstrated comprehensive filtering (`$gte`, `$lte`, `$lt`, `$in`, `$eq`, `$regex`, `$and`) and projections (inclusive and `_id: 0` suppression).
+  - Created dedicated query directories and documentation:
+    - [`queries/crud/grammy_history_db/`](../queries/crud/grammy_history_db/) (`ceremonies`)
+    - [`queries/crud/grammy_categories_db/`](../queries/crud/grammy_categories_db/) (`award_categories`)
+    - [`queries/crud/grammy_nominations_db/`](../queries/crud/grammy_nominations_db/) (`nomination_entries`)
+    - [`queries/crud/grammy_winners_db/`](../queries/crud/grammy_winners_db/) (`winner_records`)
+    - [`queries/crud/grammy_creators_db/`](../queries/crud/grammy_creators_db/) (`artists`)
+  - Created automated live cluster execution harness: [`scripts/crud/run_all_crud_examples.py`](../scripts/crud/run_all_crud_examples.py) with zero-pollution rollback guarantees.
+  - Published comprehensive master CRUD report: [`docs/crud-report.md`](crud-report.md).
+  - Verified with 19 automated pytest tests on live Atlas cluster ([`tests/test_crud_operations.py`](../tests/test_crud_operations.py), 497 total system tests passing).
+- **Next Authorized Phase**: Phase 19 — Advanced Queries & Operators.
+
