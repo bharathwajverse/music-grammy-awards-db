@@ -1,0 +1,4241 @@
+{
+  "cluster_info": {
+    "mongodb_version": "8.0.34",
+    "storage_engine": "WiredTiger",
+    "compression_default": "snappy",
+    "database_count": 5
+  },
+  "databases": {
+    "grammy_history_db": {
+      "collections_count": 10,
+      "objects_count": 645,
+      "data_size_bytes": 506347,
+      "storage_size_bytes": 450560,
+      "indexes_count": 17,
+      "index_size_bytes": 577536,
+      "collections": {
+        "academy_leadership": {
+          "document_count": 60,
+          "data_size_bytes": 50851,
+          "storage_size_bytes": 45056,
+          "total_index_size_bytes": 36864,
+          "avg_obj_size_bytes": 847,
+          "index_count": 1,
+          "indexes": [
+            {
+              "name": "_id_",
+              "key": [
+                [
+                  "_id",
+                  1
+                ]
+              ],
+              "unique": false
+            }
+          ],
+          "field_count": 12,
+          "fields": {
+            "_id": {
+              "bson_type": "str",
+              "sample_repr": "LEAD_OFFICER_025"
+            },
+            "leadership_id": {
+              "bson_type": "str",
+              "sample_repr": "LEAD_OFFICER_025"
+            },
+            "officer_name": {
+              "bson_type": "str",
+              "sample_repr": "Harvey Mason Jr. (Term #25)"
+            },
+            "executive_role_title": {
+              "bson_type": "str",
+              "sample_repr": "President & CEO"
+            },
+            "tenure_start_year": {
+              "bson_type": "int",
+              "sample_repr": "2020"
+            },
+            "tenure_end_year": {
+              "bson_type": "int",
+              "sample_repr": "2026"
+            },
+            "professional_music_background": {
+              "bson_type": "str",
+              "sample_repr": "Songwriter & Record Producer"
+            },
+            "trustee_chapter_location": {
+              "bson_type": "str",
+              "sample_repr": "Los Angeles National Headquarters"
+            },
+            "notable_policy_amendment": {
+              "bson_type": "str",
+              "sample_repr": "Expansion of General Field to 8 and 10 nominees"
+            },
+            "board_voting_privileges": {
+              "bson_type": "bool",
+              "sample_repr": "True"
+            },
+            "appointed_by": {
+              "bson_type": "str",
+              "sample_repr": "National Board of Trustees"
+            },
+            "_source_provenance": {
+              "bson_type": "dict",
+              "sample_repr": "{'source_id': 'SRC-01', 'source_name': 'Recording Academy (N"
+            }
+          }
+        },
+        "ceremonies": {
+          "document_count": 67,
+          "data_size_bytes": 49014,
+          "storage_size_bytes": 45056,
+          "total_index_size_bytes": 184320,
+          "avg_obj_size_bytes": 731,
+          "index_count": 5,
+          "indexes": [
+            {
+              "name": "_id_",
+              "key": [
+                [
+                  "_id",
+                  1
+                ]
+              ],
+              "unique": false
+            },
+            {
+              "name": "idx_ceremonies_ceremony_id",
+              "key": [
+                [
+                  "ceremony_id",
+                  1
+                ]
+              ],
+              "unique": true
+            },
+            {
+              "name": "idx_ceremonies_broadcast_year",
+              "key": [
+                [
+                  "broadcast_year",
+                  -1
+                ]
+              ],
+              "unique": false
+            },
+            {
+              "name": "idx_ceremonies_venue_id",
+              "key": [
+                [
+                  "venue_id",
+                  1
+                ]
+              ],
+              "unique": false
+            },
+            {
+              "name": "idx_ceremonies_network_year_esr",
+              "key": [
+                [
+                  "primary_network",
+                  1
+                ],
+                [
+                  "broadcast_year",
+                  -1
+                ]
+              ],
+              "unique": false
+            }
+          ],
+          "field_count": 13,
+          "fields": {
+            "_id": {
+              "bson_type": "str",
+              "sample_repr": "CEREMONY_028"
+            },
+            "ceremony_id": {
+              "bson_type": "str",
+              "sample_repr": "CEREMONY_028"
+            },
+            "edition_number": {
+              "bson_type": "int",
+              "sample_repr": "28"
+            },
+            "ceremony_date": {
+              "bson_type": "str",
+              "sample_repr": "1986-02-15"
+            },
+            "broadcast_year": {
+              "bson_type": "int",
+              "sample_repr": "1986"
+            },
+            "eligibility_period_start": {
+              "bson_type": "str",
+              "sample_repr": "1985-10-01"
+            },
+            "eligibility_period_end": {
+              "bson_type": "str",
+              "sample_repr": "1986-09-30"
+            },
+            "host_city": {
+              "bson_type": "str",
+              "sample_repr": "New York"
+            },
+            "venue_id": {
+              "bson_type": "str",
+              "sample_repr": "VEN_MSG_NY"
+            },
+            "primary_network": {
+              "bson_type": "str",
+              "sample_repr": "CBS"
+            },
+            "total_awards_presented": {
+              "bson_type": "int",
+              "sample_repr": "68"
+            },
+            "created_at": {
+              "bson_type": "str",
+              "sample_repr": "1986-02-16T10:00:00Z"
+            },
+            "_source_provenance": {
+              "bson_type": "dict",
+              "sample_repr": "{'source_id': 'SRC-01', 'source_name': 'Recording Academy (N"
+            }
+          }
+        },
+        "ceremony_hosts": {
+          "document_count": 67,
+          "data_size_bytes": 51818,
+          "storage_size_bytes": 45056,
+          "total_index_size_bytes": 36864,
+          "avg_obj_size_bytes": 773,
+          "index_count": 1,
+          "indexes": [
+            {
+              "name": "_id_",
+              "key": [
+                [
+                  "_id",
+                  1
+                ]
+              ],
+              "unique": false
+            }
+          ],
+          "field_count": 12,
+          "fields": {
+            "_id": {
+              "bson_type": "str",
+              "sample_repr": "HOST_CEREMONY_012_ALICIA_KEYS"
+            },
+            "host_assignment_id": {
+              "bson_type": "str",
+              "sample_repr": "HOST_CEREMONY_012_ALICIA_KEYS"
+            },
+            "ceremony_id": {
+              "bson_type": "str",
+              "sample_repr": "CEREMONY_012"
+            },
+            "creator_id": {
+              "bson_type": "str",
+              "sample_repr": "CRT_ALICIA_KEYS"
+            },
+            "host_full_name": {
+              "bson_type": "str",
+              "sample_repr": "Alicia Keys"
+            },
+            "hosting_style": {
+              "bson_type": "str",
+              "sample_repr": "Recording Artist"
+            },
+            "solo_or_duo": {
+              "bson_type": "str",
+              "sample_repr": "Solo"
+            },
+            "host_sequence_count": {
+              "bson_type": "int",
+              "sample_repr": "3"
+            },
+            "monologue_duration_seconds": {
+              "bson_type": "int",
+              "sample_repr": "462"
+            },
+            "emmy_nomination_received": {
+              "bson_type": "bool",
+              "sample_repr": "True"
+            },
+            "contracted_talent_agency": {
+              "bson_type": "str",
+              "sample_repr": "Creative Artists Agency (CAA)"
+            },
+            "_source_provenance": {
+              "bson_type": "dict",
+              "sample_repr": "{'source_id': 'SRC-08', 'source_name': 'Nielsen Media Resear"
+            }
+          }
+        },
+        "historic_milestones": {
+          "document_count": 67,
+          "data_size_bytes": 61220,
+          "storage_size_bytes": 45056,
+          "total_index_size_bytes": 36864,
+          "avg_obj_size_bytes": 913,
+          "index_count": 1,
+          "indexes": [
+            {
+              "name": "_id_",
+              "key": [
+                [
+                  "_id",
+                  1
+                ]
+              ],
+              "unique": false
+            }
+          ],
+          "field_count": 12,
+          "fields": {
+            "_id": {
+              "bson_type": "str",
+              "sample_repr": "MS_CEREMONY_044_01"
+            },
+            "milestone_id": {
+              "bson_type": "str",
+              "sample_repr": "MS_CEREMONY_044_01"
+            },
+            "ceremony_id": {
+              "bson_type": "str",
+              "sample_repr": "CEREMONY_044"
+            },
+            "milestone_title": {
+              "bson_type": "str",
+              "sample_repr": "Historical Broadcast Benchmark of the 44th Edition"
+            },
+            "calendar_year": {
+              "bson_type": "int",
+              "sample_repr": "2002"
+            },
+            "primary_subject_creator_id": {
+              "bson_type": "str",
+              "sample_repr": "CRT_HISTORIC_SUBJECT_44"
+            },
+            "cultural_significance_summary": {
+              "bson_type": "str",
+              "sample_repr": "Milestone event reflecting industry artistic achievements du"
+            },
+            "official_academy_recognition": {
+              "bson_type": "bool",
+              "sample_repr": "True"
+            },
+            "controversy_flag": {
+              "bson_type": "bool",
+              "sample_repr": "False"
+            },
+            "archival_video_reel_id": {
+              "bson_type": "str",
+              "sample_repr": "REEL_ARCHIVE_2002_VAULT"
+            },
+            "citation_source_url": {
+              "bson_type": "str",
+              "sample_repr": "https://www.grammy.com/awards/44th-annual-grammy-awards"
+            },
+            "_source_provenance": {
+              "bson_type": "dict",
+              "sample_repr": "{'source_id': 'SRC-01', 'source_name': 'Recording Academy (N"
+            }
+          }
+        },
+        "lifetime_achievement_honors": {
+          "document_count": 65,
+          "data_size_bytes": 53750,
+          "storage_size_bytes": 45056,
+          "total_index_size_bytes": 36864,
+          "avg_obj_size_bytes": 826,
+          "index_count": 1,
+          "indexes": [
+            {
+              "name": "_id_",
+              "key": [
+                [
+                  "_id",
+                  1
+                ]
+              ],
+              "unique": false
+            }
+          ],
+          "field_count": 12,
+          "fields": {
+            "_id": {
+              "bson_type": "str",
+              "sample_repr": "HON_LIFETIME_006"
+            },
+            "honor_id": {
+              "bson_type": "str",
+              "sample_repr": "HON_LIFETIME_006"
+            },
+            "ceremony_id": {
+              "bson_type": "str",
+              "sample_repr": "CEREMONY_008"
+            },
+            "recipient_creator_id": {
+              "bson_type": "str",
+              "sample_repr": "CRT_MILES_DAVIS"
+            },
+            "honor_type": {
+              "bson_type": "str",
+              "sample_repr": "Lifetime Achievement Award"
+            },
+            "announcement_year": {
+              "bson_type": "int",
+              "sample_repr": "1965"
+            },
+            "career_span_decades": {
+              "bson_type": "int",
+              "sample_repr": "6"
+            },
+            "presenting_dignitary_name": {
+              "bson_type": "str",
+              "sample_repr": "Board of Trustees Chair"
+            },
+            "citation_text": {
+              "bson_type": "str",
+              "sample_repr": "Presented to Miles Davis for enduring qualitative lifetime c"
+            },
+            "is_posthumous_award": {
+              "bson_type": "bool",
+              "sample_repr": "False"
+            },
+            "special_tribute_performance_flag": {
+              "bson_type": "bool",
+              "sample_repr": "True"
+            },
+            "_source_provenance": {
+              "bson_type": "dict",
+              "sample_repr": "{'source_id': 'SRC-01', 'source_name': 'Recording Academy (N"
+            }
+          }
+        },
+        "press_media_accreditations": {
+          "document_count": 70,
+          "data_size_bytes": 54750,
+          "storage_size_bytes": 45056,
+          "total_index_size_bytes": 36864,
+          "avg_obj_size_bytes": 782,
+          "index_count": 1,
+          "indexes": [
+            {
+              "name": "_id_",
+              "key": [
+                [
+                  "_id",
+                  1
+                ]
+              ],
+              "unique": false
+            }
+          ],
+          "field_count": 12,
+          "fields": {
+            "_id": {
+              "bson_type": "str",
+              "sample_repr": "PRESS_ACCRED_001"
+            },
+            "accreditation_id": {
+              "bson_type": "str",
+              "sample_repr": "PRESS_ACCRED_001"
+            },
+            "ceremony_id": {
+              "bson_type": "str",
+              "sample_repr": "CEREMONY_001"
+            },
+            "media_organization_name": {
+              "bson_type": "str",
+              "sample_repr": "Rolling Stone"
+            },
+            "media_channel_type": {
+              "bson_type": "str",
+              "sample_repr": "Digital / Print Publication"
+            },
+            "origin_country": {
+              "bson_type": "str",
+              "sample_repr": "US"
+            },
+            "passes_granted_count": {
+              "bson_type": "int",
+              "sample_repr": "4"
+            },
+            "red_carpet_position_tier": {
+              "bson_type": "str",
+              "sample_repr": "Tier 1 - Prime Position"
+            },
+            "press_room_interview_quota": {
+              "bson_type": "int",
+              "sample_repr": "10"
+            },
+            "pool_broadcaster_status": {
+              "bson_type": "bool",
+              "sample_repr": "False"
+            },
+            "compliance_clearance_status": {
+              "bson_type": "str",
+              "sample_repr": "Approved and Verified"
+            },
+            "_source_provenance": {
+              "bson_type": "dict",
+              "sample_repr": "{'source_id': 'SRC-08', 'source_name': 'Nielsen Media Resear"
+            }
+          }
+        },
+        "telecast_broadcasters": {
+          "document_count": 67,
+          "data_size_bytes": 50129,
+          "storage_size_bytes": 45056,
+          "total_index_size_bytes": 36864,
+          "avg_obj_size_bytes": 748,
+          "index_count": 1,
+          "indexes": [
+            {
+              "name": "_id_",
+              "key": [
+                [
+                  "_id",
+                  1
+                ]
+              ],
+              "unique": false
+            }
+          ],
+          "field_count": 12,
+          "fields": {
+            "_id": {
+              "bson_type": "str",
+              "sample_repr": "BC_CEREMONY_001_US"
+            },
+            "broadcast_id": {
+              "bson_type": "str",
+              "sample_repr": "BC_CEREMONY_001_US"
+            },
+            "ceremony_id": {
+              "bson_type": "str",
+              "sample_repr": "CEREMONY_001"
+            },
+            "network_name": {
+              "bson_type": "str",
+              "sample_repr": "NBC Television Network"
+            },
+            "country_code": {
+              "bson_type": "str",
+              "sample_repr": "US"
+            },
+            "broadcast_start_time_utc": {
+              "bson_type": "str",
+              "sample_repr": "1959-02-16T01:00:00Z"
+            },
+            "scheduled_duration_minutes": {
+              "bson_type": "int",
+              "sample_repr": "120"
+            },
+            "executive_producer": {
+              "bson_type": "str",
+              "sample_repr": "Ben Winston"
+            },
+            "director_name": {
+              "bson_type": "str",
+              "sample_repr": "Walter C. Miller"
+            },
+            "parental_advisory_rating": {
+              "bson_type": "str",
+              "sample_repr": "TV-14-DL"
+            },
+            "hd_4k_feed_enabled": {
+              "bson_type": "bool",
+              "sample_repr": "False"
+            },
+            "_source_provenance": {
+              "bson_type": "dict",
+              "sample_repr": "{'source_id': 'SRC-08', 'source_name': 'Nielsen Media Resear"
+            }
+          }
+        },
+        "timeline_historical_eras": {
+          "document_count": 55,
+          "data_size_bytes": 45000,
+          "storage_size_bytes": 45056,
+          "total_index_size_bytes": 36864,
+          "avg_obj_size_bytes": 818,
+          "index_count": 1,
+          "indexes": [
+            {
+              "name": "_id_",
+              "key": [
+                [
+                  "_id",
+                  1
+                ]
+              ],
+              "unique": false
+            }
+          ],
+          "field_count": 12,
+          "fields": {
+            "_id": {
+              "bson_type": "str",
+              "sample_repr": "ERA_HISTORICAL_030"
+            },
+            "era_id": {
+              "bson_type": "str",
+              "sample_repr": "ERA_HISTORICAL_030"
+            },
+            "era_name": {
+              "bson_type": "str",
+              "sample_repr": "Streaming Modern Era Part 6"
+            },
+            "start_calendar_year": {
+              "bson_type": "int",
+              "sample_repr": "2015"
+            },
+            "end_calendar_year": {
+              "bson_type": "int",
+              "sample_repr": "2025"
+            },
+            "dominant_audio_format": {
+              "bson_type": "str",
+              "sample_repr": "Spatial Audio & High-Res Streaming"
+            },
+            "voting_tabulation_method": {
+              "bson_type": "str",
+              "sample_repr": "Audited Cloud Voting Infrastructure"
+            },
+            "predominant_music_genre": {
+              "bson_type": "str",
+              "sample_repr": "Global & Diverse Genres"
+            },
+            "total_ceremonies_contained": {
+              "bson_type": "int",
+              "sample_repr": "11"
+            },
+            "headquarters_city": {
+              "bson_type": "str",
+              "sample_repr": "Santa Monica, California"
+            },
+            "industry_paradigm_shift_notes": {
+              "bson_type": "str",
+              "sample_repr": "Significant evolutionary era characterized by transition to "
+            },
+            "_source_provenance": {
+              "bson_type": "dict",
+              "sample_repr": "{'source_id': 'SRC-10', 'source_name': 'GRAMMY System Analyt"
+            }
+          }
+        },
+        "venues": {
+          "document_count": 60,
+          "data_size_bytes": 38962,
+          "storage_size_bytes": 45056,
+          "total_index_size_bytes": 77824,
+          "avg_obj_size_bytes": 649,
+          "index_count": 3,
+          "indexes": [
+            {
+              "name": "_id_",
+              "key": [
+                [
+                  "_id",
+                  1
+                ]
+              ],
+              "unique": false
+            },
+            {
+              "name": "idx_venues_venue_id",
+              "key": [
+                [
+                  "venue_id",
+                  1
+                ]
+              ],
+              "unique": true
+            },
+            {
+              "name": "idx_venues_city",
+              "key": [
+                [
+                  "city",
+                  1
+                ]
+              ],
+              "unique": false
+            }
+          ],
+          "field_count": 12,
+          "fields": {
+            "_id": {
+              "bson_type": "str",
+              "sample_repr": "VEN_SHRINE_AUDITORIUM_HALL_09"
+            },
+            "venue_id": {
+              "bson_type": "str",
+              "sample_repr": "VEN_SHRINE_AUDITORIUM_HALL_09"
+            },
+            "venue_name": {
+              "bson_type": "str",
+              "sample_repr": "Shrine Auditorium - Pavilion 10"
+            },
+            "venue_type": {
+              "bson_type": "str",
+              "sample_repr": "Auditorium"
+            },
+            "street_address": {
+              "bson_type": "str",
+              "sample_repr": "665 W Jefferson Blvd"
+            },
+            "city": {
+              "bson_type": "str",
+              "sample_repr": "Los Angeles"
+            },
+            "state": {
+              "bson_type": "str",
+              "sample_repr": "CA"
+            },
+            "postal_code": {
+              "bson_type": "str",
+              "sample_repr": "90007"
+            },
+            "max_seating_capacity": {
+              "bson_type": "int",
+              "sample_repr": "6750"
+            },
+            "first_hosted_year": {
+              "bson_type": "int",
+              "sample_repr": "1968"
+            },
+            "total_ceremonies_hosted": {
+              "bson_type": "int",
+              "sample_repr": "16"
+            },
+            "_source_provenance": {
+              "bson_type": "dict",
+              "sample_repr": "{'source_id': 'SRC-04', 'source_name': 'Wikimedia Foundation"
+            }
+          }
+        },
+        "viewership_ratings": {
+          "document_count": 67,
+          "data_size_bytes": 50853,
+          "storage_size_bytes": 45056,
+          "total_index_size_bytes": 57344,
+          "avg_obj_size_bytes": 759,
+          "index_count": 2,
+          "indexes": [
+            {
+              "name": "_id_",
+              "key": [
+                [
+                  "_id",
+                  1
+                ]
+              ],
+              "unique": false
+            },
+            {
+              "name": "idx_ratings_ceremony_viewers_esr",
+              "key": [
+                [
+                  "ceremony_id",
+                  1
+                ],
+                [
+                  "us_viewers_millions",
+                  -1
+                ]
+              ],
+              "unique": false
+            }
+          ],
+          "field_count": 12,
+          "fields": {
+            "_id": {
+              "bson_type": "str",
+              "sample_repr": "RAT_CEREMONY_009"
+            },
+            "rating_id": {
+              "bson_type": "str",
+              "sample_repr": "RAT_CEREMONY_009"
+            },
+            "ceremony_id": {
+              "bson_type": "str",
+              "sample_repr": "CEREMONY_009"
+            },
+            "us_viewers_millions": {
+              "bson_type": "float",
+              "sample_repr": "29.3"
+            },
+            "household_rating_pct": {
+              "bson_type": "float",
+              "sample_repr": "19.05"
+            },
+            "household_share_pct": {
+              "bson_type": "float",
+              "sample_repr": "41.02"
+            },
+            "demo_18_49_rating": {
+              "bson_type": "float",
+              "sample_repr": "9.38"
+            },
+            "peak_viewers_millions": {
+              "bson_type": "float",
+              "sample_repr": "36.62"
+            },
+            "peak_broadcast_segment": {
+              "bson_type": "str",
+              "sample_repr": "Album of the Year Presentation"
+            },
+            "digital_streaming_views_millions": {
+              "bson_type": "float",
+              "sample_repr": "0.0"
+            },
+            "measurement_agency": {
+              "bson_type": "str",
+              "sample_repr": "Nielsen Media Research"
+            },
+            "_source_provenance": {
+              "bson_type": "dict",
+              "sample_repr": "{'source_id': 'SRC-08', 'source_name': 'Nielsen Media Resear"
+            }
+          }
+        }
+      }
+    },
+    "grammy_categories_db": {
+      "collections_count": 10,
+      "objects_count": 650,
+      "data_size_bytes": 579424,
+      "storage_size_bytes": 466944,
+      "indexes_count": 17,
+      "index_size_bytes": 577536,
+      "collections": {
+        "award_categories": {
+          "document_count": 120,
+          "data_size_bytes": 112973,
+          "storage_size_bytes": 61440,
+          "total_index_size_bytes": 184320,
+          "avg_obj_size_bytes": 941,
+          "index_count": 5,
+          "indexes": [
+            {
+              "name": "_id_",
+              "key": [
+                [
+                  "_id",
+                  1
+                ]
+              ],
+              "unique": false
+            },
+            {
+              "name": "idx_categories_category_id",
+              "key": [
+                [
+                  "category_id",
+                  1
+                ]
+              ],
+              "unique": true
+            },
+            {
+              "name": "idx_categories_field_id",
+              "key": [
+                [
+                  "field_id",
+                  1
+                ]
+              ],
+              "unique": false
+            },
+            {
+              "name": "idx_categories_status_nominees_esr",
+              "key": [
+                [
+                  "current_status",
+                  1
+                ],
+                [
+                  "maximum_nominees_allowed",
+                  -1
+                ]
+              ],
+              "unique": false
+            },
+            {
+              "name": "idx_categories_field_inaugural_esr",
+              "key": [
+                [
+                  "field_id",
+                  1
+                ],
+                [
+                  "inaugural_edition",
+                  1
+                ]
+              ],
+              "unique": false
+            }
+          ],
+          "field_count": 13,
+          "fields": {
+            "_id": {
+              "bson_type": "str",
+              "sample_repr": "CAT_BEST_JAZZ_PERFORMANCE_GROUP_009"
+            },
+            "category_id": {
+              "bson_type": "str",
+              "sample_repr": "CAT_BEST_JAZZ_PERFORMANCE_GROUP_009"
+            },
+            "field_id": {
+              "bson_type": "str",
+              "sample_repr": "FLD_CRAFT"
+            },
+            "official_category_name": {
+              "bson_type": "str",
+              "sample_repr": "Best Jazz Performance, Group"
+            },
+            "standard_short_code": {
+              "bson_type": "str",
+              "sample_repr": "BEST_JAZZ_PE"
+            },
+            "inaugural_edition": {
+              "bson_type": "int",
+              "sample_repr": "1"
+            },
+            "is_general_field": {
+              "bson_type": "bool",
+              "sample_repr": "False"
+            },
+            "current_status": {
+              "bson_type": "str",
+              "sample_repr": "Active"
+            },
+            "maximum_nominees_allowed": {
+              "bson_type": "int",
+              "sample_repr": "5"
+            },
+            "voting_tier_access": {
+              "bson_type": "str",
+              "sample_repr": "Craft Specialist Voting Members"
+            },
+            "trophy_statuette_eligibility_rule": {
+              "bson_type": "str",
+              "sample_repr": "Statuettes presented to lead artists, featured artists (33% "
+            },
+            "entry_fee_tier": {
+              "bson_type": "str",
+              "sample_repr": "Standard OEP Tier 1"
+            },
+            "_source_provenance": {
+              "bson_type": "dict",
+              "sample_repr": "{'source_id': 'SRC-01', 'source_name': 'Recording Academy (N"
+            }
+          }
+        },
+        "award_fields": {
+          "document_count": 50,
+          "data_size_bytes": 42175,
+          "storage_size_bytes": 45056,
+          "total_index_size_bytes": 57344,
+          "avg_obj_size_bytes": 843,
+          "index_count": 2,
+          "indexes": [
+            {
+              "name": "_id_",
+              "key": [
+                [
+                  "_id",
+                  1
+                ]
+              ],
+              "unique": false
+            },
+            {
+              "name": "idx_fields_field_id",
+              "key": [
+                [
+                  "field_id",
+                  1
+                ]
+              ],
+              "unique": true
+            }
+          ],
+          "field_count": 12,
+          "fields": {
+            "_id": {
+              "bson_type": "str",
+              "sample_repr": "FLD_JAZZ_16"
+            },
+            "field_id": {
+              "bson_type": "str",
+              "sample_repr": "FLD_JAZZ_16"
+            },
+            "field_name": {
+              "bson_type": "str",
+              "sample_repr": "Jazz, Traditional & Instrumental Division 16"
+            },
+            "field_abbreviation": {
+              "bson_type": "str",
+              "sample_repr": "JAZ"
+            },
+            "field_description": {
+              "bson_type": "str",
+              "sample_repr": "Improvised instrumental and vocal jazz recordings"
+            },
+            "inaugural_ceremony_edition": {
+              "bson_type": "int",
+              "sample_repr": "10"
+            },
+            "current_active_status": {
+              "bson_type": "bool",
+              "sample_repr": "True"
+            },
+            "active_categories_count": {
+              "bson_type": "int",
+              "sample_repr": "8"
+            },
+            "specialist_committee_jurisdiction": {
+              "bson_type": "str",
+              "sample_repr": "Jazz, Traditional & Instrumental Screening Committee"
+            },
+            "field_curator_role": {
+              "bson_type": "str",
+              "sample_repr": "Trustee Committee Chairperson"
+            },
+            "last_bylaw_revision_year": {
+              "bson_type": "int",
+              "sample_repr": "2023"
+            },
+            "_source_provenance": {
+              "bson_type": "dict",
+              "sample_repr": "{'source_id': 'SRC-02', 'source_name': 'Recording Academy Go"
+            }
+          }
+        },
+        "category_lineage": {
+          "document_count": 60,
+          "data_size_bytes": 60049,
+          "storage_size_bytes": 45056,
+          "total_index_size_bytes": 36864,
+          "avg_obj_size_bytes": 1000,
+          "index_count": 1,
+          "indexes": [
+            {
+              "name": "_id_",
+              "key": [
+                [
+                  "_id",
+                  1
+                ]
+              ],
+              "unique": false
+            }
+          ],
+          "field_count": 12,
+          "fields": {
+            "_id": {
+              "bson_type": "str",
+              "sample_repr": "LIN_016"
+            },
+            "lineage_id": {
+              "bson_type": "str",
+              "sample_repr": "LIN_016"
+            },
+            "category_id": {
+              "bson_type": "str",
+              "sample_repr": "CAT_BEST_ENGINEERED_RECORD_NON_CLA_015"
+            },
+            "predecessor_category_name": {
+              "bson_type": "str",
+              "sample_repr": "Historical Ancestor of Best Engineered Record - Non-Classica"
+            },
+            "successor_category_name": {
+              "bson_type": "str",
+              "sample_repr": "Best Engineered Record - Non-Classical"
+            },
+            "effective_ceremony_edition": {
+              "bson_type": "int",
+              "sample_repr": "45"
+            },
+            "transition_classification": {
+              "bson_type": "str",
+              "sample_repr": "Renamed to modernize genre terminology"
+            },
+            "structural_rationale": {
+              "bson_type": "str",
+              "sample_repr": "Clarification of instrumentation and vocal eligibility"
+            },
+            "nominee_slate_impact_count": {
+              "bson_type": "int",
+              "sample_repr": "0"
+            },
+            "trustee_resolution_reference": {
+              "bson_type": "str",
+              "sample_repr": "RES_TRUSTEE_1995_BYLAW"
+            },
+            "ballot_clarification_bulletin": {
+              "bson_type": "str",
+              "sample_repr": "Guidance sent to all voting members"
+            },
+            "_source_provenance": {
+              "bson_type": "dict",
+              "sample_repr": "{'source_id': 'SRC-02', 'source_name': 'Recording Academy Go"
+            }
+          }
+        },
+        "category_quotas_limits": {
+          "document_count": 60,
+          "data_size_bytes": 49989,
+          "storage_size_bytes": 45056,
+          "total_index_size_bytes": 36864,
+          "avg_obj_size_bytes": 833,
+          "index_count": 1,
+          "indexes": [
+            {
+              "name": "_id_",
+              "key": [
+                [
+                  "_id",
+                  1
+                ]
+              ],
+              "unique": false
+            }
+          ],
+          "field_count": 12,
+          "fields": {
+            "_id": {
+              "bson_type": "str",
+              "sample_repr": "QUOTA_014"
+            },
+            "quota_id": {
+              "bson_type": "str",
+              "sample_repr": "QUOTA_014"
+            },
+            "category_id": {
+              "bson_type": "str",
+              "sample_repr": "CAT_BEST_ARRANGEMENT_013"
+            },
+            "ceremony_edition": {
+              "bson_type": "int",
+              "sample_repr": "65"
+            },
+            "standard_nominee_limit": {
+              "bson_type": "int",
+              "sample_repr": "8"
+            },
+            "emergency_tie_allowance": {
+              "bson_type": "int",
+              "sample_repr": "2"
+            },
+            "max_credited_producers_eligible": {
+              "bson_type": "int",
+              "sample_repr": "8"
+            },
+            "max_credited_engineers_eligible": {
+              "bson_type": "int",
+              "sample_repr": "8"
+            },
+            "playing_time_contribution_threshold_pct": {
+              "bson_type": "float",
+              "sample_repr": "33.3"
+            },
+            "lyricist_track_threshold_pct": {
+              "bson_type": "float",
+              "sample_repr": "20.0"
+            },
+            "pro_rata_trophy_rule": {
+              "bson_type": "str",
+              "sample_repr": "Statuettes delivered to all verified credited individuals me"
+            },
+            "_source_provenance": {
+              "bson_type": "dict",
+              "sample_repr": "{'source_id': 'SRC-02', 'source_name': 'Recording Academy Go"
+            }
+          }
+        },
+        "craft_credit_definitions": {
+          "document_count": 60,
+          "data_size_bytes": 51509,
+          "storage_size_bytes": 45056,
+          "total_index_size_bytes": 36864,
+          "avg_obj_size_bytes": 858,
+          "index_count": 1,
+          "indexes": [
+            {
+              "name": "_id_",
+              "key": [
+                [
+                  "_id",
+                  1
+                ]
+              ],
+              "unique": false
+            }
+          ],
+          "field_count": 12,
+          "fields": {
+            "_id": {
+              "bson_type": "str",
+              "sample_repr": "CRAFT_DEF_025"
+            },
+            "craft_def_id": {
+              "bson_type": "str",
+              "sample_repr": "CRAFT_DEF_025"
+            },
+            "category_id": {
+              "bson_type": "str",
+              "sample_repr": "CAT_BEST_CLASSICAL_PERFORMANCE_INS_024"
+            },
+            "craft_role_name": {
+              "bson_type": "str",
+              "sample_repr": "Mastering Engineer"
+            },
+            "mandatory_statuette_recipient": {
+              "bson_type": "bool",
+              "sample_repr": "True"
+            },
+            "certificate_of_merit_alternative": {
+              "bson_type": "bool",
+              "sample_repr": "False"
+            },
+            "audio_stem_mastering_threshold": {
+              "bson_type": "float",
+              "sample_repr": "50.0"
+            },
+            "assistant_engineer_eligibility": {
+              "bson_type": "bool",
+              "sample_repr": "False"
+            },
+            "sample_creator_eligibility": {
+              "bson_type": "bool",
+              "sample_repr": "False"
+            },
+            "documentation_proof_standard": {
+              "bson_type": "str",
+              "sample_repr": "Official Album Liner Notes & Studio Session Logs"
+            },
+            "union_credit_registry_crosscheck": {
+              "bson_type": "str",
+              "sample_repr": "American Federation of Musicians (AFM)"
+            },
+            "_source_provenance": {
+              "bson_type": "dict",
+              "sample_repr": "{'source_id': 'SRC-02', 'source_name': 'Recording Academy Go"
+            }
+          }
+        },
+        "discontinued_categories": {
+          "document_count": 60,
+          "data_size_bytes": 52800,
+          "storage_size_bytes": 45056,
+          "total_index_size_bytes": 36864,
+          "avg_obj_size_bytes": 880,
+          "index_count": 1,
+          "indexes": [
+            {
+              "name": "_id_",
+              "key": [
+                [
+                  "_id",
+                  1
+                ]
+              ],
+              "unique": false
+            }
+          ],
+          "field_count": 12,
+          "fields": {
+            "_id": {
+              "bson_type": "str",
+              "sample_repr": "DISC_CAT_036"
+            },
+            "discontinued_id": {
+              "bson_type": "str",
+              "sample_repr": "DISC_CAT_036"
+            },
+            "category_name": {
+              "bson_type": "str",
+              "sample_repr": "Legacy Retired Category 36"
+            },
+            "final_active_ceremony_edition": {
+              "bson_type": "int",
+              "sample_repr": "53"
+            },
+            "cumulative_years_active": {
+              "bson_type": "int",
+              "sample_repr": "30"
+            },
+            "retirement_rationale": {
+              "bson_type": "str",
+              "sample_repr": "Consolidation of gendered vocal awards into gender-neutral c"
+            },
+            "merged_into_category_id": {
+              "bson_type": "str",
+              "sample_repr": "CAT_BEST_SOUND_TRACK_ALBUM_ORIGINA_035"
+            },
+            "total_winners_awarded": {
+              "bson_type": "int",
+              "sample_repr": "30"
+            },
+            "total_nominations_recorded": {
+              "bson_type": "int",
+              "sample_repr": "110"
+            },
+            "historic_significance_tag": {
+              "bson_type": "str",
+              "sample_repr": "Gender-Neutral Reform 2012"
+            },
+            "archive_vault_reference": {
+              "bson_type": "str",
+              "sample_repr": "ARCHIVE_DOC_BOX_135"
+            },
+            "_source_provenance": {
+              "bson_type": "dict",
+              "sample_repr": "{'source_id': 'SRC-02', 'source_name': 'Recording Academy Go"
+            }
+          }
+        },
+        "eligibility_rules": {
+          "document_count": 60,
+          "data_size_bytes": 49869,
+          "storage_size_bytes": 45056,
+          "total_index_size_bytes": 36864,
+          "avg_obj_size_bytes": 831,
+          "index_count": 1,
+          "indexes": [
+            {
+              "name": "_id_",
+              "key": [
+                [
+                  "_id",
+                  1
+                ]
+              ],
+              "unique": false
+            }
+          ],
+          "field_count": 12,
+          "fields": {
+            "_id": {
+              "bson_type": "str",
+              "sample_repr": "RULE_EL_042"
+            },
+            "rule_id": {
+              "bson_type": "str",
+              "sample_repr": "RULE_EL_042"
+            },
+            "category_id": {
+              "bson_type": "str",
+              "sample_repr": "CAT_BEST_PERFORMANCE_FOLK_041"
+            },
+            "effective_edition": {
+              "bson_type": "int",
+              "sample_repr": "60"
+            },
+            "minimum_playing_time_minutes": {
+              "bson_type": "float",
+              "sample_repr": "2.0"
+            },
+            "minimum_track_count": {
+              "bson_type": "int",
+              "sample_repr": "1"
+            },
+            "featured_performance_threshold_pct": {
+              "bson_type": "float",
+              "sample_repr": "51.0"
+            },
+            "us_release_commercial_requirement": {
+              "bson_type": "bool",
+              "sample_repr": "True"
+            },
+            "language_composition_restrictions": {
+              "bson_type": "str",
+              "sample_repr": "None (Universal)"
+            },
+            "sample_replay_clearance_rule": {
+              "bson_type": "str",
+              "sample_repr": "All musical samples and interpolations must be formally clea"
+            },
+            "entry_window_months": {
+              "bson_type": "int",
+              "sample_repr": "12"
+            },
+            "_source_provenance": {
+              "bson_type": "dict",
+              "sample_repr": "{'source_id': 'SRC-02', 'source_name': 'Recording Academy Go"
+            }
+          }
+        },
+        "merged_split_history": {
+          "document_count": 60,
+          "data_size_bytes": 55900,
+          "storage_size_bytes": 45056,
+          "total_index_size_bytes": 77824,
+          "avg_obj_size_bytes": 931,
+          "index_count": 3,
+          "indexes": [
+            {
+              "name": "_id_",
+              "key": [
+                [
+                  "_id",
+                  1
+                ]
+              ],
+              "unique": false
+            },
+            {
+              "name": "idx_merged_split_source_cats_multikey",
+              "key": [
+                [
+                  "source_category_ids",
+                  1
+                ]
+              ],
+              "unique": false
+            },
+            {
+              "name": "idx_merged_split_primary_cat",
+              "key": [
+                [
+                  "primary_category_id",
+                  1
+                ]
+              ],
+              "unique": false
+            }
+          ],
+          "field_count": 12,
+          "fields": {
+            "_id": {
+              "bson_type": "str",
+              "sample_repr": "EVT_RESTRUCT_013"
+            },
+            "event_id": {
+              "bson_type": "str",
+              "sample_repr": "EVT_RESTRUCT_013"
+            },
+            "restructuring_type": {
+              "bson_type": "str",
+              "sample_repr": "Consolidation & Modernization"
+            },
+            "effective_year": {
+              "bson_type": "int",
+              "sample_repr": "2012"
+            },
+            "primary_category_id": {
+              "bson_type": "str",
+              "sample_repr": "CAT_BEST_RHYTHM_BLUES_PERFORMANCE_012"
+            },
+            "source_category_ids": {
+              "bson_type": "list",
+              "sample_repr": "['LEGACY_CAT_MALE_12', 'LEGACY_CAT_FEMALE_12']"
+            },
+            "consolidation_justification": {
+              "bson_type": "str",
+              "sample_repr": "Elimination of gender distinction to create unisex performan"
+            },
+            "gender_neutral_reform_flag": {
+              "bson_type": "bool",
+              "sample_repr": "True"
+            },
+            "member_feedback_period_days": {
+              "bson_type": "int",
+              "sample_repr": "90"
+            },
+            "trustee_vote_tally": {
+              "bson_type": "str",
+              "sample_repr": "Passed Unanimously"
+            },
+            "published_press_bulletin_id": {
+              "bson_type": "str",
+              "sample_repr": "BULL_ACADEMY_REFORM_2011_13"
+            },
+            "_source_provenance": {
+              "bson_type": "dict",
+              "sample_repr": "{'source_id': 'SRC-02', 'source_name': 'Recording Academy Go"
+            }
+          }
+        },
+        "special_merit_categories": {
+          "document_count": 60,
+          "data_size_bytes": 56571,
+          "storage_size_bytes": 45056,
+          "total_index_size_bytes": 36864,
+          "avg_obj_size_bytes": 942,
+          "index_count": 1,
+          "indexes": [
+            {
+              "name": "_id_",
+              "key": [
+                [
+                  "_id",
+                  1
+                ]
+              ],
+              "unique": false
+            }
+          ],
+          "field_count": 12,
+          "fields": {
+            "_id": {
+              "bson_type": "str",
+              "sample_repr": "MERIT_CAT_038"
+            },
+            "special_merit_id": {
+              "bson_type": "str",
+              "sample_repr": "MERIT_CAT_038"
+            },
+            "award_title": {
+              "bson_type": "str",
+              "sample_repr": "Trustee Special Merit Honor Division 38"
+            },
+            "conferral_frequency": {
+              "bson_type": "str",
+              "sample_repr": "Annual Discretionary"
+            },
+            "governing_board_supermajority_pct": {
+              "bson_type": "float",
+              "sample_repr": "66.7"
+            },
+            "candidate_selection_protocol": {
+              "bson_type": "str",
+              "sample_repr": "Nominated by National Board of Trustees Sub-Committee"
+            },
+            "trophy_or_plaque_type": {
+              "bson_type": "str",
+              "sample_repr": "Golden Gramophone Statuette"
+            },
+            "first_conferred_year": {
+              "bson_type": "int",
+              "sample_repr": "1972"
+            },
+            "target_industry_discipline": {
+              "bson_type": "str",
+              "sample_repr": "Audio Innovation, Educational Philanthropy, Industry Service"
+            },
+            "peer_nomination_permitted": {
+              "bson_type": "bool",
+              "sample_repr": "False"
+            },
+            "ceremony_segment_placement": {
+              "bson_type": "str",
+              "sample_repr": "Special Merit Awards Ceremony"
+            },
+            "_source_provenance": {
+              "bson_type": "dict",
+              "sample_repr": "{'source_id': 'SRC-02', 'source_name': 'Recording Academy Go"
+            }
+          }
+        },
+        "voting_procedures": {
+          "document_count": 60,
+          "data_size_bytes": 47589,
+          "storage_size_bytes": 45056,
+          "total_index_size_bytes": 36864,
+          "avg_obj_size_bytes": 793,
+          "index_count": 1,
+          "indexes": [
+            {
+              "name": "_id_",
+              "key": [
+                [
+                  "_id",
+                  1
+                ]
+              ],
+              "unique": false
+            }
+          ],
+          "field_count": 12,
+          "fields": {
+            "_id": {
+              "bson_type": "str",
+              "sample_repr": "VPROC_009"
+            },
+            "procedure_id": {
+              "bson_type": "str",
+              "sample_repr": "VPROC_009"
+            },
+            "category_id": {
+              "bson_type": "str",
+              "sample_repr": "CAT_BEST_JAZZ_PERFORMANCE_INDIVIDU_008"
+            },
+            "voting_round_number": {
+              "bson_type": "int",
+              "sample_repr": "1"
+            },
+            "electorate_body_type": {
+              "bson_type": "str",
+              "sample_repr": "General Voting Membership"
+            },
+            "is_ranked_choice_ballot": {
+              "bson_type": "bool",
+              "sample_repr": "False"
+            },
+            "craft_committee_review_required": {
+              "bson_type": "bool",
+              "sample_repr": "False"
+            },
+            "committee_member_roster_count": {
+              "bson_type": "int",
+              "sample_repr": "25"
+            },
+            "nomination_slot_capacity": {
+              "bson_type": "int",
+              "sample_repr": "5"
+            },
+            "tie_breaking_protocol": {
+              "bson_type": "str",
+              "sample_repr": "Admit tied nominees to expand final ballot slate"
+            },
+            "auditing_firm_signoff_flag": {
+              "bson_type": "bool",
+              "sample_repr": "True"
+            },
+            "_source_provenance": {
+              "bson_type": "dict",
+              "sample_repr": "{'source_id': 'SRC-02', 'source_name': 'Recording Academy Go"
+            }
+          }
+        }
+      }
+    },
+    "grammy_nominations_db": {
+      "collections_count": 10,
+      "objects_count": 1990,
+      "data_size_bytes": 1536342,
+      "storage_size_bytes": 819200,
+      "indexes_count": 23,
+      "index_size_bytes": 851968,
+      "collections": {
+        "first_time_nominees": {
+          "document_count": 70,
+          "data_size_bytes": 51913,
+          "storage_size_bytes": 45056,
+          "total_index_size_bytes": 36864,
+          "avg_obj_size_bytes": 741,
+          "index_count": 1,
+          "indexes": [
+            {
+              "name": "_id_",
+              "key": [
+                [
+                  "_id",
+                  1
+                ]
+              ],
+              "unique": false
+            }
+          ],
+          "field_count": 12,
+          "fields": {
+            "_id": {
+              "bson_type": "str",
+              "sample_repr": "FIRST_NOM_013"
+            },
+            "first_nom_id": {
+              "bson_type": "str",
+              "sample_repr": "FIRST_NOM_013"
+            },
+            "nomination_id": {
+              "bson_type": "str",
+              "sample_repr": "NOM_001_BEST_RHYTH_0012"
+            },
+            "creator_id": {
+              "bson_type": "str",
+              "sample_repr": "CRT_TEQUILA_0009"
+            },
+            "debut_ceremony_edition": {
+              "bson_type": "int",
+              "sample_repr": "13"
+            },
+            "breakout_work_id": {
+              "bson_type": "str",
+              "sample_repr": "WRK_TEQUILA_0012"
+            },
+            "best_new_artist_nominated": {
+              "bson_type": "bool",
+              "sample_repr": "True"
+            },
+            "age_at_debut_nomination": {
+              "bson_type": "int",
+              "sample_repr": "36"
+            },
+            "prior_uncredited_appearances": {
+              "bson_type": "int",
+              "sample_repr": "0"
+            },
+            "commercial_breakout_tier": {
+              "bson_type": "str",
+              "sample_repr": "Global Breakthrough"
+            },
+            "career_inception_year": {
+              "bson_type": "int",
+              "sample_repr": "1967"
+            },
+            "_source_provenance": {
+              "bson_type": "dict",
+              "sample_repr": "{'source_id': 'SRC-05', 'source_name': 'Kaggle (Robyn Ritchi"
+            }
+          }
+        },
+        "genre_classifications": {
+          "document_count": 70,
+          "data_size_bytes": 60544,
+          "storage_size_bytes": 45056,
+          "total_index_size_bytes": 77824,
+          "avg_obj_size_bytes": 864,
+          "index_count": 3,
+          "indexes": [
+            {
+              "name": "_id_",
+              "key": [
+                [
+                  "_id",
+                  1
+                ]
+              ],
+              "unique": false
+            },
+            {
+              "name": "idx_genre_class_secondary_tags_multikey",
+              "key": [
+                [
+                  "secondary_genre_tags",
+                  1
+                ]
+              ],
+              "unique": false
+            },
+            {
+              "name": "idx_genre_class_work_id",
+              "key": [
+                [
+                  "work_id",
+                  1
+                ]
+              ],
+              "unique": false
+            }
+          ],
+          "field_count": 12,
+          "fields": {
+            "_id": {
+              "bson_type": "str",
+              "sample_repr": "GEN_CLASS_001"
+            },
+            "classification_id": {
+              "bson_type": "str",
+              "sample_repr": "GEN_CLASS_001"
+            },
+            "work_id": {
+              "bson_type": "str",
+              "sample_repr": "WRK_NEL_BLU_DIPINTO_DI_BLU_VOLARE_0000"
+            },
+            "submitted_field_id": {
+              "bson_type": "str",
+              "sample_repr": "FLD_POP"
+            },
+            "assigned_field_id": {
+              "bson_type": "str",
+              "sample_repr": "FLD_POP"
+            },
+            "primary_genre_tag": {
+              "bson_type": "str",
+              "sample_repr": "Pop / Contemporary"
+            },
+            "secondary_genre_tags": {
+              "bson_type": "list",
+              "sample_repr": "['Vocal', 'Adult Contemporary']"
+            },
+            "screening_committee_consensus": {
+              "bson_type": "str",
+              "sample_repr": "Ratified by Committee Consensus"
+            },
+            "contested_by_label_flag": {
+              "bson_type": "bool",
+              "sample_repr": "False"
+            },
+            "reclassification_justification": {
+              "bson_type": "str",
+              "sample_repr": "Adheres to core instrumentation criteria"
+            },
+            "determination_date": {
+              "bson_type": "str",
+              "sample_repr": "1959-11-01"
+            },
+            "_source_provenance": {
+              "bson_type": "dict",
+              "sample_repr": "{'source_id': 'SRC-02', 'source_name': 'Recording Academy Go"
+            }
+          }
+        },
+        "multi_nomination_packages": {
+          "document_count": 70,
+          "data_size_bytes": 49183,
+          "storage_size_bytes": 45056,
+          "total_index_size_bytes": 77824,
+          "avg_obj_size_bytes": 702,
+          "index_count": 3,
+          "indexes": [
+            {
+              "name": "_id_",
+              "key": [
+                [
+                  "_id",
+                  1
+                ]
+              ],
+              "unique": false
+            },
+            {
+              "name": "idx_packages_nominated_works_multikey",
+              "key": [
+                [
+                  "nominated_work_ids",
+                  1
+                ]
+              ],
+              "unique": false
+            },
+            {
+              "name": "idx_packages_creator_ceremony",
+              "key": [
+                [
+                  "creator_id",
+                  1
+                ],
+                [
+                  "ceremony_year",
+                  -1
+                ]
+              ],
+              "unique": false
+            }
+          ],
+          "field_count": 12,
+          "fields": {
+            "_id": {
+              "bson_type": "str",
+              "sample_repr": "MULTI_PKG_004"
+            },
+            "package_id": {
+              "bson_type": "str",
+              "sample_repr": "MULTI_PKG_004"
+            },
+            "ceremony_id": {
+              "bson_type": "str",
+              "sample_repr": "CEREMONY_004"
+            },
+            "creator_id": {
+              "bson_type": "str",
+              "sample_repr": "CRT_ELLA_FITZGERALD_0002"
+            },
+            "total_nominations_count": {
+              "bson_type": "int",
+              "sample_repr": "7"
+            },
+            "general_field_nominations_count": {
+              "bson_type": "int",
+              "sample_repr": "2"
+            },
+            "genre_field_nominations_count": {
+              "bson_type": "int",
+              "sample_repr": "5"
+            },
+            "leading_nominee_rank": {
+              "bson_type": "int",
+              "sample_repr": "1"
+            },
+            "nominated_work_ids": {
+              "bson_type": "list",
+              "sample_repr": "['WRK_ELLA_FITZGERALD_SINGS_THE_IRVI_0003']"
+            },
+            "public_announcement_tier": {
+              "bson_type": "str",
+              "sample_repr": "Headlining Multi-Nominee"
+            },
+            "ceremony_year": {
+              "bson_type": "int",
+              "sample_repr": "1962"
+            },
+            "_source_provenance": {
+              "bson_type": "dict",
+              "sample_repr": "{'source_id': 'SRC-10', 'source_name': 'GRAMMY System Analyt"
+            }
+          }
+        },
+        "nominated_works": {
+          "document_count": 500,
+          "data_size_bytes": 381294,
+          "storage_size_bytes": 159744,
+          "total_index_size_bytes": 131072,
+          "avg_obj_size_bytes": 762,
+          "index_count": 3,
+          "indexes": [
+            {
+              "name": "_id_",
+              "key": [
+                [
+                  "_id",
+                  1
+                ]
+              ],
+              "unique": false
+            },
+            {
+              "name": "idx_nominated_works_work_id",
+              "key": [
+                [
+                  "work_id",
+                  1
+                ]
+              ],
+              "unique": true
+            },
+            {
+              "name": "idx_nominated_works_primary_label",
+              "key": [
+                [
+                  "primary_label_id",
+                  1
+                ]
+              ],
+              "unique": false
+            }
+          ],
+          "field_count": 13,
+          "fields": {
+            "_id": {
+              "bson_type": "str",
+              "sample_repr": "WRK_BASIE_0009"
+            },
+            "work_id": {
+              "bson_type": "str",
+              "sample_repr": "WRK_BASIE_0009"
+            },
+            "work_type": {
+              "bson_type": "str",
+              "sample_repr": "Individual"
+            },
+            "work_title": {
+              "bson_type": "str",
+              "sample_repr": "Basie"
+            },
+            "commercial_release_date": {
+              "bson_type": "str",
+              "sample_repr": "1959-01-15"
+            },
+            "primary_label_id": {
+              "bson_type": "str",
+              "sample_repr": "LBL_WARNER_RECORDS_10"
+            },
+            "isrc_code": {
+              "bson_type": "str",
+              "sample_repr": "US-S1Z-1959-00009"
+            },
+            "upc_barcode": {
+              "bson_type": "str",
+              "sample_repr": "075678000009"
+            },
+            "duration_total_seconds": {
+              "bson_type": "int",
+              "sample_repr": "224"
+            },
+            "track_count": {
+              "bson_type": "int",
+              "sample_repr": "1"
+            },
+            "parental_advisory_flag": {
+              "bson_type": "bool",
+              "sample_repr": "False"
+            },
+            "language_iso_code": {
+              "bson_type": "str",
+              "sample_repr": "en"
+            },
+            "_source_provenance": {
+              "bson_type": "dict",
+              "sample_repr": "{'source_id': 'SRC-03', 'source_name': 'MetaBrainz Foundatio"
+            }
+          }
+        },
+        "nomination_audit_logs": {
+          "document_count": 70,
+          "data_size_bytes": 59841,
+          "storage_size_bytes": 53248,
+          "total_index_size_bytes": 36864,
+          "avg_obj_size_bytes": 854,
+          "index_count": 1,
+          "indexes": [
+            {
+              "name": "_id_",
+              "key": [
+                [
+                  "_id",
+                  1
+                ]
+              ],
+              "unique": false
+            }
+          ],
+          "field_count": 12,
+          "fields": {
+            "_id": {
+              "bson_type": "str",
+              "sample_repr": "AUDIT_LOG_002"
+            },
+            "audit_id": {
+              "bson_type": "str",
+              "sample_repr": "AUDIT_LOG_002"
+            },
+            "nomination_id": {
+              "bson_type": "str",
+              "sample_repr": "NOM_001_ALBUM_OF_T_0001"
+            },
+            "auditing_firm_id": {
+              "bson_type": "str",
+              "sample_repr": "Deloitte & Touche LLP"
+            },
+            "lead_auditor_name": {
+              "bson_type": "str",
+              "sample_repr": "Senior Partner 2"
+            },
+            "audit_timestamp": {
+              "bson_type": "str",
+              "sample_repr": "1960-12-15T12:00:00Z"
+            },
+            "digital_signature_hash": {
+              "bson_type": "str",
+              "sample_repr": "440aabb74aa931153aefa395ee4b1319096dd011ce32e90960dea3e78d20"
+            },
+            "tabulation_vault_partition": {
+              "bson_type": "str",
+              "sample_repr": "VAULT_PARTITION_SECURE_1"
+            },
+            "discrepancy_check_passed": {
+              "bson_type": "bool",
+              "sample_repr": "True"
+            },
+            "recount_required_flag": {
+              "bson_type": "bool",
+              "sample_repr": "False"
+            },
+            "compliance_certificate_code": {
+              "bson_type": "str",
+              "sample_repr": "CERT_TAB_7001"
+            },
+            "_source_provenance": {
+              "bson_type": "dict",
+              "sample_repr": "{'source_id': 'SRC-02', 'source_name': 'Recording Academy Go"
+            }
+          }
+        },
+        "nomination_credits": {
+          "document_count": 500,
+          "data_size_bytes": 358428,
+          "storage_size_bytes": 131072,
+          "total_index_size_bytes": 49152,
+          "avg_obj_size_bytes": 716,
+          "index_count": 1,
+          "indexes": [
+            {
+              "name": "_id_",
+              "key": [
+                [
+                  "_id",
+                  1
+                ]
+              ],
+              "unique": false
+            }
+          ],
+          "field_count": 12,
+          "fields": {
+            "_id": {
+              "bson_type": "str",
+              "sample_repr": "CRD_0019"
+            },
+            "credit_id": {
+              "bson_type": "str",
+              "sample_repr": "CRD_0019"
+            },
+            "nomination_id": {
+              "bson_type": "str",
+              "sample_repr": "NOM_001_BEST_SOUND_0019"
+            },
+            "creator_id": {
+              "bson_type": "str",
+              "sample_repr": "CRT_ANDR_PREVIN_0014"
+            },
+            "credit_role": {
+              "bson_type": "str",
+              "sample_repr": "Primary Recording Artist"
+            },
+            "credit_billing_rank": {
+              "bson_type": "int",
+              "sample_repr": "1"
+            },
+            "work_contribution_summary": {
+              "bson_type": "str",
+              "sample_repr": "Lead Vocal & Instrumental Performance"
+            },
+            "contribution_percentage": {
+              "bson_type": "float",
+              "sample_repr": "100.0"
+            },
+            "is_lead_performer": {
+              "bson_type": "bool",
+              "sample_repr": "True"
+            },
+            "is_producer_credit": {
+              "bson_type": "bool",
+              "sample_repr": "False"
+            },
+            "academy_verified_status": {
+              "bson_type": "bool",
+              "sample_repr": "True"
+            },
+            "_source_provenance": {
+              "bson_type": "dict",
+              "sample_repr": "{'source_id': 'SRC-05', 'source_name': 'Kaggle (Robyn Ritchi"
+            }
+          }
+        },
+        "nomination_entries": {
+          "document_count": 500,
+          "data_size_bytes": 402858,
+          "storage_size_bytes": 196608,
+          "total_index_size_bytes": 290816,
+          "avg_obj_size_bytes": 805,
+          "index_count": 6,
+          "indexes": [
+            {
+              "name": "_id_",
+              "key": [
+                [
+                  "_id",
+                  1
+                ]
+              ],
+              "unique": false
+            },
+            {
+              "name": "idx_nom_entries_nomination_id",
+              "key": [
+                [
+                  "nomination_id",
+                  1
+                ]
+              ],
+              "unique": true
+            },
+            {
+              "name": "idx_nom_entries_artist_id",
+              "key": [
+                [
+                  "primary_artist_id",
+                  1
+                ]
+              ],
+              "unique": false
+            },
+            {
+              "name": "idx_nom_entries_work_id",
+              "key": [
+                [
+                  "work_id",
+                  1
+                ]
+              ],
+              "unique": false
+            },
+            {
+              "name": "idx_nom_entries_category_year_esr",
+              "key": [
+                [
+                  "category_id",
+                  1
+                ],
+                [
+                  "nomination_year",
+                  -1
+                ]
+              ],
+              "unique": false
+            },
+            {
+              "name": "idx_nom_entries_winner_year_slot_esr",
+              "key": [
+                [
+                  "is_winner_flag",
+                  1
+                ],
+                [
+                  "nomination_year",
+                  -1
+                ],
+                [
+                  "ballot_slot_order",
+                  1
+                ]
+              ],
+              "unique": false
+            }
+          ],
+          "field_count": 13,
+          "fields": {
+            "_id": {
+              "bson_type": "str",
+              "sample_repr": "NOM_001_BEST_COUNT_0011"
+            },
+            "nomination_id": {
+              "bson_type": "str",
+              "sample_repr": "NOM_001_BEST_COUNT_0011"
+            },
+            "ceremony_id": {
+              "bson_type": "str",
+              "sample_repr": "CEREMONY_001"
+            },
+            "category_id": {
+              "bson_type": "str",
+              "sample_repr": "CAT_BEST_COUNTRY_WESTERN_PERFORMAN_011"
+            },
+            "work_id": {
+              "bson_type": "str",
+              "sample_repr": "WRK_TOM_DOOLEY_0011"
+            },
+            "nomination_year": {
+              "bson_type": "int",
+              "sample_repr": "1959"
+            },
+            "entry_billing_title": {
+              "bson_type": "str",
+              "sample_repr": "Tom Dooley"
+            },
+            "primary_artist_id": {
+              "bson_type": "str",
+              "sample_repr": "CRT_TOM_DOOLEY_0008"
+            },
+            "is_winner_flag": {
+              "bson_type": "bool",
+              "sample_repr": "True"
+            },
+            "ballot_slot_order": {
+              "bson_type": "int",
+              "sample_repr": "2"
+            },
+            "auditor_validation_code": {
+              "bson_type": "str",
+              "sample_repr": "dd2f769fe5995d84"
+            },
+            "created_timestamp": {
+              "bson_type": "str",
+              "sample_repr": "1959-01-05T00:00:00Z"
+            },
+            "_source_provenance": {
+              "bson_type": "dict",
+              "sample_repr": "{'source_id': 'SRC-05', 'source_name': 'Kaggle (Robyn Ritchi"
+            }
+          }
+        },
+        "submission_batches": {
+          "document_count": 70,
+          "data_size_bytes": 55081,
+          "storage_size_bytes": 45056,
+          "total_index_size_bytes": 36864,
+          "avg_obj_size_bytes": 786,
+          "index_count": 1,
+          "indexes": [
+            {
+              "name": "_id_",
+              "key": [
+                [
+                  "_id",
+                  1
+                ]
+              ],
+              "unique": false
+            }
+          ],
+          "field_count": 12,
+          "fields": {
+            "_id": {
+              "bson_type": "str",
+              "sample_repr": "SUB_BATCH_019"
+            },
+            "batch_id": {
+              "bson_type": "str",
+              "sample_repr": "SUB_BATCH_019"
+            },
+            "ceremony_id": {
+              "bson_type": "str",
+              "sample_repr": "CEREMONY_019"
+            },
+            "submitting_label_id": {
+              "bson_type": "str",
+              "sample_repr": "LBL_BLUE_NOTE_RECORDS_19"
+            },
+            "submission_timestamp": {
+              "bson_type": "str",
+              "sample_repr": "1977-10-15T18:00:00Z"
+            },
+            "total_entries_count": {
+              "bson_type": "int",
+              "sample_repr": "61"
+            },
+            "entry_fee_total_usd": {
+              "bson_type": "float",
+              "sample_repr": "6100.0"
+            },
+            "compliance_officer_name": {
+              "bson_type": "str",
+              "sample_repr": "Label Submissions Director 19"
+            },
+            "first_round_accepted_count": {
+              "bson_type": "int",
+              "sample_repr": "60"
+            },
+            "disqualified_entries_count": {
+              "bson_type": "int",
+              "sample_repr": "1"
+            },
+            "payment_reconciliation_hash": {
+              "bson_type": "str",
+              "sample_repr": "PAY_HASH_88018"
+            },
+            "_source_provenance": {
+              "bson_type": "dict",
+              "sample_repr": "{'source_id': 'SRC-02', 'source_name': 'Recording Academy Go"
+            }
+          }
+        },
+        "tied_nominations": {
+          "document_count": 70,
+          "data_size_bytes": 59331,
+          "storage_size_bytes": 45056,
+          "total_index_size_bytes": 77824,
+          "avg_obj_size_bytes": 847,
+          "index_count": 3,
+          "indexes": [
+            {
+              "name": "_id_",
+              "key": [
+                [
+                  "_id",
+                  1
+                ]
+              ],
+              "unique": false
+            },
+            {
+              "name": "idx_tied_noms_tied_ids_multikey",
+              "key": [
+                [
+                  "tied_nomination_ids",
+                  1
+                ]
+              ],
+              "unique": false
+            },
+            {
+              "name": "idx_tied_noms_ceremony_category",
+              "key": [
+                [
+                  "ceremony_id",
+                  1
+                ],
+                [
+                  "category_id",
+                  1
+                ]
+              ],
+              "unique": false
+            }
+          ],
+          "field_count": 12,
+          "fields": {
+            "_id": {
+              "bson_type": "str",
+              "sample_repr": "TIE_027"
+            },
+            "tie_id": {
+              "bson_type": "str",
+              "sample_repr": "TIE_027"
+            },
+            "ceremony_id": {
+              "bson_type": "str",
+              "sample_repr": "CEREMONY_027"
+            },
+            "category_id": {
+              "bson_type": "str",
+              "sample_repr": "CAT_BEST_CLASSICAL_PERFORMANCE_VOC_026"
+            },
+            "tied_nomination_ids": {
+              "bson_type": "list",
+              "sample_repr": "['NOM_001_BEST_CLASS_0026', 'NOM_001_BEST_CLASS_0027']"
+            },
+            "tied_vote_count_audited": {
+              "bson_type": "int",
+              "sample_repr": "450"
+            },
+            "ballot_auditor_token": {
+              "bson_type": "str",
+              "sample_repr": "AUD_TOKEN_9926"
+            },
+            "board_tie_waiver_approved": {
+              "bson_type": "bool",
+              "sample_repr": "True"
+            },
+            "expanded_slate_size": {
+              "bson_type": "int",
+              "sample_repr": "6"
+            },
+            "adjudication_timestamp": {
+              "bson_type": "str",
+              "sample_repr": "1985-12-10T14:00:00Z"
+            },
+            "bylaw_clause_reference": {
+              "bson_type": "str",
+              "sample_repr": "Article IV, Section 3(b) - Equal Vote Slate Inclusion"
+            },
+            "_source_provenance": {
+              "bson_type": "dict",
+              "sample_repr": "{'source_id': 'SRC-02', 'source_name': 'Recording Academy Go"
+            }
+          }
+        },
+        "voter_screening_batches": {
+          "document_count": 70,
+          "data_size_bytes": 57869,
+          "storage_size_bytes": 53248,
+          "total_index_size_bytes": 36864,
+          "avg_obj_size_bytes": 826,
+          "index_count": 1,
+          "indexes": [
+            {
+              "name": "_id_",
+              "key": [
+                [
+                  "_id",
+                  1
+                ]
+              ],
+              "unique": false
+            }
+          ],
+          "field_count": 12,
+          "fields": {
+            "_id": {
+              "bson_type": "str",
+              "sample_repr": "SCR_BATCH_006"
+            },
+            "screening_batch_id": {
+              "bson_type": "str",
+              "sample_repr": "SCR_BATCH_006"
+            },
+            "ceremony_id": {
+              "bson_type": "str",
+              "sample_repr": "CEREMONY_006"
+            },
+            "field_id": {
+              "bson_type": "str",
+              "sample_repr": "FLD_POP"
+            },
+            "panel_chair_creator_id": {
+              "bson_type": "str",
+              "sample_repr": "CRT_BILLY_MAY_S_BIG_FAT_BRASS_0004"
+            },
+            "session_start_timestamp": {
+              "bson_type": "str",
+              "sample_repr": "1964-10-20T09:00:00Z"
+            },
+            "session_end_timestamp": {
+              "bson_type": "str",
+              "sample_repr": "1964-10-20T17:00:00Z"
+            },
+            "works_screened_count": {
+              "bson_type": "int",
+              "sample_repr": "150"
+            },
+            "disqualifications_ordered": {
+              "bson_type": "int",
+              "sample_repr": "2"
+            },
+            "quorum_certified": {
+              "bson_type": "bool",
+              "sample_repr": "True"
+            },
+            "panel_confidentiality_hash": {
+              "bson_type": "str",
+              "sample_repr": "7fa102383fff490508995c93f4d47779f17b00d3ce64602372fd2f6231db"
+            },
+            "_source_provenance": {
+              "bson_type": "dict",
+              "sample_repr": "{'source_id': 'SRC-02', 'source_name': 'Recording Academy Go"
+            }
+          }
+        }
+      }
+    },
+    "grammy_winners_db": {
+      "collections_count": 14,
+      "objects_count": 985,
+      "data_size_bytes": 840940,
+      "storage_size_bytes": 667648,
+      "indexes_count": 25,
+      "index_size_bytes": 835584,
+      "collections": {
+        "acceptance_speeches": {
+          "document_count": 65,
+          "data_size_bytes": 59529,
+          "storage_size_bytes": 45056,
+          "total_index_size_bytes": 98304,
+          "avg_obj_size_bytes": 915,
+          "index_count": 4,
+          "indexes": [
+            {
+              "name": "_id_",
+              "key": [
+                [
+                  "_id",
+                  1
+                ]
+              ],
+              "unique": false
+            },
+            {
+              "name": "idx_speeches_speech_id",
+              "key": [
+                [
+                  "speech_id",
+                  1
+                ]
+              ],
+              "unique": true
+            },
+            {
+              "name": "idx_speeches_winner_record_id",
+              "key": [
+                [
+                  "winner_record_id",
+                  1
+                ]
+              ],
+              "unique": false
+            },
+            {
+              "name": "idx_speeches_ack_multikey",
+              "key": [
+                [
+                  "individuals_acknowledged",
+                  1
+                ]
+              ],
+              "unique": false
+            }
+          ],
+          "field_count": 12,
+          "fields": {
+            "_id": {
+              "bson_type": "str",
+              "sample_repr": "SPEECH_018"
+            },
+            "speech_id": {
+              "bson_type": "str",
+              "sample_repr": "SPEECH_018"
+            },
+            "winner_record_id": {
+              "bson_type": "str",
+              "sample_repr": "WIN_NOM_001_BEST_MUSIC_0017"
+            },
+            "primary_speaker_creator_id": {
+              "bson_type": "str",
+              "sample_repr": "CRT_CROSS_COUNTRY_SUITE_0012"
+            },
+            "speech_duration_seconds": {
+              "bson_type": "int",
+              "sample_repr": "112"
+            },
+            "playoff_music_interrupted": {
+              "bson_type": "bool",
+              "sample_repr": "False"
+            },
+            "primary_quote_transcript": {
+              "bson_type": "str",
+              "sample_repr": "Thank you to the Recording Academy, my fans, producers, and "
+            },
+            "individuals_acknowledged": {
+              "bson_type": "list",
+              "sample_repr": "['Record Label', 'Co-producers', 'Family', 'Fans']"
+            },
+            "social_political_message_flag": {
+              "bson_type": "bool",
+              "sample_repr": "False"
+            },
+            "press_room_followup_id": {
+              "bson_type": "str",
+              "sample_repr": "PRESS_ROOM_QNA_018"
+            },
+            "broadcast_clip_timecode": {
+              "bson_type": "str",
+              "sample_repr": "02:32:30"
+            },
+            "_source_provenance": {
+              "bson_type": "dict",
+              "sample_repr": "{'source_id': 'SRC-01', 'source_name': 'Recording Academy (N"
+            }
+          }
+        },
+        "big_four_sweeps": {
+          "document_count": 65,
+          "data_size_bytes": 49460,
+          "storage_size_bytes": 45056,
+          "total_index_size_bytes": 36864,
+          "avg_obj_size_bytes": 760,
+          "index_count": 1,
+          "indexes": [
+            {
+              "name": "_id_",
+              "key": [
+                [
+                  "_id",
+                  1
+                ]
+              ],
+              "unique": false
+            }
+          ],
+          "field_count": 12,
+          "fields": {
+            "_id": {
+              "bson_type": "str",
+              "sample_repr": "SWEEP_037"
+            },
+            "sweep_id": {
+              "bson_type": "str",
+              "sample_repr": "SWEEP_037"
+            },
+            "ceremony_id": {
+              "bson_type": "str",
+              "sample_repr": "CEREMONY_002"
+            },
+            "creator_id": {
+              "bson_type": "str",
+              "sample_repr": "CRT_ELLA_FITZGERALD_0002"
+            },
+            "sweep_achievement_type": {
+              "bson_type": "str",
+              "sample_repr": "Big Four Clean Sweep"
+            },
+            "aoty_nomination_id": {
+              "bson_type": "str",
+              "sample_repr": "NOM_002_BEST_JAZZ__0036"
+            },
+            "roty_nomination_id": {
+              "bson_type": "str",
+              "sample_repr": "NOM_002_BEST_JAZZ__0036"
+            },
+            "soty_nomination_id": {
+              "bson_type": "str",
+              "sample_repr": "NOM_002_BEST_JAZZ__0036"
+            },
+            "bna_nomination_id": {
+              "bson_type": "str",
+              "sample_repr": "NOM_002_BEST_JAZZ__0036"
+            },
+            "sweep_calendar_year": {
+              "bson_type": "int",
+              "sample_repr": "1960"
+            },
+            "career_significance_rating": {
+              "bson_type": "str",
+              "sample_repr": "Historic Academic Benchmark Achievement"
+            },
+            "_source_provenance": {
+              "bson_type": "dict",
+              "sample_repr": "{'source_id': 'SRC-10', 'source_name': 'GRAMMY System Analyt"
+            }
+          }
+        },
+        "consecutive_winners": {
+          "document_count": 65,
+          "data_size_bytes": 48644,
+          "storage_size_bytes": 45056,
+          "total_index_size_bytes": 77824,
+          "avg_obj_size_bytes": 748,
+          "index_count": 3,
+          "indexes": [
+            {
+              "name": "_id_",
+              "key": [
+                [
+                  "_id",
+                  1
+                ]
+              ],
+              "unique": false
+            },
+            {
+              "name": "idx_consecutive_creator_id",
+              "key": [
+                [
+                  "creator_id",
+                  1
+                ]
+              ],
+              "unique": false
+            },
+            {
+              "name": "idx_consecutive_winning_works_multikey",
+              "key": [
+                [
+                  "winning_work_ids_list",
+                  1
+                ]
+              ],
+              "unique": false
+            }
+          ],
+          "field_count": 12,
+          "fields": {
+            "_id": {
+              "bson_type": "str",
+              "sample_repr": "STREAK_005"
+            },
+            "streak_id": {
+              "bson_type": "str",
+              "sample_repr": "STREAK_005"
+            },
+            "creator_id": {
+              "bson_type": "str",
+              "sample_repr": "CRT_CATCH_A_FALLING_STAR_0003"
+            },
+            "category_id": {
+              "bson_type": "str",
+              "sample_repr": "CAT_BEST_VOCAL_PERFORMANCE_MALE_004"
+            },
+            "streak_span_years": {
+              "bson_type": "int",
+              "sample_repr": "3"
+            },
+            "initial_ceremony_edition": {
+              "bson_type": "int",
+              "sample_repr": "1"
+            },
+            "terminal_ceremony_edition": {
+              "bson_type": "int",
+              "sample_repr": "4"
+            },
+            "winning_work_ids_list": {
+              "bson_type": "list",
+              "sample_repr": "['WRK_CATCH_A_FALLING_STAR_0004']"
+            },
+            "is_streak_currently_active": {
+              "bson_type": "bool",
+              "sample_repr": "False"
+            },
+            "historical_streak_rank": {
+              "bson_type": "int",
+              "sample_repr": "5"
+            },
+            "category_monopoly_notes": {
+              "bson_type": "str",
+              "sample_repr": "Consecutive category wins across consecutive award cycles"
+            },
+            "_source_provenance": {
+              "bson_type": "dict",
+              "sample_repr": "{'source_id': 'SRC-10', 'source_name': 'GRAMMY System Analyt"
+            }
+          }
+        },
+        "controlled_concurrency_benchmarks": {
+          "document_count": 0,
+          "data_size_bytes": 0,
+          "storage_size_bytes": 20480,
+          "total_index_size_bytes": 20480,
+          "avg_obj_size_bytes": 0,
+          "index_count": 1,
+          "indexes": [
+            {
+              "name": "_id_",
+              "key": [
+                [
+                  "_id",
+                  1
+                ]
+              ],
+              "unique": false
+            }
+          ],
+          "field_count": 0,
+          "fields": {}
+        },
+        "controlled_tx_audit": {
+          "document_count": 0,
+          "data_size_bytes": 0,
+          "storage_size_bytes": 32768,
+          "total_index_size_bytes": 32768,
+          "avg_obj_size_bytes": 0,
+          "index_count": 1,
+          "indexes": [
+            {
+              "name": "_id_",
+              "key": [
+                [
+                  "_id",
+                  1
+                ]
+              ],
+              "unique": false
+            }
+          ],
+          "field_count": 0,
+          "fields": {}
+        },
+        "controlled_tx_ballots": {
+          "document_count": 0,
+          "data_size_bytes": 0,
+          "storage_size_bytes": 32768,
+          "total_index_size_bytes": 65536,
+          "avg_obj_size_bytes": 0,
+          "index_count": 2,
+          "indexes": [
+            {
+              "name": "_id_",
+              "key": [
+                [
+                  "_id",
+                  1
+                ]
+              ],
+              "unique": false
+            },
+            {
+              "name": "ballot_id_1",
+              "key": [
+                [
+                  "ballot_id",
+                  1
+                ]
+              ],
+              "unique": true
+            }
+          ],
+          "field_count": 0,
+          "fields": {}
+        },
+        "controlled_tx_trophies": {
+          "document_count": 0,
+          "data_size_bytes": 0,
+          "storage_size_bytes": 32768,
+          "total_index_size_bytes": 65536,
+          "avg_obj_size_bytes": 0,
+          "index_count": 2,
+          "indexes": [
+            {
+              "name": "_id_",
+              "key": [
+                [
+                  "_id",
+                  1
+                ]
+              ],
+              "unique": false
+            },
+            {
+              "name": "trophy_serial_1",
+              "key": [
+                [
+                  "trophy_serial",
+                  1
+                ]
+              ],
+              "unique": true
+            }
+          ],
+          "field_count": 0,
+          "fields": {}
+        },
+        "hall_of_fame_inductions": {
+          "document_count": 65,
+          "data_size_bytes": 60841,
+          "storage_size_bytes": 45056,
+          "total_index_size_bytes": 36864,
+          "avg_obj_size_bytes": 936,
+          "index_count": 1,
+          "indexes": [
+            {
+              "name": "_id_",
+              "key": [
+                [
+                  "_id",
+                  1
+                ]
+              ],
+              "unique": false
+            }
+          ],
+          "field_count": 12,
+          "fields": {
+            "_id": {
+              "bson_type": "str",
+              "sample_repr": "HOF_009"
+            },
+            "induction_id": {
+              "bson_type": "str",
+              "sample_repr": "HOF_009"
+            },
+            "inducted_work_title": {
+              "bson_type": "str",
+              "sample_repr": "Enduring Classic Recording 9"
+            },
+            "recording_artist_name": {
+              "bson_type": "str",
+              "sample_repr": "Tom Dooley"
+            },
+            "original_release_year": {
+              "bson_type": "int",
+              "sample_repr": "1948"
+            },
+            "induction_ceremony_year": {
+              "bson_type": "int",
+              "sample_repr": "1981"
+            },
+            "recording_medium_format": {
+              "bson_type": "str",
+              "sample_repr": "78 RPM Shellac / 33 1/3 Vinyl Master"
+            },
+            "qualifying_minimum_age_years": {
+              "bson_type": "int",
+              "sample_repr": "25"
+            },
+            "historical_impact_essay": {
+              "bson_type": "str",
+              "sample_repr": "Inducted into the GRAMMY Hall of Fame for lasting qualitativ"
+            },
+            "museum_exhibition_status": {
+              "bson_type": "str",
+              "sample_repr": "Permanent Exhibition at GRAMMY Museum Los Angeles"
+            },
+            "catalog_archival_code": {
+              "bson_type": "str",
+              "sample_repr": "HOF-ARCHIVE-CODE-3008"
+            },
+            "_source_provenance": {
+              "bson_type": "dict",
+              "sample_repr": "{'source_id': 'SRC-01', 'source_name': 'Recording Academy (N"
+            }
+          }
+        },
+        "historic_win_benchmarks": {
+          "document_count": 65,
+          "data_size_bytes": 49824,
+          "storage_size_bytes": 45056,
+          "total_index_size_bytes": 36864,
+          "avg_obj_size_bytes": 766,
+          "index_count": 1,
+          "indexes": [
+            {
+              "name": "_id_",
+              "key": [
+                [
+                  "_id",
+                  1
+                ]
+              ],
+              "unique": false
+            }
+          ],
+          "field_count": 12,
+          "fields": {
+            "_id": {
+              "bson_type": "str",
+              "sample_repr": "BENCH_007"
+            },
+            "benchmark_id": {
+              "bson_type": "str",
+              "sample_repr": "BENCH_007"
+            },
+            "benchmark_title": {
+              "bson_type": "str",
+              "sample_repr": "Milestone Tier 7: 15+ Career Grammy Awards"
+            },
+            "qualifying_win_threshold": {
+              "bson_type": "int",
+              "sample_repr": "15"
+            },
+            "total_qualifying_creators": {
+              "bson_type": "int",
+              "sample_repr": "25"
+            },
+            "pioneering_creator_id": {
+              "bson_type": "str",
+              "sample_repr": "CRT_BASIE_0005"
+            },
+            "year_threshold_first_achieved": {
+              "bson_type": "int",
+              "sample_repr": "1959"
+            },
+            "most_recent_qualifier_id": {
+              "bson_type": "str",
+              "sample_repr": "CRT_BASIE_0005"
+            },
+            "egot_component_flag": {
+              "bson_type": "bool",
+              "sample_repr": "True"
+            },
+            "rarity_index_score": {
+              "bson_type": "float",
+              "sample_repr": "98.5"
+            },
+            "hall_of_records_citation": {
+              "bson_type": "str",
+              "sample_repr": "Official Recording Academy Hall of Records Citation"
+            },
+            "_source_provenance": {
+              "bson_type": "dict",
+              "sample_repr": "{'source_id': 'SRC-10', 'source_name': 'GRAMMY System Analyt"
+            }
+          }
+        },
+        "posthumous_awards": {
+          "document_count": 65,
+          "data_size_bytes": 55358,
+          "storage_size_bytes": 45056,
+          "total_index_size_bytes": 36864,
+          "avg_obj_size_bytes": 851,
+          "index_count": 1,
+          "indexes": [
+            {
+              "name": "_id_",
+              "key": [
+                [
+                  "_id",
+                  1
+                ]
+              ],
+              "unique": false
+            }
+          ],
+          "field_count": 12,
+          "fields": {
+            "_id": {
+              "bson_type": "str",
+              "sample_repr": "POSTHUMOUS_001"
+            },
+            "posthumous_id": {
+              "bson_type": "str",
+              "sample_repr": "POSTHUMOUS_001"
+            },
+            "winner_record_id": {
+              "bson_type": "str",
+              "sample_repr": "WIN_NOM_001_RECORD_OF__0000"
+            },
+            "deceased_creator_id": {
+              "bson_type": "str",
+              "sample_repr": "CRT_NEL_BLU_DIPINTO_DI_BLU_VOLARE_0000"
+            },
+            "date_of_passing": {
+              "bson_type": "str",
+              "sample_repr": "1958-11-20"
+            },
+            "award_ceremony_date": {
+              "bson_type": "str",
+              "sample_repr": "1959-02-15"
+            },
+            "accepted_by_representative": {
+              "bson_type": "str",
+              "sample_repr": "Estate Trustee of CRT_NEL_BLU_DIPINTO_DI_BLU_VOLARE_0000"
+            },
+            "representative_legal_relationship": {
+              "bson_type": "str",
+              "sample_repr": "Family Trustee & Estate Executor"
+            },
+            "in_memoriam_segment_aired": {
+              "bson_type": "bool",
+              "sample_repr": "True"
+            },
+            "estate_concurrence_status": {
+              "bson_type": "str",
+              "sample_repr": "Ratified and Accepted by Estate"
+            },
+            "tribute_performance_id": {
+              "bson_type": "str",
+              "sample_repr": "TRIBUTE_SEGMENT_001"
+            },
+            "_source_provenance": {
+              "bson_type": "dict",
+              "sample_repr": "{'source_id': 'SRC-04', 'source_name': 'Wikimedia Foundation"
+            }
+          }
+        },
+        "record_breakers": {
+          "document_count": 65,
+          "data_size_bytes": 50689,
+          "storage_size_bytes": 45056,
+          "total_index_size_bytes": 36864,
+          "avg_obj_size_bytes": 779,
+          "index_count": 1,
+          "indexes": [
+            {
+              "name": "_id_",
+              "key": [
+                [
+                  "_id",
+                  1
+                ]
+              ],
+              "unique": false
+            }
+          ],
+          "field_count": 12,
+          "fields": {
+            "_id": {
+              "bson_type": "str",
+              "sample_repr": "REC_032"
+            },
+            "record_id": {
+              "bson_type": "str",
+              "sample_repr": "REC_032"
+            },
+            "winner_record_id": {
+              "bson_type": "str",
+              "sample_repr": "WIN_NOM_002_BEST_VOCAL_0031"
+            },
+            "creator_id": {
+              "bson_type": "str",
+              "sample_repr": "CRT_ELLA_FITZGERALD_0002"
+            },
+            "record_metric_name": {
+              "bson_type": "str",
+              "sample_repr": "Most Wins in an Individual Category"
+            },
+            "previous_record_holder_name": {
+              "bson_type": "str",
+              "sample_repr": "Prior Historic Record Holder"
+            },
+            "previous_record_value": {
+              "bson_type": "float",
+              "sample_repr": "4.0"
+            },
+            "new_record_value": {
+              "bson_type": "float",
+              "sample_repr": "5.0"
+            },
+            "record_establishment_year": {
+              "bson_type": "int",
+              "sample_repr": "1960"
+            },
+            "creator_age_at_record": {
+              "bson_type": "float",
+              "sample_repr": "34.0"
+            },
+            "academy_verified_announcement_url": {
+              "bson_type": "str",
+              "sample_repr": "https://www.grammy.com/news/record-breaker-edition-2"
+            },
+            "_source_provenance": {
+              "bson_type": "dict",
+              "sample_repr": "{'source_id': 'SRC-10', 'source_name': 'GRAMMY System Analyt"
+            }
+          }
+        },
+        "trophy_tracking": {
+          "document_count": 65,
+          "data_size_bytes": 60818,
+          "storage_size_bytes": 53248,
+          "total_index_size_bytes": 36864,
+          "avg_obj_size_bytes": 935,
+          "index_count": 1,
+          "indexes": [
+            {
+              "name": "_id_",
+              "key": [
+                [
+                  "_id",
+                  1
+                ]
+              ],
+              "unique": false
+            }
+          ],
+          "field_count": 12,
+          "fields": {
+            "_id": {
+              "bson_type": "str",
+              "sample_repr": "TROPHY_STATUETTE_055"
+            },
+            "trophy_id": {
+              "bson_type": "str",
+              "sample_repr": "TROPHY_STATUETTE_055"
+            },
+            "winner_record_id": {
+              "bson_type": "str",
+              "sample_repr": "WIN_NOM_002_BEST_PERFO_0054"
+            },
+            "recipient_creator_id": {
+              "bson_type": "str",
+              "sample_repr": "CRT_THE_KINGSTON_TRIO_AT_LARGE_0039"
+            },
+            "statuette_serial_number": {
+              "bson_type": "str",
+              "sample_repr": "GRAM-2023-SN-10054"
+            },
+            "engraved_billing_text": {
+              "bson_type": "str",
+              "sample_repr": "Presented to CRT_THE_KINGSTON_TRIO_AT_LARGE_0039 For Excelle"
+            },
+            "manufacturing_foundry_name": {
+              "bson_type": "str",
+              "sample_repr": "Billings Artworks (Ridgway, Colorado)"
+            },
+            "grammium_alloy_specification": {
+              "bson_type": "str",
+              "sample_repr": "Grammium-Alloy-Formula-IV"
+            },
+            "gold_plating_thickness_microns": {
+              "bson_type": "float",
+              "sample_repr": "5.25"
+            },
+            "dispatch_shipment_date": {
+              "bson_type": "str",
+              "sample_repr": "1960-04-15"
+            },
+            "custody_receipt_hash": {
+              "bson_type": "str",
+              "sample_repr": "3f416a0954dd32a9f19830070cca952c3622dbc646fb3d0206136aca9919"
+            },
+            "_source_provenance": {
+              "bson_type": "dict",
+              "sample_repr": "{'source_id': 'SRC-10', 'source_name': 'GRAMMY System Analyt"
+            }
+          }
+        },
+        "winner_press_releases": {
+          "document_count": 65,
+          "data_size_bytes": 69019,
+          "storage_size_bytes": 45056,
+          "total_index_size_bytes": 36864,
+          "avg_obj_size_bytes": 1061,
+          "index_count": 1,
+          "indexes": [
+            {
+              "name": "_id_",
+              "key": [
+                [
+                  "_id",
+                  1
+                ]
+              ],
+              "unique": false
+            }
+          ],
+          "field_count": 12,
+          "fields": {
+            "_id": {
+              "bson_type": "str",
+              "sample_repr": "PRESS_REL_004"
+            },
+            "release_id": {
+              "bson_type": "str",
+              "sample_repr": "PRESS_REL_004"
+            },
+            "ceremony_id": {
+              "bson_type": "str",
+              "sample_repr": "CEREMONY_001"
+            },
+            "release_headline": {
+              "bson_type": "str",
+              "sample_repr": "Recording Academy Announces Winners for the 1th Annual GRAMM"
+            },
+            "publication_timestamp_utc": {
+              "bson_type": "str",
+              "sample_repr": "1959-02-16T04:00:00Z"
+            },
+            "headlining_creator_ids": {
+              "bson_type": "list",
+              "sample_repr": "['CRT_ELLA_FITZGERALD_0002']"
+            },
+            "telecast_highlights_summary": {
+              "bson_type": "str",
+              "sample_repr": "Historical awards presentation celebrating musical excellenc"
+            },
+            "pr_communications_director": {
+              "bson_type": "str",
+              "sample_repr": "Vice President of Communications"
+            },
+            "syndication_wire_distribution": {
+              "bson_type": "list",
+              "sample_repr": "['PR Newswire', 'Associated Press', 'Reuters']"
+            },
+            "press_asset_bundle_url": {
+              "bson_type": "str",
+              "sample_repr": "https://www.grammy.com/press/1th-telecast-kit.zip"
+            },
+            "archival_digest_id": {
+              "bson_type": "str",
+              "sample_repr": "DIGEST_ARCHIVE_001"
+            },
+            "_source_provenance": {
+              "bson_type": "dict",
+              "sample_repr": "{'source_id': 'SRC-01', 'source_name': 'Recording Academy (N"
+            }
+          }
+        },
+        "winner_records": {
+          "document_count": 400,
+          "data_size_bytes": 336758,
+          "storage_size_bytes": 135168,
+          "total_index_size_bytes": 217088,
+          "avg_obj_size_bytes": 841,
+          "index_count": 5,
+          "indexes": [
+            {
+              "name": "_id_",
+              "key": [
+                [
+                  "_id",
+                  1
+                ]
+              ],
+              "unique": false
+            },
+            {
+              "name": "idx_winner_records_winner_id",
+              "key": [
+                [
+                  "winner_record_id",
+                  1
+                ]
+              ],
+              "unique": true
+            },
+            {
+              "name": "idx_winner_records_artist_id",
+              "key": [
+                [
+                  "primary_artist_id",
+                  1
+                ]
+              ],
+              "unique": false
+            },
+            {
+              "name": "idx_winner_records_category_year_esr",
+              "key": [
+                [
+                  "category_id",
+                  1
+                ],
+                [
+                  "ceremony_year",
+                  -1
+                ]
+              ],
+              "unique": false
+            },
+            {
+              "name": "idx_winner_records_telecast_statuettes_esr",
+              "key": [
+                [
+                  "presented_live_on_telecast",
+                  1
+                ],
+                [
+                  "trophy_statuettes_awarded_count",
+                  -1
+                ]
+              ],
+              "unique": false
+            }
+          ],
+          "field_count": 13,
+          "fields": {
+            "_id": {
+              "bson_type": "str",
+              "sample_repr": "WIN_NOM_001_BEST_JAZZ__0008"
+            },
+            "winner_record_id": {
+              "bson_type": "str",
+              "sample_repr": "WIN_NOM_001_BEST_JAZZ__0008"
+            },
+            "nomination_id": {
+              "bson_type": "str",
+              "sample_repr": "NOM_001_BEST_JAZZ__0008"
+            },
+            "ceremony_id": {
+              "bson_type": "str",
+              "sample_repr": "CEREMONY_001"
+            },
+            "category_id": {
+              "bson_type": "str",
+              "sample_repr": "CAT_BEST_JAZZ_PERFORMANCE_INDIVIDU_008"
+            },
+            "winning_work_id": {
+              "bson_type": "str",
+              "sample_repr": "WRK_ELLA_FITZGERALD_SINGS_THE_DUKE_0008"
+            },
+            "primary_artist_id": {
+              "bson_type": "str",
+              "sample_repr": "CRT_ELLA_FITZGERALD_0002"
+            },
+            "broadcast_presentation_order": {
+              "bson_type": "int",
+              "sample_repr": "9"
+            },
+            "presented_live_on_telecast": {
+              "bson_type": "bool",
+              "sample_repr": "True"
+            },
+            "acceptance_speech_delivered": {
+              "bson_type": "bool",
+              "sample_repr": "True"
+            },
+            "trophy_statuettes_awarded_count": {
+              "bson_type": "int",
+              "sample_repr": "1"
+            },
+            "verified_timestamp": {
+              "bson_type": "str",
+              "sample_repr": "1959-02-15T23:30:00Z"
+            },
+            "_source_provenance": {
+              "bson_type": "dict",
+              "sample_repr": "{'source_id': 'SRC-05', 'source_name': 'Kaggle (Robyn Ritchi"
+            }
+          }
+        }
+      }
+    },
+    "grammy_creators_db": {
+      "collections_count": 10,
+      "objects_count": 920,
+      "data_size_bytes": 792312,
+      "storage_size_bytes": 544768,
+      "indexes_count": 18,
+      "index_size_bytes": 630784,
+      "collections": {
+        "arrangers_conductors": {
+          "document_count": 75,
+          "data_size_bytes": 63981,
+          "storage_size_bytes": 45056,
+          "total_index_size_bytes": 36864,
+          "avg_obj_size_bytes": 853,
+          "index_count": 1,
+          "indexes": [
+            {
+              "name": "_id_",
+              "key": [
+                [
+                  "_id",
+                  1
+                ]
+              ],
+              "unique": false
+            }
+          ],
+          "field_count": 12,
+          "fields": {
+            "_id": {
+              "bson_type": "str",
+              "sample_repr": "ARR_012"
+            },
+            "arranger_id": {
+              "bson_type": "str",
+              "sample_repr": "ARR_012"
+            },
+            "creator_id": {
+              "bson_type": "str",
+              "sample_repr": "CRT_FRANK_SINATRA_0011"
+            },
+            "arrangement_discipline": {
+              "bson_type": "str",
+              "sample_repr": "Orchestral and Big Band"
+            },
+            "resident_orchestra_ensemble": {
+              "bson_type": "str",
+              "sample_repr": "London Symphony Orchestra / Los Angeles Philharmonic"
+            },
+            "formal_conservatory_education": {
+              "bson_type": "str",
+              "sample_repr": "Juilliard School of Music"
+            },
+            "sheet_music_publisher": {
+              "bson_type": "str",
+              "sample_repr": "Hal Leonard Corporation"
+            },
+            "conducts_own_compositions": {
+              "bson_type": "bool",
+              "sample_repr": "True"
+            },
+            "classical_crossover_experience": {
+              "bson_type": "bool",
+              "sample_repr": "True"
+            },
+            "union_musicians_local": {
+              "bson_type": "str",
+              "sample_repr": "AFM Local 47 (Los Angeles)"
+            },
+            "career_commission_count": {
+              "bson_type": "int",
+              "sample_repr": "36"
+            },
+            "_source_provenance": {
+              "bson_type": "dict",
+              "sample_repr": "{'source_id': 'SRC-03', 'source_name': 'MetaBrainz Foundatio"
+            }
+          }
+        },
+        "artists": {
+          "document_count": 300,
+          "data_size_bytes": 289149,
+          "storage_size_bytes": 118784,
+          "total_index_size_bytes": 196608,
+          "avg_obj_size_bytes": 963,
+          "index_count": 4,
+          "indexes": [
+            {
+              "name": "_id_",
+              "key": [
+                [
+                  "_id",
+                  1
+                ]
+              ],
+              "unique": false
+            },
+            {
+              "name": "idx_artists_artist_id",
+              "key": [
+                [
+                  "artist_id",
+                  1
+                ]
+              ],
+              "unique": true
+            },
+            {
+              "name": "idx_artists_stage_name",
+              "key": [
+                [
+                  "stage_name",
+                  1
+                ]
+              ],
+              "unique": false
+            },
+            {
+              "name": "idx_artists_group_career_esr",
+              "key": [
+                [
+                  "is_group_ensemble_flag",
+                  1
+                ],
+                [
+                  "active_career_start_year",
+                  1
+                ]
+              ],
+              "unique": false
+            }
+          ],
+          "field_count": 13,
+          "fields": {
+            "_id": {
+              "bson_type": "str",
+              "sample_repr": "CRT_THE_BATTLE_OF_KOOKAMONGA_0035"
+            },
+            "artist_id": {
+              "bson_type": "str",
+              "sample_repr": "CRT_THE_BATTLE_OF_KOOKAMONGA_0035"
+            },
+            "full_legal_name": {
+              "bson_type": "str",
+              "sample_repr": "The Battle Of Kookamonga"
+            },
+            "stage_name": {
+              "bson_type": "str",
+              "sample_repr": "The Battle Of Kookamonga"
+            },
+            "primary_musical_genre": {
+              "bson_type": "str",
+              "sample_repr": "Jazz"
+            },
+            "birth_or_formation_date": {
+              "bson_type": "str",
+              "sample_repr": "1970-05-15"
+            },
+            "country_of_citizenship": {
+              "bson_type": "str",
+              "sample_repr": "Canada"
+            },
+            "active_career_start_year": {
+              "bson_type": "int",
+              "sample_repr": "1985"
+            },
+            "is_group_ensemble_flag": {
+              "bson_type": "bool",
+              "sample_repr": "True"
+            },
+            "musicbrainz_artist_gid": {
+              "bson_type": "str",
+              "sample_repr": "29390958e69b57d16313fab855d90ba4"
+            },
+            "official_website_url": {
+              "bson_type": "str",
+              "sample_repr": "https://www.musicbrainz.org/artist/THE_BATTLE_OF_KOOKAMONGA"
+            },
+            "biography_overview": {
+              "bson_type": "str",
+              "sample_repr": "Celebrated recording artist and Grammy-honored musician The "
+            },
+            "_source_provenance": {
+              "bson_type": "dict",
+              "sample_repr": "{'source_id': 'SRC-03', 'source_name': 'MetaBrainz Foundatio"
+            }
+          }
+        },
+        "audio_engineers": {
+          "document_count": 75,
+          "data_size_bytes": 60681,
+          "storage_size_bytes": 45056,
+          "total_index_size_bytes": 36864,
+          "avg_obj_size_bytes": 809,
+          "index_count": 1,
+          "indexes": [
+            {
+              "name": "_id_",
+              "key": [
+                [
+                  "_id",
+                  1
+                ]
+              ],
+              "unique": false
+            }
+          ],
+          "field_count": 12,
+          "fields": {
+            "_id": {
+              "bson_type": "str",
+              "sample_repr": "ENG_015"
+            },
+            "engineer_id": {
+              "bson_type": "str",
+              "sample_repr": "ENG_015"
+            },
+            "creator_id": {
+              "bson_type": "str",
+              "sample_repr": "CRT_ANDR_PREVIN_0014"
+            },
+            "engineering_specialization": {
+              "bson_type": "str",
+              "sample_repr": "Mastering & Mixing"
+            },
+            "primary_mastering_facility": {
+              "bson_type": "str",
+              "sample_repr": "Sterling Sound / Abbey Road Studios"
+            },
+            "hardware_console_credits": {
+              "bson_type": "str",
+              "sample_repr": "Solid State Logic 9000J / Neve 88RS"
+            },
+            "dolby_atmos_certified_status": {
+              "bson_type": "bool",
+              "sample_repr": "True"
+            },
+            "aes_professional_membership": {
+              "bson_type": "bool",
+              "sample_repr": "True"
+            },
+            "first_album_engineering_year": {
+              "bson_type": "int",
+              "sample_repr": "1979"
+            },
+            "technical_patents_held": {
+              "bson_type": "int",
+              "sample_repr": "2"
+            },
+            "discogs_engineer_id": {
+              "bson_type": "str",
+              "sample_repr": "discogs-eng-2014"
+            },
+            "_source_provenance": {
+              "bson_type": "dict",
+              "sample_repr": "{'source_id': 'SRC-03', 'source_name': 'MetaBrainz Foundatio"
+            }
+          }
+        },
+        "creator_collaborations": {
+          "document_count": 65,
+          "data_size_bytes": 51320,
+          "storage_size_bytes": 53248,
+          "total_index_size_bytes": 36864,
+          "avg_obj_size_bytes": 789,
+          "index_count": 1,
+          "indexes": [
+            {
+              "name": "_id_",
+              "key": [
+                [
+                  "_id",
+                  1
+                ]
+              ],
+              "unique": false
+            }
+          ],
+          "field_count": 12,
+          "fields": {
+            "_id": {
+              "bson_type": "str",
+              "sample_repr": "COL_002"
+            },
+            "collab_id": {
+              "bson_type": "str",
+              "sample_repr": "COL_002"
+            },
+            "work_id": {
+              "bson_type": "str",
+              "sample_repr": "WRK_HISTORIC_RECORDING_002"
+            },
+            "creator_a_id": {
+              "bson_type": "str",
+              "sample_repr": "CRT_HENRY_MANCINI_0001"
+            },
+            "creator_b_id": {
+              "bson_type": "str",
+              "sample_repr": "CRT_ELLA_FITZGERALD_0002"
+            },
+            "collaboration_nature": {
+              "bson_type": "str",
+              "sample_repr": "Vocal Duet & Co-Production"
+            },
+            "billing_credit_format": {
+              "bson_type": "str",
+              "sample_repr": "Henry Mancini with Ella Fitzgerald"
+            },
+            "publishing_split_percentage": {
+              "bson_type": "float",
+              "sample_repr": "50.0"
+            },
+            "joint_grammy_nominations_count": {
+              "bson_type": "int",
+              "sample_repr": "2"
+            },
+            "clearance_agreement_date": {
+              "bson_type": "str",
+              "sample_repr": "1966-04-10"
+            },
+            "inter_label_licensing_waiver": {
+              "bson_type": "str",
+              "sample_repr": "WAIVER_INTERLABEL_1001"
+            },
+            "_source_provenance": {
+              "bson_type": "dict",
+              "sample_repr": "{'source_id': 'SRC-10', 'source_name': 'GRAMMY System Analyt"
+            }
+          }
+        },
+        "creator_discographies": {
+          "document_count": 65,
+          "data_size_bytes": 53088,
+          "storage_size_bytes": 45056,
+          "total_index_size_bytes": 36864,
+          "avg_obj_size_bytes": 816,
+          "index_count": 1,
+          "indexes": [
+            {
+              "name": "_id_",
+              "key": [
+                [
+                  "_id",
+                  1
+                ]
+              ],
+              "unique": false
+            }
+          ],
+          "field_count": 12,
+          "fields": {
+            "_id": {
+              "bson_type": "str",
+              "sample_repr": "DISC_005"
+            },
+            "discography_id": {
+              "bson_type": "str",
+              "sample_repr": "DISC_005"
+            },
+            "creator_id": {
+              "bson_type": "str",
+              "sample_repr": "CRT_BILLY_MAY_S_BIG_FAT_BRASS_0004"
+            },
+            "work_id": {
+              "bson_type": "str",
+              "sample_repr": "WRK_HISTORIC_RECORDING_005"
+            },
+            "release_calendar_year": {
+              "bson_type": "int",
+              "sample_repr": "1969"
+            },
+            "primary_credit_type": {
+              "bson_type": "str",
+              "sample_repr": "Primary Solo Recording Artist"
+            },
+            "catalog_matrix_code": {
+              "bson_type": "str",
+              "sample_repr": "CAT-LP-8004"
+            },
+            "billboard_200_peak_position": {
+              "bson_type": "int",
+              "sample_repr": "5"
+            },
+            "riaa_certification_status": {
+              "bson_type": "str",
+              "sample_repr": "Multi-Platinum"
+            },
+            "recording_studio_facility": {
+              "bson_type": "str",
+              "sample_repr": "Capitol Studios Hollywood"
+            },
+            "master_rights_holder_label_id": {
+              "bson_type": "str",
+              "sample_repr": "LBL_CAPITOL_RECORDS_05"
+            },
+            "_source_provenance": {
+              "bson_type": "dict",
+              "sample_repr": "{'source_id': 'SRC-03', 'source_name': 'MetaBrainz Foundatio"
+            }
+          }
+        },
+        "group_memberships": {
+          "document_count": 65,
+          "data_size_bytes": 46595,
+          "storage_size_bytes": 45056,
+          "total_index_size_bytes": 36864,
+          "avg_obj_size_bytes": 716,
+          "index_count": 1,
+          "indexes": [
+            {
+              "name": "_id_",
+              "key": [
+                [
+                  "_id",
+                  1
+                ]
+              ],
+              "unique": false
+            }
+          ],
+          "field_count": 12,
+          "fields": {
+            "_id": {
+              "bson_type": "str",
+              "sample_repr": "MEM_006"
+            },
+            "membership_id": {
+              "bson_type": "str",
+              "sample_repr": "MEM_006"
+            },
+            "group_id": {
+              "bson_type": "str",
+              "sample_repr": "GRP_006"
+            },
+            "artist_id": {
+              "bson_type": "str",
+              "sample_repr": "CRT_BASIE_0005"
+            },
+            "role_within_group": {
+              "bson_type": "str",
+              "sample_repr": "Lead Vocalist & Rhythm Guitarist"
+            },
+            "tenure_start_year": {
+              "bson_type": "int",
+              "sample_repr": "1965"
+            },
+            "tenure_end_year": {
+              "bson_type": "int",
+              "sample_repr": "2026"
+            },
+            "is_founding_member": {
+              "bson_type": "bool",
+              "sample_repr": "True"
+            },
+            "is_primary_frontperson": {
+              "bson_type": "bool",
+              "sample_repr": "True"
+            },
+            "royalty_split_contract_percentage": {
+              "bson_type": "float",
+              "sample_repr": "25.0"
+            },
+            "member_departure_reason": {
+              "bson_type": "str",
+              "sample_repr": "Active member"
+            },
+            "_source_provenance": {
+              "bson_type": "dict",
+              "sample_repr": "{'source_id': 'SRC-03', 'source_name': 'MetaBrainz Foundatio"
+            }
+          }
+        },
+        "musical_groups": {
+          "document_count": 65,
+          "data_size_bytes": 47835,
+          "storage_size_bytes": 45056,
+          "total_index_size_bytes": 77824,
+          "avg_obj_size_bytes": 735,
+          "index_count": 3,
+          "indexes": [
+            {
+              "name": "_id_",
+              "key": [
+                [
+                  "_id",
+                  1
+                ]
+              ],
+              "unique": false
+            },
+            {
+              "name": "idx_musical_groups_group_id",
+              "key": [
+                [
+                  "group_id",
+                  1
+                ]
+              ],
+              "unique": true
+            },
+            {
+              "name": "idx_musical_groups_formation_year",
+              "key": [
+                [
+                  "formation_calendar_year",
+                  1
+                ]
+              ],
+              "unique": false
+            }
+          ],
+          "field_count": 12,
+          "fields": {
+            "_id": {
+              "bson_type": "str",
+              "sample_repr": "GRP_029"
+            },
+            "group_id": {
+              "bson_type": "str",
+              "sample_repr": "GRP_029"
+            },
+            "group_name": {
+              "bson_type": "str",
+              "sample_repr": "Historic Recording Ensemble 29"
+            },
+            "formation_calendar_year": {
+              "bson_type": "int",
+              "sample_repr": "1988"
+            },
+            "disbandment_year": {
+              "bson_type": "int",
+              "sample_repr": "2026"
+            },
+            "ensemble_structure_type": {
+              "bson_type": "str",
+              "sample_repr": "Quartet"
+            },
+            "origin_city": {
+              "bson_type": "str",
+              "sample_repr": "Los Angeles"
+            },
+            "origin_country": {
+              "bson_type": "str",
+              "sample_repr": "US"
+            },
+            "current_activity_status": {
+              "bson_type": "bool",
+              "sample_repr": "True"
+            },
+            "signature_musical_style": {
+              "bson_type": "str",
+              "sample_repr": "Harmonic Vocal Pop and Rock"
+            },
+            "musicbrainz_group_gid": {
+              "bson_type": "str",
+              "sample_repr": "2ffd38b9e4b0c7df91d868abfbf11182"
+            },
+            "_source_provenance": {
+              "bson_type": "dict",
+              "sample_repr": "{'source_id': 'SRC-03', 'source_name': 'MetaBrainz Foundatio"
+            }
+          }
+        },
+        "producers": {
+          "document_count": 75,
+          "data_size_bytes": 64918,
+          "storage_size_bytes": 53248,
+          "total_index_size_bytes": 36864,
+          "avg_obj_size_bytes": 865,
+          "index_count": 1,
+          "indexes": [
+            {
+              "name": "_id_",
+              "key": [
+                [
+                  "_id",
+                  1
+                ]
+              ],
+              "unique": false
+            }
+          ],
+          "field_count": 12,
+          "fields": {
+            "_id": {
+              "bson_type": "str",
+              "sample_repr": "PROD_003"
+            },
+            "producer_id": {
+              "bson_type": "str",
+              "sample_repr": "PROD_003"
+            },
+            "creator_id": {
+              "bson_type": "str",
+              "sample_repr": "CRT_ELLA_FITZGERALD_0002"
+            },
+            "primary_production_genre": {
+              "bson_type": "str",
+              "sample_repr": "R&B / Soul"
+            },
+            "headquarters_studio_location": {
+              "bson_type": "str",
+              "sample_repr": "Los Angeles, CA"
+            },
+            "production_company_affiliation": {
+              "bson_type": "str",
+              "sample_repr": "Ella Fitzgerald Production Group"
+            },
+            "analog_digital_workflow_preference": {
+              "bson_type": "str",
+              "sample_repr": "Hybrid Analog/DAW"
+            },
+            "total_career_credits_count": {
+              "bson_type": "int",
+              "sample_repr": "49"
+            },
+            "discogs_producer_id": {
+              "bson_type": "str",
+              "sample_repr": "discogs-p-1002"
+            },
+            "first_notable_production_year": {
+              "bson_type": "int",
+              "sample_repr": "1962"
+            },
+            "signature_sound_profile": {
+              "bson_type": "str",
+              "sample_repr": "Acoustic warmth and dynamic range optimization"
+            },
+            "_source_provenance": {
+              "bson_type": "dict",
+              "sample_repr": "{'source_id': 'SRC-03', 'source_name': 'MetaBrainz Foundatio"
+            }
+          }
+        },
+        "record_labels": {
+          "document_count": 60,
+          "data_size_bytes": 48963,
+          "storage_size_bytes": 45056,
+          "total_index_size_bytes": 57344,
+          "avg_obj_size_bytes": 816,
+          "index_count": 2,
+          "indexes": [
+            {
+              "name": "_id_",
+              "key": [
+                [
+                  "_id",
+                  1
+                ]
+              ],
+              "unique": false
+            },
+            {
+              "name": "idx_record_labels_label_id",
+              "key": [
+                [
+                  "label_id",
+                  1
+                ]
+              ],
+              "unique": true
+            }
+          ],
+          "field_count": 12,
+          "fields": {
+            "_id": {
+              "bson_type": "str",
+              "sample_repr": "LBL_MOTOWN_RECORDS_34"
+            },
+            "label_id": {
+              "bson_type": "str",
+              "sample_repr": "LBL_MOTOWN_RECORDS_34"
+            },
+            "label_corporate_name": {
+              "bson_type": "str",
+              "sample_repr": "Motown Records Division 34"
+            },
+            "parent_music_group": {
+              "bson_type": "str",
+              "sample_repr": "Universal Music Group"
+            },
+            "foundation_year": {
+              "bson_type": "int",
+              "sample_repr": "1959"
+            },
+            "corporate_headquarters_city": {
+              "bson_type": "str",
+              "sample_repr": "Detroit"
+            },
+            "origin_country": {
+              "bson_type": "str",
+              "sample_repr": "US"
+            },
+            "commercial_distribution_channel": {
+              "bson_type": "str",
+              "sample_repr": "Global Physical & Streaming Distribution"
+            },
+            "riaa_member_standing": {
+              "bson_type": "bool",
+              "sample_repr": "True"
+            },
+            "historical_catalog_size": {
+              "bson_type": "int",
+              "sample_repr": "9100"
+            },
+            "current_operational_status": {
+              "bson_type": "str",
+              "sample_repr": "Active Major Label Imprint"
+            },
+            "_source_provenance": {
+              "bson_type": "dict",
+              "sample_repr": "{'source_id': 'SRC-03', 'source_name': 'MetaBrainz Foundatio"
+            }
+          }
+        },
+        "songwriters_composers": {
+          "document_count": 75,
+          "data_size_bytes": 65782,
+          "storage_size_bytes": 49152,
+          "total_index_size_bytes": 77824,
+          "avg_obj_size_bytes": 877,
+          "index_count": 3,
+          "indexes": [
+            {
+              "name": "_id_",
+              "key": [
+                [
+                  "_id",
+                  1
+                ]
+              ],
+              "unique": false
+            },
+            {
+              "name": "idx_songwriters_songwriter_id",
+              "key": [
+                [
+                  "songwriter_id",
+                  1
+                ]
+              ],
+              "unique": true
+            },
+            {
+              "name": "idx_songwriters_pro_works_esr",
+              "key": [
+                [
+                  "pro_affiliation",
+                  1
+                ],
+                [
+                  "registered_works_count",
+                  -1
+                ]
+              ],
+              "unique": false
+            }
+          ],
+          "field_count": 12,
+          "fields": {
+            "_id": {
+              "bson_type": "str",
+              "sample_repr": "SONG_017"
+            },
+            "songwriter_id": {
+              "bson_type": "str",
+              "sample_repr": "SONG_017"
+            },
+            "creator_id": {
+              "bson_type": "str",
+              "sample_repr": "CRT_GAIETE_PARISIENNE_0016"
+            },
+            "pro_affiliation": {
+              "bson_type": "str",
+              "sample_repr": "ASCAP"
+            },
+            "ipi_cae_identifier": {
+              "bson_type": "str",
+              "sample_repr": "IPI-0500016"
+            },
+            "music_publisher_company": {
+              "bson_type": "str",
+              "sample_repr": "Sony Music Publishing / Universal Music Publishing"
+            },
+            "lyric_vs_composition_focus": {
+              "bson_type": "str",
+              "sample_repr": "Both Lyrics and Melodic Composition"
+            },
+            "registered_works_count": {
+              "bson_type": "int",
+              "sample_repr": "280"
+            },
+            "inducted_songwriters_hof": {
+              "bson_type": "bool",
+              "sample_repr": "False"
+            },
+            "primary_songwriting_instrument": {
+              "bson_type": "str",
+              "sample_repr": "Piano and Acoustic Guitar"
+            },
+            "signature_melodic_style": {
+              "bson_type": "str",
+              "sample_repr": "Anthemic chord progressions and evocative lyrical imagery"
+            },
+            "_source_provenance": {
+              "bson_type": "dict",
+              "sample_repr": "{'source_id': 'SRC-03', 'source_name': 'MetaBrainz Foundatio"
+            }
+          }
+        }
+      }
+    }
+  },
+  "summary_totals": {
+    "total_collections": 54,
+    "total_documents": 5190,
+    "total_data_size_bytes": 4255365,
+    "total_storage_size_bytes": 2949120,
+    "total_index_size_bytes": 3473408
+  }
+}

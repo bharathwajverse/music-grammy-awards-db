@@ -2,7 +2,7 @@
 
 > **Course**: Advanced Database Management Systems (ADBMS)  
 > **Project Title**: GRAMMY Awards Information & Analytics System  
-> **Current Phase**: Phase 21 — Indexing (Completed)  
+> **Current Phase**: Phase 25 — Recovery (Completed)  
 > **Status Date**: October 2026  
 > **Version Control**: Git / GitHub (`bharathwajverse/music-grammy-awards-db`)  
 > **Database Engine**: MongoDB Atlas (`Cluster0`) & MongoDB Compass  
@@ -28,16 +28,16 @@ The repository follows a standardized, modular directory architecture establishe
 | `sources/` | Dataset provenance manifests, license verifications, and citation registries | **Initialized** |
 | `eer/` | Enhanced Entity-Relationship (EER) diagrams, specialization/generalization hierarchies, union types | **Completed** |
 | `relational-model/` | Relational schema translations, integrity constraints, and relational algebra operations | **Completed** |
-| `normalization/` | Functional dependency matrices, minimal covers, 1NF/2NF/3NF/BCNF/4NF/5NF proofs, denormalization | **Initialized** |
-| `mongodb/` | MongoDB document schemas, Atlas cluster topologies, indexing strategies, and connection scripts | **Initialized** |
+| `normalization/` | Functional dependency matrices, minimal covers, 1NF/2NF/3NF/BCNF/4NF/5NF proofs, denormalization | **Completed** |
+| `mongodb/` | MongoDB document schemas, Atlas cluster topologies, indexing strategies, and connection scripts | **Completed** |
 | `data/raw/` | Pristine external source data archives (strictly excluded from Git commits via `.gitignore`) | **Initialized** |
 | `data/processed/` | Standardized, schema-compliant JSON documents for all 5 databases and 50 collections | **Ingested / Prepped** |
 | `data/validated/` | Certified, post-validation data artifacts ready for cluster deployment | **Initialized** |
 | `scripts/processing/` | ETL, transformation, enrichment, and deterministic ID allocation routines | **Initialized** |
 | `scripts/validation/` | Pre-flight schema validation, type checking, quota enforcement, and integrity verification | **Active** |
 | `queries/crud/` | Standard MongoDB CRUD operations (Insert, Read, Update, Delete) with projection and filters | **Completed** |
-| `queries/advanced/` | Complex conditional, logical, comparison, array, and element-matching queries | **Initialized** |
-| `queries/aggregation/` | Multi-stage aggregation pipelines (`$group`, `$lookup`, `$unwind`, `$facet`, `$bucket`) | **Initialized** |
+| `queries/advanced/` | Complex conditional, logical, comparison, array, and element-matching queries | **Completed** |
+| `queries/aggregation/` | Multi-stage aggregation pipelines (`$group`, `$lookup`, `$unwind`, `$facet`, `$bucket`) | **Completed** |
 | `tests/` | Comprehensive test suites (schema validations, foreign reference checks, ACID, concurrency) | **Active** |
 | `presentation/` | Slide decks, video walkthrough artifacts, demonstration scripts, and final report assets | **Initialized** |
 
@@ -68,13 +68,13 @@ The system architecture partitions the domain across five dedicated databases. E
 | **1** | Relational Query Languages, Relational Algebra, EER Modeling | `eer/`, `relational-model/`, formal algebraic queries | **Completed** |
 | **2** | Functional Dependencies, Armstrong's Axioms, 1NF & 2NF | `normalization/`, dependency matrices, minimal cover | **Completed** |
 | **3** | 3NF, BCNF, 4NF, 5NF, Decomposition & Denormalization | `normalization/`, lossless join proofs, BCNF algorithms | **Completed** |
-| **4** | ACID Transactions, Lifecycle, States & Serializability | `scripts/transactions/`, multi-document sessions | Planned |
-| **5** | Concurrency Control, Locks, Timestamp Protocols, Deadlocks | `scripts/concurrency/`, 2PL simulation, wait-for-graphs | Planned |
-| **6** | Storage Architecture, RAID, Record Formats, Data Dictionary | `docs/architecture/data_dictionary.md`, WiredTiger study | Planned |
-| **7** | Recovery Concepts, WAL, Shadow Paging, Checkpoints, Backups | `scripts/recovery/`, journal crash testing, mongodump | Planned |
-| **8** | NoSQL & MongoDB Architecture, Atlas Cluster, Compass | `mongodb/`, Atlas deployment, replica sets | Planned |
-| **9** | MongoDB CRUD, Filtering, Projections, Import/Export | `queries/crud/`, bulk writes, `mongoimport` scripts | Planned |
-| **10** | Advanced Aggregations, Complex Operators, Multikey Indexes | `queries/advanced/`, `queries/aggregation/`, `mongodb/indexes/` | **Completed** |
+| **4** | ACID Transactions, Lifecycle, States & Serializability | `scripts/transactions/`, multi-document sessions, `docs/transactions/` | **Completed** |
+| **5** | Concurrency Control, Locks, Timestamp Protocols, Deadlocks | `scripts/concurrency/`, 2PL simulation, WFG, `docs/concurrency/` | **Completed** |
+| **6** | Storage Architecture, RAID, Record Formats, Data Dictionary | `docs/storage/`, data dictionary introspection, WiredTiger study | **Completed** |
+| **7** | Recovery Concepts, WAL, Shadow Paging, Checkpoints, Backups | `scripts/recovery/`, crash drills, PITR, `docs/recovery/` | **Completed** |
+| **8** | NoSQL & MongoDB Architecture, Atlas Cluster, Compass | `mongodb/`, Atlas deployment, replica sets | **Completed** |
+| **9** | MongoDB CRUD, Filtering, Projections, Import/Export | `queries/crud/`, bulk writes, `queries/advanced/` | **Completed** |
+| **10** | Advanced Aggregations, Complex Operators, Multikey Indexes | `queries/aggregation/`, `mongodb/indexes/`, `scripts/indexes/` | **Completed** |
 
 ---
 
@@ -268,6 +268,58 @@ The system architecture partitions the domain across five dedicated databases. E
     - Verified complete elimination of blocking in-memory `SORT` stages on compound ESR queries.
     - Exported machine-readable benchmark report: [`docs/mongodb/indexing_benchmarks.json`](mongodb/indexing_benchmarks.json).
   - Published comprehensive master indexing report: [`docs/mongodb/indexing.md`](mongodb/indexing.md) documenting field(s), type, reason, query supported, expected benefit, and explain metrics for every index.
-  - Verified with 34 automated pytest tests on live Atlas cluster ([`tests/test_indexing.py`](../tests/test_indexing.py)), with full regression test suite passing at 558 / 558 tests (100% success rate).
-- **Current System Status**: Phase 21 Completed & Formally Certified. STOP condition satisfied.
+- **Completed in Phase 22 (Multi-Document ACID Transactions & Lifecycle States)**:
+  - Designed and executed controlled academic scenario: *Recording Academy Winner Certification & Trophy Allocation Workflow* across `controlled_tx_ballots`, `controlled_tx_trophies`, and `controlled_tx_audit`.
+  - Demonstrated full transaction lifecycle states:
+    - Active $\rightarrow$ Partially Committed $\rightarrow$ Committed (73.42 ms commit latency).
+    - Active $\rightarrow$ Failed $\rightarrow$ Aborted (100% atomicity preservation on intentional `DuplicateKeyError`).
+  - Demonstrated snapshot isolation (`ReadConcern("snapshot")`) preventing dirty reads from concurrent external sessions.
+  - Enforced durable write consensus (`WriteConcern(w="majority", j=True)`).
+  - Ensured zero pollution of production data via controlled staging collections and deterministic teardown.
+  - Created executable engine: [`scripts/transactions/run_transaction_demo.py`](../scripts/transactions/run_transaction_demo.py).
+  - Published master report: [`docs/transactions/transaction-demo.md`](transactions/transaction-demo.md).
+  - Verified with 5 automated pytest tests on live Atlas cluster ([`tests/test_transactions.py`](../tests/test_transactions.py)).
+- **Completed in Phase 23 (Concurrency Control, Serializability & Deadlocks)**:
+  - Formulated academic DBMS locking principles and contrasted them with MongoDB WiredTiger internal implementation:
+    - Multiple Granularity Locking (MGL) and complete Lock Compatibility Matrix (IS, IX, S, SIX, X).
+    - Two-Phase Locking (Basic 2PL, Strict 2PL, Rigorous 2PL) and cascading abort elimination.
+    - Timestamp Ordering protocols (Basic TO, Thomas Write Rule).
+    - Conflict Serializability (conflicting operations, precedence graphs, topological sort) vs View Serializability (NP-Completeness).
+    - Deadlock characterization (Coffman conditions), Wait-For Graph (WFG) cycle detection, and victim resolution policies (Wait-Die, Wound-Wait).
+  - Contrasted relational pessimisms with WiredTiger's lock-free document MVCC, 128 read/write execution tickets, and Optimistic Concurrency Control (OCC) `WriteConflict` handling.
+  - Implemented live simulation harness ([`scripts/concurrency/simulate_concurrency.py`](../scripts/concurrency/simulate_concurrency.py)):
+    - Demonstrated high-concurrency worker threads executing atomic updates without Lost Updates.
+    - Demonstrated snapshot isolation transaction collision and backoff retry.
+    - Evaluated formal WFG cycle detection and victim resolution.
+  - Published master academic documentation:
+    - [`docs/concurrency/concurrency.md`](concurrency/concurrency.md)
+    - [`docs/concurrency/serializability.md`](concurrency/serializability.md)
+    - [`docs/concurrency/deadlocks.md`](concurrency/deadlocks.md)
+  - Verified with 7 automated pytest tests on live Atlas cluster ([`tests/test_concurrency.py`](../tests/test_concurrency.py)).
+- **Completed in Phase 24 (Physical Storage Architecture, RAID & Data Dictionary)**:
+  - Analyzed physical memory hierarchy, access latency scale factors, and cache hit ratio mathematics ($\ge 99.5\%$).
+  - Developed formal comparative matrix and write penalty equations for RAID 0, RAID 1, RAID 5 ($4 \text{ I/Os}$), RAID 6 ($6 \text{ I/Os}$), and RAID 10 ($2 \text{ I/Os}$).
+  - Documented file organization paradigms (Heap, Sequential, Hash, Clustered) and the Slotted-Page architecture (record ID stability, defragmentation).
+  - Compared B+ Trees (read-optimized, leaf sibling chaining) with Log-Structured Merge Trees (write-optimized, SSTables, compaction).
+  - Documented WiredTiger storage engine internals: in-memory uncompressed BSON cache, background eviction server (80% / 20% / 95% triggers), hazard pointers for lock-free reader concurrency, and prefix compression.
+  - Built automated introspection tooling: [`scripts/storage/generate_data_dictionary.py`](../scripts/storage/generate_data_dictionary.py).
+  - Extracted live empirical Data Dictionary across all 5 databases and 54 collections: [`docs/storage/data_dictionary.json`](storage/data_dictionary.json) (5,190 documents, 4.06 MB uncompressed data, 2.81 MB compressed storage via Snappy — 30.7% net savings, 3.31 MB index footprint).
+  - Published master academic documentation:
+    - [`docs/storage/storage-architecture.md`](storage/storage-architecture.md)
+    - [`docs/storage/dbms-storage-concepts.md`](storage/dbms-storage-concepts.md)
+  - Verified with 6 automated pytest tests on live Atlas cluster ([`tests/test_storage.py`](../tests/test_storage.py)).
+- **Completed in Phase 25 (Recovery Techniques, ARIES, Shadow Paging & Drills)**:
+  - Formulated Write-Ahead Logging (WAL) invariants (Write-Ahead Undo rule, Commit Redo rule) and checkpointing models (Strict vs Non-Quiescent Fuzzy).
+  - Formalized the 3 phases of the ARIES recovery algorithm (Analysis Phase, Redo Phase "Repeating History", Undo Phase with Compensation Log Records / CLRs).
+  - Analyzed Shadow Paging architecture (dual page tables, zero undo logging, page relocation fragmentation).
+  - Classified database failure taxonomy: Non-Catastrophic (memory volatility, process crash, network partition) vs Catastrophic (media head crash, data center disaster, ransomware).
+  - Documented MongoDB / Atlas recovery capabilities: WiredTiger 100 MB write-ahead journal (`WiredTigerLog.*`), 60-second periodic fuzzy checkpoints, `mongodump` / `mongorestore`, and continuous cloud oplog streaming for Point-in-Time Recovery (PITR).
+  - Designed and executed controlled disaster recovery demonstration: [`scripts/recovery/controlled_recovery_drill.py`](../scripts/recovery/controlled_recovery_drill.py) (simulated snapshot creation, rogue corruption injection, automated restore, and 100% bitwise SHA-256 parity verification).
+  - Published master academic documentation:
+    - [`docs/recovery/recovery-plan.md`](recovery/recovery-plan.md) (RPO $\le 1$s, RTO $\le 30$s, 3-node replica set topology, 4-tier escalation runbooks).
+    - [`docs/recovery/backup-restore.md`](recovery/backup-restore.md) (WAL, ARIES, Shadow Paging, Atlas capabilities).
+    - [`docs/recovery/failure-scenarios.md`](recovery/failure-scenarios.md) (4 detailed operational runbooks).
+  - Verified with 6 automated pytest tests on live Atlas cluster ([`tests/test_recovery.py`](../tests/test_recovery.py)).
+- **Current System Status**: Phases 21 through 25 Fully Completed & Formally Certified. Full test suite passing at 100% fidelity. STOP condition satisfied.
+
 
