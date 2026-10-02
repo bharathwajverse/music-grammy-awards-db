@@ -1,0 +1,449 @@
+{
+  "audit_timestamp": "2026-10-02T11:00:47Z",
+  "total_databases": 5,
+  "total_collections": 50,
+  "total_documents_imported": 5190,
+  "all_requirements_passed": true,
+  "databases": {
+    "grammy_history_db": {
+      "collection_count": 10,
+      "collection_count_passed": true,
+      "total_documents": 645,
+      "all_collections_passed": true,
+      "collections": {
+        "academy_leadership": {
+          "document_count": 60,
+          "field_coverage_pct": 100.0,
+          "duplicate_ids": 0,
+          "invalid_references": 0,
+          "provenance_preserved_count": 60,
+          "status": "PASSED"
+        },
+        "ceremonies": {
+          "document_count": 67,
+          "field_coverage_pct": 85.71,
+          "duplicate_ids": 0,
+          "invalid_references": 0,
+          "provenance_preserved_count": 67,
+          "status": "PASSED"
+        },
+        "ceremony_hosts": {
+          "document_count": 67,
+          "field_coverage_pct": 100.0,
+          "duplicate_ids": 0,
+          "invalid_references": 0,
+          "provenance_preserved_count": 67,
+          "status": "PASSED"
+        },
+        "historic_milestones": {
+          "document_count": 67,
+          "field_coverage_pct": 100.0,
+          "duplicate_ids": 0,
+          "invalid_references": 0,
+          "provenance_preserved_count": 67,
+          "status": "PASSED"
+        },
+        "lifetime_achievement_honors": {
+          "document_count": 65,
+          "field_coverage_pct": 100.0,
+          "duplicate_ids": 0,
+          "invalid_references": 0,
+          "provenance_preserved_count": 65,
+          "status": "PASSED"
+        },
+        "press_media_accreditations": {
+          "document_count": 70,
+          "field_coverage_pct": 100.0,
+          "duplicate_ids": 0,
+          "invalid_references": 0,
+          "provenance_preserved_count": 70,
+          "status": "PASSED"
+        },
+        "telecast_broadcasters": {
+          "document_count": 67,
+          "field_coverage_pct": 100.0,
+          "duplicate_ids": 0,
+          "invalid_references": 0,
+          "provenance_preserved_count": 67,
+          "status": "PASSED"
+        },
+        "timeline_historical_eras": {
+          "document_count": 55,
+          "field_coverage_pct": 100.0,
+          "duplicate_ids": 0,
+          "invalid_references": 0,
+          "provenance_preserved_count": 55,
+          "status": "PASSED"
+        },
+        "venues": {
+          "document_count": 60,
+          "field_coverage_pct": 100.0,
+          "duplicate_ids": 0,
+          "invalid_references": 0,
+          "provenance_preserved_count": 60,
+          "status": "PASSED"
+        },
+        "viewership_ratings": {
+          "document_count": 67,
+          "field_coverage_pct": 100.0,
+          "duplicate_ids": 0,
+          "invalid_references": 0,
+          "provenance_preserved_count": 67,
+          "status": "PASSED"
+        }
+      }
+    },
+    "grammy_categories_db": {
+      "collection_count": 10,
+      "collection_count_passed": true,
+      "total_documents": 650,
+      "all_collections_passed": true,
+      "collections": {
+        "award_categories": {
+          "document_count": 120,
+          "field_coverage_pct": 85.71,
+          "duplicate_ids": 0,
+          "invalid_references": 0,
+          "provenance_preserved_count": 120,
+          "status": "PASSED"
+        },
+        "award_fields": {
+          "document_count": 50,
+          "field_coverage_pct": 100.0,
+          "duplicate_ids": 0,
+          "invalid_references": 0,
+          "provenance_preserved_count": 50,
+          "status": "PASSED"
+        },
+        "category_lineage": {
+          "document_count": 60,
+          "field_coverage_pct": 100.0,
+          "duplicate_ids": 0,
+          "invalid_references": 0,
+          "provenance_preserved_count": 60,
+          "status": "PASSED"
+        },
+        "category_quotas_limits": {
+          "document_count": 60,
+          "field_coverage_pct": 100.0,
+          "duplicate_ids": 0,
+          "invalid_references": 0,
+          "provenance_preserved_count": 60,
+          "status": "PASSED"
+        },
+        "craft_credit_definitions": {
+          "document_count": 60,
+          "field_coverage_pct": 100.0,
+          "duplicate_ids": 0,
+          "invalid_references": 0,
+          "provenance_preserved_count": 60,
+          "status": "PASSED"
+        },
+        "discontinued_categories": {
+          "document_count": 60,
+          "field_coverage_pct": 100.0,
+          "duplicate_ids": 0,
+          "invalid_references": 0,
+          "provenance_preserved_count": 60,
+          "status": "PASSED"
+        },
+        "eligibility_rules": {
+          "document_count": 60,
+          "field_coverage_pct": 100.0,
+          "duplicate_ids": 0,
+          "invalid_references": 0,
+          "provenance_preserved_count": 60,
+          "status": "PASSED"
+        },
+        "merged_split_history": {
+          "document_count": 60,
+          "field_coverage_pct": 100.0,
+          "duplicate_ids": 0,
+          "invalid_references": 0,
+          "provenance_preserved_count": 60,
+          "status": "PASSED"
+        },
+        "special_merit_categories": {
+          "document_count": 60,
+          "field_coverage_pct": 100.0,
+          "duplicate_ids": 0,
+          "invalid_references": 0,
+          "provenance_preserved_count": 60,
+          "status": "PASSED"
+        },
+        "voting_procedures": {
+          "document_count": 60,
+          "field_coverage_pct": 100.0,
+          "duplicate_ids": 0,
+          "invalid_references": 0,
+          "provenance_preserved_count": 60,
+          "status": "PASSED"
+        }
+      }
+    },
+    "grammy_nominations_db": {
+      "collection_count": 10,
+      "collection_count_passed": true,
+      "total_documents": 1990,
+      "all_collections_passed": true,
+      "collections": {
+        "first_time_nominees": {
+          "document_count": 70,
+          "field_coverage_pct": 100.0,
+          "duplicate_ids": 0,
+          "invalid_references": 0,
+          "provenance_preserved_count": 70,
+          "status": "PASSED"
+        },
+        "genre_classifications": {
+          "document_count": 70,
+          "field_coverage_pct": 100.0,
+          "duplicate_ids": 0,
+          "invalid_references": 0,
+          "provenance_preserved_count": 70,
+          "status": "PASSED"
+        },
+        "multi_nomination_packages": {
+          "document_count": 70,
+          "field_coverage_pct": 100.0,
+          "duplicate_ids": 0,
+          "invalid_references": 0,
+          "provenance_preserved_count": 70,
+          "status": "PASSED"
+        },
+        "nominated_works": {
+          "document_count": 500,
+          "field_coverage_pct": 85.71,
+          "duplicate_ids": 0,
+          "invalid_references": 0,
+          "provenance_preserved_count": 500,
+          "status": "PASSED"
+        },
+        "nomination_audit_logs": {
+          "document_count": 70,
+          "field_coverage_pct": 100.0,
+          "duplicate_ids": 0,
+          "invalid_references": 0,
+          "provenance_preserved_count": 70,
+          "status": "PASSED"
+        },
+        "nomination_credits": {
+          "document_count": 500,
+          "field_coverage_pct": 100.0,
+          "duplicate_ids": 0,
+          "invalid_references": 0,
+          "provenance_preserved_count": 500,
+          "status": "PASSED"
+        },
+        "nomination_entries": {
+          "document_count": 500,
+          "field_coverage_pct": 92.31,
+          "duplicate_ids": 0,
+          "invalid_references": 0,
+          "provenance_preserved_count": 500,
+          "status": "PASSED"
+        },
+        "submission_batches": {
+          "document_count": 70,
+          "field_coverage_pct": 100.0,
+          "duplicate_ids": 0,
+          "invalid_references": 0,
+          "provenance_preserved_count": 70,
+          "status": "PASSED"
+        },
+        "tied_nominations": {
+          "document_count": 70,
+          "field_coverage_pct": 100.0,
+          "duplicate_ids": 0,
+          "invalid_references": 0,
+          "provenance_preserved_count": 70,
+          "status": "PASSED"
+        },
+        "voter_screening_batches": {
+          "document_count": 70,
+          "field_coverage_pct": 100.0,
+          "duplicate_ids": 0,
+          "invalid_references": 0,
+          "provenance_preserved_count": 70,
+          "status": "PASSED"
+        }
+      }
+    },
+    "grammy_winners_db": {
+      "collection_count": 10,
+      "collection_count_passed": true,
+      "total_documents": 985,
+      "all_collections_passed": true,
+      "collections": {
+        "acceptance_speeches": {
+          "document_count": 65,
+          "field_coverage_pct": 100.0,
+          "duplicate_ids": 0,
+          "invalid_references": 0,
+          "provenance_preserved_count": 65,
+          "status": "PASSED"
+        },
+        "big_four_sweeps": {
+          "document_count": 65,
+          "field_coverage_pct": 100.0,
+          "duplicate_ids": 0,
+          "invalid_references": 0,
+          "provenance_preserved_count": 65,
+          "status": "PASSED"
+        },
+        "consecutive_winners": {
+          "document_count": 65,
+          "field_coverage_pct": 100.0,
+          "duplicate_ids": 0,
+          "invalid_references": 0,
+          "provenance_preserved_count": 65,
+          "status": "PASSED"
+        },
+        "hall_of_fame_inductions": {
+          "document_count": 65,
+          "field_coverage_pct": 100.0,
+          "duplicate_ids": 0,
+          "invalid_references": 0,
+          "provenance_preserved_count": 65,
+          "status": "PASSED"
+        },
+        "historic_win_benchmarks": {
+          "document_count": 65,
+          "field_coverage_pct": 100.0,
+          "duplicate_ids": 0,
+          "invalid_references": 0,
+          "provenance_preserved_count": 65,
+          "status": "PASSED"
+        },
+        "posthumous_awards": {
+          "document_count": 65,
+          "field_coverage_pct": 100.0,
+          "duplicate_ids": 0,
+          "invalid_references": 0,
+          "provenance_preserved_count": 65,
+          "status": "PASSED"
+        },
+        "record_breakers": {
+          "document_count": 65,
+          "field_coverage_pct": 100.0,
+          "duplicate_ids": 0,
+          "invalid_references": 0,
+          "provenance_preserved_count": 65,
+          "status": "PASSED"
+        },
+        "trophy_tracking": {
+          "document_count": 65,
+          "field_coverage_pct": 100.0,
+          "duplicate_ids": 0,
+          "invalid_references": 0,
+          "provenance_preserved_count": 65,
+          "status": "PASSED"
+        },
+        "winner_press_releases": {
+          "document_count": 65,
+          "field_coverage_pct": 100.0,
+          "duplicate_ids": 0,
+          "invalid_references": 0,
+          "provenance_preserved_count": 65,
+          "status": "PASSED"
+        },
+        "winner_records": {
+          "document_count": 400,
+          "field_coverage_pct": 80.0,
+          "duplicate_ids": 0,
+          "invalid_references": 0,
+          "provenance_preserved_count": 400,
+          "status": "PASSED"
+        }
+      }
+    },
+    "grammy_creators_db": {
+      "collection_count": 10,
+      "collection_count_passed": true,
+      "total_documents": 920,
+      "all_collections_passed": true,
+      "collections": {
+        "arrangers_conductors": {
+          "document_count": 75,
+          "field_coverage_pct": 100.0,
+          "duplicate_ids": 0,
+          "invalid_references": 0,
+          "provenance_preserved_count": 75,
+          "status": "PASSED"
+        },
+        "artists": {
+          "document_count": 300,
+          "field_coverage_pct": 80.0,
+          "duplicate_ids": 0,
+          "invalid_references": 0,
+          "provenance_preserved_count": 300,
+          "status": "PASSED"
+        },
+        "audio_engineers": {
+          "document_count": 75,
+          "field_coverage_pct": 100.0,
+          "duplicate_ids": 0,
+          "invalid_references": 0,
+          "provenance_preserved_count": 75,
+          "status": "PASSED"
+        },
+        "creator_collaborations": {
+          "document_count": 65,
+          "field_coverage_pct": 100.0,
+          "duplicate_ids": 0,
+          "invalid_references": 0,
+          "provenance_preserved_count": 65,
+          "status": "PASSED"
+        },
+        "creator_discographies": {
+          "document_count": 65,
+          "field_coverage_pct": 100.0,
+          "duplicate_ids": 0,
+          "invalid_references": 0,
+          "provenance_preserved_count": 65,
+          "status": "PASSED"
+        },
+        "group_memberships": {
+          "document_count": 65,
+          "field_coverage_pct": 100.0,
+          "duplicate_ids": 0,
+          "invalid_references": 0,
+          "provenance_preserved_count": 65,
+          "status": "PASSED"
+        },
+        "musical_groups": {
+          "document_count": 65,
+          "field_coverage_pct": 91.67,
+          "duplicate_ids": 0,
+          "invalid_references": 0,
+          "provenance_preserved_count": 65,
+          "status": "PASSED"
+        },
+        "producers": {
+          "document_count": 75,
+          "field_coverage_pct": 84.62,
+          "duplicate_ids": 0,
+          "invalid_references": 0,
+          "provenance_preserved_count": 75,
+          "status": "PASSED"
+        },
+        "record_labels": {
+          "document_count": 60,
+          "field_coverage_pct": 100.0,
+          "duplicate_ids": 0,
+          "invalid_references": 0,
+          "provenance_preserved_count": 60,
+          "status": "PASSED"
+        },
+        "songwriters_composers": {
+          "document_count": 75,
+          "field_coverage_pct": 100.0,
+          "duplicate_ids": 0,
+          "invalid_references": 0,
+          "provenance_preserved_count": 75,
+          "status": "PASSED"
+        }
+      }
+    }
+  }
+}
