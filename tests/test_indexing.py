@@ -33,7 +33,6 @@ if str(REPO_ROOT) not in sys.path:
 from scripts.indexes.create_indexes import INDEX_CATALOG
 
 
-
 @pytest.fixture(scope="session")
 def mongo_client():
     """Session fixture for authenticated MongoDB client."""
@@ -114,116 +113,188 @@ def test_total_custom_index_count(mongo_client):
     assert total_custom_found == 44, f"Expected 44 active custom indexes, found {total_custom_found}"
 
 
-def test_unique_secondary_index_enforcement(mongo_client):
-    """Verifies that unique secondary indexes reject duplicate key insertions."""
-    db = mongo_client["grammy_history_db"]
-    coll = db["ceremonies"]
+def plan_has_stage(p, stage_name):
+    if not p:
+        return False
+    if p.get("stage") == stage_name:
+        return True
+    if "inputStage" in p and plan_has_stage(p["inputStage"], stage_name):
+        return True
+    for ch in p.get("inputStages", []):
+        if plan_has_stage(ch, stage_name):
+            return True
+    return False
 
-    # Attempt inserting a duplicate ceremony_id (CEREMONY_001 already exists)
-    duplicate_doc = {
-        "_id": "CEREMONY_DUPLICATE_TEST_TEMP",
-        "ceremony_id": "CEREMONY_001",  # duplicate natural key
-        "edition_number": 999,
-        "ceremony_date": "2099-01-01",
-        "broadcast_year": 2099,
-        "eligibility_period_start": "2098-01-01",
-        "eligibility_period_end": "2098-12-31",
-        "host_city": "Los Angeles",
-        "venue_id": "VEN_BEVERLY_HILTON",
-        "primary_network": "CBS",
-        "total_awards_presented": 50,
-        "created_at": "2099-01-01T00:00:00Z",
-        "_source_provenance": {
-            "source_id": "SRC-01",
-            "source_name": "Test",
-            "license_type": "Test",
-            "provenance_tier": "PRIMARY OFFICIAL SOURCE"
-        }
-    }
+
+@pytest.mark.parametrize(
+    "db_name,coll_name,key_field,duplicate_value",
+    [
+        ("grammy_history_db", "ceremonies", "ceremony_id", "CEREMONY_001"),
+        ("grammy_categories_db", "award_categories", "category_id", "CAT_RECORD_OF_THE_YEAR_000"),
+        ("grammy_nominations_db", "nominated_works", "work_id", "WRK_NEL_BLU_DIPINTO_DI_BLU_VOLARE_0000"),
+        ("grammy_winners_db", "winner_records", "winner_record_id", "WIN_NOM_001_RECORD_OF__0000"),
+        ("grammy_creators_db", "artists", "artist_id", "CRT_NEL_BLU_DIPINTO_DI_BLU_VOLARE_0000"),
+    ],
+)
+def test_unique_secondary_index_enforcement(mongo_client, db_name, coll_name, key_field, duplicate_value):
+    """Verifies that unique secondary indexes reject duplicate key insertions across all 5 databases."""
+    db = mongo_client[db_name]
+    coll = db[coll_name]
+
+    # Fetch an existing document to construct a valid duplicate document
+    existing_doc = coll.find_one({key_field: duplicate_value})
+    assert existing_doc is not None, f"Sample document with {key_field}={duplicate_value} not found!"
+
+    # Clone document with a new distinct _id but identical natural key
+    duplicate_doc = dict(existing_doc)
+    duplicate_doc["_id"] = f"{duplicate_value}_DUPLICATE_TEST_TEMP"
 
     with pytest.raises(pymongo.errors.DuplicateKeyError):
         coll.insert_one(duplicate_doc)
 
-    # Ensure no residual document
-    coll.delete_one({"_id": "CEREMONY_DUPLICATE_TEST_TEMP"})
+    # Clean up test artifact if by any chance it persisted
+    coll.delete_one({"_id": f"{duplicate_value}_DUPLICATE_TEST_TEMP"})
 
 
-def test_multikey_index_queries_use_ixscan(mongo_client):
-    """Verifies that queries over array fields utilize multikey IXSCAN."""
-    # 1. Acceptance speeches individuals_acknowledged
-    db_win = mongo_client["grammy_winners_db"]
-    cursor1 = db_win.acceptance_speeches.find({"individuals_acknowledged": "Family"})
-    explain1 = cursor1.explain()
-    plan1 = explain1.get("queryPlanner", {}).get("winningPlan", {})
+@pytest.mark.parametrize(
+    "db_name,coll_name,query_filter,description",
+    [
+        ("grammy_winners_db", "acceptance_speeches", {"individuals_acknowledged": "Family"}, "Speech acknowledgments"),
+        ("grammy_categories_db", "merged_split_history", {"source_category_ids": {"$all": ["LEGACY_CAT_MALE_0", "LEGACY_CAT_FEMALE_0"]}}, "Merged split history source categories"),
+        ("grammy_nominations_db", "tied_nominations", {"tied_nomination_ids": "NOM_001_RECORD_OF__0000"}, "Tied nomination IDs"),
+        ("grammy_nominations_db", "genre_classifications", {"secondary_genre_tags": "Adult Contemporary"}, "Genre classification tags"),
+        ("grammy_nominations_db", "multi_nomination_packages", {"nominated_work_ids": "WRK_NEL_BLU_DIPINTO_DI_BLU_VOLARE_0000"}, "Multi-nomination packages works"),
+        ("grammy_winners_db", "consecutive_winners", {"winning_work_ids_list": "WRK_NEL_BLU_DIPINTO_DI_BLU_VOLARE_0000"}, "Consecutive winning works list"),
+    ],
+)
+def test_multikey_index_queries_use_ixscan(mongo_client, db_name, coll_name, query_filter, description):
+    """Verifies that queries over all multikey array fields utilize IXSCAN."""
+    db = mongo_client[db_name]
+    coll = db[coll_name]
+    cursor = coll.find(query_filter)
+    explain = cursor.explain()
+    plan = explain.get("queryPlanner", {}).get("winningPlan", {})
 
-    def plan_has_stage(p, stage_name):
-        if p.get("stage") == stage_name:
-            return True
-        if "inputStage" in p and plan_has_stage(p["inputStage"], stage_name):
-            return True
-        for ch in p.get("inputStages", []):
-            if plan_has_stage(ch, stage_name):
-                return True
-        return False
-
-    assert plan_has_stage(plan1, "IXSCAN"), "acceptance_speeches query should utilize IXSCAN"
-
-    # 2. Merged split history source_category_ids
-    db_cat = mongo_client["grammy_categories_db"]
-    cursor2 = db_cat.merged_split_history.find({
-        "source_category_ids": {"$all": ["LEGACY_CAT_MALE_0", "LEGACY_CAT_FEMALE_0"]}
-    })
-    explain2 = cursor2.explain()
-    plan2 = explain2.get("queryPlanner", {}).get("winningPlan", {})
-    assert plan_has_stage(plan2, "IXSCAN"), "merged_split_history query should utilize IXSCAN"
+    assert plan_has_stage(plan, "IXSCAN"), f"Query on {db_name}.{coll_name} ({description}) should utilize IXSCAN"
 
 
-def test_compound_esr_query_plans_use_ixscan(mongo_client):
+@pytest.mark.parametrize(
+    "db_name,coll_name,filter_spec,sort_spec,description",
+    [
+        (
+            "grammy_nominations_db",
+            "nomination_entries",
+            {"is_winner_flag": True, "nomination_year": {"$gte": 1959, "$lte": 1965}},
+            [("nomination_year", -1), ("ballot_slot_order", 1)],
+            "nomination_entries winner + year range + ballot sort",
+        ),
+        (
+            "grammy_history_db",
+            "ceremonies",
+            {"primary_network": "CBS", "broadcast_year": {"$gte": 2000}},
+            [("broadcast_year", -1)],
+            "ceremonies network + broadcast year sort",
+        ),
+        (
+            "grammy_categories_db",
+            "award_categories",
+            {"current_status": "Active"},
+            [("maximum_nominees_allowed", -1)],
+            "award_categories active status + nominees capacity sort",
+        ),
+        (
+            "grammy_winners_db",
+            "winner_records",
+            {"presented_live_on_telecast": True},
+            [("trophy_statuettes_awarded_count", -1)],
+            "winner_records live telecast + statuettes sort",
+        ),
+        (
+            "grammy_creators_db",
+            "artists",
+            {"is_group_ensemble_flag": False, "active_career_start_year": {"$gte": 1950}},
+            [("active_career_start_year", 1)],
+            "artists solo flag + career start year sort",
+        ),
+    ],
+)
+def test_compound_esr_query_plans_use_ixscan(mongo_client, db_name, coll_name, filter_spec, sort_spec, description):
     """Verifies that compound queries adhering to ESR rule utilize IXSCAN without in-memory blocking sort."""
-    db_nom = mongo_client["grammy_nominations_db"]
-    # Query: Equality on is_winner_flag, Range on nomination_year, Sort on nomination_year / ballot_slot
-    cursor = db_nom.nomination_entries.find({
-        "is_winner_flag": True,
-        "nomination_year": {"$gte": 1959, "$lte": 1965}
-    }).sort([("nomination_year", -1), ("ballot_slot_order", 1)])
-
+    db = mongo_client[db_name]
+    coll = db[coll_name]
+    cursor = coll.find(filter_spec).sort(sort_spec)
     explain = cursor.explain()
     winning_plan = explain.get("queryPlanner", {}).get("winningPlan", {})
 
-    def plan_has_stage(p, stage_name):
-        if p.get("stage") == stage_name:
-            return True
-        if "inputStage" in p and plan_has_stage(p["inputStage"], stage_name):
-            return True
-        for ch in p.get("inputStages", []):
-            if plan_has_stage(ch, stage_name):
-                return True
-        return False
-
-    assert plan_has_stage(winning_plan, "IXSCAN"), "Compound ESR query should utilize IXSCAN"
-    # An optimal ESR compound index satisfies sort order directly, meaning no standalone blocking SORT stage
-    assert not plan_has_stage(winning_plan, "SORT"), "ESR index should eliminate blocking SORT stage"
+    assert plan_has_stage(winning_plan, "IXSCAN"), f"ESR query on {coll_name} ({description}) should utilize IXSCAN"
+    assert not plan_has_stage(winning_plan, "SORT"), f"ESR query on {coll_name} ({description}) should eliminate blocking SORT stage"
 
 
-def test_single_field_point_lookup_efficiency(mongo_client):
+@pytest.mark.parametrize(
+    "db_name,coll_name,point_filter",
+    [
+        ("grammy_nominations_db", "nomination_entries", {"nomination_id": "NOM_001_RECORD_OF__0000"}),
+        ("grammy_history_db", "ceremonies", {"ceremony_id": "CEREMONY_001"}),
+        ("grammy_creators_db", "artists", {"artist_id": "CRT_NEL_BLU_DIPINTO_DI_BLU_VOLARE_0000"}),
+        ("grammy_history_db", "venues", {"venue_id": "VEN_BEVERLY_HILTON"}),
+    ],
+)
+def test_single_field_point_lookup_efficiency(mongo_client, db_name, coll_name, point_filter):
     """Verifies that point lookups examine exactly 1 document and 1 index key."""
-    db_nom = mongo_client["grammy_nominations_db"]
-    cursor = db_nom.nomination_entries.find({"nomination_id": "NOM_001_RECORD_OF__0000"})
+    db = mongo_client[db_name]
+    coll = db[coll_name]
+    cursor = coll.find(point_filter)
     explain = cursor.explain()
     exec_stats = explain.get("executionStats", {})
 
     assert exec_stats.get("totalDocsExamined") == 1, (
-        f"Point lookup should examine exactly 1 doc, examined {exec_stats.get('totalDocsExamined')}"
+        f"Point lookup on {coll_name} should examine 1 doc, examined {exec_stats.get('totalDocsExamined')}"
     )
     assert exec_stats.get("totalKeysExamined") == 1, (
-        f"Point lookup should examine exactly 1 key, examined {exec_stats.get('totalKeysExamined')}"
+        f"Point lookup on {coll_name} should examine 1 key, examined {exec_stats.get('totalKeysExamined')}"
     )
 
 
-def test_wiredtiger_index_storage_allocated(mongo_client):
-    """Verifies that WiredTiger engine reports allocated index sizes for indexed collections."""
-    db_nom = mongo_client["grammy_nominations_db"]
-    stats = db_nom.command("collStats", "nomination_entries")
+def test_all_44_custom_indexes_produce_ixscan(mongo_client):
+    """Verifies that EVERY SINGLE ONE of all 44 custom indexes in INDEX_CATALOG produces IXSCAN."""
+    for db_name, collections in INDEX_CATALOG.items():
+        db = mongo_client[db_name]
+        for coll_name, index_list in collections.items():
+            coll = db[coll_name]
+            for idx_def in index_list:
+                name = idx_def["name"]
+                keys = idx_def["keys"]
+                first_k, _ = keys[0]
+                sample = coll.find_one({first_k: {"$exists": True, "$ne": None}})
+                assert sample is not None, f"No sample found for {db_name}.{coll_name}.{first_k}"
+                sample_val = sample[first_k]
+                if isinstance(sample_val, list) and len(sample_val) > 0:
+                    query_val = sample_val[0]
+                else:
+                    query_val = sample_val
 
-    assert stats.get("nindexes") >= 6, "nomination_entries should have at least 6 indexes (_id + 5 custom)"
-    assert stats.get("totalIndexSize", 0) > 0, "totalIndexSize should be greater than 0 bytes"
+                cursor = coll.find({first_k: query_val}).hint(name)
+                explain = cursor.explain()
+                wp = explain.get("queryPlanner", {}).get("winningPlan", {})
+                has_scan = plan_has_stage(wp, "IXSCAN") or plan_has_stage(wp, "EXPRESS_IXSCAN")
+                assert has_scan, f"Index {name} on {db_name}.{coll_name} failed to produce IXSCAN"
+
+
+@pytest.mark.parametrize(
+    "db_name,coll_name,min_indexes",
+    [
+        ("grammy_nominations_db", "nomination_entries", 6),
+        ("grammy_history_db", "ceremonies", 5),
+        ("grammy_categories_db", "award_categories", 5),
+        ("grammy_winners_db", "winner_records", 5),
+        ("grammy_creators_db", "artists", 4),
+    ],
+)
+def test_wiredtiger_index_storage_allocated(mongo_client, db_name, coll_name, min_indexes):
+    """Verifies that WiredTiger engine reports allocated index sizes for indexed collections."""
+    db = mongo_client[db_name]
+    stats = db.command("collStats", coll_name)
+
+    assert stats.get("nindexes") >= min_indexes, f"{coll_name} should have >= {min_indexes} indexes"
+    assert stats.get("totalIndexSize", 0) > 0, f"{coll_name} totalIndexSize should be > 0"
+

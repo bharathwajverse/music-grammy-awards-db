@@ -623,12 +623,129 @@ def display_stats(client: pymongo.MongoClient):
             print(f"  {coll_name:<26} | Docs: {count:4d} | Data: {size_kb:6.2f} KB | Indexes: {n_indexes} ({idx_size_kb:6.2f} KB)")
 
 
+def run_benchmarks(client: pymongo.MongoClient):
+    """Executes explain('executionStats') benchmarks on representative queries across all 5 databases."""
+    print("\n=======================================================")
+    print("RUNNING EXPLAIN PLAN BENCHMARKS ON ATLAS")
+    print("=======================================================")
+
+    benchmark_queries = [
+        {
+            "id": "Q01_NOM_POINT_LOOKUP",
+            "db": "grammy_nominations_db",
+            "coll": "nomination_entries",
+            "filter": {"nomination_id": "NOM_001_RECORD_OF__0000"},
+            "sort": None,
+            "target_index": "idx_nom_entries_nomination_id",
+            "description": "Point lookup by nomination_id"
+        },
+        {
+            "id": "Q02_NOM_ARTIST_FILTER",
+            "db": "grammy_nominations_db",
+            "coll": "nomination_entries",
+            "filter": {"primary_artist_id": "CRT_HENRY_MANCINI_0001"},
+            "sort": None,
+            "target_index": "idx_nom_entries_artist_id",
+            "description": "Analytical filter on primary_artist_id (Henry Mancini)"
+        },
+        {
+            "id": "Q03_NOM_ESR_COMPOUND",
+            "db": "grammy_nominations_db",
+            "coll": "nomination_entries",
+            "filter": {"is_winner_flag": True, "nomination_year": {"$gte": 1959, "$lte": 1965}},
+            "sort": [("nomination_year", -1), ("ballot_slot_order", 1)],
+            "target_index": "idx_nom_entries_winner_year_slot_esr",
+            "description": "ESR Compound query (Winner equality, year range, ballot sort)"
+        },
+        {
+            "id": "Q04_SPEECH_MULTIKEY_CONTAINMENT",
+            "db": "grammy_winners_db",
+            "coll": "acceptance_speeches",
+            "filter": {"individuals_acknowledged": "Family"},
+            "sort": None,
+            "target_index": "idx_speeches_ack_multikey",
+            "description": "Multikey array containment query on individuals_acknowledged ('Family')"
+        },
+        {
+            "id": "Q05_RESTRUCT_MULTIKEY_ALL",
+            "db": "grammy_categories_db",
+            "coll": "merged_split_history",
+            "filter": {"source_category_ids": {"$all": ["LEGACY_CAT_MALE_0", "LEGACY_CAT_FEMALE_0"]}},
+            "sort": None,
+            "target_index": "idx_merged_split_source_cats_multikey",
+            "description": "Multikey array $all query on source_category_ids"
+        },
+        {
+            "id": "Q06_TIES_MULTIKEY_CONTAINMENT",
+            "db": "grammy_nominations_db",
+            "coll": "tied_nominations",
+            "filter": {"tied_nomination_ids": "NOM_001_RECORD_OF__0000"},
+            "sort": None,
+            "target_index": "idx_tied_noms_tied_ids_multikey",
+            "description": "Multikey array containment query on tied_nomination_ids"
+        },
+        {
+            "id": "Q07_WINNER_TELECAST_ESR",
+            "db": "grammy_winners_db",
+            "coll": "winner_records",
+            "filter": {"presented_live_on_telecast": True},
+            "sort": [("trophy_statuettes_awarded_count", -1)],
+            "target_index": "idx_winner_records_telecast_statuettes_esr",
+            "description": "ESR compound query on telecast presentations sorted by trophy count"
+        },
+        {
+            "id": "Q08_CEREMONY_NETWORK_YEAR_ESR",
+            "db": "grammy_history_db",
+            "coll": "ceremonies",
+            "filter": {"primary_network": "CBS", "broadcast_year": {"$gte": 2000}},
+            "sort": [("broadcast_year", -1)],
+            "target_index": "idx_ceremonies_network_year_esr",
+            "description": "ESR compound query on CBS network with year filter and sort"
+        },
+        {
+            "id": "Q09_CATEGORY_STATUS_NOMINEES_ESR",
+            "db": "grammy_categories_db",
+            "coll": "award_categories",
+            "filter": {"current_status": "Active"},
+            "sort": [("maximum_nominees_allowed", -1)],
+            "target_index": "idx_categories_status_nominees_esr",
+            "description": "ESR compound query on active categories sorted by nominee capacity"
+        },
+        {
+            "id": "Q10_ARTIST_GROUP_CAREER_ESR",
+            "db": "grammy_creators_db",
+            "coll": "artists",
+            "filter": {"is_group_ensemble_flag": False, "active_career_start_year": {"$gte": 1950}},
+            "sort": [("active_career_start_year", 1)],
+            "target_index": "idx_artists_group_career_esr",
+            "description": "ESR compound query on solo artists with career start year filter and sort"
+        }
+    ]
+
+    for bq in benchmark_queries:
+        db = client[bq["db"]]
+        coll = db[bq["coll"]]
+        cursor = coll.find(bq["filter"])
+        if bq["sort"]:
+            cursor = cursor.sort(bq["sort"])
+        cursor = cursor.hint(bq["target_index"])
+        explain = cursor.explain()
+        exec_stats = explain.get("executionStats", {})
+        wp = explain.get("queryPlanner", {}).get("winningPlan", {})
+        stage = wp.get("stage", "UNKNOWN")
+        keys = exec_stats.get("totalKeysExamined", 0)
+        docs = exec_stats.get("totalDocsExamined", 0)
+        time_ms = exec_stats.get("executionTimeMillis", 0)
+        print(f"  [{bq['id']}] {bq['coll']:<24} {bq['target_index']:<40} | Stage: {stage:<14} | Keys: {keys:4d} | Docs: {docs:4d} | Time: {time_ms}ms")
+
+
 def main():
     parser = argparse.ArgumentParser(description="MongoDB Atlas Index Management CLI")
-    parser.add_argument("--create", action="store_true", default=True, help="Create all indexes (default)")
+    parser.add_argument("--create", action="store_true", help="Create all recommended indexes")
     parser.add_argument("--verify", action="store_true", help="Verify all indexes are present on Atlas")
     parser.add_argument("--drop", action="store_true", help="Drop custom-managed indexes")
     parser.add_argument("--stats", action="store_true", help="Display index storage statistics")
+    parser.add_argument("--benchmark", action="store_true", help="Run explain plan benchmarks across representative queries")
 
     args = parser.parse_args()
     client = get_mongo_client()
@@ -640,9 +757,15 @@ def main():
         sys.exit(0 if success else 1)
     elif args.stats:
         display_stats(client)
+    elif args.benchmark:
+        run_benchmarks(client)
+    elif args.create:
+        create_indexes(client)
+        verify_indexes(client)
     else:
         create_indexes(client)
         verify_indexes(client)
+
 
 
 if __name__ == "__main__":

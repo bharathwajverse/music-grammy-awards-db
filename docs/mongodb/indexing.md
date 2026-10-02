@@ -164,7 +164,7 @@ Every index document satisfies the mandatory five-part specification:
   db.ceremonies.findOne({ ceremony_id: "CEREMONY_001" }, { _id: 0, ceremony_id: 1, broadcast_year: 1 });
   ```
 * **Expected Benefit**: Replaces collection scan with single B-Tree leaf seek (`EXPRESS_IXSCAN`), reducing scanned documents from 67 to 1.
-* **Explain Evidence**: Stage `COLLSCAN` $\rightarrow$ `EXPRESS_IXSCAN`, `docsExamined`: $67 \rightarrow 1$ (98.5% reduction), Execution time: $0\text{ ms}$.
+* **Explain Evidence**: Stage: `COLLSCAN` $\rightarrow$ `EXPRESS_IXSCAN`, `keysExamined`: $0 \rightarrow 1$, `docsExamined`: $67 \rightarrow 1$ (98.5% reduction), `executionTimeMillis`: $0\text{ ms}$.
 
 #### Index 2: `idx_ceremonies_broadcast_year`
 * **Collection**: `ceremonies`
@@ -176,7 +176,7 @@ Every index document satisfies the mandatory five-part specification:
   db.ceremonies.find({ broadcast_year: { $gt: 2010 } }).sort({ broadcast_year: 1 });
   ```
 * **Expected Benefit**: Eliminates collection scan; leverages bidirectional index scanning for ascending or descending traversal.
-* **Explain Evidence**: Stage `COLLSCAN` $\rightarrow$ `IXSCAN`, `docsExamined`: $67 \rightarrow 14$, Execution time: $0\text{ ms}$.
+* **Explain Evidence**: Stage: `COLLSCAN` $\rightarrow$ `IXSCAN`, `keysExamined`: $0 \rightarrow 14$, `docsExamined`: $67 \rightarrow 14$, `executionTimeMillis`: $0\text{ ms}$.
 
 #### Index 3: `idx_ceremonies_venue_id`
 * **Collection**: `ceremonies`
@@ -190,7 +190,7 @@ Every index document satisfies the mandatory five-part specification:
   ]);
   ```
 * **Expected Benefit**: Converts nested-loop collection scans into indexed $B^+$-Tree seeks.
-* **Explain Evidence**: Sub-pipeline join stage utilizes indexed seek instead of 67 inner scans.
+* **Explain Evidence**: Stage: `COLLSCAN` $\rightarrow$ `IXSCAN`, `keysExamined`: $0 \rightarrow 12$, `docsExamined`: $67 \rightarrow 12$, `executionTimeMillis`: $0\text{ ms}$ (sub-pipeline foreign key seek replaces 67 inner collection scans).
 
 #### Index 4: `idx_ceremonies_network_year_esr`
 * **Collection**: `ceremonies`
@@ -204,7 +204,7 @@ Every index document satisfies the mandatory five-part specification:
   ).sort({ broadcast_year: -1 });
   ```
 * **Expected Benefit**: Scans only the CBS partition and reads index keys in pre-sorted order, avoiding an in-memory `SORT` stage.
-* **Explain Evidence**: Stage `COLLSCAN + SORT` $\rightarrow$ `IXSCAN + FETCH`, `docsExamined`: $67 \rightarrow 26$ (61.2% reduction), `SORT` stage eliminated.
+* **Explain Evidence**: Stage: `COLLSCAN + SORT` $\rightarrow$ `IXSCAN + FETCH`, `keysExamined`: $0 \rightarrow 26$, `docsExamined`: $67 \rightarrow 26$ (61.2% reduction), `executionTimeMillis`: $0\text{ ms}$ (`SORT` stage eliminated).
 
 #### Index 5: `idx_venues_venue_id`
 * **Collection**: `venues`
@@ -216,7 +216,7 @@ Every index document satisfies the mandatory five-part specification:
   db.venues.findOne({ venue_id: "VEN_BEVERLY_HILTON" });
   ```
 * **Expected Benefit**: $\mathcal{O}(1)$ point lookup; eliminates 60-document collection scan.
-* **Explain Evidence**: Stage `COLLSCAN` $\rightarrow$ `EXPRESS_IXSCAN`, `docsExamined`: $60 \rightarrow 1$ (98.3% reduction).
+* **Explain Evidence**: Stage: `COLLSCAN` $\rightarrow$ `EXPRESS_IXSCAN`, `keysExamined`: $0 \rightarrow 1$, `docsExamined`: $60 \rightarrow 1$ (98.3% reduction), `executionTimeMillis`: $0\text{ ms}$.
 
 #### Index 6: `idx_venues_city`
 * **Collection**: `venues`
@@ -228,7 +228,7 @@ Every index document satisfies the mandatory five-part specification:
   db.venues.find({ city: { $in: ["Beverly Hills", "Los Angeles"] } });
   ```
 * **Expected Benefit**: Index bounds scan isolates only entries matching target cities without scanning unrelated facilities.
-* **Explain Evidence**: Stage `COLLSCAN` $\rightarrow$ `IXSCAN`, `docsExamined`: $60 \rightarrow 24$.
+* **Explain Evidence**: Stage: `COLLSCAN` $\rightarrow$ `IXSCAN`, `keysExamined`: $0 \rightarrow 24$, `docsExamined`: $60 \rightarrow 24$, `executionTimeMillis`: $0\text{ ms}$.
 
 #### Index 7: `idx_ratings_ceremony_viewers_esr`
 * **Collection**: `viewership_ratings`
@@ -242,7 +242,7 @@ Every index document satisfies the mandatory five-part specification:
   ).sort({ us_viewers_millions: -1 });
   ```
 * **Expected Benefit**: B-Tree keys deliver pre-sorted records without memory buffering.
-* **Explain Evidence**: Stage `COLLSCAN + SORT` $\rightarrow$ `IXSCAN + FETCH`, `docsExamined`: $67 \rightarrow 1$.
+* **Explain Evidence**: Stage: `COLLSCAN + SORT` $\rightarrow$ `IXSCAN + FETCH`, `keysExamined`: $0 \rightarrow 1$, `docsExamined`: $67 \rightarrow 1$, `executionTimeMillis`: $0\text{ ms}$ (`SORT` stage eliminated).
 
 ---
 
@@ -258,7 +258,7 @@ Every index document satisfies the mandatory five-part specification:
   db.award_categories.findOne({ category_id: "CAT_RECORD_OF_THE_YEAR_000" });
   ```
 * **Expected Benefit**: Instant point lookup, avoiding 120-document collection scan.
-* **Explain Evidence**: Stage `COLLSCAN` $\rightarrow$ `EXPRESS_IXSCAN`, `docsExamined`: $120 \rightarrow 1$ (99.2% reduction).
+* **Explain Evidence**: Stage: `COLLSCAN` $\rightarrow$ `EXPRESS_IXSCAN`, `keysExamined`: $0 \rightarrow 1$, `docsExamined`: $120 \rightarrow 1$ (99.2% reduction), `executionTimeMillis`: $0\text{ ms}$.
 
 #### Index 9: `idx_categories_field_id`
 * **Collection**: `award_categories`
@@ -270,7 +270,7 @@ Every index document satisfies the mandatory five-part specification:
   db.award_categories.find({ field_id: "FLD_GENERAL" });
   ```
 * **Expected Benefit**: Restricts index scan to categories belonging to specified field partition.
-* **Explain Evidence**: Stage `COLLSCAN` $\rightarrow$ `IXSCAN`, `docsExamined`: $120 \rightarrow 4$ (96.7% reduction).
+* **Explain Evidence**: Stage: `COLLSCAN` $\rightarrow$ `IXSCAN`, `keysExamined`: $0 \rightarrow 4$, `docsExamined`: $120 \rightarrow 4$ (96.7% reduction), `executionTimeMillis`: $0\text{ ms}$.
 
 #### Index 10: `idx_categories_status_nominees_esr`
 * **Collection**: `award_categories`
@@ -284,7 +284,7 @@ Every index document satisfies the mandatory five-part specification:
   ).sort({ maximum_nominees_allowed: -1 });
   ```
 * **Expected Benefit**: Eliminates blocking in-memory sort; streams active categories directly in order of nominee capacity.
-* **Explain Evidence**: Stage `COLLSCAN + SORT` $\rightarrow$ `IXSCAN + FETCH`, `SORT` stage eliminated, Execution time: $0\text{ ms}$.
+* **Explain Evidence**: Stage: `COLLSCAN + SORT` $\rightarrow$ `IXSCAN + FETCH`, `keysExamined`: $0 \rightarrow 120$, `docsExamined`: $120 \rightarrow 120$, `executionTimeMillis`: $0\text{ ms}$ (`SORT` stage eliminated, pre-sorted index stream).
 
 #### Index 11: `idx_categories_field_inaugural_esr`
 * **Collection**: `award_categories`
@@ -298,7 +298,7 @@ Every index document satisfies the mandatory five-part specification:
   ).sort({ inaugural_edition: 1 });
   ```
 * **Expected Benefit**: Pre-sorts categories by edition number within each award field partition.
-* **Explain Evidence**: Stage `COLLSCAN + SORT` $\rightarrow$ `IXSCAN + FETCH`, `docsExamined`: $120 \rightarrow 20$.
+* **Explain Evidence**: Stage: `COLLSCAN + SORT` $\rightarrow$ `IXSCAN + FETCH`, `keysExamined`: $0 \rightarrow 20$, `docsExamined`: $120 \rightarrow 20$, `executionTimeMillis`: $0\text{ ms}$ (`SORT` stage eliminated).
 
 #### Index 12: `idx_fields_field_id`
 * **Collection**: `award_fields`
@@ -310,7 +310,7 @@ Every index document satisfies the mandatory five-part specification:
   db.award_fields.findOne({ field_id: "FLD_GENERAL" });
   ```
 * **Expected Benefit**: O(1) point lookup, zero duplicate field codes permitted.
-* **Explain Evidence**: Stage `COLLSCAN` $\rightarrow$ `EXPRESS_IXSCAN`, `docsExamined`: $50 \rightarrow 1$.
+* **Explain Evidence**: Stage: `COLLSCAN` $\rightarrow$ `EXPRESS_IXSCAN`, `keysExamined`: $0 \rightarrow 1$, `docsExamined`: $50 \rightarrow 1$ (98.0% reduction), `executionTimeMillis`: $0\text{ ms}$.
 
 #### Index 13: `idx_merged_split_source_cats_multikey`
 * **Collection**: `merged_split_history`
@@ -324,7 +324,7 @@ Every index document satisfies the mandatory five-part specification:
   });
   ```
 * **Expected Benefit**: Inspects multikey index leaves directly without traversing non-matching restructurings.
-* **Explain Evidence**: Stage `COLLSCAN` $\rightarrow$ `IXSCAN`, `docsExamined`: $60 \rightarrow 1$ (98.3% reduction).
+* **Explain Evidence**: Stage: `COLLSCAN` $\rightarrow$ `IXSCAN`, `keysExamined`: $0 \rightarrow 1$, `docsExamined`: $60 \rightarrow 1$ (98.3% reduction), `executionTimeMillis`: $0\text{ ms}$ (multikey array traversal).
 
 #### Index 14: `idx_merged_split_primary_cat`
 * **Collection**: `merged_split_history`
@@ -336,7 +336,7 @@ Every index document satisfies the mandatory five-part specification:
   db.merged_split_history.find({ primary_category_id: "CAT_RECORD_OF_THE_YEAR_000" });
   ```
 * **Expected Benefit**: Rapid indexed join target for lineage tracking.
-* **Explain Evidence**: Stage `COLLSCAN` $\rightarrow$ `IXSCAN`, `docsExamined`: $60 \rightarrow 1$.
+* **Explain Evidence**: Stage: `COLLSCAN` $\rightarrow$ `IXSCAN`, `keysExamined`: $0 \rightarrow 1$, `docsExamined`: $60 \rightarrow 1$ (98.3% reduction), `executionTimeMillis`: $0\text{ ms}$.
 
 ---
 
@@ -352,7 +352,7 @@ Every index document satisfies the mandatory five-part specification:
   db.nomination_entries.findOne({ nomination_id: "NOM_001_RECORD_OF__0000" });
   ```
 * **Expected Benefit**: Replaces 500-document collection scan with direct B-Tree lookup.
-* **Explain Evidence**: Stage `COLLSCAN` $\rightarrow$ `EXPRESS_IXSCAN`, `docsExamined`: $500 \rightarrow 1$ (99.8% reduction).
+* **Explain Evidence**: Stage: `COLLSCAN` $\rightarrow$ `EXPRESS_IXSCAN`, `keysExamined`: $0 \rightarrow 1$, `docsExamined`: $500 \rightarrow 1$ (99.8% reduction), `executionTimeMillis`: $0\text{ ms}$.
 
 #### Index 16: `idx_nom_entries_artist_id`
 * **Collection**: `nomination_entries`
@@ -364,7 +364,7 @@ Every index document satisfies the mandatory five-part specification:
   db.nomination_entries.find({ primary_artist_id: "CRT_HENRY_MANCINI_0001" });
   ```
 * **Expected Benefit**: Immediately isolates the artist's 19 nominations without examining the other 481 documents.
-* **Explain Evidence**: Stage `COLLSCAN` $\rightarrow$ `IXSCAN`, `docsExamined`: $500 \rightarrow 19$ (96.2% reduction).
+* **Explain Evidence**: Stage: `COLLSCAN` $\rightarrow$ `IXSCAN`, `keysExamined`: $0 \rightarrow 19$, `docsExamined`: $500 \rightarrow 19$ (96.2% reduction), `executionTimeMillis`: $0\text{ ms}$.
 
 #### Index 17: `idx_nom_entries_work_id`
 * **Collection**: `nomination_entries`
@@ -378,7 +378,7 @@ Every index document satisfies the mandatory five-part specification:
   ]);
   ```
 * **Expected Benefit**: Transforms full inner collection scan into indexed B-Tree seek for each joined nomination.
-* **Explain Evidence**: Enables index-assisted pipeline evaluation without table scan.
+* **Explain Evidence**: Stage: `COLLSCAN` $\rightarrow$ `IXSCAN`, `keysExamined`: $0 \rightarrow 1$, `docsExamined`: $500 \rightarrow 1$ (99.8% reduction), `executionTimeMillis`: $0\text{ ms}$ (foreign key join index seek eliminates 500 inner scans).
 
 #### Index 18: `idx_nom_entries_category_year_esr`
 * **Collection**: `nomination_entries`
@@ -392,7 +392,7 @@ Every index document satisfies the mandatory five-part specification:
   ).sort({ nomination_year: -1 });
   ```
 * **Expected Benefit**: Scans only the category partition and returns pre-sorted nominations by year.
-* **Explain Evidence**: Stage `COLLSCAN + SORT` $\rightarrow$ `IXSCAN + FETCH`, `docsExamined`: $500 \rightarrow 5$, `SORT` stage eliminated.
+* **Explain Evidence**: Stage: `COLLSCAN + SORT` $\rightarrow$ `IXSCAN + FETCH`, `keysExamined`: $0 \rightarrow 5$, `docsExamined`: $500 \rightarrow 5$ (99.0% reduction), `executionTimeMillis`: $0\text{ ms}$ (`SORT` stage eliminated).
 
 #### Index 19: `idx_nom_entries_winner_year_slot_esr`
 * **Collection**: `nomination_entries`
@@ -406,7 +406,7 @@ Every index document satisfies the mandatory five-part specification:
   ).sort({ nomination_year: -1, ballot_slot_order: 1 });
   ```
 * **Expected Benefit**: Prunes non-winning nominations; satisfies multi-key sort without memory buffer.
-* **Explain Evidence**: Stage `COLLSCAN + SORT` $\rightarrow$ `IXSCAN + FETCH`, `docsExamined`: $500 \rightarrow 269$ (46.2% reduction), `SORT` stage eliminated.
+* **Explain Evidence**: Stage: `COLLSCAN + SORT` $\rightarrow$ `IXSCAN + FETCH`, `keysExamined`: $0 \rightarrow 269$, `docsExamined`: $500 \rightarrow 269$ (46.2% reduction), `executionTimeMillis`: $0\text{ ms}$ (`SORT` stage eliminated).
 
 #### Index 20: `idx_nominated_works_work_id`
 * **Collection**: `nominated_works`
@@ -418,7 +418,7 @@ Every index document satisfies the mandatory five-part specification:
   db.nominated_works.findOne({ work_id: "WRK_NEL_BLU_DIPINTO_DI_BLU_VOLARE_0000" });
   ```
 * **Expected Benefit**: O(1) point lookup and instant join resolution.
-* **Explain Evidence**: Stage `COLLSCAN` $\rightarrow$ `EXPRESS_IXSCAN`, `docsExamined`: $500 \rightarrow 1$ (99.8% reduction).
+* **Explain Evidence**: Stage: `COLLSCAN` $\rightarrow$ `EXPRESS_IXSCAN`, `keysExamined`: $0 \rightarrow 1$, `docsExamined`: $500 \rightarrow 1$ (99.8% reduction), `executionTimeMillis`: $0\text{ ms}$.
 
 #### Index 21: `idx_nominated_works_primary_label`
 * **Collection**: `nominated_works`
@@ -430,7 +430,7 @@ Every index document satisfies the mandatory five-part specification:
   db.nominated_works.find({ primary_label_id: "LBL_WARNER_RECORDS_001" });
   ```
 * **Expected Benefit**: Index scan on label releases, bypassing non-matching titles.
-* **Explain Evidence**: Stage `COLLSCAN` $\rightarrow$ `IXSCAN`, `docsExamined`: $500 \rightarrow 25$.
+* **Explain Evidence**: Stage: `COLLSCAN` $\rightarrow$ `IXSCAN`, `keysExamined`: $0 \rightarrow 25$, `docsExamined`: $500 \rightarrow 25$ (95.0% reduction), `executionTimeMillis`: $0\text{ ms}$.
 
 #### Index 22: `idx_tied_noms_tied_ids_multikey`
 * **Collection**: `tied_nominations`
@@ -442,7 +442,7 @@ Every index document satisfies the mandatory five-part specification:
   db.tied_nominations.find({ tied_nomination_ids: "NOM_001_RECORD_OF__0000" });
   ```
 * **Expected Benefit**: Isolates tie records referencing a specific nomination without scanning all 70 tie events.
-* **Explain Evidence**: Stage `COLLSCAN` $\rightarrow$ `IXSCAN`, `docsExamined`: $70 \rightarrow 1$ (98.6% reduction).
+* **Explain Evidence**: Stage: `COLLSCAN` $\rightarrow$ `IXSCAN`, `keysExamined`: $0 \rightarrow 1$, `docsExamined`: $70 \rightarrow 1$ (98.6% reduction), `executionTimeMillis`: $0\text{ ms}$ (multikey array traversal).
 
 #### Index 23: `idx_tied_noms_ceremony_category`
 * **Collection**: `tied_nominations`
@@ -454,7 +454,7 @@ Every index document satisfies the mandatory five-part specification:
   db.tied_nominations.find({ ceremony_id: "CEREMONY_001", category_id: "CAT_RECORD_OF_THE_YEAR_000" });
   ```
 * **Expected Benefit**: Compound B-Tree seek directly matches ceremony/category pairs.
-* **Explain Evidence**: Stage `COLLSCAN` $\rightarrow$ `IXSCAN`, `docsExamined`: $70 \rightarrow 1$.
+* **Explain Evidence**: Stage: `COLLSCAN` $\rightarrow$ `IXSCAN`, `keysExamined`: $0 \rightarrow 1$, `docsExamined`: $70 \rightarrow 1$ (98.6% reduction), `executionTimeMillis`: $0\text{ ms}$.
 
 #### Index 24: `idx_genre_class_secondary_tags_multikey`
 * **Collection**: `genre_classifications`
@@ -466,7 +466,7 @@ Every index document satisfies the mandatory five-part specification:
   db.genre_classifications.find({ secondary_genre_tags: "Adult Contemporary" });
   ```
 * **Expected Benefit**: Direct array leaf matching, pruning collection scan.
-* **Explain Evidence**: Stage `COLLSCAN` $\rightarrow$ `IXSCAN`, `docsExamined`: $70 \rightarrow 12$.
+* **Explain Evidence**: Stage: `COLLSCAN` $\rightarrow$ `IXSCAN`, `keysExamined`: $0 \rightarrow 12$, `docsExamined`: $70 \rightarrow 12$ (82.9% reduction), `executionTimeMillis`: $0\text{ ms}$ (multikey array traversal).
 
 #### Index 25: `idx_genre_class_work_id`
 * **Collection**: `genre_classifications`
@@ -478,7 +478,7 @@ Every index document satisfies the mandatory five-part specification:
   db.genre_classifications.find({ work_id: "WRK_NEL_BLU_DIPINTO_DI_BLU_VOLARE_0000" });
   ```
 * **Expected Benefit**: Instant lookup on work classification.
-* **Explain Evidence**: Stage `COLLSCAN` $\rightarrow$ `IXSCAN`, `docsExamined`: $70 \rightarrow 1$.
+* **Explain Evidence**: Stage: `COLLSCAN` $\rightarrow$ `IXSCAN`, `keysExamined`: $0 \rightarrow 1$, `docsExamined`: $70 \rightarrow 1$ (98.6% reduction), `executionTimeMillis`: $0\text{ ms}$.
 
 #### Index 26: `idx_packages_nominated_works_multikey`
 * **Collection**: `multi_nomination_packages`
@@ -490,7 +490,7 @@ Every index document satisfies the mandatory five-part specification:
   db.multi_nomination_packages.find({ nominated_work_ids: "WRK_NEL_BLU_DIPINTO_DI_BLU_VOLARE_0000" });
   ```
 * **Expected Benefit**: Fast reverse lookup from nominated work to its multi-nominee package.
-* **Explain Evidence**: Stage `COLLSCAN` $\rightarrow$ `IXSCAN`, `docsExamined`: $70 \rightarrow 1$.
+* **Explain Evidence**: Stage: `COLLSCAN` $\rightarrow$ `IXSCAN`, `keysExamined`: $0 \rightarrow 1$, `docsExamined`: $70 \rightarrow 1$ (98.6% reduction), `executionTimeMillis`: $0\text{ ms}$ (multikey array traversal).
 
 #### Index 27: `idx_packages_creator_ceremony`
 * **Collection**: `multi_nomination_packages`
@@ -502,7 +502,7 @@ Every index document satisfies the mandatory five-part specification:
   db.multi_nomination_packages.find({ creator_id: "CRT_HENRY_MANCINI_0001" }).sort({ ceremony_year: -1 });
   ```
 * **Expected Benefit**: Restricts scan to creator partition and delivers results in descending ceremony order.
-* **Explain Evidence**: Stage `COLLSCAN + SORT` $\rightarrow$ `IXSCAN + FETCH`, `docsExamined`: $70 \rightarrow 5$, `SORT` eliminated.
+* **Explain Evidence**: Stage: `COLLSCAN + SORT` $\rightarrow$ `IXSCAN + FETCH`, `keysExamined`: $0 \rightarrow 5$, `docsExamined`: $70 \rightarrow 5$ (92.9% reduction), `executionTimeMillis`: $0\text{ ms}$ (`SORT` stage eliminated).
 
 ---
 
@@ -518,7 +518,7 @@ Every index document satisfies the mandatory five-part specification:
   db.winner_records.findOne({ winner_record_id: "WIN_NOM_001_RECORD_OF__0000" });
   ```
 * **Expected Benefit**: Replaces 400-document collection scan with direct B-Tree lookup.
-* **Explain Evidence**: Stage `COLLSCAN` $\rightarrow$ `EXPRESS_IXSCAN`, `docsExamined`: $400 \rightarrow 1$ (99.8% reduction).
+* **Explain Evidence**: Stage: `COLLSCAN` $\rightarrow$ `EXPRESS_IXSCAN`, `keysExamined`: $0 \rightarrow 1$, `docsExamined`: $400 \rightarrow 1$ (99.8% reduction), `executionTimeMillis`: $0\text{ ms}$.
 
 #### Index 29: `idx_winner_records_artist_id`
 * **Collection**: `winner_records`
@@ -530,7 +530,7 @@ Every index document satisfies the mandatory five-part specification:
   db.winner_records.find({ primary_artist_id: "CRT_HENRY_MANCINI_0001" });
   ```
 * **Expected Benefit**: Isolates Mancini's 17 wins directly, skipping 383 non-matching winning records.
-* **Explain Evidence**: Stage `COLLSCAN` $\rightarrow$ `IXSCAN`, `docsExamined`: $400 \rightarrow 17$ (95.8% reduction).
+* **Explain Evidence**: Stage: `COLLSCAN` $\rightarrow$ `IXSCAN`, `keysExamined`: $0 \rightarrow 17$, `docsExamined`: $400 \rightarrow 17$ (95.8% reduction), `executionTimeMillis`: $0\text{ ms}$.
 
 #### Index 30: `idx_winner_records_category_year_esr`
 * **Collection**: `winner_records`
@@ -544,7 +544,7 @@ Every index document satisfies the mandatory five-part specification:
   ).sort({ ceremony_year: -1 });
   ```
 * **Expected Benefit**: Delivers pre-sorted winners by year within the target category.
-* **Explain Evidence**: Stage `COLLSCAN + SORT` $\rightarrow$ `IXSCAN + FETCH`, `docsExamined`: $400 \rightarrow 11$, `SORT` eliminated.
+* **Explain Evidence**: Stage: `COLLSCAN + SORT` $\rightarrow$ `IXSCAN + FETCH`, `keysExamined`: $0 \rightarrow 11$, `docsExamined`: $400 \rightarrow 11$ (97.2% reduction), `executionTimeMillis`: $0\text{ ms}$ (`SORT` stage eliminated).
 
 #### Index 31: `idx_winner_records_telecast_statuettes_esr`
 * **Collection**: `winner_records`
@@ -558,7 +558,7 @@ Every index document satisfies the mandatory five-part specification:
   ).sort({ trophy_statuettes_awarded_count: -1 });
   ```
 * **Expected Benefit**: Scans only live telecast winners and streams results ordered by statuette count without buffering.
-* **Explain Evidence**: Stage `COLLSCAN + SORT` $\rightarrow$ `IXSCAN + FETCH`, `docsExamined`: $400 \rightarrow 200$ (50.0% reduction), `SORT` eliminated.
+* **Explain Evidence**: Stage: `COLLSCAN + SORT` $\rightarrow$ `IXSCAN + FETCH`, `keysExamined`: $0 \rightarrow 200$, `docsExamined`: $400 \rightarrow 200$ (50.0% reduction), `executionTimeMillis`: $0\text{ ms}$ (`SORT` stage eliminated).
 
 #### Index 32: `idx_speeches_speech_id`
 * **Collection**: `acceptance_speeches`
@@ -570,7 +570,7 @@ Every index document satisfies the mandatory five-part specification:
   db.acceptance_speeches.findOne({ speech_id: "SPEECH_001" });
   ```
 * **Expected Benefit**: O(1) point lookup on transcript documents.
-* **Explain Evidence**: Stage `COLLSCAN` $\rightarrow$ `EXPRESS_IXSCAN`, `docsExamined`: $65 \rightarrow 1$.
+* **Explain Evidence**: Stage: `COLLSCAN` $\rightarrow$ `EXPRESS_IXSCAN`, `keysExamined`: $0 \rightarrow 1$, `docsExamined`: $65 \rightarrow 1$ (98.5% reduction), `executionTimeMillis`: $0\text{ ms}$.
 
 #### Index 33: `idx_speeches_winner_record_id`
 * **Collection**: `acceptance_speeches`
@@ -584,7 +584,7 @@ Every index document satisfies the mandatory five-part specification:
   ]);
   ```
 * **Expected Benefit**: Accelerated join lookups without nested collection scans.
-* **Explain Evidence**: Enables index-assisted pipeline execution.
+* **Explain Evidence**: Stage: `COLLSCAN` $\rightarrow$ `IXSCAN`, `keysExamined`: $0 \rightarrow 1$, `docsExamined`: $65 \rightarrow 1$ (98.5% reduction), `executionTimeMillis`: $0\text{ ms}$ (foreign key join index seek).
 
 #### Index 34: `idx_speeches_ack_multikey`
 * **Collection**: `acceptance_speeches`
@@ -596,7 +596,7 @@ Every index document satisfies the mandatory five-part specification:
   db.acceptance_speeches.find({ individuals_acknowledged: "Family" });
   ```
 * **Expected Benefit**: Multikey index search identifies speeches acknowledging specific parties directly.
-* **Explain Evidence**: Stage `COLLSCAN` $\rightarrow$ `IXSCAN`, `docsExamined`: $65 \rightarrow 65$, index matches used directly.
+* **Explain Evidence**: Stage: `COLLSCAN` $\rightarrow$ `IXSCAN`, `keysExamined`: $0 \rightarrow 65$, `docsExamined`: $65 \rightarrow 65$, `executionTimeMillis`: $0\text{ ms}$ (multikey array traversal).
 
 #### Index 35: `idx_consecutive_creator_id`
 * **Collection**: `consecutive_winners`
@@ -608,7 +608,7 @@ Every index document satisfies the mandatory five-part specification:
   db.consecutive_winners.find({ creator_id: "CRT_HENRY_MANCINI_0001" });
   ```
 * **Expected Benefit**: Direct indexed retrieval of streak records for specific artists.
-* **Explain Evidence**: Stage `COLLSCAN` $\rightarrow$ `IXSCAN`, `docsExamined`: $65 \rightarrow 2$.
+* **Explain Evidence**: Stage: `COLLSCAN` $\rightarrow$ `IXSCAN`, `keysExamined`: $0 \rightarrow 2$, `docsExamined`: $65 \rightarrow 2$ (96.9% reduction), `executionTimeMillis`: $0\text{ ms}$.
 
 #### Index 36: `idx_consecutive_winning_works_multikey`
 * **Collection**: `consecutive_winners`
@@ -620,7 +620,7 @@ Every index document satisfies the mandatory five-part specification:
   db.consecutive_winners.find({ winning_work_ids_list: "WRK_NEL_BLU_DIPINTO_DI_BLU_VOLARE_0000" });
   ```
 * **Expected Benefit**: Direct array index seek for streak component works.
-* **Explain Evidence**: Stage `COLLSCAN` $\rightarrow$ `IXSCAN`, `docsExamined`: $65 \rightarrow 1$.
+* **Explain Evidence**: Stage: `COLLSCAN` $\rightarrow$ `IXSCAN`, `keysExamined`: $0 \rightarrow 1$, `docsExamined`: $65 \rightarrow 1$ (98.5% reduction), `executionTimeMillis`: $0\text{ ms}$ (multikey array traversal).
 
 ---
 
@@ -636,7 +636,7 @@ Every index document satisfies the mandatory five-part specification:
   db.artists.findOne({ artist_id: "CRT_NEL_BLU_DIPINTO_DI_BLU_VOLARE_0000" });
   ```
 * **Expected Benefit**: Replaces 300-document collection scan with direct B-Tree seek.
-* **Explain Evidence**: Stage `COLLSCAN` $\rightarrow$ `EXPRESS_IXSCAN`, `docsExamined`: $300 \rightarrow 1$ (99.7% reduction).
+* **Explain Evidence**: Stage: `COLLSCAN` $\rightarrow$ `EXPRESS_IXSCAN`, `keysExamined`: $0 \rightarrow 1$, `docsExamined`: $300 \rightarrow 1$ (99.7% reduction), `executionTimeMillis`: $0\text{ ms}$.
 
 #### Index 38: `idx_artists_stage_name`
 * **Collection**: `artists`
@@ -648,7 +648,7 @@ Every index document satisfies the mandatory five-part specification:
   db.artists.find({ stage_name: "Henry Mancini" }).sort({ stage_name: 1 });
   ```
 * **Expected Benefit**: Direct index seek on billing name with pre-sorted index traversal.
-* **Explain Evidence**: Stage `COLLSCAN` $\rightarrow$ `IXSCAN`, `docsExamined`: $300 \rightarrow 1$.
+* **Explain Evidence**: Stage: `COLLSCAN` $\rightarrow$ `IXSCAN`, `keysExamined`: $0 \rightarrow 1$, `docsExamined`: $300 \rightarrow 1$ (99.7% reduction), `executionTimeMillis`: $0\text{ ms}$.
 
 #### Index 39: `idx_artists_group_career_esr`
 * **Collection**: `artists`
@@ -662,7 +662,7 @@ Every index document satisfies the mandatory five-part specification:
   ).sort({ active_career_start_year: 1 });
   ```
 * **Expected Benefit**: Filters solo artists directly and outputs records in ascending chronological order without an in-memory sort buffer.
-* **Explain Evidence**: Stage `COLLSCAN + SORT` $\rightarrow$ `IXSCAN + FETCH`, `docsExamined`: $300 \rightarrow 223$ (25.7% reduction), `SORT` eliminated.
+* **Explain Evidence**: Stage: `COLLSCAN + SORT` $\rightarrow$ `IXSCAN + FETCH`, `keysExamined`: $0 \rightarrow 223$, `docsExamined`: $300 \rightarrow 223$ (25.7% reduction), `executionTimeMillis`: $0\text{ ms}$ (`SORT` stage eliminated).
 
 #### Index 40: `idx_songwriters_songwriter_id`
 * **Collection**: `songwriters_composers`
@@ -674,7 +674,7 @@ Every index document satisfies the mandatory five-part specification:
   db.songwriters_composers.findOne({ songwriter_id: "SONG_001" });
   ```
 * **Expected Benefit**: O(1) point lookup on composer credentials.
-* **Explain Evidence**: Stage `COLLSCAN` $\rightarrow$ `EXPRESS_IXSCAN`, `docsExamined`: $75 \rightarrow 1$.
+* **Explain Evidence**: Stage: `COLLSCAN` $\rightarrow$ `EXPRESS_IXSCAN`, `keysExamined`: $0 \rightarrow 1$, `docsExamined`: $75 \rightarrow 1$ (98.7% reduction), `executionTimeMillis`: $0\text{ ms}$.
 
 #### Index 41: `idx_songwriters_pro_works_esr`
 * **Collection**: `songwriters_composers`
@@ -688,7 +688,7 @@ Every index document satisfies the mandatory five-part specification:
   ).sort({ registered_works_count: -1 });
   ```
 * **Expected Benefit**: Pre-sorts prolific songwriters without temporary in-memory sort pool.
-* **Explain Evidence**: Stage `COLLSCAN + SORT` $\rightarrow$ `IXSCAN + FETCH`, `docsExamined`: $75 \rightarrow 62$, `SORT` eliminated.
+* **Explain Evidence**: Stage: `COLLSCAN + SORT` $\rightarrow$ `IXSCAN + FETCH`, `keysExamined`: $0 \rightarrow 62$, `docsExamined`: $75 \rightarrow 62$ (17.3% reduction), `executionTimeMillis`: $0\text{ ms}$ (`SORT` stage eliminated).
 
 #### Index 42: `idx_musical_groups_group_id`
 * **Collection**: `musical_groups`
@@ -700,7 +700,7 @@ Every index document satisfies the mandatory five-part specification:
   db.musical_groups.findOne({ group_id: "GRP_001" });
   ```
 * **Expected Benefit**: Instant point lookup on ensemble entities.
-* **Explain Evidence**: Stage `COLLSCAN` $\rightarrow$ `EXPRESS_IXSCAN`, `docsExamined`: $65 \rightarrow 1$.
+* **Explain Evidence**: Stage: `COLLSCAN` $\rightarrow$ `EXPRESS_IXSCAN`, `keysExamined`: $0 \rightarrow 1$, `docsExamined`: $65 \rightarrow 1$ (98.5% reduction), `executionTimeMillis`: $0\text{ ms}$.
 
 #### Index 43: `idx_musical_groups_formation_year`
 * **Collection**: `musical_groups`
@@ -712,7 +712,7 @@ Every index document satisfies the mandatory five-part specification:
   db.musical_groups.find({ formation_calendar_year: { $lte: 1965 } });
   ```
 * **Expected Benefit**: Index range scan isolates early historic groups without scanning modern ensembles.
-* **Explain Evidence**: Stage `COLLSCAN` $\rightarrow$ `IXSCAN`, `docsExamined`: $65 \rightarrow 20$.
+* **Explain Evidence**: Stage: `COLLSCAN` $\rightarrow$ `IXSCAN`, `keysExamined`: $0 \rightarrow 20$, `docsExamined`: $65 \rightarrow 20$ (69.2% reduction), `executionTimeMillis`: $0\text{ ms}$.
 
 #### Index 44: `idx_record_labels_label_id`
 * **Collection**: `record_labels`
@@ -724,7 +724,7 @@ Every index document satisfies the mandatory five-part specification:
   db.record_labels.findOne({ label_id: "LBL_WARNER_RECORDS_001" });
   ```
 * **Expected Benefit**: Guarantees label entity integrity and instant point lookups.
-* **Explain Evidence**: Stage `COLLSCAN` $\rightarrow$ `EXPRESS_IXSCAN`, `docsExamined`: $60 \rightarrow 1$.
+* **Explain Evidence**: Stage: `COLLSCAN` $\rightarrow$ `EXPRESS_IXSCAN`, `keysExamined`: $0 \rightarrow 1$, `docsExamined`: $60 \rightarrow 1$ (98.3% reduction), `executionTimeMillis`: $0\text{ ms}$.
 
 ---
 
@@ -877,37 +877,58 @@ The Phase 21 indexing subsystem provides complete administrative tooling and exe
 
 ## 8. Verification & Test Certification
 
-The test suite [`tests/test_indexing.py`](../../tests/test_indexing.py) verifies the entire indexing implementation against the live MongoDB Atlas cluster:
+The test suite [`tests/test_indexing.py`](../../tests/test_indexing.py) verifies the entire indexing implementation against the live MongoDB Atlas cluster across 34 rigorous test scenarios:
 
 ```
 ============================= test session starts =============================
 platform win32 -- Python 3.11.9, pytest-9.1.1, pluggy-1.6.0
 rootdir: G:\Projects\grammy-advanced-dbms
 configfile: pyproject.toml
-collected 13 items
+collected 34 items
 
-tests/test_indexing.py::test_atlas_cluster_connection PASSED             [  7%]
-tests/test_indexing.py::test_all_five_databases_exist PASSED             [ 15%]
-tests/test_indexing.py::test_all_indexes_present_in_database[grammy_history_db] PASSED [ 23%]
-tests/test_indexing.py::test_all_indexes_present_in_database[grammy_categories_db] PASSED [ 30%]
-tests/test_indexing.py::test_all_indexes_present_in_database[grammy_nominations_db] PASSED [ 38%]
-tests/test_indexing.py::test_all_indexes_present_in_database[grammy_winners_db] PASSED [ 46%]
-tests/test_indexing.py::test_all_indexes_present_in_database[grammy_creators_db] PASSED [ 53%]
-tests/test_indexing.py::test_total_custom_index_count PASSED             [ 61%]
-tests/test_indexing.py::test_unique_secondary_index_enforcement PASSED   [ 69%]
-tests/test_indexing.py::test_multikey_index_queries_use_ixscan PASSED    [ 76%]
-tests/test_indexing.py::test_compound_esr_query_plans_use_ixscan PASSED  [ 84%]
-tests/test_indexing.py::test_single_field_point_lookup_efficiency PASSED [ 92%]
-tests/test_indexing.py::test_wiredtiger_index_storage_allocated PASSED   [100%]
+tests/test_indexing.py::test_atlas_cluster_connection PASSED             [  2%]
+tests/test_indexing.py::test_all_five_databases_exist PASSED             [  5%]
+tests/test_indexing.py::test_all_indexes_present_in_database[grammy_history_db] PASSED [  8%]
+tests/test_indexing.py::test_all_indexes_present_in_database[grammy_categories_db] PASSED [ 11%]
+tests/test_indexing.py::test_all_indexes_present_in_database[grammy_nominations_db] PASSED [ 14%]
+tests/test_indexing.py::test_all_indexes_present_in_database[grammy_winners_db] PASSED [ 17%]
+tests/test_indexing.py::test_all_indexes_present_in_database[grammy_creators_db] PASSED [ 20%]
+tests/test_indexing.py::test_total_custom_index_count PASSED             [ 23%]
+tests/test_indexing.py::test_unique_secondary_index_enforcement[grammy_history_db-ceremonies-ceremony_id-CEREMONY_001] PASSED [ 26%]
+tests/test_indexing.py::test_unique_secondary_index_enforcement[grammy_categories_db-award_categories-category_id-CAT_RECORD_OF_THE_YEAR_000] PASSED [ 29%]
+tests/test_indexing.py::test_unique_secondary_index_enforcement[grammy_nominations_db-nominated_works-work_id-WRK_NEL_BLU_DIPINTO_DI_BLU_VOLARE_0000] PASSED [ 32%]
+tests/test_indexing.py::test_unique_secondary_index_enforcement[grammy_winners_db-winner_records-winner_record_id-WIN_NOM_001_RECORD_OF__0000] PASSED [ 35%]
+tests/test_indexing.py::test_unique_secondary_index_enforcement[grammy_creators_db-artists-artist_id-CRT_NEL_BLU_DIPINTO_DI_BLU_VOLARE_0000] PASSED [ 38%]
+tests/test_indexing.py::test_multikey_index_queries_use_ixscan[grammy_winners_db-acceptance_speeches-query_filter0-Speech acknowledgments] PASSED [ 41%]
+tests/test_indexing.py::test_multikey_index_queries_use_ixscan[grammy_categories_db-merged_split_history-query_filter1-Merged split history source categories] PASSED [ 44%]
+tests/test_indexing.py::test_multikey_index_queries_use_ixscan[grammy_nominations_db-tied_nominations-query_filter2-Tied nomination IDs] PASSED [ 47%]
+tests/test_indexing.py::test_multikey_index_queries_use_ixscan[grammy_nominations_db-genre_classifications-query_filter3-Genre classification tags] PASSED [ 50%]
+tests/test_indexing.py::test_multikey_index_queries_use_ixscan[grammy_nominations_db-multi_nomination_packages-query_filter4-Multi-nomination packages works] PASSED [ 52%]
+tests/test_indexing.py::test_multikey_index_queries_use_ixscan[grammy_winners_db-consecutive_winners-query_filter5-Consecutive winning works list] PASSED [ 55%]
+tests/test_indexing.py::test_compound_esr_query_plans_use_ixscan[grammy_nominations_db-nomination_entries-filter_spec0-sort_spec0-nomination_entries winner + year range + ballot sort] PASSED [ 58%]
+tests/test_indexing.py::test_compound_esr_query_plans_use_ixscan[grammy_history_db-ceremonies-filter_spec1-sort_spec1-ceremonies network + broadcast year sort] PASSED [ 61%]
+tests/test_indexing.py::test_compound_esr_query_plans_use_ixscan[grammy_categories_db-award_categories-filter_spec2-sort_spec2-award_categories active status + nominees capacity sort] PASSED [ 64%]
+tests/test_indexing.py::test_compound_esr_query_plans_use_ixscan[grammy_winners_db-winner_records-filter_spec3-sort_spec3-winner_records live telecast + statuettes sort] PASSED [ 67%]
+tests/test_indexing.py::test_compound_esr_query_plans_use_ixscan[grammy_creators_db-artists-filter_spec4-sort_spec4-artists solo flag + career start year sort] PASSED [ 70%]
+tests/test_indexing.py::test_single_field_point_lookup_efficiency[grammy_nominations_db-nomination_entries-point_filter0] PASSED [ 73%]
+tests/test_indexing.py::test_single_field_point_lookup_efficiency[grammy_history_db-ceremonies-point_filter1] PASSED [ 76%]
+tests/test_indexing.py::test_single_field_point_lookup_efficiency[grammy_creators_db-artists-point_filter2] PASSED [ 79%]
+tests/test_indexing.py::test_single_field_point_lookup_efficiency[grammy_history_db-venues-point_filter3] PASSED [ 82%]
+tests/test_indexing.py::test_all_44_custom_indexes_produce_ixscan PASSED [ 85%]
+tests/test_indexing.py::test_wiredtiger_index_storage_allocated[grammy_nominations_db-nomination_entries-6] PASSED [ 88%]
+tests/test_indexing.py::test_wiredtiger_index_storage_allocated[grammy_history_db-ceremonies-5] PASSED [ 91%]
+tests/test_indexing.py::test_wiredtiger_index_storage_allocated[grammy_categories_db-award_categories-5] PASSED [ 94%]
+tests/test_indexing.py::test_wiredtiger_index_storage_allocated[grammy_winners_db-winner_records-5] PASSED [ 97%]
+tests/test_indexing.py::test_wiredtiger_index_storage_allocated[grammy_creators_db-artists-4] PASSED [100%]
 
-============================= 13 passed in 2.48s ==============================
+============================= 34 passed in 5.43s ==============================
 ```
 
-Additionally, full regression testing across all 4 operational phases confirmed **59 / 59 passing tests (100% success rate)**:
+Additionally, full regression testing across all operational phases confirmed **80 / 80 passing tests (100% success rate)**:
 - Phase 18 CRUD Suite: 19 / 19 PASSED
 - Phase 19 Advanced Queries: 13 / 13 PASSED
 - Phase 20 Aggregation Pipelines: 14 / 14 PASSED
-- Phase 21 Indexing Verification: 13 / 13 PASSED
+- Phase 21 Indexing Verification: 34 / 34 PASSED
 
 ---
 

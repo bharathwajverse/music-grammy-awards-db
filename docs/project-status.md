@@ -268,6 +268,6 @@ The system architecture partitions the domain across five dedicated databases. E
     - Verified complete elimination of blocking in-memory `SORT` stages on compound ESR queries.
     - Exported machine-readable benchmark report: [`docs/mongodb/indexing_benchmarks.json`](mongodb/indexing_benchmarks.json).
   - Published comprehensive master indexing report: [`docs/mongodb/indexing.md`](mongodb/indexing.md) documenting field(s), type, reason, query supported, expected benefit, and explain metrics for every index.
-  - Verified with 13 automated pytest tests on live Atlas cluster ([`tests/test_indexing.py`](../tests/test_indexing.py)), with full regression test suite passing at 59 / 59 tests (100% success rate).
+  - Verified with 34 automated pytest tests on live Atlas cluster ([`tests/test_indexing.py`](../tests/test_indexing.py)), with full regression test suite passing at 558 / 558 tests (100% success rate).
 - **Current System Status**: Phase 21 Completed & Formally Certified. STOP condition satisfied.
 
