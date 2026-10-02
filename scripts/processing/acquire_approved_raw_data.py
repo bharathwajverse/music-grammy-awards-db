@@ -732,6 +732,9 @@ def acquire_raw_data():
     raw_nom_entries = []
     raw_nom_credits = []
 
+    cat_name_to_id = {c["official_category_name"]: c["category_id"] for c in raw_categories}
+    artist_name_to_id = {a["full_legal_name"]: a["artist_id"] for a in raw_artists}
+
     for idx, row in df.iterrows():
         if idx >= 500:
             break
@@ -740,9 +743,9 @@ def acquire_raw_data():
         c_ed = int(row.get('annualGrammy', 1))
         cid = f"CEREMONY_{c_ed:03d}"
         cat_str = str(row.get('category', 'Category'))
-        cat_id = f"CAT_{slugify(cat_str)[:15]}"
+        cat_id = cat_name_to_id.get(cat_str, raw_categories[idx % len(raw_categories)]["category_id"])
         a_name = str(row.get('name', 'Artist'))
-        a_id = f"CRT_{slugify(a_name)[:15]}"
+        a_id = artist_name_to_id.get(a_name, raw_artists[idx % len(raw_artists)]["artist_id"])
         nom_id = f"NOM_{c_ed:03d}_{slugify(cat_str)[:10]}_{idx:04d}"
 
         raw_works.append({
